@@ -1,9 +1,9 @@
 /*��ҳ*/
 .os-top{ position: fixed; width:100%;  min-width:1300px;height: 64px; z-index: 150; background: none; border-bottom:1px solid #2e2c2d;}
 .rolling{background:#373a44; opacity:0.9;}
-.os-snLogo{width: 300px; height: 25px; margin-top:20px;background: url("../images/snLogo.png")/*tpa=https://open.suning.com/ospos/staticfiles/images/snLogo.png*/ no-repeat;margin-right: 80px;}
+.os-snLogo{width: 300px; height: 25px; margin-top:20px;background: url("../images/weLogo.png") no-repeat;margin-right: 80px;}
 .os-nav{float:left;}
-.os-nav >li{float: left; position:relative; font-size: 16px; height: 64px;line-height: 64px; text-align: center;transition:all .3s; padding: 0 16px;}
+.os-nav >li{float: left; position:relative; font-size: 18px; height: 64px;line-height: 64px; text-align: center;transition:all .3s; padding: 0 24px;}
 .os-nav >li:hover{color:#ff9c00; transition:all .5s; background: none;}
 .os-nav >li:hover >a{color:#ff9c00;}
 
