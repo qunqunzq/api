@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>开放服务-API列表</title>
+	
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="手机, 电脑, 冰箱, 洗衣机, 相机, 数码, 家居用品, 鞋帽, 化妆品, 母婴用品, 图书，食品，保险，旅行，充值，团购，正品行货, 全国联保, 货到付款。"/>
+<meta name="description" content="苏宁易购是领先的综合网上购物商城, 在线特价销售家电、通讯数码、电脑、家居百货、服装服饰、母婴、图书、食品、保险、旅行、充值、团购等数万类商品和服务。正品行货, 全国联保, 本地配送, 货到付款。省钱放心上苏宁电器网上商城, 尽享购物乐趣！"/>
+<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<script src="../../../static.suning.cn/osr/meas/error-1.js" tppabs="http://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
+			<link rel="stylesheet" href="../staticfiles/css/common.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/common.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/OpenSerNew.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/OpenSerNew.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+	<style>
+		.on-menuL .child-menu .parent-li a.parenta {
+		    display: inline-block;
+		}
+	</style>
+</head>
+	<body>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    if("" != ""){
+			var userName = "";
+			$("#alLoginName").text(userName);
+			$("#alLoginName").attr("title",userName);
+			$("#alLogin").show();
+			$("#withOutLogin").hide();
+	    }else {
+			var userName = getCookie("osposLoginUserIdFlag");
+			if(userName == ""){
+				var logonStatusVal = getCookie("logonStatus");
+				var authIdVal = getCookie("authId");
+				if((logonStatusVal != undefined && logonStatusVal != "") 
+	       		|| (authIdVal != undefined && authIdVal != "")){
+					userName = getCookie("idsLoginUserIdLastTime");
+				}
+			}
+			if(userName != ""){
+				$("#alLoginName").text(userName);
+				$("#alLoginName").attr("title",userName);
+				$("#alLogin").show();
+				$("#withOutLogin").hide();
+			}else {
+				$("#alLogin").hide();
+				$("#withOutLogin").show();
+			} 
+	    }
+    });
+	
+    function getCookie(cookieName){
+		var cookieArr = document.cookie.split(';');
+		for(var i=0; i<cookieArr.length; i++){
+			var cookie = cookieArr[i];
+			while (cookie.charAt(0)==' '){
+				cookie = cookie.substring(1);
+			}
+			cookieEntry = cookie.split('=');
+			if(cookieEntry[0] == cookieName){
+				return decodeURIComponent(cookieEntry[1]);
+			}
+		}
+		return "";
+    }
+	
+	$(function(){
+        $(".os-nav li").each(function(index){
+            $(this).removeClass("os-on");
+            if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toApi")!=-1&&index=="3"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toDevCenter")!=-1&&index=="4"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname=="/"&&index=="0"){
+                $(this).addClass("os-on");
+            }
+        })                
+	})
+</script>
+<div class="os-top bcs-top">
+	<div class="w1190 clearfix">
+		<div class="l os-snLogo"></div>	
+		<ul class="os-nav">
+			<li class="os-on"><a href="../../index-1.htm" tppabs="http://open.suning.com/">首页</a></li>
+			<li><a href="javascript:void(0);">开放版图<i></i></a>
+				<!--[if IE]>
+				<dl style="margin-left: -104px;margin-top: 55px;">
+				<![endif]-->
+				<!--[if !IE]><!-->
+				<dl>
+			    <!--<![endif]-->
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/road/roadIndex.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/road/roadIndex.html'" tppabs="https://road.suning.com/ospos/road/roadIndex.html" target="_blank">一号公路开放</a><i></i></dd>
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/toDevCenter.action  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/toDevCenter.action'" tppabs="https://road.suning.com/ospos/toDevCenter.action">商家后台开放</a><i></i></dd>
+                </dl>
+            </li>
+            <li><a href="toDocCenter-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toDocCenter.do">文档中心</a></li>
+			<li><a href="toApiListMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiListMenu.do">API文档</a></li>
+			<li><a href="../pushapi/toTopicPageList-1.do.htm" tppabs="http://open.suning.com/ospos/pushapi/toTopicPageList.do">消息文档</a></li>
+			<li><a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/toDevCenter.action">控制台</a></li>
+		</ul>
+		
+		<a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/logOut.action" class="os-exit" style="display: none;" id="alLogin">退出</a> 
+		<div class="r search-top">
+			<form method="post" action="http://open.suning.com/ospos/apipage/toSearchPage.do" id="tlSearchForm" style="display:inline;float:right;" autocomplete="off">
+                <input type="text" class="os-input" id="tlSearchIn" name="tlSearchName"/>
+                <span class="os-search" id="tlSearchBtn"></span>
+            </form>                
+                <span class="os-search"></span>
+                <span id="alLoginName" class="lname r"></span>
+                <a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/toLogin.action" class="os-login" style="display: none;" id="withOutLogin">登录</a>
+		</div>
+	</div>
+</div>	
+		<div class="on-wrapp">
+			<div class="w1190 clearfix mb40 oh" style="position:relative;">
+				<div class="on-title">API</div>
+				<div class="on-menuL w238">
+					<div class="child-menu">
+			            <dl>
+			              <dt class="parent-li">
+			                 <i class="se-menuIcon se-icon2"></i>
+			                  <a href="#" class="parenta">API列表</a>
+			              </dt>
+			              <dd class="child-parent">
+			                 <ul class="pos" name="apibuslist">
+			                 	  			<li class="on-menuOn">
+			                 	  				<a href="#1">平台业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#2">物流业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#3">网盟业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#4">自营业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#5">质检业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#6">云商城业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#7">自采业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#8">其他业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#10">4PS业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#11">商家供应商业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#16">O2O业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#14">联营</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#30">零售云</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#12">云信业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#13">政企业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#17">广告业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#21">公共业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#23">特卖业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#27">服务市场业务</a>
+			                 	  			</li>
+			                 	  			<li>
+			                 	  				<a href="#28">消息服务</a>
+			                 	  			</li>
+			                  </ul>
+			              </dd>
+			            </dl>
+			            <dl style="border-bottom: 1px solid #e2e3e4;">
+		            	</dl>
+			            <a href="toApiErrorCodeMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiErrorCodeMenu.do" target="_blank"><div class="ap-APIDoc"><em></em>异常码自查工具</div></a>
+			          </div>
+				</div>
+				<div class="on-menuR ml240 clearfix">
+				<div class="p30">
+					<span class="on-title">API列表</span>
+					<div class="on-hr"></div>
+		             	  		<div class="pr-title pr-t1 mt30" id="1">
+		             	  			<span class="l">平台业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con1">
+											<a href="toApiAccessMenu-1.do-intertypepageid=1&bustypeid=1.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=1&bustypeId=1" class="ap-conT" target="_blank"><em class="cirIcon"></em>商品API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过商品模块的API接口，可以完成新品申请、商品维护等商品方面的工作。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=2&bustypeid=1.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=2&bustypeId=1" class="ap-conT" target="_blank"><em class="cirIcon"></em>价格API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供了商品的销售价格的查询和推送。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=3&bustypeid=1.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=3&bustypeId=1" class="ap-conT" target="_blank"><em class="cirIcon"></em>库存API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供了仓库地址的设置及商品库存的查询和更新。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=4&bustypeid=1.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=4&bustypeId=1" class="ap-conT" target="_blank"><em class="cirIcon"></em>销售准备API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供了商品在进行销售前一些列准备功能API，包含销售范围、销售范围关联商品组、运费模板的设置。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=5&bustypeid=1.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=5&bustypeId=1" class="ap-conT" target="_blank"><em class="cirIcon"></em>交易API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供了在交易过程中的需要的功能API，包含获取订单、发货。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=6&bustypeid=1.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=6&bustypeId=1" class="ap-conT" target="_blank"><em class="cirIcon"></em>退货退款API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供了在逆向过程中的需要的功能API，包含退货及退款两大模块。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=8&bustypeid=1.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=8&bustypeId=1" class="ap-conT" target="_blank"><em class="cirIcon"></em>店铺API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过店铺API接口，完成店铺信息获取及修改、店铺分类及分类下商品的管理
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=9&bustypeid=1.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=9&bustypeId=1" class="ap-conT" target="_blank"><em class="cirIcon"></em>物流API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过物流API接口，获取到顾客的面单信息，进行面单打印等工作
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=10&bustypeid=1.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=10&bustypeId=1" class="ap-conT" target="_blank"><em class="cirIcon"></em>促销API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供了促销信息的查询接口。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=64&bustypeid=1.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=64&bustypeId=1" class="ap-conT" target="_blank"><em class="cirIcon"></em>分销API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供查询分销API接口
+												</p>
+												<hr class="ap-dash" />
+							</div>
+		             	  		<div class="pr-title pr-t2" id="2">
+		             	  			<span class="l">物流业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con2">
+											<a href="toApiAccessMenu-1.do-intertypepageid=11&bustypeid=2.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=11&bustypeId=2" class="ap-conT" target="_blank"><em class="cirIcon"></em>苏宁开放物流API &gt;</a>
+												<p class="pr-p1 ml15 mb30">
+														通过物流作业API获取到苏宁分配的作业任务，并反馈苏宁物流作业的时时状态。
+												</p>
+							</div>
+		             	  		<div class="pr-title pr-t3" id="3">
+		             	  			<span class="l">网盟业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con3">
+											<a href="toApiAccessMenu-1.do-intertypepageid=12&bustypeid=3.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=12&bustypeId=3" class="ap-conT" target="_blank"><em class="cirIcon"></em>联盟订单API &gt;</a>
+												<p class="pr-p1 ml15">
+														开放苏宁联盟业务资源，提供联盟订单相关信息的获取
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=41&bustypeid=3.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=41&bustypeId=3" class="ap-conT" target="_blank"><em class="cirIcon"></em>会员API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供苏宁会员相关API接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=13&bustypeid=3.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=13&bustypeId=3" class="ap-conT" target="_blank"><em class="cirIcon"></em>大聚惠API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供大聚惠相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=26&bustypeid=3.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=26&bustypeId=3" class="ap-conT" target="_blank"><em class="cirIcon"></em>联盟商品API &gt;</a>
+												<p class="pr-p1 ml15">
+														联盟商品信息API接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=61&bustypeid=3.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=61&bustypeId=3" class="ap-conT" target="_blank"><em class="cirIcon"></em>招商推广活动API &gt;</a>
+												<p class="pr-p1 ml15">
+														获取招商推广活动相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=71&bustypeid=3.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=71&bustypeId=3" class="ap-conT" target="_blank"><em class="cirIcon"></em>获取推广链接API &gt;</a>
+												<p class="pr-p1 ml15">
+														获取联盟推广链接相关API
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=73&bustypeid=3.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=73&bustypeId=3" class="ap-conT" target="_blank"><em class="cirIcon"></em>优惠券推广API &gt;</a>
+												<p class="pr-p1 ml15">
+														网盟用户优惠券推广相关接口
+												</p>
+												<hr class="ap-dash" />
+							</div>
+		             	  		<div class="pr-title pr-t4" id="4">
+		             	  			<span class="l">自营业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con4">
+											<a href="toApiAccessMenu-1.do-intertypepageid=14&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=14&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>合同API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供批量获取苏宁电子承兑合同和苏宁电子承兑合同签章回传接口。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=15&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=15&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>厂送API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供厂送相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=29&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=29&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>品牌串码API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供品牌串码的进销存信息
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=34&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=34&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>报表API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过报表模块的API接口，可以完成报表方面的相关工作。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=35&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=35&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>采购订单API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过订单模块的API接口，可以完成苏宁订单的获取。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=36&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=36&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>供应商收发货API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过收发货模块的API接口，可以完成物流方面的相关工作。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=37&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=37&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>供应商财务API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过财务模块的API接口，可以完成财务方面的相关工作。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=38&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=38&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>主数据API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过主数据模块的API接口，可以获取主数据方面的相关数据。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=39&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=39&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>售后服务API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过售后服务类API接口，完成订单获取和反馈。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=62&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=62&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>自营商品API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过商品模块的API接口，可以获取自营商品相关信息
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=70&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=70&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>订单API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供订单API查询接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=74&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=74&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>易道报表API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供易道报表API接口查询
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=65&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=65&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>采购计划API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供采购计划API接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=69&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=69&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>收发货API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供收发货API查询接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=84&bustypeid=4.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=84&bustypeId=4" class="ap-conT" target="_blank"><em class="cirIcon"></em>不良品API &gt;</a>
+												<p class="pr-p1 ml15">
+														获取不良品相关信息
+												</p>
+												<hr class="ap-dash" />
+							</div>
+		             	  		<div class="pr-title pr-t5" id="5">
+		             	  			<span class="l">质检业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con5">
+											<a href="toApiAccessMenu-1.do-intertypepageid=16&bustypeid=5.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=16&bustypeId=5" class="ap-conT" target="_blank"><em class="cirIcon"></em>服务商质检API &gt;</a>
+												<p class="pr-p1 ml15 mb30">
+														服务商质检
+												</p>
+							</div>
+		             	  		<div class="pr-title pr-t6" id="6">
+		             	  			<span class="l">云商城业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con6">
+											<a href="toApiAccessMenu-1.do-intertypepageid=17&bustypeid=6.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=17&bustypeId=6" class="ap-conT" target="_blank"><em class="cirIcon"></em>云商城API &gt;</a>
+												<p class="pr-p1 ml15 mb30">
+														提供云商城业务接口
+												</p>
+							</div>
+		             	  		<div class="pr-title pr-t7" id="7">
+		             	  			<span class="l">自采业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con7">
+											<a href="toApiAccessMenu-1.do-intertypepageid=20&bustypeid=7.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=20&bustypeId=7" class="ap-conT" target="_blank"><em class="cirIcon"></em>供应商结算API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过结算模块的API接口，可以完成财务结算方面的相关工作。
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=23&bustypeid=7.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=23&bustypeId=7" class="ap-conT" target="_blank"><em class="cirIcon"></em>退厂API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过退货单模块的API接口，可以获取退货单方面的相关数据。
+												</p>
+												<hr class="ap-dash" />
+							</div>
+		             	  		<div class="pr-title pr-t8" id="8">
+		             	  			<span class="l">其他业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con8">
+											<a href="toApiAccessMenu-1.do-intertypepageid=24&bustypeid=8.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=24&bustypeId=8" class="ap-conT" target="_blank"><em class="cirIcon"></em>购物广场API &gt;</a>
+												<p class="pr-p1 ml15 mb30">
+														通过购物广场模块的API接口，可以完成购物广场商户销售数据的采集等工作。
+												</p>
+							</div>
+		             	  		<div class="pr-title pr-t9" id="10">
+		             	  			<span class="l">4PS业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con9">
+											<a href="toApiAccessMenu-1.do-intertypepageid=27&bustypeid=10.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=27&bustypeId=10" class="ap-conT" target="_blank"><em class="cirIcon"></em>4PS接单管理API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供4PS接单管理相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=28&bustypeid=10.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=28&bustypeId=10" class="ap-conT" target="_blank"><em class="cirIcon"></em>4PS任务作业API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供任务作业相关的接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=30&bustypeid=10.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=30&bustypeId=10" class="ap-conT" target="_blank"><em class="cirIcon"></em>4PS商品查询API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供4PS商品查询相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=31&bustypeid=10.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=31&bustypeId=10" class="ap-conT" target="_blank"><em class="cirIcon"></em>4PS商品管理API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供4PS商品管理相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=32&bustypeid=10.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=32&bustypeId=10" class="ap-conT" target="_blank"><em class="cirIcon"></em>4PS仓库管理API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供4PS仓库管理相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=33&bustypeid=10.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=33&bustypeId=10" class="ap-conT" target="_blank"><em class="cirIcon"></em>4PS仓库库存API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供4PS仓库库存相关接口
+												</p>
+												<hr class="ap-dash" />
+							</div>
+		             	  		<div class="pr-title pr-t10" id="11">
+		             	  			<span class="l">商家供应商业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con10">
+											<a href="toApiAccessMenu-1.do-intertypepageid=40&bustypeid=11.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=40&bustypeId=11" class="ap-conT" target="_blank"><em class="cirIcon"></em>商家供应商交易API &gt;</a>
+												<p class="pr-p1 ml15 mb30">
+														提供为商家服务的供应商业务相关API接口
+												</p>
+							</div>
+		             	  		<div class="pr-title pr-t11" id="16">
+		             	  			<span class="l">O2O业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con11">
+											<a href="toApiAccessMenu-1.do-intertypepageid=55&bustypeid=16.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=55&bustypeId=16" class="ap-conT" target="_blank"><em class="cirIcon"></em>O2O订单API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过接口获取O2O业务订单
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=58&bustypeid=16.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=58&bustypeId=16" class="ap-conT" target="_blank"><em class="cirIcon"></em>O2O商品API &gt;</a>
+												<p class="pr-p1 ml15">
+														通过接口获取O2O业务商品
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=63&bustypeid=16.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=63&bustypeId=16" class="ap-conT" target="_blank"><em class="cirIcon"></em>O2O库存API &gt;</a>
+												<p class="pr-p1 ml15">
+														查询联营厂送API接口
+												</p>
+												<hr class="ap-dash" />
+							</div>
+		             	  		<div class="pr-title pr-t12" id="14">
+		             	  			<span class="l">联营</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con12">
+											<a href="toApiAccessMenu-1.do-intertypepageid=53&bustypeid=14.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=53&bustypeId=14" class="ap-conT" target="_blank"><em class="cirIcon"></em>仓库API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供商品库存情况查询接口服务
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=52&bustypeid=14.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=52&bustypeId=14" class="ap-conT" target="_blank"><em class="cirIcon"></em>退库API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供商品退库预约相关接口服务
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=51&bustypeid=14.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=51&bustypeId=14" class="ap-conT" target="_blank"><em class="cirIcon"></em>入库API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供商品入库预约接口服务
+												</p>
+												<hr class="ap-dash" />
+							</div>
+		             	  		<div class="pr-title pr-t13" id="30">
+		             	  			<span class="l">零售云</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con13">
+											<a href="toApiAccessMenu-1.do-intertypepageid=78&bustypeid=30.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=78&bustypeId=30" class="ap-conT" target="_blank"><em class="cirIcon"></em>商品API &gt;</a>
+												<p class="pr-p1 ml15">
+														提供商品相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=79&bustypeid=30.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=79&bustypeId=30" class="ap-conT" target="_blank"><em class="cirIcon"></em>订单API &gt;</a>
+												<p class="pr-p1 ml15">
+														查询订单相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=80&bustypeid=30.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=80&bustypeId=30" class="ap-conT" target="_blank"><em class="cirIcon"></em>发货API &gt;</a>
+												<p class="pr-p1 ml15">
+														查询发货相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=81&bustypeid=30.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=81&bustypeId=30" class="ap-conT" target="_blank"><em class="cirIcon"></em>退货API &gt;</a>
+												<p class="pr-p1 ml15">
+														查询退货相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=83&bustypeid=30.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=83&bustypeId=30" class="ap-conT" target="_blank"><em class="cirIcon"></em>销售报表API &gt;</a>
+												<p class="pr-p1 ml15">
+														地产公司查询房租销售明细报表接口
+												</p>
+												<hr class="ap-dash" />
+							</div>
+		             	  		<div class="pr-title pr-t14" id="12">
+		             	  			<span class="l">云信业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con14">
+											<a href="toApiAccessMenu-1.do-intertypepageid=42&bustypeid=12.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=42&bustypeId=12" class="ap-conT" target="_blank"><em class="cirIcon"></em>云信API &gt;</a>
+												<p class="pr-p1 ml15 mb30">
+														开放云信系列相关接口
+												</p>
+							</div>
+		             	  		<div class="pr-title pr-t15" id="13">
+		             	  			<span class="l">政企业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con15">
+											<a href="toApiAccessMenu-1.do-intertypepageid=43&bustypeid=13.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=43&bustypeId=13" class="ap-conT" target="_blank"><em class="cirIcon"></em>政企商品API &gt;</a>
+												<p class="pr-p1 ml15">
+														政企用户用户获取商品相关信息的接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=44&bustypeid=13.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=44&bustypeId=13" class="ap-conT" target="_blank"><em class="cirIcon"></em>政企价格API &gt;</a>
+												<p class="pr-p1 ml15">
+														政企用户用于获取价格相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=45&bustypeid=13.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=45&bustypeId=13" class="ap-conT" target="_blank"><em class="cirIcon"></em>政企库存API &gt;</a>
+												<p class="pr-p1 ml15">
+														政企用户用于获取商品库存相关信息的接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=50&bustypeid=13.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=50&bustypeId=13" class="ap-conT" target="_blank"><em class="cirIcon"></em>政企订单API &gt;</a>
+												<p class="pr-p1 ml15">
+														政企用户用于获取商品交易信息的接口，可用于订单信息的查询
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=47&bustypeid=13.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=47&bustypeId=13" class="ap-conT" target="_blank"><em class="cirIcon"></em>政企物流API &gt;</a>
+												<p class="pr-p1 ml15">
+														政企用户用于获取物流相关信息的接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=59&bustypeid=13.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=59&bustypeId=13" class="ap-conT" target="_blank"><em class="cirIcon"></em>政企发票API &gt;</a>
+												<p class="pr-p1 ml15">
+														政企用户用于获取发票相关信息的接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=48&bustypeid=13.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=48&bustypeId=13" class="ap-conT" target="_blank"><em class="cirIcon"></em>政企其他API &gt;</a>
+												<p class="pr-p1 ml15">
+														政企业务其他相关接口
+												</p>
+												<hr class="ap-dash" />
+							</div>
+		             	  		<div class="pr-title pr-t16" id="17">
+		             	  			<span class="l">广告业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con16">
+											<a href="toApiAccessMenu-1.do-intertypepageid=60&bustypeid=17.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=60&bustypeId=17" class="ap-conT" target="_blank"><em class="cirIcon"></em>效果报表API &gt;</a>
+												<p class="pr-p1 ml15 mb30">
+														效果报表API
+												</p>
+							</div>
+		             	  		<div class="pr-title pr-t17" id="21">
+		             	  			<span class="l">公共业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con17">
+											<a href="toApiAccessMenu-1.do-intertypepageid=57&bustypeid=21.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=57&bustypeId=21" class="ap-conT" target="_blank"><em class="cirIcon"></em>工具API &gt;</a>
+												<p class="pr-p1 ml15 mb30">
+														苏宁公共业务接口
+												</p>
+							</div>
+		             	  		<div class="pr-title pr-t18" id="23">
+		             	  			<span class="l">特卖业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con18">
+											<a href="toApiAccessMenu-1.do-intertypepageid=66&bustypeid=23.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=66&bustypeId=23" class="ap-conT" target="_blank"><em class="cirIcon"></em>特卖商品API &gt;</a>
+												<p class="pr-p1 ml15">
+														获取特卖商品数据相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=67&bustypeid=23.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=67&bustypeId=23" class="ap-conT" target="_blank"><em class="cirIcon"></em>特卖交易API &gt;</a>
+												<p class="pr-p1 ml15">
+														查询特卖交易类信息相关接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=68&bustypeid=23.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=68&bustypeId=23" class="ap-conT" target="_blank"><em class="cirIcon"></em>特卖库存API &gt;</a>
+												<p class="pr-p1 ml15">
+														查询特卖商品库存信息相关接口
+												</p>
+												<hr class="ap-dash" />
+							</div>
+		             	  		<div class="pr-title pr-t19" id="27">
+		             	  			<span class="l">服务市场业务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con19">
+											<a href="toApiAccessMenu-1.do-intertypepageid=72&bustypeid=27.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=72&bustypeId=27" class="ap-conT" target="_blank"><em class="cirIcon"></em>字体服务商API &gt;</a>
+												<p class="pr-p1 ml15">
+														服务商查询授权和发票信息接口
+												</p>
+												<hr class="ap-dash" />
+											<a href="toApiAccessMenu-1.do-intertypepageid=77&bustypeid=27.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=77&bustypeId=27" class="ap-conT" target="_blank"><em class="cirIcon"></em>订购关系查询API &gt;</a>
+												<p class="pr-p1 ml15">
+														服务商通过API接口查询在服务市场的订购关系
+												</p>
+												<hr class="ap-dash" />
+							</div>
+		             	  		<div class="pr-title pr-t20" id="28">
+		             	  			<span class="l">消息服务</span><em class="pr-em pr-down"></em>
+		             	  		</div>
+							<div class="pr-con20">
+											<a href="toApiAccessMenu-1.do-intertypepageid=75&bustypeid=28.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=75&bustypeId=28" class="ap-conT" target="_blank"><em class="cirIcon"></em>消息服务 &gt;</a>
+												<p class="pr-p1 ml15 mb30">
+														提供消息服务接口
+												</p>
+							</div>
+					</div>
+				</div>
+				<div class="menuLRH"></div>
+			</div>
+		</div>	
+	
+		<!-- 置顶 -->
+		<div class="os-topTo" style="bottom: 210px;"></div>
+	
+<div class="foot">
+    <iframe scrolling="no" frameborder="0" width="100%" height="165" src="../../../sop.suning.com/sel/portal/common/footer-1.html" tppabs="http://sop.suning.com/sel/portal/common/footer.html"></iframe>
+</div>	
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/OpenSer.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/open/OpenSer.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/common.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/custom/common.js?v=v1.0" charset="UTF-8"></script>
+		<script src="../../../static.suning.cn/osr/meas/time-1.js" tppabs="http://static.suning.cn/osr/meas/time.js"></script>
+	</body>
+</html>

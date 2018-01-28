@@ -1,0 +1,385 @@
+@charset "utf-8";
+.bs-header{padding:0 25px 0 20px;min-width:1145px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1145?"1145px":"");height:60px;background:#1F4E7C;overflow:hidden;}
+.bs-header .logo{float:left;margin-top:20px;}
+.bs-header .login-info{float:right;padding:24px 0 18px;height:18px;overflow:hidden;}
+.bs-header .login-info .name{float:left;}
+.bs-header .login-info .name em{float:left;margin:2px 5px 0 0;width:12px;height:14px;background:url("images/bs-icon-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat 0 0;overflow:hidden;}
+.bs-header .login-info .name span{float:left;color:#FFF;}
+.bs-header .login-info a{float:left;padding-left:20px;color:#FFF;}
+.bs-header .login-info a:hover{text-decoration:underline;}
+.bs-header .nav{float:right;padding-right:50px;height:60px;overflow:hidden;}
+.bs-header .nav li{float:left;}
+.bs-header .nav a{display:inline-block;padding:0 24px;height:60px;font:16px/60px 'Microsoft YaHei';border:solid #1F4E7C;border-width:0 1px;color:#FFF;}
+.bs-header .nav a:hover{background:#12416F;border-color:#245A8F;text-decoration:none;}
+
+.bs-wrap{position:relative;min-width:1190px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1190?"1190px":"");background:#F3F3F3;overflow:hidden;}
+.bs-wrap .bs-main{float:left;width:100%;}
+.bs-wrap .bs-subMain{float:left;width:100%;}
+.bs-wrap .bs-menu{float:left;margin:0 0 -9999px -100%;padding-bottom:9999px;width:120px;background:#1976E6;}
+.bs-wrap .bs-subMenu{float:left;margin:0 0 -9999px -100%;padding-bottom:9999px;width:104px;background:#E7E7E7;border-right:1px solid #DDD;}
+.bs-wrap .bs-content{margin-left:120px;padding:0 25px 60px;min-height:1px;}
+.bs-wrap .bs-content1{margin-left:120px;padding:0 25px 0 0;min-height:1px;}
+.bs-wrap .bs-subContent{margin-left:105px;padding:0 0 60px 20px;min-height:1px;}
+.bs-wrap .bs-footer{position:absolute;left:0;bottom:10px;width:100%;height:18px;overflow:hidden;}
+.bs-wrap .bs-footer p{padding-left:120px;color:#999;text-align:center;}
+
+.bs-menu li{position:relative;height:40px;border-bottom:1px solid #0657A7;overflow:hidden;vertical-align:top;}
+.bs-menu li a{display:block;padding-left:20px;width:100px;height:40px;overflow:hidden;}
+.bs-menu li span{font:14px/40px 'Microsoft YaHei';color:#FFF;cursor:pointer;}
+.bs-menu li i{float:left;margin:12px 10px 0 0;width:16px;height:16px;background:url("images/bs-icon-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat;overflow:hidden;cursor:pointer;}
+.bs-menu li a:hover{background:#0657A7;text-decoration:none;}
+.bs-menu .on a,
+.bs-menu .on a:hover{background:#0657A7;}
+.bs-menu li a:hover span{text-decoration:none;}
+.bs-menu .on a span,
+.bs-menu .on a:hover span{color:#FFF;text-decoration:none;}
+.bs-menu li .menu01 i{background-position:0 -46px;}
+.bs-menu li .menu01:hover i{background-position:0 -30px;}
+.bs-menu .on .menu01 i,
+.bs-menu .on .menu01:hover i{background-position:0 -46px;}
+.bs-menu li .menu02 i{background-position:0 -94px;}
+.bs-menu li .menu02:hover i{background-position:0 -94px;}
+.bs-menu .on .menu02 i,
+.bs-menu .on .menu02:hover i{background-position:0 -94px;}
+.bs-menu li .menu03 i{background-position:0 -110px;}
+.bs-menu li .menu03:hover i{background-position:0 -126px;}
+.bs-menu .on .menu03 i,
+.bs-menu .on .menu03:hover i{background-position:0 -142px;}
+.bs-menu li .menu04 i{background-position:0 -190px;}
+.bs-menu li .menu04:hover i{background-position:0 -190px;}
+.bs-menu .on .menu04 i,
+.bs-menu .on .menu04:hover i{background-position:0 -190px;}
+.bs-menu li em{position:absolute;top:15px;left:115px;display:none;width:5px;height:9px;background:url("images/bs-icon-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat 0 -206px;overflow:hidden;}
+.bs-menu .on em{display:block;}
+
+.bs-subMenu dt{padding-left:12px;height:40px;line-height:40px;overflow:hidden;}
+.bs-subMenu dd{height:40px;overflow:hidden;}
+.bs-subMenu dd a{display:block;padding-left:24px;width:80px;height:40px;line-height:40px;color:#333;}
+.bs-subMenu dd a:hover{background:#DFDFDF;text-decoration:none;}
+.bs-subMenu .on a,
+.bs-subMenu .on a:hover{background:#D6D6D6;}
+/**面包屑**/
+.bs-path{padding-top:10px;height:32px;line-height:32px;overflow:hidden;}
+.bs-path a{float:left;color:#2272CB;}
+.bs-path a:hover{color:#F70;text-decoration:underline;}
+.bs-path i{float:left;font-family:\5b8b\4f53;}
+.bs-path span{float:left;}
+/**首页**/
+.index-actionWrap{float:left;padding-top:25px;width:60%;}
+.index-noticeWrap{float:left;padding-top:25px;width:40%;}
+.index-action{padding-right:12px;}
+.index-notice{padding-left:12px;}
+.bs-box{padding:0 20px;background:#FFF;border:solid #E2E2E2;border-width:0 1px 1px 0}
+.bs-box .bs-box-t{margin-bottom:10px;height:38px;border-bottom:1px solid #F3F3F3;overflow:hidden;}
+.bs-box .bs-box-t h3{float:left;font:18px/38px 'Microsoft YaHei';}
+.bs-box .bs-box-t .more{float:right;font:12px/38px \5b8b\4f53;color:#2272CB;}
+.bs-box .bs-box-t .more:hover{color:#F70;text-decoration:underline;}
+.index-action .action{padding-bottom:68px;height:140px;overflow:hidden;}
+.index-action .action .name{float:left;margin-right:-100px;width:100px;height:140px;}
+.index-action .action .name .img{display:block;margin-bottom:10px;width:100px;height:100px;}
+.index-action .action .name .img img{display:block;width:100px;height:100px;}
+.index-action .action .info{padding-left:110px;}
+.index-action .action .info-con{margin:-3px 0 8px 0;height:80px;overflow:hidden;}
+.index-action .action .info-con p{line-height:20px;}
+.index-action .action .info-num{color:#2272CB;}
+.index-action .action .info-num:hover{color:#F70;text-decoration:underline;}
+.index-notice .bs-box .bs-box-t{margin-bottom:0;}
+.index-notice .notice{padding-bottom:20px;height:470px;}
+.index-notice .notice li{height:32px;vertical-align:top;overflow:hidden;}
+.index-notice .notice li a{display:block;padding:0 10px;height:32px;line-height:32px;color:#333;}
+.index-notice .notice li a span{float:left;width:260px;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;cursor:pointer;}
+.index-notice .notice li a em{float:right;cursor:pointer;}
+.index-notice .notice li a:hover{background:#70ACE5;color:#FFF;text-decoration:none;}
+.index-notice .notice li a:hover span,
+.index-notice .notice li a:hover em{text-decoration:none;}
+/**公告详情**/
+.bs-notice{height:790px;overflow:hidden;}
+.bs-notice .notice-list{position:relative;float:left;width:431px;margin-right:-431px;z-index:2;}
+.bs-notice .notice{padding-bottom:35px;}
+.bs-notice .notice ul{position:relative;overflow:hidden;zoom:1;}
+.bs-notice .notice li{position:relative;margin-top:-1px;height:32px;border:solid #ECECEC;border-width:1px 0;vertical-align:top;overflow:hidden;z-index:1;}
+.bs-notice .notice .on{border-color:#70ACE5;z-index:2;}
+.bs-notice .notice .on a,
+.bs-notice .notice .on a:hover{background:#70ACE5;color:#FFF;text-decoration:none;}
+.bs-notice .notice .odd{background:#F4F4F4;}
+.bs-notice .notice li a{display:block;padding:0 10px;height:32px;line-height:32px;color:#333;}
+.bs-notice .notice li a span{float:left;width:260px;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;cursor:pointer;}
+.bs-notice .notice li a em{float:right;cursor:pointer;}
+.bs-notice .notice li a:hover{background:#70ACE5;color:#FFF;text-decoration:none;}
+.bs-notice .notice li a:hover span,
+.bs-notice .notice li a:hover em{text-decoration:none;}
+.bs-pages{padding-top:10px;height:27px;overflow:hidden;}
+.bs-pages .snPages{margin-right:-14px;}
+.bs-notice .notice-details{position:relative;margin-top:10px;padding:30px 40px 30px 475px;height:674px;background:#F7F7F7;border:solid #E2E2E2;border-width:0 1px 1px 0;color:#333;z-index:1;}
+.bs-notice .notice-details .close-btn{position:absolute;top:9px;right:12px;display:block;width:16px;height:15px;background:url("images/bs-icon-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat 0 -215px;overflow:hidden;}
+.bs-notice .notice-details .details-bg{position:absolute;right:-1px;bottom:-1px;width:45px;height:23px;background:url("images/bs-bg-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/bs-bg.png*/ no-repeat 0 0;overflow:hidden;}
+.bs-notice .details{height:674px;overflow-x:hidden;overflow-y:auto;}
+.bs-notice .details h4{padding:10px 0;border-bottom:1px solid #E8E8E8;line-height:22px;font-size:14px;font-weight:400;text-align:center;}
+.bs-notice .details-con{padding-top:10px;border-top:1px solid #FFF;}
+.bs-notice .details-con b{line-height:22px;font-weight:400;}
+.bs-notice .details-con p{line-height:24px;text-indent:2em;}
+/**应用列表**/
+.bs-apply{padding-top:20px;}
+.bs-apply .no-result{margin-top:15px;}
+.bs-apply .no-result p{padding-left:20px;height:35px;background:#E7E7E7;line-height:34px;color:#666;}
+.bs-apply .no-result p a{color:#2272CB;}
+.bs-apply .no-result p a:hover{color:#F70;text-decoration:underline;}
+.bs-apply .apply-list{margin-top:15px;}
+
+.bs-table{table-layout:fixed;}
+.bs-table thead tr{border:solid #72A8DD;border-width:1px 1px 0 1px;}
+.bs-table thead th{height:33px;background:#87B5E2;border-bottom:1px solid #72A8DD;line-height:34px;color:#FFF;}
+.bs-table thead .name{text-align:left;text-indent:30px;}
+.bs-table td{padding:8px 0;border-bottom:1px solid #E4E4E4;line-height:20px;color:#666;text-align:center;}
+.bs-table tbody .img{padding:10px 0;text-align:left;}
+.bs-table tbody .img a{padding:0;}
+.bs-table tbody .name{text-align:left;}
+.bs-table tbody .name a{padding:0;color:#666;white-space:normal;word-break:break-all;}
+.bs-table tbody .name a:hover{color:#F70;text-decoration:underline;}
+.bs-table td a{padding:0 10px;white-space:nowrap;word-break:keep-all;color:#2272CB;}
+.bs-table td a:hover{color:#F70;text-decoration:underline;}
+
+.tip-popBox .pop-box-main{padding:27px 0 46px;}
+.tip-popBox .tip-table{margin:0 auto;}
+.tip-popBox .tip-table td{padding:10px 0;}
+.tip-popBox .tip-table em{margin-right:10px;display:block;width:32px;height:32px;background:url("images/tipIcon-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ no-repeat -120px -70px;overflow:hidden;}
+.tip-popBox .tip-table b{padding-top:6px;font-size:14px;line-height:20px;}
+.email-popBox .pop-box-main{padding:20px 0 38px;}
+.email-popBox .pop-box-main table{table-layout:fixed;}
+.email-popBox .pop-box-main td{padding-bottom:10px;vertical-align:top;}
+.email-popBox .pop-box-main .label{font-weight:700;color:#666;line-height:30px;text-align:right;}
+.email-popBox .pop-box-main .email{line-height:30px;}
+.email-popBox .pop-box-main .email-tip{width:240px;line-height:14px;color:#999;}
+.email-popBox .pop-box-main .code-btn,
+.email-popBox .pop-box-main .code-time{margin-top:15px;}
+
+.bs-flow{position:relative;margin-bottom:15px;height:40px;background:#C8C8C8;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;overflow:hidden;}
+.bs-flow .flow-wrap{height:40px;overflow:hidden;}
+.bs-flow .cou3,
+.bs-flow .cou4{position:relative;}
+.bs-flow span{float:left;height:40px;line-height:40px;color:#FFF;font-weight:700;font-size:14px;text-align:center;overflow:hidden;}
+.bs-flow .cou3 span{width:33.33%}
+.bs-flow .cou4 span{width:25%}
+.bs-flow .prev{background:#629FDB;}
+.bs-flow .cur{*margin-right:-3px;background:#4D8ECE;}
+.bs-flow em{float:left;position:absolute;top:0;display:block;width:28px;height:40px;background:url("images/bs-bg-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/bs-bg.png*/ no-repeat;overflow:hidden;}
+.bs-flow .flow-icon01{background-position:0 -25px;}
+.bs-flow .flow-icon02{background-position:-28px -25px;}
+.bs-flow .flow-icon03{background-position:-56px -25px;}
+.bs-flow .flow-icon04{background-position:-84px -25px;}
+.bs-flow .cou3 .l1{left:33%;}
+.bs-flow .cou3 .l2{left:66%;}
+.bs-flow .cou4 .l1{left:24%;}
+.bs-flow .cou4 .l2{left:49%;}
+.bs-flow .cou4 .l3{left:74%;}
+
+.bs-form{padding-bottom:60px;}
+.bs-form h3{padding-top:10px;font:700 14px/34px Arial,\5b8b\4f53;}
+.bs-form h3 span{padding-left:10px;font-size:12px;font-weight:400;color:#999;}
+.bs-form dt{padding-top:5px;height:34px;}
+.bs-form dt .label{font-size:14px;line-height:34px;}
+.bs-form dd{padding-bottom:5px;height:30px;overflow:hidden;}
+.bs-form dd label{float:left;padding-right:70px;}
+.bs-form dd label input{margin-right:5px;width:13px;height:13px;vertical-align:-2px;*vertical-align:-1px;_vertical-align:3px;}
+.bs-form .agree-check{display:block;margin-bottom:10px;height:32px;line-height:32px;overflow:hidden;}
+.bs-form .agree-check input{float:left;margin:9px 5px 0 0;width:13px;height:13px;overflow:hidden;}
+.bs-form .agree-check  p{float:left;margin:4px 5px 0 0;font:14px/22px 'Microsoft YaHei';color:#333;}
+.bs-form .agree-check  p a{color:#0080CC;}
+.bs-form .agree-check  p a:hover{color:#F70;text-decoration:underline;}
+.bs-form .submit-tip{padding-top:7px;}
+.bs-form .app-icon{height:100px;}
+.bs-form .app-icon .img{float:left;margin-right:25px;width:100px;height:100px;background:#B1B1B1;overflow:hidden;}
+.bs-form .app-icon .img img{display:block;width:100px;height:100px;}
+.bs-form .app-icon .icon-up{float:left;padding-top:20px;}
+.bs-form .app-icon .icon-up .up-btn{position:relative;margin-bottom:12px;width:100px;height:30px;overflow:hidden;}
+.bs-form .app-icon .icon-up .up-btn input{position:absolute;top:0;right:0;height:30px;opacity:0;filter:alpha(opacity=0);cursor:pointer;}
+.bs-form .app-icon .icon-up .sBtn-h30-disable{margin-bottom:12px;}
+.bs-form .app-icon .icon-up .up-tip{line-height:20px;color:#999;}
+.bs-form .bubble{position:relative;float:right;margin-top:4px;width:16px;height:30px;cursor:pointer;}
+.bs-form .bubble-icon{display:block;margin-top:7px;width:25px;height:16px;background:url("images/tipIcon-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ no-repeat -155px -280px;overflow:hidden;}
+.bs-form .bubble-box{display:none;position:absolute;left:-20px;bottom:34px;padding:6px 8px 8px 10px;background:#FFFACC;border:1px solid #FFC52A;}
+.bs-form .bubble-box p{line-height:16px;word-break:keep-all;white-space:nowrap;}
+.bs-form .bubble-box .w300{word-break:break-all;white-space:normal;}
+.bs-form .bubble-box i{position:absolute;left:22px;bottom:-7px;display:block;width:11px;height:7px;background:url("images/com-icon-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/com-icon.png*/ no-repeat 0 -16px;overflow:hidden;}
+.bs-form .def-text{color:#999;}
+.bs-form .handle{padding:15px 0 20px;border-bottom:2px solid #E8E8E8;}
+.bs-form .handle1{padding:20px 0 0;}
+.bs-form .newTip{float:left;margin-top:3px;width: 300px;height: 25px;}
+.bs-form .release-txt{height:120px;}
+.bs-form .release-txt textarea{padding:5px;width:588px;height:108px;}
+.bs-form .release-txt .code-count{float:left;margin-top:106px;color:#666;}
+
+.bs-app .bs-box .bs-box-t{margin-bottom:0;padding-top:5px;height:44px;border-bottom:2px solid #E8E8E8;overflow:hidden;}
+.bs-app .bs-box .bs-box-t h3{float:left;font:700 14px/44px Arial,\5b8b\4f53;}
+.bs-app .bs-box .bs-box-t .show-btn{float:left;padding-left:30px;line-height:44px;color:#2272CB;}
+.bs-app .bs-box .bs-box-t .show-btn:hover{color:#F70;text-decoration:underline;}
+.bs-app .app-menu{float:left;margin-right:-141px;padding:0 0 42px;width:140px;background:#FFF;border:solid #D2D2D2;border-width:0 1px 1px 0;}
+.bs-app .app-main{padding-left:151px;}
+.bs-app .app-menu dt{padding:0 10px 0 15px;height:32px;line-height:32px;overflow:hidden;cursor:pointer;}
+.bs-app .app-menu dt b{float:left;cursor:pointer;}
+.bs-app .app-menu dt em{float:right;margin-top:13px;width:7px;height:4px;background:url("images/bs-icon-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat 0 -230px;overflow:hidden;cursor:pointer;}
+.bs-app .app-menu dt .up{background-position:0 -234px;}
+.bs-app .app-menu .app-select{position:relative;}
+.bs-app .app-menu .app-select .select-box{padding:0 9px 0 14px;height:38px;border:1px solid #FFF;line-height:38px;overflow:hidden;cursor:pointer;}
+.bs-app .app-menu .app-select .hover{border-color:#DDD;}
+.bs-app .app-menu .app-select .select-box b{float:left;cursor:pointer;}
+.bs-app .app-menu .app-select .select-box em{float:right;margin-top:17px;width:7px;height:4px;background:url("images/bs-icon-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat 0 -230px;overflow:hidden;cursor:pointer;}
+.bs-app .app-menu .app-select .select-list{display:none;position:absolute;top:40px;left:0;width:138px;max-height:260px;_height:expression((document.documentElement.clientHeight||document.body.clientHeight)>260?"260px":"");background:#F6F6F6;border:1px solid #DDD;overflow-x:hidden;overflow-y:auto;}
+.bs-app .app-menu .app-select .select-list a{display:block;padding:0 9px 0 14px;width:115px;height:26px;line-height:26px;font-weight:700;color:#666;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.bs-app .app-menu .app-select .select-list a:hover{background:#70ACE5;color:#FFF;text-decoration:none;}
+.bs-app .app-menu dd a{display:block;padding-left:28px;width:112px;height:32px;line-height:32px;color:#333;overflow:hidden;}
+.bs-app .app-menu dd a:hover{background:#96C9F9;text-decoration:none;}
+.bs-app .app-menu dd .on,
+.bs-app .app-menu dd .on:hover{background:#70ACE5;color:#FFF;text-decoration:none;}
+.bs-app .app-menu dd li a{padding-left:40px;width:100px;}
+.bs-app .app-menu dd span{display:block;padding-left:15px;height:32px;line-height:32px;overflow:hidden;cursor:pointer;}
+.bs-app .app-menu dd span em{float:left;margin:12px 6px 0 0;width:7px;height:7px;background:url("images/bs-icon-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat 0 -245px;overflow:hidden;cursor:pointer;}
+.bs-app .app-menu dd span i{float:left;}
+.bs-app .app-menu dd span .up{margin-top:14px;background-position:0 -238px;}
+.bs-app .app-test{padding:45px 0 55px;height:54px;}
+.bs-app .app-test em{float:left;margin:8px 10px 0 0;width:32px;height:32px;background:url("images/tipIcon-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ no-repeat -120px 0;overflow:hidden;}
+.bs-app .app-test .test-con{float:left;}
+.bs-app .app-test .test-con b{font-size:14px;line-height:24px;}
+.bs-app .app-test .test-con p{height:30px;overflow:hidden;}
+.bs-app .app-test .test-con p i{float:left;line-height:30px;color:#666;}
+.bs-app .app-test .test-con p .sBtn{float:left;margin:0 5px;}
+.bs-app .app-test .test-con p .sBtn:hover{text-decoration:none;}
+.bs-app .app-test .test-con p a{float:left;line-height:30px;color:#2272CB;}
+.bs-app .app-test .test-con p a:hover{color:#F70;text-decoration:underline;}
+.bs-app .app-cert{padding:20px 0 170px;zoom:1;}
+.bs-app .app-cert .img{float:left;margin-right:-170px;width:170px;}
+.bs-app .app-cert .info{padding-left:210px;}
+.bs-app .app-cert .img img{margin-bottom:40px;display:block;width:170px;height:125px;}
+.bs-app .app-cert .info table{table-layout:fixed;}
+.bs-app .app-cert .info td{line-height:30px;}
+.bs-app .app-cert .info td a{color:#2272CB;}
+.bs-app .app-cert .info td a:hover{color:#F70;text-decoration:underline;}
+.bs-app .app-cert .info td .show-key{padding-right:25px;}
+.bs-app .app-cert .intro{margin-top:16px;padding-top:17px;border-top:2px solid #E8E8E8;}
+.bs-ipWhite{padding:17px 0 50px;}
+.bs-ipWhite .ipWhite-tip{padding-left:10px;}
+.bs-ipWhite h4{font-size:14px;line-height:24px;}
+.bs-ipWhite h4 span{padding-left:15px;font-size:12px;font-weight:400;}
+.bs-ipWhite .batch{margin-top:22px;padding-left:10px;}
+.bs-ipWhite .batch .up-tip{padding-top:5px;width:294px;line-height:32px;overflow:hidden;}
+.bs-ipWhite .batch .up-tip span{float:left;color:#999;}
+.bs-ipWhite .batch .up-tip a{float:right;color:#2272CB;}
+.bs-ipWhite .batch .up-tip a:hover{color:#F70;text-decoration:underline;}
+.bs-ipWhite .batch .up-btn{position:relative;margin-bottom:12px;width:100px;height:30px;overflow:hidden;}
+.bs-ipWhite .batch .up-btn input{position:absolute;top:0;right:0;height:30px;opacity:0;filter:alpha(opacity=0);cursor:pointer;}
+.bs-ipWhite .batch .batch-tip{line-height:32px;color:#999;}
+.bs-ipWhite .manual{margin-top:15px;padding:10px 0 0 10px;border-top:2px solid #E8E8E8;}
+.bs-ipWhite .manual .manual-tip{line-height:22px;}
+.bs-ipWhite .manual .manual-text{margin-top:5px;height:30px;overflow:hidden;}
+.bs-ipWhite .handle{padding-left:10px;margin-top:5px;}
+.bs-ipWhite .newTip{float:left;margin-top:7px;}
+
+/**服务列表**/
+.bs-serve .serve-search .search-box{float:left;padding:10px 0;line-height:30px;}
+.bs-serve .serve-search .new-btn{float:right;}
+.bs-serve .serve-search table{table-layout:fixed;}
+.bs-serve .serve-search td{padding:10px 0;line-height:30px;}
+.bs-serve .serve-search .label{text-align:right;}
+.bs-serve .serve-search td i{float:left;display:inline;margin-left:5px;}
+.bs-serve .serve-search td em{float:left;width:40px;text-align:center;}
+.bs-serve .serve-search td .sopText{padding-right:0;}
+.bs-serve .result-count{line-height:22px;}
+.bs-serve .result-count span{padding:0 5px;}
+.bs-serve .serve-list .name a{font-weight:700;}
+.bs-serve .serve-list .name span{color:#999;}
+.bs-serve .serve-list .name span i{font-family:\5b8b\4f53;}
+.bs-serve .chose-way{margin-top:20px;height:30px;overflow:hidden;}
+.bs-serve .chose-way label{float:left;padding-right:20px;height:30px;}
+.bs-serve .chose-way label input{float:left;margin:9px 5px 0 0;_margin-top:8px;width:13px;height:13px;}
+.bs-serve .chose-way label span{float:left;line-height:30px;}
+.bs-serve .serve-release01{display:none;margin-top:15px;}
+.bs-serve .serve-release01 .class-list{width:687px;height:268px;background:#FFF;border:solid #E6E6E6;border-width:1px 0 1px 1px;overflow:hidden;}
+.bs-serve .serve-release01 .class-list .class-one,
+.bs-serve .serve-release01 .class-list .class-two,
+.bs-serve .serve-release01 .class-list .class-three{float:left;padding:15px 0;width:228px;height:238px;border-right:1px solid #E6E6E6;overflow-x:hidden;overflow-y:auto;}
+.bs-serve .serve-release01 .class-list li{margin-bottom:5px;height:22px;vertical-align:top;}
+.bs-serve .serve-release01 .class-list li a{padding:0 16px 0 20px;display:block;height:22px;line-height:22px;color:#333;overflow:hidden;}
+.bs-serve .serve-release01 .class-list li a span{float:left;cursor:pointer;}
+.bs-serve .serve-release01 .class-list li a i{float:right;font-family:\5b8b\4f53;cursor:pointer;}
+.bs-serve .serve-release01 .class-list .on a,
+.bs-serve .serve-release01 .class-list .on a:hover{background:#74B5F6;}
+.bs-serve .serve-release01 .class-list .on a span,
+.bs-serve .serve-release01 .class-list .on a:hover span,
+.bs-serve .serve-release01 .class-list .on a i,
+.bs-serve .serve-release01 .class-list .on a:hover i{color:#FFF;}
+.bs-serve .serve-release01 .class-list li a:hover{background:#D5EAFF;}
+.bs-serve .serve-release01 .class-list li a:hover span,
+.bs-serve .serve-release01 .class-list li a:hover i{text-decoration:none;}
+.bs-serve .serve-release01 .check-class{margin-top:10px;width:686px;height:40px;background:#FFF;border:1px solid #E6E6E6;line-height:40px;overflow:hidden;}
+.bs-serve .serve-release01 .check-class i{float:left;padding-left:20px;color:#999;}
+.bs-serve .serve-release01 .check-class em{float:left;padding:0 5px;font-family:\5b8b\4f53;}
+.bs-serve .serve-release01 .check-class span{float:left;}
+.bs-serve .handle{margin-top:15px;height:30px;overflow:hidden;}
+.bs-serve .serve-release02{display:none;margin-top:35px;}
+.bs-serve .serve-release02 li{position:relative;float:left;margin:0 25px 20px 0;width:220px;height:55px;overflow:hidden;}
+.bs-serve .serve-release02 a{display:block;padding:2px;width:214px;height:49px;border:1px solid;font-size:14px;line-height:50px;color:#FFF;text-align:center;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;}
+.bs-serve .serve-release02 .c1{background:#27A9E3;border-color:#2195C9;}
+.bs-serve .serve-release02 .c2{background:#28B779;border-color:#17A668;}
+.bs-serve .serve-release02 .c3{background:#FFB848;border-color:#DA9627;}
+.bs-serve .serve-release02 .c4{background:#ED4E2A;border-color:#DC3009;}
+.bs-serve .serve-release02 .c5{background:#FF7C3C;border-color:#ED4E2A;}
+.bs-serve .serve-release02 .c6{background:#3CC051;border-color:#17A668;}
+.bs-serve .serve-release02 .c7{background:#57B5E3;border-color:#4D8ECE;}
+.bs-serve .serve-release02 a:hover{padding:0;border:3px solid #FC9100;text-decoration:none;}
+.bs-serve .serve-release02 li em{position:absolute;right:0;bottom:0;display:none;width:20px;height:22px;background:url("images/bs-bg-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/bs-bg.png*/ no-repeat -45px 0;overflow:hidden;}
+.bs-serve .serve-release02 .on em{display:block;}
+.bs-serve .serve-release02 .on a,
+.bs-serve .serve-release02 .on a:hover{padding:0;border:3px solid #FC9100;text-decoration:none;}
+.bs-serve .serve-tip{background:#FDF9EB;border:1px solid #FFE29B;}
+.bs-serve .serve-tip em{float:left;margin-right:-32px;width:32px;height:32px;background:url("images/tipIcon-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ no-repeat;overflow:hidden;}
+.bs-serve .serve-tip .con{padding-left:42px;}
+.bs-serve .serve-tip .con b{line-height:22px;font-size:14px;}
+.bs-serve .serve-tip .con p{line-height:20px;}
+.bs-serve .serve-tip01{padding:20px 50px 28px;}
+.bs-serve .serve-tip01 em{margin-top:4px;background-position:-120px -210px;}
+.bs-serve .serve-tip02{padding:15px 50px 20px;}
+.bs-serve .serve-tip02 em{background-position:-120px 0;}
+.bs-serve .serve-tip02 .con{padding-top:5px;}
+.bs-serve .serve-tip03{padding:20px 50px 28px;}
+.bs-serve .serve-tip03 em{margin-top:4px;background-position:-120px 0;}
+
+
+/**服务信息填写**/
+.bs-table1{table-layout:fixed;}
+.bs-table1 td{padding:10px 0;vertical-align:top;}
+.bs-table1 .label{text-align:right;line-height:30px;}
+.bs-table1 .label em{padding-right:3px;color:#F00;font-family:\5b8b\4f53;}
+.bs-table1 .serve-icon{position:relative;height:80px;overflow:hidden;}
+.bs-table1 .serve-icon .img{float:left;margin-right:10px;width:80px;height:80px;background:#B1B1B1;overflow:hidden;}
+.bs-table1 .serve-icon .icon-up{float:left;padding-top:30px;}
+.bs-table1 .serve-icon .up-btn{position:relative;margin-bottom:5px;width:100px;height:30px;overflow:hidden;}
+.bs-table1 .serve-icon .up-btn input{position:absolute;top:0;right:0;height:30px;opacity:0;filter:alpha(opacity=0);cursor:pointer;}
+.bs-table1 .serve-icon .up-tip{color:#999;}
+.bs-table1 .serve-txt{position:relative;height:80px;}
+.bs-table1 .serve-txt textarea{padding:5px;width:788px;height:68px;}
+.bs-table1 .serve-txt .code-count{position:absolute;top:65px;left:810px;color:#666;}
+.bs-table1 .serve-txt .con{padding-top:6px;width:800px;}
+.bs-table1 .type{line-height:30px;}
+.bs-table1 .type i{padding:0 5px;font-family:\5b8b\4f53;}
+.bs-table1 .txt-wrap{width:798px;height:198px;background:#FFF;border:1px solid #BBB;overflow-x:hidden;overflow-y:auto;float:left;margin-right:10px;}
+.bs-table1 .agree-check{padding-top:0;}
+.bs-table1 .agree-check input{float:left;margin:9px 5px 0 0;width:13px;height:13px;overflow:hidden;vertical-align:-2px;*vertical-align:-1px;_vertical-align:3px;}
+.bs-table1 .agree-check  p{float:left;margin:4px 5px 0 0;font:14px/22px 'Microsoft YaHei';color:#333;}
+.bs-table1 .agree-check  p a{color:#0080CC;}
+.bs-table1 .agree-check  p a:hover{color:#F70;text-decoration:underline;}
+.bs-table1 .newTip{float:left;margin-top:7px;}
+.bs-table1 .serve-icon .newTip{position:absolute;left:200px;top:37px;margin-top:0;}
+
+.noResult-table{margin:25px auto;}
+.noResult-table em{display:inline-block;margin-right:10px;width:32px;height:32px;background:url("images/tipIcon-1.png")/*tpa=http://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ no-repeat -120px -70px;overflow:hidden;}
+.noResult-table b{line-height:24px;font-size:14px;}
+.noResult-table p{line-height:22px;}
+
+.bs-serve .grade-list .name a{display:inline-block;padding:0 10px;}
+.bs-serve .bs-form{padding:20px 0 0 20px;}
+.bs-serve .bs-form dt{padding-top:10px;}
+.bs-serve .bs-form dt .label{font-size:12px;line-height:32px;}
+.bs-serve .bs-form dd{padding-bottom:0;}
+
+
+

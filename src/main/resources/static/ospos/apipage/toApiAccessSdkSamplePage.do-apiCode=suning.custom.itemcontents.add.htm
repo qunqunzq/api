@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>å¼€æ”¾æœåŠ¡-SDKè°ƒç”¨ç¤ºä¾‹</title>
+	
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="æ‰‹æœº, ç”µè„‘, å†°ç®±, æ´—è¡£æœº, ç›¸æœº, æ•°ç , å®¶å±…ç”¨å“, é‹å¸½, åŒ–å¦†å“, æ¯å©´ç”¨å“, å›¾ä¹¦ï¼Œé£Ÿå“ï¼Œä¿é™©ï¼Œæ—…è¡Œï¼Œå……å€¼ï¼Œå›¢è´­ï¼Œæ­£å“è¡Œè´§, å…¨å›½è”ä¿, è´§åˆ°ä»˜æ¬¾ã€‚"/>
+<meta name="description" content="è‹å®æ˜“è´­æ˜¯é¢†å…ˆçš„ç»¼åˆç½‘ä¸Šè´­ç‰©å•†åŸ, åœ¨çº¿ç‰¹ä»·é”€å”®å®¶ç”µã€é€šè®¯æ•°ç ã€ç”µè„‘ã€å®¶å±…ç™¾è´§ã€æœè£…æœé¥°ã€æ¯å©´ã€å›¾ä¹¦ã€é£Ÿå“ã€ä¿é™©ã€æ—…è¡Œã€å……å€¼ã€å›¢è´­ç­‰æ•°ä¸‡ç±»å•†å“å’ŒæœåŠ¡ã€‚æ­£å“è¡Œè´§, å…¨å›½è”ä¿, æœ¬åœ°é…é€, è´§åˆ°ä»˜æ¬¾ã€‚çœé’±æ”¾å¿ƒä¸Šè‹å®ç”µå™¨ç½‘ä¸Šå•†åŸ, å°½äº«è´­ç‰©ä¹è¶£ï¼"/>
+<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<script src="../../../static.suning.cn/osr/meas/error.js" tppabs="https://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
+			<link rel="stylesheet" href="../staticfiles/css/common.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/common.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/OpenSerNew.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/OpenSerNew.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+</head>
+<body>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    if("" != ""){
+			var userName = "";
+			$("#alLoginName").text(userName);
+			$("#alLoginName").attr("title",userName);
+			$("#alLogin").show();
+			$("#withOutLogin").hide();
+	    }else {
+			var userName = getCookie("osposLoginUserIdFlag");
+			if(userName == ""){
+				var logonStatusVal = getCookie("logonStatus");
+				var authIdVal = getCookie("authId");
+				if((logonStatusVal != undefined && logonStatusVal != "") 
+	       		|| (authIdVal != undefined && authIdVal != "")){
+					userName = getCookie("idsLoginUserIdLastTime");
+				}
+			}
+			if(userName != ""){
+				$("#alLoginName").text(userName);
+				$("#alLoginName").attr("title",userName);
+				$("#alLogin").show();
+				$("#withOutLogin").hide();
+			}else {
+				$("#alLogin").hide();
+				$("#withOutLogin").show();
+			} 
+	    }
+    });
+	
+    function getCookie(cookieName){
+		var cookieArr = document.cookie.split(';');
+		for(var i=0; i<cookieArr.length; i++){
+			var cookie = cookieArr[i];
+			while (cookie.charAt(0)==' '){
+				cookie = cookie.substring(1);
+			}
+			cookieEntry = cookie.split('=');
+			if(cookieEntry[0] == cookieName){
+				return decodeURIComponent(cookieEntry[1]);
+			}
+		}
+		return "";
+    }
+	
+	$(function(){
+        $(".os-nav li").each(function(index){
+            $(this).removeClass("os-on");
+            if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toApi")!=-1&&index=="3"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toDevCenter")!=-1&&index=="4"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname=="/"&&index=="0"){
+                $(this).addClass("os-on");
+            }
+        })                
+	})
+</script>
+<div class="os-top bcs-top">
+	<div class="w1190 clearfix">
+		<div class="l os-snLogo"></div>	
+		<ul class="os-nav">
+			<li class="os-on"><a href="../../index.htm" tppabs="https://open.suning.com/">é¦–é¡µ</a></li>
+			<li><a href="javascript:void(0);">å¼€æ”¾ç‰ˆå›¾<i></i></a>
+				<!--[if IE]>
+				<dl style="margin-left: -104px;margin-top: 55px;">
+				<![endif]-->
+				<!--[if !IE]><!-->
+				<dl>
+			    <!--<![endif]-->
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/road/roadIndex.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://road.suning.com/ospos/road/roadIndex.html'" tppabs="https://road.suning.com/ospos/road/roadIndex.html" target="_blank">ä¸€å·å…¬è·¯å¼€æ”¾</a><i></i></dd>
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/toDevCenter.action  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://road.suning.com/ospos/toDevCenter.action'" tppabs="https://road.suning.com/ospos/toDevCenter.action">å•†å®¶åå°å¼€æ”¾</a><i></i></dd>
+                </dl>
+            </li>
+            <li><a href="toDocCenter.do.htm" tppabs="https://open.suning.com/ospos/apipage/toDocCenter.do">æ–‡æ¡£ä¸­å¿ƒ</a></li>
+			<li><a href="toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do">APIæ–‡æ¡£</a></li>
+			<li><a href="../pushapi/toTopicPageList.do.htm" tppabs="https://open.suning.com/ospos/pushapi/toTopicPageList.do">æ¶ˆæ¯æ–‡æ¡£</a></li>
+			<li><a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/toDevCenter.action">æ§åˆ¶å°</a></li>
+		</ul>
+		
+		<a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/logOut.action" class="os-exit" style="display: none;" id="alLogin">é€€å‡º</a> 
+		<div class="r search-top">
+			<form method="post" action="https://open.suning.com/ospos/apipage/toSearchPage.do" id="tlSearchForm" style="display:inline;float:right;" autocomplete="off">
+                <input type="text" class="os-input" id="tlSearchIn" name="tlSearchName"/>
+                <span class="os-search" id="tlSearchBtn"></span>
+            </form>                
+                <span class="os-search"></span>
+                <span id="alLoginName" class="lname r"></span>
+                <a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/toLogin.action" class="os-login" style="display: none;" id="withOutLogin">ç™»å½•</a>
+		</div>
+	</div>
+</div>
+	<div class="on-wrapp">
+		<div class="clearfix" style="width:1000px;margin: 0 auto;">
+			<div class="on-title">SDKè°ƒç”¨ç¤ºä¾‹ <span>suning.custom.itemcontents.add/</span></div>
+			<div class="te-wrapp" style="height:900px;">
+				<div class="te-right" style="width:100%;">
+					<div class="te-rightDiv">
+						<div style="overflow:hidden;">
+							<span class="l">è°ƒç”¨ç¤ºä¾‹(JAVA)</span>
+							<a href="javascript:void(0);" class="r" onclick="copyToClipBoard('javaSdkSampleTextArea','1')">å¤åˆ¶å…¨éƒ¨ä»£ç </a>
+						</div>
+						<textarea class="te-inDiv" id="javaSdkSampleTextArea">itemContentsAddRequest request = new itemContentsAddRequest();
+request.setAfterSaleServiceDec("7å¤©å†…åŒ…é€€æ¢");
+request.setAlertQty("5");
+request.setAlertQty("5");
+request.setAssortCode("1");
+request.setAutoRefund("0");
+request.setBookingShop("0");
+request.setCmTitle("å•†å“æ ‡é¢˜");
+request.setContent("5aW95ZWG5ZOB");
+request.setCouponId("1");
+request.setDeductiblePrice("1");
+request.setDeductiblePriceChild("1");
+request.setEffectiveDay("99");
+request.setExtractMode("01,10");
+request.setFreightTemplateId("2da499d40cda4389817273ab0affdbed");
+request.setImgUrl("http://1.jpg");
+request.setInsaleRefund("0");
+request.setIntroduction("5aW95ZWG5ZOB");
+request.setInvQty("5");
+request.setInvQty("10");
+request.setItemCode("561");
+request.setItemCode("789123");
+request.setModuleId("1");
+request.setModuleName("å”®åæœåŠ¡");
+request.setModuleName("å”®åæœåŠ¡");
+request.setModuleStatus("1");
+request.setNum("1");
+request.setNum("1");
+request.setPackingListName("è£…ç®±æ¸…å•åç§°");
+request.setPackingListQty("1");
+request.setPayTemplate("1");
+request.setPic("http://1.jpg");
+request.setPrice("100.00");
+request.setPrice("5.00");
+request.setPriceType("01");
+request.setProductCode("104007723");
+request.setProductCode("102652866");
+request.setSaleDate("2013-09-15");
+request.setSaleSet("0");
+request.setSellChannel("01");
+request.setSellPoint("å•†å“å–ç‚¹");
+request.setSourceCountry("CN");
+request.setSummary("1");
+request.setSupplierImg10Url("http://1.jpg...");
+request.setSupplierImg1Url("http://1.jpg");
+request.setSupplierImg1Url("http://1.jpg...");
+request.setSupplierImg2Url("http://1.jpg...");
+request.setSupplierImg3Url("http://1.jpg...");
+request.setSupplierImg4Url("http://1.jpg...");
+request.setSupplierImg5Url("http://1.jpg...");
+request.setSupplierImg6Url("http://1.jpg...");
+request.setSupplierImg7Url("http://1.jpg...");
+request.setSupplierImg8Url("http://1.jpg...");
+request.setSupplierImg9Url("http://1.jpg...");
+request.setText("1");
+request.setTuijianId("1");
+request.setType("usr_mod");
+request.setWriteoffPayment("0");
+request.setWriteoffShop("1");
+//apiå…¥å‚æ ¡éªŒé€»è¾‘å¼€å…³ï¼Œå½“æµ‹è¯•ç¨³å®šä¹‹åå»ºè®®è®¾ç½®ä¸º false æˆ–è€…åˆ é™¤è¯¥è¡Œ
+request.setCheckParam(true);
+String serverUrl = "https://open.suning.com/api/http/sopRequest";
+String appKey = "ä½ çš„appKey";
+String appSecret = "ä½ çš„appSecret";
+DefaultSuningClient client = new DefaultSuningClient(serverUrl, appKey,appSecret, "json");
+try {
+ itemContentsAddResponse response = client.excute(request);
+ System.out.println("è¿”å›json/xmlæ ¼å¼æ•°æ® :" + response.getBody());
+} catch (SuningApiException e) {
+ e.printStackTrace();
+}</textarea>
+						<div style="overflow:hidden;">
+							<span class="l">è°ƒç”¨ç¤ºä¾‹(PHP)</span>
+							<a href="javascript:void(0);" class="r" onclick="copyToClipBoard('phpSdkSampleTextArea','1')">å¤åˆ¶å…¨éƒ¨ä»£ç </a>
+						</div>
+						<textarea class="te-inDiv" id="phpSdkSampleTextArea">$req = new itemContentsAddRequest();
+$req -> setAfterSaleServiceDec("7å¤©å†…åŒ…é€€æ¢");
+$req -> setAlertQty("5");
+$req -> setAlertQty("5");
+$req -> setAssortCode("1");
+$req -> setAutoRefund("0");
+$req -> setBookingShop("0");
+$req -> setCmTitle("å•†å“æ ‡é¢˜");
+$req -> setContent("5aW95ZWG5ZOB");
+$req -> setCouponId("1");
+$req -> setDeductiblePrice("1");
+$req -> setDeductiblePriceChild("1");
+$req -> setEffectiveDay("99");
+$req -> setExtractMode("01,10");
+$req -> setFreightTemplateId("2da499d40cda4389817273ab0affdbed");
+$req -> setImgUrl("http://1.jpg");
+$req -> setInsaleRefund("0");
+$req -> setIntroduction("5aW95ZWG5ZOB");
+$req -> setInvQty("5");
+$req -> setInvQty("10");
+$req -> setItemCode("561");
+$req -> setItemCode("789123");
+$req -> setModuleId("1");
+$req -> setModuleName("å”®åæœåŠ¡");
+$req -> setModuleName("å”®åæœåŠ¡");
+$req -> setModuleStatus("1");
+$req -> setNum("1");
+$req -> setNum("1");
+$req -> setPackingListName("è£…ç®±æ¸…å•åç§°");
+$req -> setPackingListQty("1");
+$req -> setPayTemplate("1");
+$req -> setPic("http://1.jpg");
+$req -> setPrice("100.00");
+$req -> setPrice("5.00");
+$req -> setPriceType("01");
+$req -> setProductCode("104007723");
+$req -> setProductCode("102652866");
+$req -> setSaleDate("2013-09-15");
+$req -> setSaleSet("0");
+$req -> setSellChannel("01");
+$req -> setSellPoint("å•†å“å–ç‚¹");
+$req -> setSourceCountry("CN");
+$req -> setSummary("1");
+$req -> setSupplierImg10Url("http://1.jpg...");
+$req -> setSupplierImg1Url("http://1.jpg");
+$req -> setSupplierImg1Url("http://1.jpg...");
+$req -> setSupplierImg2Url("http://1.jpg...");
+$req -> setSupplierImg3Url("http://1.jpg...");
+$req -> setSupplierImg4Url("http://1.jpg...");
+$req -> setSupplierImg5Url("http://1.jpg...");
+$req -> setSupplierImg6Url("http://1.jpg...");
+$req -> setSupplierImg7Url("http://1.jpg...");
+$req -> setSupplierImg8Url("http://1.jpg...");
+$req -> setSupplierImg9Url("http://1.jpg...");
+$req -> setText("1");
+$req -> setTuijianId("1");
+$req -> setType("usr_mod");
+$req -> setWriteoffPayment("0");
+$req -> setWriteoffShop("1");
+//apiå…¥å‚æ ¡éªŒé€»è¾‘å¼€å…³ï¼Œå½“æµ‹è¯•ç¨³å®šä¹‹åå»ºè®®è®¾ç½®ä¸º false æˆ–è€…åˆ é™¤è¯¥è¡Œ
+$req -> setCheckParam('true');
+$serverUrl = "https://open.suning.com/api/http/sopRequest";
+$appKey = "ä½ çš„appKey";
+$appSecret = "ä½ çš„appSecret";
+$client = new DefaultSuningClient($serverUrl,$appKey,$appSecret,'json');
+$resp = $client -> execute($req);
+print_r("è¿”å›å“åº”æŠ¥æ–‡:".$resp);</textarea>
+						<div style="overflow:hidden;">
+							<span class="l">è°ƒç”¨ç¤ºä¾‹(.NET)</span>
+							<a href="javascript:void(0);" class="r" onclick="copyToClipBoard('netSdkSampleTextArea','1')">å¤åˆ¶å…¨éƒ¨ä»£ç </a>
+						</div>
+						<textarea class="te-inDiv" id="netSdkSampleTextArea">itemContentsAddRequest request = new itemContentsAddRequest();
+request.afterSaleServiceDec="7å¤©å†…åŒ…é€€æ¢";
+request.alertQty="5";
+request.alertQty="5";
+request.assortCode="1";
+request.autoRefund="0";
+request.bookingShop="0";
+request.cmTitle="å•†å“æ ‡é¢˜";
+request.content="5aW95ZWG5ZOB";
+request.couponId="1";
+request.deductiblePrice="1";
+request.deductiblePriceChild="1";
+request.effectiveDay="99";
+request.extractMode="01,10";
+request.freightTemplateId="2da499d40cda4389817273ab0affdbed";
+request.imgUrl="http://1.jpg";
+request.insaleRefund="0";
+request.introduction="5aW95ZWG5ZOB";
+request.invQty="5";
+request.invQty="10";
+request.itemCode="561";
+request.itemCode="789123";
+request.moduleId="1";
+request.moduleName="å”®åæœåŠ¡";
+request.moduleName="å”®åæœåŠ¡";
+request.moduleStatus="1";
+request.num="1";
+request.num="1";
+request.packingListName="è£…ç®±æ¸…å•åç§°";
+request.packingListQty="1";
+request.payTemplate="1";
+request.pic="http://1.jpg";
+request.price="100.00";
+request.price="5.00";
+request.priceType="01";
+request.productCode="104007723";
+request.productCode="102652866";
+request.saleDate="2013-09-15";
+request.saleSet="0";
+request.sellChannel="01";
+request.sellPoint="å•†å“å–ç‚¹";
+request.sourceCountry="CN";
+request.summary="1";
+request.supplierImg10Url="http://1.jpg...";
+request.supplierImg1Url="http://1.jpg";
+request.supplierImg1Url="http://1.jpg...";
+request.supplierImg2Url="http://1.jpg...";
+request.supplierImg3Url="http://1.jpg...";
+request.supplierImg4Url="http://1.jpg...";
+request.supplierImg5Url="http://1.jpg...";
+request.supplierImg6Url="http://1.jpg...";
+request.supplierImg7Url="http://1.jpg...";
+request.supplierImg8Url="http://1.jpg...";
+request.supplierImg9Url="http://1.jpg...";
+request.text="1";
+request.tuijianId="1";
+request.type="usr_mod";
+request.writeoffPayment="0";
+request.writeoffShop="1";
+//å¼€å¯æ—¥å¿—è°ƒè¯•ï¼Œå½“æµ‹è¯•ç¨³å®šä¹‹åå»ºè®®è®¾ç½®ä¸º false æˆ–è€…åˆ é™¤è¯¥è¡Œ
+SuningLogger.IsLogDebug = true;
+string serverUrl = "https://open.suning.com/api/http/sopRequest";
+string appKey = "ä½ çš„appKey";
+string appSecret = "ä½ çš„appSecret";
+ISuningClient client = new DefaultSuningClient(serverUrl, appKey,appSecret);
+itemContentsAddResponse response = client.Execute(request);
+</textarea>
+						<div style="overflow:hidden;">
+							<span class="l">è°ƒç”¨ç¤ºä¾‹(PYTHON)</span>
+							<a href="javascript:void(0);" class="r" onclick="copyToClipBoard('pythonSdkSampleTextArea','1')">å¤åˆ¶å…¨éƒ¨ä»£ç </a>
+						</div>
+						<textarea class="te-inDiv" id="pythonSdkSampleTextArea"># -*- coding: utf-8 -*-
+import suning.api
+request = suning.api.itemContentsAddRequest()
+request.afterSaleServiceDec="7å¤©å†…åŒ…é€€æ¢"
+request.alertQty="5"
+request.alertQty="5"
+request.assortCode="1"
+request.autoRefund="0"
+request.bookingShop="0"
+request.cmTitle="å•†å“æ ‡é¢˜"
+request.content="5aW95ZWG5ZOB"
+request.couponId="1"
+request.deductiblePrice="1"
+request.deductiblePriceChild="1"
+request.effectiveDay="99"
+request.extractMode="01,10"
+request.freightTemplateId="2da499d40cda4389817273ab0affdbed"
+request.imgUrl="http://1.jpg"
+request.insaleRefund="0"
+request.introduction="5aW95ZWG5ZOB"
+request.invQty="5"
+request.invQty="10"
+request.itemCode="561"
+request.itemCode="789123"
+request.moduleId="1"
+request.moduleName="å”®åæœåŠ¡"
+request.moduleName="å”®åæœåŠ¡"
+request.moduleStatus="1"
+request.num="1"
+request.num="1"
+request.packingListName="è£…ç®±æ¸…å•åç§°"
+request.packingListQty="1"
+request.payTemplate="1"
+request.pic="http://1.jpg"
+request.price="100.00"
+request.price="5.00"
+request.priceType="01"
+request.productCode="104007723"
+request.productCode="102652866"
+request.saleDate="2013-09-15"
+request.saleSet="0"
+request.sellChannel="01"
+request.sellPoint="å•†å“å–ç‚¹"
+request.sourceCountry="CN"
+request.summary="1"
+request.supplierImg10Url="http://1.jpg..."
+request.supplierImg1Url="http://1.jpg"
+request.supplierImg1Url="http://1.jpg..."
+request.supplierImg2Url="http://1.jpg..."
+request.supplierImg3Url="http://1.jpg..."
+request.supplierImg4Url="http://1.jpg..."
+request.supplierImg5Url="http://1.jpg..."
+request.supplierImg6Url="http://1.jpg..."
+request.supplierImg7Url="http://1.jpg..."
+request.supplierImg8Url="http://1.jpg..."
+request.supplierImg9Url="http://1.jpg..."
+request.text="1"
+request.tuijianId="1"
+request.type="usr_mod"
+request.writeoffPayment="0"
+request.writeoffShop="1"
+domain = "https://open.suning.com"
+appKey  = "ä½ çš„appKey"
+appSecret  = "ä½ çš„appSecret"
+request.setDomainInfo(domain,"80")
+request.setAppInfo(appKey,appSecret)
+try:
+result=request.getResponse()
+print(result)
+except Exception as e:
+print(e)
+</textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	<!-- ç½®é¡¶ -->
+	<div class="os-topTo" style="bottom: 220px;"></div>
+
+<div class="foot">
+    <iframe scrolling="no" frameborder="0" width="100%" height="165" src="../../../sop.suning.com/sel/portal/common/footer.html" tppabs="https://sop.suning.com/sel/portal/common/footer.html"></iframe>
+</div>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/OpenSer.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/open/OpenSer.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/common.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/custom/common.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/json2.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/custom/json2.js?v=v1.0" charset="UTF-8"></script>
+	<script src="../../../static.suning.cn/osr/meas/time.js" tppabs="https://static.suning.cn/osr/meas/time.js"></script>
+</body>
+</html>

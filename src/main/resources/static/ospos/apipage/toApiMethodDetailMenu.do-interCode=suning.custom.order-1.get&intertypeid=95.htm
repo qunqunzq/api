@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>开放服务-API接口详情</title>
+	
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="手机, 电脑, 冰箱, 洗衣机, 相机, 数码, 家居用品, 鞋帽, 化妆品, 母婴用品, 图书，食品，保险，旅行，充值，团购，正品行货, 全国联保, 货到付款。"/>
+<meta name="description" content="苏宁易购是领先的综合网上购物商城, 在线特价销售家电、通讯数码、电脑、家居百货、服装服饰、母婴、图书、食品、保险、旅行、充值、团购等数万类商品和服务。正品行货, 全国联保, 本地配送, 货到付款。省钱放心上苏宁电器网上商城, 尽享购物乐趣！"/>
+<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<script src="../../../static.suning.cn/osr/meas/error-1.js" tppabs="http://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
+			<link rel="stylesheet" href="../staticfiles/css/common.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/common.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/OpenSerNew.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/OpenSerNew.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/plugins/syntaxhighlighter/styles/shCore.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/styles/shCore.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/plugins/syntaxhighlighter/styles/shThemeDefault.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/styles/shThemeDefault.css?v=v1.0"></link>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+</head>
+<body>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    if("" != ""){
+			var userName = "";
+			$("#alLoginName").text(userName);
+			$("#alLoginName").attr("title",userName);
+			$("#alLogin").show();
+			$("#withOutLogin").hide();
+	    }else {
+			var userName = getCookie("osposLoginUserIdFlag");
+			if(userName == ""){
+				var logonStatusVal = getCookie("logonStatus");
+				var authIdVal = getCookie("authId");
+				if((logonStatusVal != undefined && logonStatusVal != "") 
+	       		|| (authIdVal != undefined && authIdVal != "")){
+					userName = getCookie("idsLoginUserIdLastTime");
+				}
+			}
+			if(userName != ""){
+				$("#alLoginName").text(userName);
+				$("#alLoginName").attr("title",userName);
+				$("#alLogin").show();
+				$("#withOutLogin").hide();
+			}else {
+				$("#alLogin").hide();
+				$("#withOutLogin").show();
+			} 
+	    }
+    });
+	
+    function getCookie(cookieName){
+		var cookieArr = document.cookie.split(';');
+		for(var i=0; i<cookieArr.length; i++){
+			var cookie = cookieArr[i];
+			while (cookie.charAt(0)==' '){
+				cookie = cookie.substring(1);
+			}
+			cookieEntry = cookie.split('=');
+			if(cookieEntry[0] == cookieName){
+				return decodeURIComponent(cookieEntry[1]);
+			}
+		}
+		return "";
+    }
+	
+	$(function(){
+        $(".os-nav li").each(function(index){
+            $(this).removeClass("os-on");
+            if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toApi")!=-1&&index=="3"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toDevCenter")!=-1&&index=="4"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname=="/"&&index=="0"){
+                $(this).addClass("os-on");
+            }
+        })                
+	})
+</script>
+<div class="os-top bcs-top">
+	<div class="w1190 clearfix">
+		<div class="l os-snLogo"></div>	
+		<ul class="os-nav">
+			<li class="os-on"><a href="../../index-1.htm" tppabs="http://open.suning.com/">首页</a></li>
+			<li><a href="javascript:void(0);">开放版图<i></i></a>
+				<!--[if IE]>
+				<dl style="margin-left: -104px;margin-top: 55px;">
+				<![endif]-->
+				<!--[if !IE]><!-->
+				<dl>
+			    <!--<![endif]-->
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/road/roadIndex.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/road/roadIndex.html'" tppabs="https://road.suning.com/ospos/road/roadIndex.html" target="_blank">一号公路开放</a><i></i></dd>
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/toDevCenter.action  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/toDevCenter.action'" tppabs="https://road.suning.com/ospos/toDevCenter.action">商家后台开放</a><i></i></dd>
+                </dl>
+            </li>
+            <li><a href="toDocCenter-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toDocCenter.do">文档中心</a></li>
+			<li><a href="toApiListMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiListMenu.do">API文档</a></li>
+			<li><a href="../pushapi/toTopicPageList-1.do.htm" tppabs="http://open.suning.com/ospos/pushapi/toTopicPageList.do">消息文档</a></li>
+			<li><a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/toDevCenter.action">控制台</a></li>
+		</ul>
+		
+		<a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/logOut.action" class="os-exit" style="display: none;" id="alLogin">退出</a> 
+		<div class="r search-top">
+			<form method="post" action="http://open.suning.com/ospos/apipage/toSearchPage.do" id="tlSearchForm" style="display:inline;float:right;" autocomplete="off">
+                <input type="text" class="os-input" id="tlSearchIn" name="tlSearchName"/>
+                <span class="os-search" id="tlSearchBtn"></span>
+            </form>                
+                <span class="os-search"></span>
+                <span id="alLoginName" class="lname r"></span>
+                <a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/toLogin.action" class="os-login" style="display: none;" id="withOutLogin">登录</a>
+		</div>
+	</div>
+</div>
+	<div class="on-wrapp">
+		<div class="w1190 clearfix mb40 oh" style="position:relative;">
+			<div class="on-title">
+				<div class="go-title"><a href="toApiListMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiListMenu.do">API</a> &gt; <a href="toApiListMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiListMenu.do">API列表</a> &gt;<span><a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=79&bustypeId=1  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ����������ʼ��ַ��Զ�����ӡ������������ʼ��ַ�����������, ���ļ������������ض��С�  \n\n�����ڷ������ϴ���?'))window.location='http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=79&bustypeId=1'" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=79&bustypeId=1">订单API</a></span></div>
+			</div>
+			<div class="on-menuL w238">
+				<a href="toApiListMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiListMenu.do" class="go-backLink"><em></em>返回API列表</a>
+				<div class="su-list">
+					<ul>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.order-1.query&intertypeid=95.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.order.query&interTypeId=95*/;" title="suning.custom.order.query 批量获取订单（三个月内的订单）">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.order.query</a>
+											<p>批量获取订单（三个月内的订单）</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.historyorder-1.query&intertypeid=95.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.historyorder.query&interTypeId=95*/;" title="suning.custom.historyorder.query 批量获取历史订单（三个月前的历史订单）">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.historyorder.query</a>
+											<p>批量获取历史订单（三个月前的历史订单）</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.order-1.get&intertypeid=95.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.order.get&interTypeId=95*/;" class="on-menuOn" title="suning.custom.order.get 单笔订单查询">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.order.get</a>
+											<p>单笔订单查询</p>
+										</div>
+										<div class="su-mask su-mask1"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.unpaidorder-1.query&intertypeid=95.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.unpaidorder.query&interTypeId=95*/;" title="suning.custom.unpaidorder.query 未付款订单查询">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.unpaidorder.query</a>
+											<p>未付款订单查询</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+					</ul>
+				</div>
+				<a href="toApiErrorCodeMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiErrorCodeMenu.do"><div class="ap-APIDoc"><em></em>异常码自查工具</div></a>
+			</div>
+			<div class="on-menuR ml240 clearfix"  style="position: relative;">
+			<div class="p30">
+				<span class="on-title su-titPos">suning.custom.order.get&nbsp;单笔订单查询</span>
+				<p class="tnote">
+			<span style='color: rgb(51, 51, 51); font-family: ' microsoft='' yahei';'=''>通过此接口可进行单笔订单的查询。</span><br style='color: rgb(51, 51, 51); font-family: ' microsoft='' yahei';'=''><span style='color: rgb(51, 51, 51); font-family: ' microsoft='' yahei';'=''>1、订单号可通过接口“suning.custom.order.query”、“suning.custom.historyorder.query”、“suning.custom.ordercode.query”获取；</span><br style='color: rgb(51, 51, 51); font-family: ' microsoft='' yahei';'=''><span style='color: rgb(51, 51, 51); font-family: ' microsoft='' yahei';'=''>2、返回省、市、区代码与中文名称，及中文详细地址，省、市、区代码与详细中文地址省、市、区对应；</span><br style='color: rgb(51, 51, 51); font-family: ' microsoft='' yahei';'=''><span style='color: rgb(51, 51, 51); font-family: ' microsoft='' yahei';'=''>3、商户商品编码可依据苏宁商品编码，通过接口“suning.custom.item.get”获取；</span><br style='color: rgb(51, 51, 51); font-family: ' microsoft='' yahei';'=''><span style='color: rgb(51, 51, 51); font-family: ' microsoft='' yahei';'=''>4、订单状态指当前订单总状态，10表示待发货、20表示已发货、21表示部分发货、30表示交易成功、40表示交易关闭五种状态，部分发货状态表示订单行项目状态有待发货、已发货两种状态；&nbsp;</span><br style='color: rgb(51, 51, 51); font-family: ' microsoft='' yahei';'=''><span style='color: rgb(51, 51, 51); font-family: ' microsoft='' yahei';'=''>5、订单行项目状态指订单明细状态，10表示待发货、20表示已发货、30表示交易成功三种状态；</span><br style='color: rgb(51, 51, 51); font-family: ' microsoft='' yahei';'=''><span style='color: rgb(51, 51, 51); font-family: ' microsoft='' yahei';'=''>6、实际收款=价格*数量+运费-优惠券金额-优惠单金额</span>
+		</p>
+					<ul class="su-titList pos">
+						<li class="cur"><a href="#local1" id="scroll-it1">公共参数</a></li>
+						<li><a href="#local2" id="scroll-it2">请求参数</a></li>
+						<li><a href="#local3" id="scroll-it3">响应参数</a></li>
+						<li><a href="#local4" id="scroll-it4">请求示例</a></li>
+						<li><a href="#local5" id="scroll-it5">响应示例</a></li>
+						<li><a href="#local6" id="scroll-it6">异常示例</a></li>
+						<li><a href="#local7" id="scroll-it7">业务异常码</a></li>
+						<li><a href="#local8" id="scroll-it8">公共异常码</a></li>
+						<li><a href="#local9" id="scroll-it9">API工具</a></li>
+						<li><a href="#local10" id="scroll-it10">FAQ</a></li>
+					</ul>
+				<div class="pr-title pr-t1" id="local1"><span class="l">公共参数</span><em class="pr-em pr-down pr-up"></em></div>
+                <div class="pr-con1" style="display: none;">
+                    <table class="su-table mb30">
+                    <colgroup>
+                        <col width="20%"></col>
+                        <col width="10%"></col>
+                        <col width="10%"></col>
+                        <col width="10%"></col>
+                        <col></col>
+                    </colgroup>
+                    <tr>
+                        <th style="text-align:left;">名称</th>
+                        <th align="center">类型</th>
+                        <th align="center">是否必须</th>
+                        <th align="center">示例值</th>
+                        <th class="addBR" style="text-align:left;">描述</th>
+                    </tr>
+							<tr class="odds" name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">appMethod</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">suning.custom.category.query</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">API接口名称</td>
+							</tr>
+							<tr name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">appRequestTime</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">2012-04-25 20:23:30</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">时间戳，格式为yyyy-MM-dd HH:mm:ss，例如：2012-04-25 20:23:30。API服务端允许客户端请求时间误差为10分钟。</td>
+							</tr>
+							<tr class="odds" name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">format</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										N
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">XML</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">默认xml,可指定格式为xml,json</td>
+							</tr>
+							<tr name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">appKey</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">b0c332a133c102765f39de**********</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">分配给应用的访问令牌</td>
+							</tr>
+							<tr class="odds" name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">versionNo</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">v1.2</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">API的版本，目前为v1.2版本</td>
+							</tr>
+							<tr name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">signInfo</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">460d7ff15b073e463125b4**********</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">appSecret,appMethod ,appRequestTime, appKey, versionNo, 请求报文base64加密后的数据顺序MD5(32位小写)，其中appSecret为appKey对应的密钥</td>
+							</tr>
+							<tr class="odds" name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">access_token</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										N
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">a1c5c62b08df3a3cbf7efd**********</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">采用OAuth授权方式为必填参数</td>
+							</tr>
+                </table>
+                </div>
+				<div class="pr-title pr-t2" id="local2"><span class="l">请求参数</span><em class="pr-em pr-down pr-up"></em></div>
+                <div class="pr-con2">
+                    <table class="su-table mb30 JS_showHide">
+                        <colgroup>
+                            <col width="30%"></col>
+                            <col width="10%"></col>
+                            <col width="10%"></col>
+                            <col width="10%"></col>
+                            <col width="30%"></col>
+                        </colgroup>
+                        <tr>
+                            <th align="center" style="text-align:left;">名称</th>
+                            <th align="center">类型</th>
+                            <th align="center">是否必须</th>
+                            <th align="center">示例值</th>
+                            <th class="addBR" style="text-align:left;">描述</th>
+                        </tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>orderCode</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>Y</td><td class='addBB' style='text-align:left;word-break: break-word;'>4511680451</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>B2C订单号</td></tr>
+                    </table>
+                </div>
+				<div class="pr-title pr-t3" id="local3"><span class="l">响应参数</span><em class="pr-em pr-down"></em></div>
+				<div class="pr-con3">
+					<table class="su-table mb30 JS_showHide">
+						<colgroup>
+							<col width="30%"></col>
+							<col width="10%"></col>
+							<col width="10%"></col>
+							<col width="30%"></col>
+						</colgroup>
+						<tr>
+							<th align="center" style="text-align:left;">名称</th>
+							<th align="center">类型</th>
+							<th align="center">示例值</th>
+							<th align="center" class="addBR" style="text-align:left;">描述</th>
+						</tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>account</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>6YUIOP3456789009876</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>开户账号</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>bank</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>南京市白下区淮海路68号苏宁电器大厦18F</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>开户行</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>buyerOrdRemark</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>尽快发货哦</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>订单备注（买家）--买家对订单的备注信息</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>cityCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>000001000267</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>城市代码</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>cityName</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>南京市</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>收件人地址（市）中文</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>customerAddress</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>上海上海市黄浦区太平路18号</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>详细地址</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>customerName</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>张三三</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>顾客姓名</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>districtCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>00000001</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>区域代码</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>districtName</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>玄武区</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>收件人地址（区）中文</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>evaluationMark</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>0</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>评价状态。0=未评价；1=已评价</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>invoice</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>发票内容</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>发票内容</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>invoiceHead</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>张三三</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>发票抬头</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>invoiceRecipientAddress</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>南京市白下区淮海路68号苏宁电器大厦18F</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>发票收件人地址</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>invoiceRecipientHandPhone</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>18651662963</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>发票收件人手机</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>invoiceRecipientName</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>张涛</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>发票收件人姓名</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>invoiceRecipientPhone</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>02584418888</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>发票收件人电话</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>invoiceType</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>增值税</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>发票类型 -- 增值还是普通（01增值 02普通 04 电子发票）</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>isCanModifyTransportFee</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>N</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>是否能够修改运费</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>mobNum</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>18611111111</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>买家联系电话</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>needinvoiceflag</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>Y</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>是否需要发票（Y：需要，N：不需要）</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>orderCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>1000831522</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>订单号</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 0px;'><i class='plus_link'></i>orderDetail</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'></td><td class='addBR addBB' style='text-align:left;word-break: break-word;'></td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>activitytype</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>02</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>活动类型（02：渠道专享订单，03：免费试用订单，04：付邮试用订单，05,06：预定订单，07：秒杀订单，08：S码活动订单，09：赠品）</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='plus_link'></i>activityTypes</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'></td><td class='addBR addBB' style='text-align:left;word-break: break-word;'></td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>activityTypeCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>活动类型（1：闪拍，2：免费试用，3：付邮试用，4：渠道专享，5：预定，6：秒杀，7：S码，8：大聚会，9：赠品）</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>bLineNumber</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>90004000001</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>b2c行项目号</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>carShopAddr</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>南京市白下区淮宁电器大厦18F</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>汽车服务门店地址</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>carShopCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>1001</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>汽车服务门店编码</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>carShopName</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>南京市鼓楼区服务站</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>汽车服务门店名称</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>carShopSerWay</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>汽车服务方式（1-上门服务，2-到店服务）</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>carShopTel</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>02558761110</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>汽车服务门店电话</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='plus_link'></i>couponList</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'></td><td class='addBR addBB' style='text-align:left;word-break: break-word;'></td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>coupontype</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>8012</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>券类型。券类型表示返券返积分的类型：5998-店铺优惠券、6998-联合0元购券、7998-0元购券、8012-积分抵现、9994-优惠券、9995-优惠券。</td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>sharelimit</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>20.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>销售单据分摊金额。订单返券返积分总金额需每个行项目的销售单据分摊额度累计。</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>coupontotalMoney</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>0.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>优惠劵金额</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>declareGoodsAmount</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>30.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>申报订单行货款</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>declareItemPrice</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>20.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>申报单价</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>declareItemTaxfare</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>2.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>申报税费</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>disType</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>01</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>发货方式。01 代表海外直邮发货；02代表商家保税区发货；03代表苏宁保税区发货;空代表国内海外购</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>expresscompanycode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>E01</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>物流公司编码</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>expressno</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>EMS1001</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>运单号</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>fpsdeliveryflag</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>0</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>4PS发货标示,1代表4PS发货、0代表C店发货</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>hwgFlag</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>01</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>海外购标识。01表示海外购订单，其他值为非海外购订单</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>invCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>D01</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>仓库编码</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>isProsupplierDelivery</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>是否供应商发货标识，1代表是</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>itemCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>B1001</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家商品编码</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>itemTaxFare</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>10.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>税费</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>mode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>02</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>通关模式(01:保税备货,02:海外直邮,03:个人申报,04:邮关)</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>orderchannel</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>MOBILE</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>订单渠道。PC，手机MOBILE，WAP， 电话PHONE</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='plus_link'></i>orderChannels</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'></td><td class='addBR addBB' style='text-align:left;word-break: break-word;'></td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>orderChannelCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>订单渠道（1：网盟，2：手机订单，3：门店订单：）</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>orderLineNumber</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>1000231255</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>订单行项目号</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>orderLineStatus</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>20</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>订单行项目状态。0:订单取消；5:等待支付；10=待发货；15:发货中；20=已发货；30=交易成功</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>packageorderid</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>00000000100001785834</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>包裹号</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>payAmount</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>299.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>付款金额。订单行项目金额</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>payerCustomerName</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>张三</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>支付人姓名</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>payerIdNumber</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>342111198811212222</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>支付人身份证号码</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='plus_link'></i>paymentList</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'></td><td class='addBR addBB' style='text-align:left;word-break: break-word;'></td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>banktypecode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>10006</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>支付方式编码。表示对订单使用的券用积分类型：5998-店铺优惠券、6998-联合0元购券、7998-0元购券、8012-积分抵现、9994-优惠券、9995-优惠券、10001-云券、10002-限品类云券、10003-店铺云券、10004-易券、10005-限品类易券、10006-店铺易券、10009-无敌券。</td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>offLinePayFlag</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>线下支付：1；非线下支付：空值</td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>payamount</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>10.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>支付方式分摊金额。订单使用劵和积分总金额需每个行项目的支付方式分摊金额累计。</td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>paycode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>4148</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>付款方式。4148-易付宝支付、5002-礼品卡支付、9003-门店付款、6901-券或云钻支付、6903-易付宝优惠券支付、2037-光大MIS银行卡（新）、1001-现金(CASH)、2044-建行MIS银行卡（新）、6906-赠品支付、4237-支付宝支付、4245-微信支付</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>payorderid</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>P00000000100001785834</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>支付单号</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='plus_link'></i>payTypes</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'></td><td class='addBR addBB' style='text-align:left;word-break: break-word;'></td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>payTypeCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>支付方式（1：云钻-加钱购，2：云钻-全额兑，3：礼品卡，4：门店付款，5：货到付款，6：在线支付，7：支付宝）</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>phoneIdentifyCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>102003303202</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>手机串码</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>prmtcode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>01</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>推广方式。取值为01时，表示网盟</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>productCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>102609881</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>苏宁商品编码</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>productName</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>销售组汤锅02</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商品中文名称</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>receivezipCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>211806</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>收货人邮政编码</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>reservebalanceamount</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>100.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>预定尾款金额</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>reservedepositamount</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>100.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>预定定金金额</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>reservestatus</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>M</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>预定状态（M：定金已支付，P：定金已罚没，R：定金已退还）</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>returnOrderFlag</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>退货订单标示位 0表示正常订单, 1表示退货订单</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>saleNum</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>1.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>数量</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>transportFee</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>0.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>运费。订单行项目对应的运费</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>unitPrice</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>188.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商品单价</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>vouchertotalMoney</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>0.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>优惠单金额</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>serviceItemFlag</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>0非服务行 ,1服务行</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>otoStoreCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>139123456</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>O2O门店编码</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>otoStoreName</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>海青O2O门店</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>O2O门店编码</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>otoOrderType</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>01-一口价电子凭证 02-特权定金 03-分阶段订单 04 线下现场拿货 05 线下快递上门 </td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>O2O订单类型</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>expandAmount</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>100.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>膨胀金额</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>refVerifyCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>123654789</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>特权定金验证码</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>orderSaleTime</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>2013-11-26 09:24:58</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>订单创建时间,格式：yyyy-MM-dd HH:mm:ss</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>orderTotalStatus</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>10</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>订单总状态</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>payTotalAmount</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>110.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>支付金额，支付方式的支付金额</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>payType</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>礼品卡支付方式</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>支付方式，如礼品卡支付</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>provinceCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>020</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>省份代码。</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>provinceName</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>江苏省</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>收件人地址（省）中文</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>registerAddress</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>南京市白下区淮海路68号苏宁电器大厦18F</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>注册地址</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>registerPhone</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>02584418888</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>注册电话</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>sellerOrdRemark</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>顾客要求延迟发货</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>订单备注（卖家）--商家对订单的备注信息</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>userName</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>huiyuan2013_sit009@163.com</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>买家帐号</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>vatTaxpayerNumber</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>WERTDTG1234567</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>纳税人识别号</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>guideAccountNo</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>msopo2o@1.com</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>下单导购帐号</td></tr>
+					</table>
+				</div>
+				<div class="pr-title pr-t4" id="local4"><span class="l">请求示例</span><em class="pr-em pr-down"></em></div>
+				<div class="pr-con4">
+                    <div class="tab">
+                        <div class="tab-handler">
+                            <ul>
+                                <li atr="reqxml">XML示例</li>
+                                <li atr="reqjson">JSON示例</li>
+                            </ul>
+                            <a href="javascript:void(0);" id="interReqSampleXmlDivHref" class="copy" onclick='copyToClipBoardText(this)'>复制全部代码</a>
+                            <input type="hidden" value="
+&lt;sn_request&gt;
+  &lt;sn_body&gt;
+    &lt;orderGet&gt;
+      &lt;orderCode&gt;4511680451&lt;/orderCode&gt;
+    &lt;/orderGet&gt;
+  &lt;/sn_body&gt;
+&lt;/sn_request&gt;
+
+			"/>
+                            <a href="javascript:void(0);" id="interReqSampleJsonDivHref" class="copy" onclick='copyToClipBoardText(this)' style="display:none;">复制全部代码</a>
+                        	<input type="hidden" value='
+{
+  "sn_request": {
+    "sn_body": {
+      "orderGet": {
+        "orderCode": "4511680451"
+      }
+    }
+  }
+}
+			'/>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-panel">
+                                <pre class='brush:xml;toolbar:false;'>
+
+&lt;sn_request&gt;
+  &lt;sn_body&gt;
+    &lt;orderGet&gt;
+      &lt;orderCode&gt;4511680451&lt;/orderCode&gt;
+    &lt;/orderGet&gt;
+  &lt;/sn_body&gt;
+&lt;/sn_request&gt;
+
+			
+								</pre>
+                            </div>
+                            <div class="tab-panel">
+                                <pre class='brush:javascript;toolbar:false;'>
+
+{
+  "sn_request": {
+    "sn_body": {
+      "orderGet": {
+        "orderCode": "4511680451"
+      }
+    }
+  }
+}
+			
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="pr-title pr-t5" id="local5"><span class="l">响应示例</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con5">
+                    <div class="tab">
+                        <div class="tab-handler">
+                            <ul>
+                                <li atr="respxml">XML示例</li>
+                                <li atr="respjson">JSON示例</li>
+                            </ul>
+                            <a href="javascript:void(0);" id="interRespSampleXmlDivHref" class="copy" onclick='copyToClipBoardText(this)'>复制全部代码</a>
+                            <input type="hidden" value="
+&lt;sn_responseContent&gt;
+  &lt;sn_body&gt;
+    &lt;orderGet&gt;
+      &lt;mobNum&gt;18611111111&lt;/mobNum&gt;
+      &lt;orderCode&gt;1000831522&lt;/orderCode&gt;
+      &lt;invoice&gt;&#21457;&#31080;&#20869;&#23481;&lt;/invoice&gt;
+      &lt;provinceCode&gt;020&lt;/provinceCode&gt;
+      &lt;cityName&gt;&#21335;&#20140;&#24066;&lt;/cityName&gt;
+      &lt;cityCode&gt;000001000267&lt;/cityCode&gt;
+      &lt;provinceName&gt;&#27743;&#33487;&#30465;&lt;/provinceName&gt;
+      &lt;registerAddress&gt;&#21335;&#20140;&#24066;&#30333;&#19979;&#21306;&#28142;&#28023;&#36335;68&#21495;&#33487;&#23425;&#30005;&#22120;&#22823;&#21414;18F&lt;/registerAddress&gt;
+      &lt;invoiceRecipientHandPhone&gt;18651662963&lt;/invoiceRecipientHandPhone&gt;
+      &lt;registerPhone&gt;02584418888&lt;/registerPhone&gt;
+      &lt;invoiceRecipientAddress&gt;&#21335;&#20140;&#24066;&#30333;&#19979;&#21306;&#28142;&#28023;&#36335;68&#21495;&#33487;&#23425;&#30005;&#22120;&#22823;&#21414;18F&lt;/invoiceRecipientAddress&gt;
+      &lt;isCanModifyTransportFee&gt;N&lt;/isCanModifyTransportFee&gt;
+      &lt;invoiceHead&gt;&#24352;&#19977;&#19977;&lt;/invoiceHead&gt;
+      &lt;buyerOrdRemark&gt;&#23613;&#24555;&#21457;&#36135;&#21734;&lt;/buyerOrdRemark&gt;
+      &lt;payTotalAmount&gt;110.00&lt;/payTotalAmount&gt;
+      &lt;vatTaxpayerNumber&gt;WERTDTG1234567&lt;/vatTaxpayerNumber&gt;
+      &lt;guideAccountNo&gt;msopo2o@1.com&lt;/guideAccountNo&gt;
+      &lt;invoiceRecipientPhone&gt;02584418888&lt;/invoiceRecipientPhone&gt;
+      &lt;userName&gt;huiyuan2013_sit009@163.com&lt;/userName&gt;
+      &lt;bank&gt;&#21335;&#20140;&#24066;&#30333;&#19979;&#21306;&#28142;&#28023;&#36335;68&#21495;&#33487;&#23425;&#30005;&#22120;&#22823;&#21414;18F&lt;/bank&gt;
+      &lt;orderSaleTime&gt;2013-11-26 09:24:58&lt;/orderSaleTime&gt;
+      &lt;customerName&gt;&#24352;&#19977;&#19977;&lt;/customerName&gt;
+      &lt;needinvoiceflag&gt;Y&lt;/needinvoiceflag&gt;
+      &lt;orderTotalStatus&gt;10&lt;/orderTotalStatus&gt;
+      &lt;invoiceType&gt;&#22686;&#20540;&#31246;&lt;/invoiceType&gt;
+      &lt;sellerOrdRemark&gt;&#39038;&#23458;&#35201;&#27714;&#24310;&#36831;&#21457;&#36135;&lt;/sellerOrdRemark&gt;
+      &lt;evaluationMark&gt;0&lt;/evaluationMark&gt;
+      &lt;districtName&gt;&#29572;&#27494;&#21306;&lt;/districtName&gt;
+      &lt;districtCode&gt;00000001&lt;/districtCode&gt;
+      &lt;orderDetail&gt;
+        &lt;otoStoreName&gt;&#28023;&#38738;O2O&#38376;&#24215;&lt;/otoStoreName&gt;
+        &lt;phoneIdentifyCode&gt;102003303202&lt;/phoneIdentifyCode&gt;
+        &lt;hwgFlag&gt;01&lt;/hwgFlag&gt;
+        &lt;expressno&gt;EMS1001&lt;/expressno&gt;
+        &lt;unitPrice&gt;188.00&lt;/unitPrice&gt;
+        &lt;reservedepositamount&gt;100.00&lt;/reservedepositamount&gt;
+        &lt;saleNum&gt;1.00&lt;/saleNum&gt;
+        &lt;invCode&gt;D01&lt;/invCode&gt;
+        &lt;couponList&gt;
+          &lt;sharelimit&gt;20.00&lt;/sharelimit&gt;
+          &lt;coupontype&gt;8012&lt;/coupontype&gt;
+        &lt;/couponList&gt;
+        &lt;returnOrderFlag&gt;1&lt;/returnOrderFlag&gt;
+        &lt;activitytype&gt;02&lt;/activitytype&gt;
+        &lt;otoOrderType&gt;01-&#19968;&#21475;&#20215;&#30005;&#23376;&#20973;&#35777; 02-&#29305;&#26435;&#23450;&#37329; 03-&#20998;&#38454;&#27573;&#35746;&#21333; 04 &#32447;&#19979;&#29616;&#22330;&#25343;&#36135; 05 &#32447;&#19979;&#24555;&#36882;&#19978;&#38376; &lt;/otoOrderType&gt;
+        &lt;fpsdeliveryflag&gt;0&lt;/fpsdeliveryflag&gt;
+        &lt;otoStoreCode&gt;139123456&lt;/otoStoreCode&gt;
+        &lt;orderLineStatus&gt;20&lt;/orderLineStatus&gt;
+        &lt;itemCode&gt;B1001&lt;/itemCode&gt;
+        &lt;itemTaxFare&gt;10.00&lt;/itemTaxFare&gt;
+        &lt;prmtcode&gt;01&lt;/prmtcode&gt;
+        &lt;payerCustomerName&gt;&#24352;&#19977;&lt;/payerCustomerName&gt;
+        &lt;reservebalanceamount&gt;100.00&lt;/reservebalanceamount&gt;
+        &lt;carShopCode&gt;1001&lt;/carShopCode&gt;
+        &lt;payTypes&gt;
+          &lt;payTypeCode&gt;1&lt;/payTypeCode&gt;
+        &lt;/payTypes&gt;
+        &lt;payerIdNumber&gt;342111198811212222&lt;/payerIdNumber&gt;
+        &lt;reservestatus&gt;M&lt;/reservestatus&gt;
+        &lt;declareGoodsAmount&gt;30.00&lt;/declareGoodsAmount&gt;
+        &lt;orderChannels&gt;
+          &lt;orderChannelCode&gt;1&lt;/orderChannelCode&gt;
+        &lt;/orderChannels&gt;
+        &lt;carShopName&gt;&#21335;&#20140;&#24066;&#40723;&#27004;&#21306;&#26381;&#21153;&#31449;&lt;/carShopName&gt;
+        &lt;expresscompanycode&gt;E01&lt;/expresscompanycode&gt;
+        &lt;orderchannel&gt;MOBILE&lt;/orderchannel&gt;
+        &lt;activityTypes&gt;
+          &lt;activityTypeCode&gt;1&lt;/activityTypeCode&gt;
+        &lt;/activityTypes&gt;
+        &lt;mode&gt;02&lt;/mode&gt;
+        &lt;packageorderid&gt;00000000100001785834&lt;/packageorderid&gt;
+        &lt;transportFee&gt;0.00&lt;/transportFee&gt;
+        &lt;vouchertotalMoney&gt;0.00&lt;/vouchertotalMoney&gt;
+        &lt;serviceItemFlag&gt;1&lt;/serviceItemFlag&gt;
+        &lt;declareItemPrice&gt;20.00&lt;/declareItemPrice&gt;
+        &lt;expandAmount&gt;100.00&lt;/expandAmount&gt;
+        &lt;orderLineNumber&gt;1000231255&lt;/orderLineNumber&gt;
+        &lt;bLineNumber&gt;90004000001&lt;/bLineNumber&gt;
+        &lt;carShopSerWay&gt;1&lt;/carShopSerWay&gt;
+        &lt;paymentList&gt;
+          &lt;banktypecode&gt;10006&lt;/banktypecode&gt;
+          &lt;offLinePayFlag&gt;1&lt;/offLinePayFlag&gt;
+          &lt;payamount&gt;10.00&lt;/payamount&gt;
+          &lt;paycode&gt;4148&lt;/paycode&gt;
+        &lt;/paymentList&gt;
+        &lt;payAmount&gt;299.00&lt;/payAmount&gt;
+        &lt;receivezipCode&gt;211806&lt;/receivezipCode&gt;
+        &lt;productCode&gt;102609881&lt;/productCode&gt;
+        &lt;refVerifyCode&gt;123654789&lt;/refVerifyCode&gt;
+        &lt;coupontotalMoney&gt;0.00&lt;/coupontotalMoney&gt;
+        &lt;carShopAddr&gt;&#21335;&#20140;&#24066;&#30333;&#19979;&#21306;&#28142;&#23425;&#30005;&#22120;&#22823;&#21414;18F&lt;/carShopAddr&gt;
+        &lt;payorderid&gt;P00000000100001785834&lt;/payorderid&gt;
+        &lt;isProsupplierDelivery&gt;1&lt;/isProsupplierDelivery&gt;
+        &lt;disType&gt;01&lt;/disType&gt;
+        &lt;declareItemTaxfare&gt;2.00&lt;/declareItemTaxfare&gt;
+        &lt;carShopTel&gt;02558761110&lt;/carShopTel&gt;
+        &lt;productName&gt;&#38144;&#21806;&#32452;&#27748;&#38149;02&lt;/productName&gt;
+      &lt;/orderDetail&gt;
+      &lt;invoiceRecipientName&gt;&#24352;&#28059;&lt;/invoiceRecipientName&gt;
+      &lt;customerAddress&gt;&#19978;&#28023;&#19978;&#28023;&#24066;&#40644;&#28006;&#21306;&#22826;&#24179;&#36335;18&#21495;&lt;/customerAddress&gt;
+      &lt;payType&gt;&#31036;&#21697;&#21345;&#25903;&#20184;&#26041;&#24335;&lt;/payType&gt;
+      &lt;account&gt;6YUIOP3456789009876&lt;/account&gt;
+    &lt;/orderGet&gt;
+  &lt;/sn_body&gt;
+&lt;/sn_responseContent&gt;
+
+			"/>
+                            <a href="javascript:void(0);" id="interRespSampleJsonDivHref" class="copy" onclick='copyToClipBoardText(this)' style="display:none;">复制全部代码</a>
+                        	<input type="hidden" value='
+{
+  "sn_responseContent": {
+    "sn_body": {
+      "orderGet": {
+        "orderCode": "1000831522",
+        "mobNum": "18611111111",
+        "invoice": "发票内容",
+        "cityName": "南京市",
+        "provinceCode": "020",
+        "cityCode": "000001000267",
+        "provinceName": "江苏省",
+        "invoiceRecipientHandPhone": "18651662963",
+        "registerAddress": "南京市白下区淮海路68号苏宁电器大厦18F",
+        "registerPhone": "02584418888",
+        "isCanModifyTransportFee": "N",
+        "invoiceRecipientAddress": "南京市白下区淮海路68号苏宁电器大厦18F",
+        "invoiceHead": "张三三",
+        "buyerOrdRemark": "尽快发货哦",
+        "payTotalAmount": "110.00",
+        "vatTaxpayerNumber": "WERTDTG1234567",
+        "guideAccountNo": "msopo2o@1.com",
+        "invoiceRecipientPhone": "02584418888",
+        "userName": "huiyuan2013_sit009@163.com",
+        "bank": "南京市白下区淮海路68号苏宁电器大厦18F",
+        "orderSaleTime": "2013-11-26 09:24:58",
+        "customerName": "张三三",
+        "needinvoiceflag": "Y",
+        "orderTotalStatus": "10",
+        "invoiceType": "增值税",
+        "sellerOrdRemark": "顾客要求延迟发货",
+        "districtName": "玄武区",
+        "evaluationMark": "0",
+        "districtCode": "00000001",
+        "orderDetail": [
+          {
+            "otoStoreName": "海青O2O门店",
+            "phoneIdentifyCode": "102003303202",
+            "hwgFlag": "01",
+            "reservestatus": "M",
+            "declareGoodsAmount": "30.00",
+            "expressno": "EMS1001",
+            "unitPrice": "188.00",
+            "carShopName": "南京市鼓楼区服务站",
+            "orderChannels": [
+              {
+                "orderChannelCode": "1"
+              }
+            ],
+            "reservedepositamount": "100.00",
+            "expresscompanycode": "E01",
+            "orderchannel": "MOBILE",
+            "saleNum": "1.00",
+            "transportFee": "0.00",
+            "packageorderid": "00000000100001785834",
+            "mode": "02",
+            "activityTypes": [
+              {
+                "activityTypeCode": "1"
+              }
+            ],
+            "invCode": "D01",
+            "couponList": [
+              {
+                "sharelimit": "20.00",
+                "coupontype": "8012"
+              }
+            ],
+            "returnOrderFlag": "1",
+            "vouchertotalMoney": "0.00",
+            "serviceItemFlag": "1",
+            "expandAmount": "100.00",
+            "declareItemPrice": "20.00",
+            "activitytype": "02",
+            "orderLineNumber": "1000231255",
+            "otoOrderType": "01-一口价电子凭证 02-特权定金 03-分阶段订单 04 线下现场拿货 05 线下快递上门 ",
+            "fpsdeliveryflag": "0",
+            "carShopSerWay": "1",
+            "bLineNumber": "90004000001",
+            "otoStoreCode": "139123456",
+            "paymentList": [
+              {
+                "banktypecode": "10006",
+                "offLinePayFlag": "1",
+                "payamount": "10.00",
+                "paycode": "4148"
+              }
+            ],
+            "orderLineStatus": "20",
+            "itemCode": "B1001",
+            "payAmount": "299.00",
+            "itemTaxFare": "10.00",
+            "receivezipCode": "211806",
+            "productCode": "102609881",
+            "refVerifyCode": "123654789",
+            "prmtcode": "01",
+            "payerCustomerName": "张三",
+            "reservebalanceamount": "100.00",
+            "coupontotalMoney": "0.00",
+            "carShopCode": "1001",
+            "carShopAddr": "南京市白下区淮宁电器大厦18F",
+            "payorderid": "P00000000100001785834",
+            "payTypes": [
+              {
+                "payTypeCode": "1"
+              }
+            ],
+            "isProsupplierDelivery": "1",
+            "disType": "01",
+            "declareItemTaxfare": "2.00",
+            "carShopTel": "02558761110",
+            "payerIdNumber": "342111198811212222",
+            "productName": "销售组汤锅02"
+          }
+        ],
+        "invoiceRecipientName": "张涛",
+        "customerAddress": "上海上海市黄浦区太平路18号",
+        "account": "6YUIOP3456789009876",
+        "payType": "礼品卡支付方式"
+      }
+    }
+  }
+}
+			'/>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-panel">
+                              <pre class='brush:xml;toolbar:false;'>
+
+&lt;sn_responseContent&gt;
+  &lt;sn_body&gt;
+    &lt;orderGet&gt;
+      &lt;mobNum&gt;18611111111&lt;/mobNum&gt;
+      &lt;orderCode&gt;1000831522&lt;/orderCode&gt;
+      &lt;invoice&gt;&#21457;&#31080;&#20869;&#23481;&lt;/invoice&gt;
+      &lt;provinceCode&gt;020&lt;/provinceCode&gt;
+      &lt;cityName&gt;&#21335;&#20140;&#24066;&lt;/cityName&gt;
+      &lt;cityCode&gt;000001000267&lt;/cityCode&gt;
+      &lt;provinceName&gt;&#27743;&#33487;&#30465;&lt;/provinceName&gt;
+      &lt;registerAddress&gt;&#21335;&#20140;&#24066;&#30333;&#19979;&#21306;&#28142;&#28023;&#36335;68&#21495;&#33487;&#23425;&#30005;&#22120;&#22823;&#21414;18F&lt;/registerAddress&gt;
+      &lt;invoiceRecipientHandPhone&gt;18651662963&lt;/invoiceRecipientHandPhone&gt;
+      &lt;registerPhone&gt;02584418888&lt;/registerPhone&gt;
+      &lt;invoiceRecipientAddress&gt;&#21335;&#20140;&#24066;&#30333;&#19979;&#21306;&#28142;&#28023;&#36335;68&#21495;&#33487;&#23425;&#30005;&#22120;&#22823;&#21414;18F&lt;/invoiceRecipientAddress&gt;
+      &lt;isCanModifyTransportFee&gt;N&lt;/isCanModifyTransportFee&gt;
+      &lt;invoiceHead&gt;&#24352;&#19977;&#19977;&lt;/invoiceHead&gt;
+      &lt;buyerOrdRemark&gt;&#23613;&#24555;&#21457;&#36135;&#21734;&lt;/buyerOrdRemark&gt;
+      &lt;payTotalAmount&gt;110.00&lt;/payTotalAmount&gt;
+      &lt;vatTaxpayerNumber&gt;WERTDTG1234567&lt;/vatTaxpayerNumber&gt;
+      &lt;guideAccountNo&gt;msopo2o@1.com&lt;/guideAccountNo&gt;
+      &lt;invoiceRecipientPhone&gt;02584418888&lt;/invoiceRecipientPhone&gt;
+      &lt;userName&gt;huiyuan2013_sit009@163.com&lt;/userName&gt;
+      &lt;bank&gt;&#21335;&#20140;&#24066;&#30333;&#19979;&#21306;&#28142;&#28023;&#36335;68&#21495;&#33487;&#23425;&#30005;&#22120;&#22823;&#21414;18F&lt;/bank&gt;
+      &lt;orderSaleTime&gt;2013-11-26 09:24:58&lt;/orderSaleTime&gt;
+      &lt;customerName&gt;&#24352;&#19977;&#19977;&lt;/customerName&gt;
+      &lt;needinvoiceflag&gt;Y&lt;/needinvoiceflag&gt;
+      &lt;orderTotalStatus&gt;10&lt;/orderTotalStatus&gt;
+      &lt;invoiceType&gt;&#22686;&#20540;&#31246;&lt;/invoiceType&gt;
+      &lt;sellerOrdRemark&gt;&#39038;&#23458;&#35201;&#27714;&#24310;&#36831;&#21457;&#36135;&lt;/sellerOrdRemark&gt;
+      &lt;evaluationMark&gt;0&lt;/evaluationMark&gt;
+      &lt;districtName&gt;&#29572;&#27494;&#21306;&lt;/districtName&gt;
+      &lt;districtCode&gt;00000001&lt;/districtCode&gt;
+      &lt;orderDetail&gt;
+        &lt;otoStoreName&gt;&#28023;&#38738;O2O&#38376;&#24215;&lt;/otoStoreName&gt;
+        &lt;phoneIdentifyCode&gt;102003303202&lt;/phoneIdentifyCode&gt;
+        &lt;hwgFlag&gt;01&lt;/hwgFlag&gt;
+        &lt;expressno&gt;EMS1001&lt;/expressno&gt;
+        &lt;unitPrice&gt;188.00&lt;/unitPrice&gt;
+        &lt;reservedepositamount&gt;100.00&lt;/reservedepositamount&gt;
+        &lt;saleNum&gt;1.00&lt;/saleNum&gt;
+        &lt;invCode&gt;D01&lt;/invCode&gt;
+        &lt;couponList&gt;
+          &lt;sharelimit&gt;20.00&lt;/sharelimit&gt;
+          &lt;coupontype&gt;8012&lt;/coupontype&gt;
+        &lt;/couponList&gt;
+        &lt;returnOrderFlag&gt;1&lt;/returnOrderFlag&gt;
+        &lt;activitytype&gt;02&lt;/activitytype&gt;
+        &lt;otoOrderType&gt;01-&#19968;&#21475;&#20215;&#30005;&#23376;&#20973;&#35777; 02-&#29305;&#26435;&#23450;&#37329; 03-&#20998;&#38454;&#27573;&#35746;&#21333; 04 &#32447;&#19979;&#29616;&#22330;&#25343;&#36135; 05 &#32447;&#19979;&#24555;&#36882;&#19978;&#38376; &lt;/otoOrderType&gt;
+        &lt;fpsdeliveryflag&gt;0&lt;/fpsdeliveryflag&gt;
+        &lt;otoStoreCode&gt;139123456&lt;/otoStoreCode&gt;
+        &lt;orderLineStatus&gt;20&lt;/orderLineStatus&gt;
+        &lt;itemCode&gt;B1001&lt;/itemCode&gt;
+        &lt;itemTaxFare&gt;10.00&lt;/itemTaxFare&gt;
+        &lt;prmtcode&gt;01&lt;/prmtcode&gt;
+        &lt;payerCustomerName&gt;&#24352;&#19977;&lt;/payerCustomerName&gt;
+        &lt;reservebalanceamount&gt;100.00&lt;/reservebalanceamount&gt;
+        &lt;carShopCode&gt;1001&lt;/carShopCode&gt;
+        &lt;payTypes&gt;
+          &lt;payTypeCode&gt;1&lt;/payTypeCode&gt;
+        &lt;/payTypes&gt;
+        &lt;payerIdNumber&gt;342111198811212222&lt;/payerIdNumber&gt;
+        &lt;reservestatus&gt;M&lt;/reservestatus&gt;
+        &lt;declareGoodsAmount&gt;30.00&lt;/declareGoodsAmount&gt;
+        &lt;orderChannels&gt;
+          &lt;orderChannelCode&gt;1&lt;/orderChannelCode&gt;
+        &lt;/orderChannels&gt;
+        &lt;carShopName&gt;&#21335;&#20140;&#24066;&#40723;&#27004;&#21306;&#26381;&#21153;&#31449;&lt;/carShopName&gt;
+        &lt;expresscompanycode&gt;E01&lt;/expresscompanycode&gt;
+        &lt;orderchannel&gt;MOBILE&lt;/orderchannel&gt;
+        &lt;activityTypes&gt;
+          &lt;activityTypeCode&gt;1&lt;/activityTypeCode&gt;
+        &lt;/activityTypes&gt;
+        &lt;mode&gt;02&lt;/mode&gt;
+        &lt;packageorderid&gt;00000000100001785834&lt;/packageorderid&gt;
+        &lt;transportFee&gt;0.00&lt;/transportFee&gt;
+        &lt;vouchertotalMoney&gt;0.00&lt;/vouchertotalMoney&gt;
+        &lt;serviceItemFlag&gt;1&lt;/serviceItemFlag&gt;
+        &lt;declareItemPrice&gt;20.00&lt;/declareItemPrice&gt;
+        &lt;expandAmount&gt;100.00&lt;/expandAmount&gt;
+        &lt;orderLineNumber&gt;1000231255&lt;/orderLineNumber&gt;
+        &lt;bLineNumber&gt;90004000001&lt;/bLineNumber&gt;
+        &lt;carShopSerWay&gt;1&lt;/carShopSerWay&gt;
+        &lt;paymentList&gt;
+          &lt;banktypecode&gt;10006&lt;/banktypecode&gt;
+          &lt;offLinePayFlag&gt;1&lt;/offLinePayFlag&gt;
+          &lt;payamount&gt;10.00&lt;/payamount&gt;
+          &lt;paycode&gt;4148&lt;/paycode&gt;
+        &lt;/paymentList&gt;
+        &lt;payAmount&gt;299.00&lt;/payAmount&gt;
+        &lt;receivezipCode&gt;211806&lt;/receivezipCode&gt;
+        &lt;productCode&gt;102609881&lt;/productCode&gt;
+        &lt;refVerifyCode&gt;123654789&lt;/refVerifyCode&gt;
+        &lt;coupontotalMoney&gt;0.00&lt;/coupontotalMoney&gt;
+        &lt;carShopAddr&gt;&#21335;&#20140;&#24066;&#30333;&#19979;&#21306;&#28142;&#23425;&#30005;&#22120;&#22823;&#21414;18F&lt;/carShopAddr&gt;
+        &lt;payorderid&gt;P00000000100001785834&lt;/payorderid&gt;
+        &lt;isProsupplierDelivery&gt;1&lt;/isProsupplierDelivery&gt;
+        &lt;disType&gt;01&lt;/disType&gt;
+        &lt;declareItemTaxfare&gt;2.00&lt;/declareItemTaxfare&gt;
+        &lt;carShopTel&gt;02558761110&lt;/carShopTel&gt;
+        &lt;productName&gt;&#38144;&#21806;&#32452;&#27748;&#38149;02&lt;/productName&gt;
+      &lt;/orderDetail&gt;
+      &lt;invoiceRecipientName&gt;&#24352;&#28059;&lt;/invoiceRecipientName&gt;
+      &lt;customerAddress&gt;&#19978;&#28023;&#19978;&#28023;&#24066;&#40644;&#28006;&#21306;&#22826;&#24179;&#36335;18&#21495;&lt;/customerAddress&gt;
+      &lt;payType&gt;&#31036;&#21697;&#21345;&#25903;&#20184;&#26041;&#24335;&lt;/payType&gt;
+      &lt;account&gt;6YUIOP3456789009876&lt;/account&gt;
+    &lt;/orderGet&gt;
+  &lt;/sn_body&gt;
+&lt;/sn_responseContent&gt;
+
+			
+                                </pre>
+                            </div>
+                            <div class="tab-panel">
+                              <pre class='brush:javascript;toolbar:false;'>
+
+{
+  "sn_responseContent": {
+    "sn_body": {
+      "orderGet": {
+        "orderCode": "1000831522",
+        "mobNum": "18611111111",
+        "invoice": "发票内容",
+        "cityName": "南京市",
+        "provinceCode": "020",
+        "cityCode": "000001000267",
+        "provinceName": "江苏省",
+        "invoiceRecipientHandPhone": "18651662963",
+        "registerAddress": "南京市白下区淮海路68号苏宁电器大厦18F",
+        "registerPhone": "02584418888",
+        "isCanModifyTransportFee": "N",
+        "invoiceRecipientAddress": "南京市白下区淮海路68号苏宁电器大厦18F",
+        "invoiceHead": "张三三",
+        "buyerOrdRemark": "尽快发货哦",
+        "payTotalAmount": "110.00",
+        "vatTaxpayerNumber": "WERTDTG1234567",
+        "guideAccountNo": "msopo2o@1.com",
+        "invoiceRecipientPhone": "02584418888",
+        "userName": "huiyuan2013_sit009@163.com",
+        "bank": "南京市白下区淮海路68号苏宁电器大厦18F",
+        "orderSaleTime": "2013-11-26 09:24:58",
+        "customerName": "张三三",
+        "needinvoiceflag": "Y",
+        "orderTotalStatus": "10",
+        "invoiceType": "增值税",
+        "sellerOrdRemark": "顾客要求延迟发货",
+        "districtName": "玄武区",
+        "evaluationMark": "0",
+        "districtCode": "00000001",
+        "orderDetail": [
+          {
+            "otoStoreName": "海青O2O门店",
+            "phoneIdentifyCode": "102003303202",
+            "hwgFlag": "01",
+            "reservestatus": "M",
+            "declareGoodsAmount": "30.00",
+            "expressno": "EMS1001",
+            "unitPrice": "188.00",
+            "carShopName": "南京市鼓楼区服务站",
+            "orderChannels": [
+              {
+                "orderChannelCode": "1"
+              }
+            ],
+            "reservedepositamount": "100.00",
+            "expresscompanycode": "E01",
+            "orderchannel": "MOBILE",
+            "saleNum": "1.00",
+            "transportFee": "0.00",
+            "packageorderid": "00000000100001785834",
+            "mode": "02",
+            "activityTypes": [
+              {
+                "activityTypeCode": "1"
+              }
+            ],
+            "invCode": "D01",
+            "couponList": [
+              {
+                "sharelimit": "20.00",
+                "coupontype": "8012"
+              }
+            ],
+            "returnOrderFlag": "1",
+            "vouchertotalMoney": "0.00",
+            "serviceItemFlag": "1",
+            "expandAmount": "100.00",
+            "declareItemPrice": "20.00",
+            "activitytype": "02",
+            "orderLineNumber": "1000231255",
+            "otoOrderType": "01-一口价电子凭证 02-特权定金 03-分阶段订单 04 线下现场拿货 05 线下快递上门 ",
+            "fpsdeliveryflag": "0",
+            "carShopSerWay": "1",
+            "bLineNumber": "90004000001",
+            "otoStoreCode": "139123456",
+            "paymentList": [
+              {
+                "banktypecode": "10006",
+                "offLinePayFlag": "1",
+                "payamount": "10.00",
+                "paycode": "4148"
+              }
+            ],
+            "orderLineStatus": "20",
+            "itemCode": "B1001",
+            "payAmount": "299.00",
+            "itemTaxFare": "10.00",
+            "receivezipCode": "211806",
+            "productCode": "102609881",
+            "refVerifyCode": "123654789",
+            "prmtcode": "01",
+            "payerCustomerName": "张三",
+            "reservebalanceamount": "100.00",
+            "coupontotalMoney": "0.00",
+            "carShopCode": "1001",
+            "carShopAddr": "南京市白下区淮宁电器大厦18F",
+            "payorderid": "P00000000100001785834",
+            "payTypes": [
+              {
+                "payTypeCode": "1"
+              }
+            ],
+            "isProsupplierDelivery": "1",
+            "disType": "01",
+            "declareItemTaxfare": "2.00",
+            "carShopTel": "02558761110",
+            "payerIdNumber": "342111198811212222",
+            "productName": "销售组汤锅02"
+          }
+        ],
+        "invoiceRecipientName": "张涛",
+        "customerAddress": "上海上海市黄浦区太平路18号",
+        "account": "6YUIOP3456789009876",
+        "payType": "礼品卡支付方式"
+      }
+    }
+  }
+}
+			
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pr-title pr-t6" id="local6"><span class="l">异常示例</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con6">
+                    <div class="tab">
+                        <div class="tab-handler">
+                            <ul>
+                                <li atr="errorxml">XML示例</li>
+                                <li atr="errorjson">JSON示例</li>
+                            </ul>
+                            <a href="javascript:void(0);" id="interErrorSampleXmlDivHref" class="copy" onclick="copyToClipBoardText(this)">复制全部代码</a>
+                            <input type="hidden" value="<sn_responseContent><sn_error><error_code>API异常码</error_code><error_msg>异常码中文描述</error_msg></sn_error></sn_responseContent>"/>
+                            <a href="javascript:void(0);" id="interErrorSampleJsonDivHref" class="copy" onclick="copyToClipBoardText(this)" style="display:none;">复制全部代码</a>
+                       		<input type="hidden" value='{"sn_responseContent": {"sn_error": {"error_code": "API异常码","error_msg": "异常码中文描述"}}}'/>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-panel">
+                              <pre class='brush:xml;toolbar:false;' id="interErrorSampleXmlPre">
+<sn_responseContent>
+  <sn_error>
+  	<error_code>API异常码</error_code>
+  	<error_msg>异常码中文描述</error_msg>
+  </sn_error>
+</sn_responseContent>
+                           	  </pre>
+                            </div>
+                            <div class="tab-panel">
+							    <pre class='brush:javascript;toolbar:false;' id="interErrorSampleJsonPre">
+{
+  "sn_responseContent": {
+    "sn_error": {
+      "error_code": "API异常码",
+      "error_msg": "异常码中文描述"
+    }
+  }
+} 								  
+                           		</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pr-title pr-t7" id="local7"><span class="l">业务异常码</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con3">	
+                	<table class="su-table mb30">
+						<colgroup>
+							<col width="40%"></col>
+							<col width="30%"></col>
+							<col></col>
+						</colgroup>
+						<tr>
+							<th align="center" style="text-align: left;">异常码</th>
+							<th align="center" style="text-align: left;">错误描述</th>
+							<th align="center" style="text-align: left;" class="addBR">解决方案</th>
+						</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.getorder.missing-parameter:*</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">参数必填</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请检查此参数的值,*号表示参数字段名</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.data-get:no-result</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">查询没结果</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请检查查询参数</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">isp.sys.service.unavailable.moms</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">服务不可用</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请联系苏宁技术人员</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.getorder.invalid-biz:100</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">B2C订单号格式非法</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">B2C订单号为空或长度超过30位</td>
+								</tr>
+					</table>
+                </div>
+                <div class="pr-title pr-t8" id="local8">
+                	<span class="l">公共异常码</span><em class="pr-em pr-down pr-up"></em>
+                </div>
+                <div class="pr-con8" style="display:none;">
+                	<table class="su-table mb30">
+						<colgroup>
+							<col width="40%"></col>
+							<col width="30%"></col>
+							<col></col>
+						</colgroup>
+						<tr>
+							<th align="center" style="text-align: left;">异常码</th>
+							<th align="center" style="text-align: left;">错误描述</th>
+							<th align="center" style="text-align: left;" class="addBR">解决方案</th>
+						</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.user-permission:inexistence</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问令牌不存在</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">更换访问令牌</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.user-permission:overdue</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问令牌已过期</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请使用刷新令牌刷新</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.api-permission:inexistence</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">Api方法不存在</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请参考帮助中心</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.api-permission:overdue</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">Api方法已过期</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请参考帮助中心</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.api-permission:authority</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">无权操作此api</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">确认是否有访问该方法权限</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.auth.vendor-request:errory</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">无权操作此供应商</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请确认供应商编码是否正确</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.controller.api-request:limit</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">Api请求受控</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">超过请求次数</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.app-time:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">请求参数错误api请求时间误差大</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">参考帮助中心</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.request-params:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">请求报文结构错误</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">参考帮助中心、日期格式等</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.starttime-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">请求开始时间错误</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">参考帮助中心、日期格式等</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.data-get:success</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">业务数据查询成功</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.data-get:fail</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">业务数据查询失败</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查请求条件</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.data-get:no-result</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">业务数据结果为空</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.pageno-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">pageNo格式错误，只允许1到99999之间的整数</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查pageNo输入是否有误</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.pagesize-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">pageSize格式错误，只允许1到50之间的整数(订单相关是1到100)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查pageSize输入是否有误</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.page-param:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">pageNo或者pageSize不在要求范围内，pageNo只允许1到99999之间的整数，pageSize只允许1到50之间的整数(订单相关是1到100)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查pageNo和pageSize输入是否有误</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.miss-time:starttime</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">不存在开始时间(节点)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查输入</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.miss-time:endtime</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">不存在结束时间(节点)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查输入</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.starttime-value:null</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">开始时间为空(值)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查输入</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.endtime-value:null</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">结束时间为空(值)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查输入</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.starttime-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">校验开始时间不合法，格式yyyy-MM-dd HH:mm:ss</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查时间格式</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.endtime-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">校验结束时间不合法，格式yyyy-MM-dd HH:mm:ss</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查时间格式</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.query-time:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">开始时间是否小于结束时间</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查开始和结束时间大小</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.query-time:outofrange</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">时间查询是否超出指定范围</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查时间范围</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.app-sign:null</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">签名信息为空</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查签名信息</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.app-sign:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">签名信息错误</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查签名信息</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.missing-parameter:apiversion</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">API版本号未指定</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查API版本号</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.missing-parameter:appRequestTime</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">请求时间丢失</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查请求时间</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.missing-nestElement:sn_body</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">缺少sn_body节点</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查sn_body是否存在</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.user-permission:inexistence</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">用户key不存在</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查用户key是否存在</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.batch-handler:no-support</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">非查询类API不支持批量操作</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查API类型</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.request-message:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">查询类API输入多个业务节点</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查业务节点</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.header-param:null</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">header参数为空</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请检查header参数</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.controller.api-access:limit</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问限制</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.controller.api-frequency:limit</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问频率限制</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.error.network:failure</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">网络异常</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.error.network-status:?</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">响应失败 ?为状态码</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.oauth-permission:authority</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问令牌过期或未进行授权</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请重新授权或使用刷新令牌刷新新的访问令牌</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.addpackageorderdeliver.not.declaresuccess.order</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">非申报成功订单不能发货</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">商家后台点击申报按钮，或者调用海外购订单申报接口进行申报</td>
+								</tr>
+					</table>
+                </div>
+                <div class="pr-title pr-t9" id="local9"><span class="l">API工具</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con9">
+                    <div class="su-apiDiv">
+                        <a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodTestPage.do?apiCode=suning.custom.order.get  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ����������ʼ��ַ��Զ�����ӡ������������ʼ��ַ�����������, ���ļ������������ض��С�  \n\n�����ڷ������ϴ���?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodTestPage.do?apiCode=suning.custom.order.get'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodTestPage.do?apiCode=suning.custom.order.get" class="su-apiLink mr10" target="_blank">API TOOLS 在线测试工具</a><a href="toApiErrorCodeMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiErrorCodeMenu.do" class="su-other mr10" target="_blank">异常码查询工具</a><a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiAccessSdkSamplePage.do?apiCode=suning.custom.order.get  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ����������ʼ��ַ��Զ�����ӡ������������ʼ��ַ�����������, ���ļ������������ض��С�  \n\n�����ڷ������ϴ���?'))window.location='http://open.suning.com/ospos/apipage/toApiAccessSdkSamplePage.do?apiCode=suning.custom.order.get'" tppabs="http://open.suning.com/ospos/apipage/toApiAccessSdkSamplePage.do?apiCode=suning.custom.order.get" class="su-other mr10" target="_blank">SDK调用示例</a><a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/appSdkDownLoad.action  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ����������ʼ��ַ��Զ�����ӡ������������ʼ��ַ�����������, ���ļ������������ض��С�  \n\n�����ڷ������ϴ���?'))window.location='http://open.suning.com/ospos/apipage/appSdkDownLoad.action'" tppabs="http://open.suning.com/ospos/apipage/appSdkDownLoad.action" class="su-other" target="_blank">SDK下载</a>
+                    </div>
+                </div>
+				<div class="pr-title pr-t10" id="local10"><span class="l">FAQ</span><em class="pr-em pr-down"></em></div>
+				<div class="pr-con10">
+							<p class="pr-p2">Q：什么是订单行项目？</p>	
+							<p class="pr-p1 mb30">A：一个订单可能包含多种商品，一种商品对应一个订单行项目。</p>
+							<p class="pr-p2">Q：什么是订单总状态？</p>	
+							<p class="pr-p1 mb30">A：若订单存在多个订单行项目，则订单总状态为订单行项目状态的集合，有10待发货、20已发货、21部分发货、30交易成功、40交易关闭五种状态。</p>
+							<p class="pr-p2">Q：什么是订单行项目状态？</p>	
+							<p class="pr-p1 mb30">A：订单行项目状态指订单明细状态，10表示待发货、20表示已发货、30表示交易成功、40表示交易关闭四种状态。</p>
+							<p class="pr-p2">Q：订单中获取的城市代码如何查看对应的城市名称？</p>	
+							<p class="pr-p1 mb30">A：当前苏宁订单接口仅实现获取到城市代码，通过接口“suning.custom.city.query”查看对应的城市名称 。</p>
+							<p class="pr-p2">Q：如何查看订单中商品的商家商品编码？</p>	
+							<p class="pr-p1 mb30">A：当前苏宁订单接口仅实现获取到苏宁商品编码，通过接口“suning.custom.item.get”查看对应的商家商品编码。</p>
+				</div>
+				</div>
+			</div>
+			<div class="menuLRH"></div>
+		</div>
+	</div>	
+
+	<!-- 置顶 -->
+	<!--<div class="os-topTo" style="bottom: 210px;"></div>-->
+
+<div class="foot">
+    <iframe scrolling="no" frameborder="0" width="100%" height="165" src="../../../sop.suning.com/sel/portal/common/footer-1.html" tppabs="http://sop.suning.com/sel/portal/common/footer.html"></iframe>
+</div>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/OpenSer.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/open/OpenSer.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/openUPdate.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/open/openUPdate.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/common.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/custom/common.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shCore.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shCore.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shAutoloader.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shAutoloader.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shBrushXml.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shBrushXml.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shBrushJScript.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shBrushJScript.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shBrushCss.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shBrushCss.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/table.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/table.js?v=v1.0" charset="UTF-8"></script>
+<script>
+	SyntaxHighlighter.all();
+
+    $(function(){
+        var _wH = $(window).width()/2;
+        var _left = _wH+1190/2+10;
+        $(".su-titList").css("left",_left);
+		$(window).resize(function(){
+			var _wH = $(window).width()/2;
+			var _left = _wH+1190/2+10;
+			$(".su-titList").css("left",_left);
+		});
+		
+    });
+	
+	$(window).scroll(function(){
+		$(".pos li").each(function(index){
+			var wH = $(window).height();
+			var wst =  $(window).scrollTop(); //滚动条距离顶端值
+			var dH = $(document).height();
+			for(j=0; j<index; j++){
+				var localTop =$(".pr-title").eq(j).offset().top;
+				if(dH-localTop>wH){
+					for (i=1; i<10; i++){
+						if($("#local"+i).offset().top<=wst+5){
+							$("#scroll-it"+i).parents("li").addClass("cur").siblings("li").removeClass("cur");  
+						}
+					}
+				}else{
+					return false;
+				}
+			}
+		});
+	});
+	
+	$.each($(".tab-handler li"),function(index,ele){
+		$(this).on("click",function(){
+			var atrVal = $(this).attr("atr");
+			if(atrVal == "reqxml"){
+				$("#interReqSampleXmlDivHref").show();
+				$("#interReqSampleJsonDivHref").hide();
+			}
+			if(atrVal == "reqjson"){
+				$("#interReqSampleJsonDivHref").show();
+				$("#interReqSampleXmlDivHref").hide();
+			}
+			if(atrVal == "respxml"){
+				$("#interRespSampleXmlDivHref").show();
+				$("#interRespSampleJsonDivHref").hide();
+			}
+			if(atrVal == "respjson"){
+				$("#interRespSampleJsonDivHref").show();
+				$("#interRespSampleXmlDivHref").hide();
+			}
+			if(atrVal == "errorxml"){
+				$("#interErrorSampleXmlDivHref").show();
+				$("#interErrorSampleJsonDivHref").hide();
+			}
+			if(atrVal == "errorjson"){
+				$("#interErrorSampleJsonDivHref").show();
+				$("#interErrorSampleXmlDivHref").hide();
+			}
+		});	
+	});	
+	
+</script>
+<script src="../../../static.suning.cn/osr/meas/time-1.js" tppabs="http://static.suning.cn/osr/meas/time.js"></script>
+</body>
+</html>

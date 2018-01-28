@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>å¼€æ”¾æœåŠ¡-ä¸»é¢˜è¯¦æƒ…</title>
+	
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="æ‰‹æœº, ç”µè„‘, å†°ç®±, æ´—è¡£æœº, ç›¸æœº, æ•°ç , å®¶å±…ç”¨å“, é‹å¸½, åŒ–å¦†å“, æ¯å©´ç”¨å“, å›¾ä¹¦ï¼Œé£Ÿå“ï¼Œä¿é™©ï¼Œæ—…è¡Œï¼Œå……å€¼ï¼Œå›¢è´­ï¼Œæ­£å“è¡Œè´§, å…¨å›½è”ä¿, è´§åˆ°ä»˜æ¬¾ã€‚"/>
+<meta name="description" content="è‹å®æ˜“è´­æ˜¯é¢†å…ˆçš„ç»¼åˆç½‘ä¸Šè´­ç‰©å•†åŸ, åœ¨çº¿ç‰¹ä»·é”€å”®å®¶ç”µã€é€šè®¯æ•°ç ã€ç”µè„‘ã€å®¶å±…ç™¾è´§ã€æœè£…æœé¥°ã€æ¯å©´ã€å›¾ä¹¦ã€é£Ÿå“ã€ä¿é™©ã€æ—…è¡Œã€å……å€¼ã€å›¢è´­ç­‰æ•°ä¸‡ç±»å•†å“å’ŒæœåŠ¡ã€‚æ­£å“è¡Œè´§, å…¨å›½è”ä¿, æœ¬åœ°é…é€, è´§åˆ°ä»˜æ¬¾ã€‚çœé’±æ”¾å¿ƒä¸Šè‹å®ç”µå™¨ç½‘ä¸Šå•†åŸ, å°½äº«è´­ç‰©ä¹è¶£ï¼"/>
+<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<script src="../../../static.suning.cn/osr/meas/error-1.js" tppabs="http://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
+			<link rel="stylesheet" href="../staticfiles/css/common.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/common.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/OpenSerNew.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/OpenSerNew.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/plugins/syntaxhighlighter/styles/shCore.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/styles/shCore.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/plugins/syntaxhighlighter/styles/shThemeDefault.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/styles/shThemeDefault.css?v=v1.0"></link>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+</head>
+<body>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    if("" != ""){
+			var userName = "";
+			$("#alLoginName").text(userName);
+			$("#alLoginName").attr("title",userName);
+			$("#alLogin").show();
+			$("#withOutLogin").hide();
+	    }else {
+			var userName = getCookie("osposLoginUserIdFlag");
+			if(userName == ""){
+				var logonStatusVal = getCookie("logonStatus");
+				var authIdVal = getCookie("authId");
+				if((logonStatusVal != undefined && logonStatusVal != "") 
+	       		|| (authIdVal != undefined && authIdVal != "")){
+					userName = getCookie("idsLoginUserIdLastTime");
+				}
+			}
+			if(userName != ""){
+				$("#alLoginName").text(userName);
+				$("#alLoginName").attr("title",userName);
+				$("#alLogin").show();
+				$("#withOutLogin").hide();
+			}else {
+				$("#alLogin").hide();
+				$("#withOutLogin").show();
+			} 
+	    }
+    });
+	
+    function getCookie(cookieName){
+		var cookieArr = document.cookie.split(';');
+		for(var i=0; i<cookieArr.length; i++){
+			var cookie = cookieArr[i];
+			while (cookie.charAt(0)==' '){
+				cookie = cookie.substring(1);
+			}
+			cookieEntry = cookie.split('=');
+			if(cookieEntry[0] == cookieName){
+				return decodeURIComponent(cookieEntry[1]);
+			}
+		}
+		return "";
+    }
+	
+	$(function(){
+        $(".os-nav li").each(function(index){
+            $(this).removeClass("os-on");
+            if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toApi")!=-1&&index=="3"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toDevCenter")!=-1&&index=="4"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname=="/"&&index=="0"){
+                $(this).addClass("os-on");
+            }
+        })                
+	})
+</script>
+<div class="os-top bcs-top">
+	<div class="w1190 clearfix">
+		<div class="l os-snLogo"></div>	
+		<ul class="os-nav">
+			<li class="os-on"><a href="../../index-1.htm" tppabs="http://open.suning.com/">é¦–é¡µ</a></li>
+			<li><a href="javascript:void(0);">å¼€æ”¾ç‰ˆå›¾<i></i></a>
+				<!--[if IE]>
+				<dl style="margin-left: -104px;margin-top: 55px;">
+				<![endif]-->
+				<!--[if !IE]><!-->
+				<dl>
+			    <!--<![endif]-->
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/road/roadIndex.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://road.suning.com/ospos/road/roadIndex.html'" tppabs="https://road.suning.com/ospos/road/roadIndex.html" target="_blank">ä¸€å·å…¬è·¯å¼€æ”¾</a><i></i></dd>
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/toDevCenter.action  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://road.suning.com/ospos/toDevCenter.action'" tppabs="https://road.suning.com/ospos/toDevCenter.action">å•†å®¶åå°å¼€æ”¾</a><i></i></dd>
+                </dl>
+            </li>
+            <li><a href="../apipage/toDocCenter-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toDocCenter.do">æ–‡æ¡£ä¸­å¿ƒ</a></li>
+			<li><a href="../apipage/toApiListMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiListMenu.do">APIæ–‡æ¡£</a></li>
+			<li><a href="toTopicPageList-1.do.htm" tppabs="http://open.suning.com/ospos/pushapi/toTopicPageList.do">æ¶ˆæ¯æ–‡æ¡£</a></li>
+			<li><a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/toDevCenter.action">æ§åˆ¶å°</a></li>
+		</ul>
+		
+		<a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/logOut.action" class="os-exit" style="display: none;" id="alLogin">é€€å‡º</a> 
+		<div class="r search-top">
+			<form method="post" action="http://open.suning.com/ospos/apipage/toSearchPage.do" id="tlSearchForm" style="display:inline;float:right;" autocomplete="off">
+                <input type="text" class="os-input" id="tlSearchIn" name="tlSearchName"/>
+                <span class="os-search" id="tlSearchBtn"></span>
+            </form>                
+                <span class="os-search"></span>
+                <span id="alLoginName" class="lname r"></span>
+                <a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/toLogin.action" class="os-login" style="display: none;" id="withOutLogin">ç™»å½•</a>
+		</div>
+	</div>
+</div>	<div class="on-wrapp">
+		<div class="w1190 clearfix mb40 oh" style="position:relative;">
+			<div class="on-title">
+				<div class="go-title">
+					<a href="../apipage/toDocCenter-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toDocCenter.do">æ–‡æ¡£ä¸­å¿ƒ</a> &gt; 
+					<a href="toTopicPageList-1.do.htm" tppabs="http://open.suning.com/ospos/pushapi/toTopicPageList.do">ä¸»é¢˜ç±»ç›®</a> &gt;
+					<span>
+							è‡ªè¥ä¸šåŠ¡
+					</span>
+				</div>
+			</div>
+			<div class="on-menuL w238">
+				<div style="padding: 12px 15px; display: inline-block;width: 206px;border-bottom: 1px solid #e2e3e4;">
+					è‡ªè¥ä¸šåŠ¡
+				</div>
+				<div class="su-list">
+					<ul>
+									<li  class="on-menuOn" onclick="toTopicDetail('2','5')">
+										<div class="su-listDiv">
+											<a href="javascript:void(0);">suning_selfmarket_purchaseplan_create</a>
+											<p>é‡‡è´­è®¡åˆ’åˆ›å»º</p>
+										</div>
+										<div class="su-mask su-mask1"></div>
+									</li>
+									<li onclick="toTopicDetail('3','4')">
+										<div class="su-listDiv">
+											<a href="#">suning_virtualcomm_sms_resend</a>
+											<p>é‡æ–°å‘é€è™šæ‹Ÿä¼šå‘˜å¡çš„å¡å·å¯†ç </p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="toTopicDetail('4','4')">
+										<div class="su-listDiv">
+											<a href="#">suning_factory_refund_modify</a>
+											<p>è‹å®ä¾›åº”å•†é€€è´§å˜æ›´é€šçŸ¥</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="toTopicDetail('5','4')">
+										<div class="su-listDiv">
+											<a href="#">suning_virtualcomm_order_create</a>
+											<p>è‹å®å•†å“è®¢å•æ¨é€</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="toTopicDetail('6','7')">
+										<div class="su-listDiv">
+											<a href="#">suning_sdcs_receivedetl_modify</a>
+											<p>è®¢å•æ”¶è´§ä¿¡æ¯ä¿®æ”¹</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="toTopicDetail('7','7')">
+										<div class="su-listDiv">
+											<a href="#">suning_sdcs_conreceive_modify</a>
+											<p>é‡‡è´­è®¢å•ç¡®è®¤æ”¶è´§ä¿¡æ¯</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="toTopicDetail('9','2')">
+										<div class="su-listDiv">
+											<a href="#">suning_merchants_status_return</a>
+											<p>è®¢å•çŠ¶æ€è¿”å›æ¥å£</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="toTopicDetail('10','3')">
+										<div class="su-listDiv">
+											<a href="#">suning_asmp_sn_install_create</a>
+											<p>è‹å®å”®åæœåŠ¡è®¢å•</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="toTopicDetail('11','3')">
+										<div class="su-listDiv">
+											<a href="#">suning_asmp_settlement_create</a>
+											<p>è‹å®å”®åç»“ç®—å¼€ç¥¨å¯¹è´¦æ¥å£</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="toTopicDetail('12','3')">
+										<div class="su-listDiv">
+											<a href="#">suning_asmp_invoice_make</a>
+											<p>è‹å®å”®åç›´è¿å‚å®¶ç»“ç®—å¼€ç¥¨çŠ¶æ€</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="toTopicDetail('13','3')">
+										<div class="su-listDiv">
+											<a href="#">suning_asvp_factory_create</a>
+											<p>è‹å®å”®åå‚è£…å•</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="toTopicDetail('14','10')">
+										<div class="su-listDiv">
+											<a href="#">suning_directbuy_status_confirm</a>
+											<p>è®¢å•çŠ¶æ€è¿”å›æ¥å£ä¹°å®¶</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="toTopicDetail('15','1')">
+										<div class="su-listDiv">
+											<a href="#">suning_isv_ord</a>
+											<p>è®¢è´­å…³ç³»</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="toTopicDetail('16','1')">
+										<div class="su-listDiv">
+											<a href="#">suning_isv_subacc_auth</a>
+											<p>å­è´¦å·åˆ›å»ºé€šçŸ¥</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="toTopicDetail('17','5')">
+										<div class="su-listDiv">
+											<a href="#">suning_selfmarket_purorderstate_add</a>
+											<p>ä¸‹å‘é‡‡è´­è®¢å•æ”¶è´§çŠ¶æ€</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+					</ul>
+				</div>
+			</div>
+			<div class="on-menuR ml240 clearfix"  style="position: relative;">
+			<div class="p30">
+				<span class="on-title su-titPos">suning_selfmarket_purchaseplan_create&nbsp;é‡‡è´­è®¡åˆ’åˆ›å»º</span>
+				<p>&nbsp;</p>
+				<div class="pr-title pr-t3"><span class="l">ä¸»é¢˜äº§ç”ŸèƒŒæ™¯</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con3">
+                    <p class="mb30">
+                    		å‘é€é‡‡è´­è®¡åˆ’å¤´ä¿¡æ¯ç»™ä¾›åº”å•†
+                    </p>
+                </div>
+				<div class="pr-title pr-t4"><span class="l">ä¸»é¢˜å­—æ®µ</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con4">
+                    <table class="su-table mb30">
+                        <colgroup>
+                            <col width="30%"></col>
+                            <col width="10%"></col>
+                            <col width="10%"></col>
+                            <col width="10%"></col>
+                            <col width="30%"></col>
+                        </colgroup>
+                        <tr>
+                            <th align="center" style="text-align:left;">åç§°</th>
+                            <th align="center">ç±»å‹</th>
+                            <th align="center">æ˜¯å¦å¿…é¡»</th>
+                            <th align="center">ç¤ºä¾‹å€¼</th>
+                            <th class="addBR" style="text-align:left;">æè¿°</th>
+                        </tr>
+									<tr class="odds" name="fieldTr">
+										<td class="addBB" name="fieldName" style="text-align:left;">operateFlag</td>
+										<td class="addBB" align="center" name="fieldType">
+											String
+										</td>
+										<td class="addBB" align="center" name="isMust">
+												N
+										</td>
+										<td class="addBB" align="center" name="fieldSample">1ï¼šæ–°å»ºï¼›2ï¼šç¡®è®¤</td>
+										<td class="addBR addBB" name="fieldDesc" style="text-align:left;">æ— </td>
+									</tr>
+									<tr name="fieldTr">
+										<td class="addBB" name="fieldName" style="text-align:left;">productMonth</td>
+										<td class="addBB" align="center" name="fieldType">
+											String
+										</td>
+										<td class="addBB" align="center" name="isMust">
+												N
+										</td>
+										<td class="addBB" align="center" name="fieldSample">2017_05</td>
+										<td class="addBR addBB" name="fieldDesc" style="text-align:left;">æ— </td>
+									</tr>
+									<tr class="odds" name="fieldTr">
+										<td class="addBB" name="fieldName" style="text-align:left;">purchasePlanCount</td>
+										<td class="addBB" align="center" name="fieldType">
+											String
+										</td>
+										<td class="addBB" align="center" name="isMust">
+												N
+										</td>
+										<td class="addBB" align="center" name="fieldSample">1000</td>
+										<td class="addBR addBB" name="fieldDesc" style="text-align:left;">æ— </td>
+									</tr>
+									<tr name="fieldTr">
+										<td class="addBB" name="fieldName" style="text-align:left;">purchasePlanNo</td>
+										<td class="addBB" align="center" name="fieldType">
+											String
+										</td>
+										<td class="addBB" align="center" name="isMust">
+												N
+										</td>
+										<td class="addBB" align="center" name="fieldSample">P000000001</td>
+										<td class="addBR addBB" name="fieldDesc" style="text-align:left;">æ— </td>
+									</tr>
+									<tr class="odds" name="fieldTr">
+										<td class="addBB" name="fieldName" style="text-align:left;">purchasePlanTitle</td>
+										<td class="addBB" align="center" name="fieldType">
+											String
+										</td>
+										<td class="addBB" align="center" name="isMust">
+												N
+										</td>
+										<td class="addBB" align="center" name="fieldSample">å¥¥å…‹æ–¯5æœˆé‡‡è´­è®¡åˆ’</td>
+										<td class="addBR addBB" name="fieldDesc" style="text-align:left;">æ— </td>
+									</tr>
+									<tr name="fieldTr">
+										<td class="addBB" name="fieldName" style="text-align:left;">purchasePlanType</td>
+										<td class="addBB" align="center" name="fieldType">
+											String
+										</td>
+										<td class="addBB" align="center" name="isMust">
+												N
+										</td>
+										<td class="addBB" align="center" name="fieldSample">å¢è¡¥è®¡åˆ’</td>
+										<td class="addBR addBB" name="fieldDesc" style="text-align:left;">æ— </td>
+									</tr>
+                    </table>
+                </div>
+				<div class="pr-title pr-t5"><span class="l">ä¸»é¢˜ç¤ºä¾‹æŠ¥æ–‡</span><em class="pr-em pr-down"></em></div>
+				<div class="pr-con5">
+                    <div class="tab">
+                        <div class="tab-content">
+                            <div class="tab-panel-new">
+                                <pre class='brush:javascript;toolbar:false;'>
+{
+  "sn_request": {
+    "sn_body": {
+       "createPurchaseplan": {
+          "purchasePlanHead": [
+          {
+           "purchasePlanNo": "110022132",
+           "purchasePlanTitle": "5æœˆé‡‡è´­è®¡åˆ’",
+           "productMonth": "2017_05",
+           "purchasePlanCount": "1000",
+           "purchasePlanType": "å¢è¡¥è®¡åˆ’",
+           "operateFlag": "1"
+          }
+          ]
+      }
+    }
+  }
+}
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+                <div class="pr-title pr-t9"><span class="l">ä¸»é¢˜å·¥å…·</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con9">
+                    <div class="su-apiDiv">
+                    	<a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/appSdkDownLoad.action  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/appSdkDownLoad.action'" tppabs="http://open.suning.com/ospos/apipage/appSdkDownLoad.action" class="su-other" target="_blank" style="width:380px;float:left;">SDKä¸‹è½½</a>
+    					<a href="../apipage/toDocContent.do-menuId=52.htm" tppabs="https://open.suning.com/ospos/apipage/toDocContent.do?menuId=52" class="su-other mr10" target="_blank" style="width:380px;float:right;" >ä½¿ç”¨æ–‡æ¡£</a>
+                    </div>
+                </div>
+			</div>
+			<div class="menuLRH"></div>
+		</div>
+	</div>	
+<div class="foot">
+    <iframe scrolling="no" frameborder="0" width="100%" height="165" src="../../../sop.suning.com/sel/portal/common/footer-1.html" tppabs="http://sop.suning.com/sel/portal/common/footer.html"></iframe>
+</div>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/OpenSer.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/open/OpenSer.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/openUPdate.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/open/openUPdate.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/common.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/custom/common.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shCore.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shCore.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shAutoloader.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shAutoloader.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shBrushXml.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shBrushXml.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shBrushJScript.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shBrushJScript.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shBrushCss.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shBrushCss.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/table.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/table.js?v=v1.0" charset="UTF-8"></script>
+<script>
+	SyntaxHighlighter.all();
+
+ $(function(){
+        var _wH = $(window).width()/2;
+        var _left = _wH+1190/2+10;
+        $(".su-titList").css("left",_left);
+		$(window).resize(function(){
+			var _wH = $(window).width()/2;
+			var _left = _wH+1190/2+10;
+			$(".su-titList").css("left",_left);
+		});
+
+    });
+	
+	//ç‚¹å‡»ä¸»é¢˜åè·³è½¬åˆ°å¯¹åº”çš„ä¸»é¢˜è¯¦æƒ…é¡µ
+	function toTopicDetail(topicDetailPageId,topicCgryId){
+		var params={"topicDetailPageId":topicDetailPageId,"topicCgryId":topicCgryId};
+		comm.initFormForSubmit("toTopicDetailPage-1.do.htm"/*tpa=http://open.suning.com/ospos/pushapi/toTopicDetailPage.do*/,"post",params);
+	}
+	
+	
+</script>
+<script src="../../../static.suning.cn/osr/meas/time-1.js" tppabs="http://static.suning.cn/osr/meas/time.js"></script>
+</body>
+</html>

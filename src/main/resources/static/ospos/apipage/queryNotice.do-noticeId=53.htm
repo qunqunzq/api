@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>开放服务-公告</title>
+    
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="手机, 电脑, 冰箱, 洗衣机, 相机, 数码, 家居用品, 鞋帽, 化妆品, 母婴用品, 图书，食品，保险，旅行，充值，团购，正品行货, 全国联保, 货到付款。"/>
+<meta name="description" content="苏宁易购是领先的综合网上购物商城, 在线特价销售家电、通讯数码、电脑、家居百货、服装服饰、母婴、图书、食品、保险、旅行、充值、团购等数万类商品和服务。正品行货, 全国联保, 本地配送, 货到付款。省钱放心上苏宁电器网上商城, 尽享购物乐趣！"/>
+<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<script src="../../../static.suning.cn/osr/meas/error.js" tppabs="https://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
+			<link rel="stylesheet" href="../staticfiles/css/common.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/common.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/OpenSerNew.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/OpenSerNew.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+</head>
+<body>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    if("" != ""){
+			var userName = "";
+			$("#alLoginName").text(userName);
+			$("#alLoginName").attr("title",userName);
+			$("#alLogin").show();
+			$("#withOutLogin").hide();
+	    }else {
+			var userName = getCookie("osposLoginUserIdFlag");
+			if(userName == ""){
+				var logonStatusVal = getCookie("logonStatus");
+				var authIdVal = getCookie("authId");
+				if((logonStatusVal != undefined && logonStatusVal != "") 
+	       		|| (authIdVal != undefined && authIdVal != "")){
+					userName = getCookie("idsLoginUserIdLastTime");
+				}
+			}
+			if(userName != ""){
+				$("#alLoginName").text(userName);
+				$("#alLoginName").attr("title",userName);
+				$("#alLogin").show();
+				$("#withOutLogin").hide();
+			}else {
+				$("#alLogin").hide();
+				$("#withOutLogin").show();
+			} 
+	    }
+    });
+	
+    function getCookie(cookieName){
+		var cookieArr = document.cookie.split(';');
+		for(var i=0; i<cookieArr.length; i++){
+			var cookie = cookieArr[i];
+			while (cookie.charAt(0)==' '){
+				cookie = cookie.substring(1);
+			}
+			cookieEntry = cookie.split('=');
+			if(cookieEntry[0] == cookieName){
+				return decodeURIComponent(cookieEntry[1]);
+			}
+		}
+		return "";
+    }
+	
+	$(function(){
+        $(".os-nav li").each(function(index){
+            $(this).removeClass("os-on");
+            if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toApi")!=-1&&index=="3"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toDevCenter")!=-1&&index=="4"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname=="/"&&index=="0"){
+                $(this).addClass("os-on");
+            }
+        })                
+	})
+</script>
+<div class="os-top bcs-top">
+	<div class="w1190 clearfix">
+		<div class="l os-snLogo"></div>	
+		<ul class="os-nav">
+			<li class="os-on"><a href="../../index.htm" tppabs="https://open.suning.com/">首页</a></li>
+			<li><a href="javascript:void(0);">开放版图<i></i></a>
+				<!--[if IE]>
+				<dl style="margin-left: -104px;margin-top: 55px;">
+				<![endif]-->
+				<!--[if !IE]><!-->
+				<dl>
+			    <!--<![endif]-->
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/road/roadIndex.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/road/roadIndex.html'" tppabs="https://road.suning.com/ospos/road/roadIndex.html" target="_blank">一号公路开放</a><i></i></dd>
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/toDevCenter.action  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/toDevCenter.action'" tppabs="https://road.suning.com/ospos/toDevCenter.action">商家后台开放</a><i></i></dd>
+                </dl>
+            </li>
+            <li><a href="toDocCenter.do.htm" tppabs="https://open.suning.com/ospos/apipage/toDocCenter.do">文档中心</a></li>
+			<li><a href="toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do">API文档</a></li>
+			<li><a href="../pushapi/toTopicPageList.do.htm" tppabs="https://open.suning.com/ospos/pushapi/toTopicPageList.do">消息文档</a></li>
+			<li><a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/toDevCenter.action">控制台</a></li>
+		</ul>
+		
+		<a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/logOut.action" class="os-exit" style="display: none;" id="alLogin">退出</a> 
+		<div class="r search-top">
+			<form method="post" action="https://open.suning.com/ospos/apipage/toSearchPage.do" id="tlSearchForm" style="display:inline;float:right;" autocomplete="off">
+                <input type="text" class="os-input" id="tlSearchIn" name="tlSearchName"/>
+                <span class="os-search" id="tlSearchBtn"></span>
+            </form>                
+                <span class="os-search"></span>
+                <span id="alLoginName" class="lname r"></span>
+                <a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/toLogin.action" class="os-login" style="display: none;" id="withOutLogin">登录</a>
+		</div>
+	</div>
+</div>    <div class="on-wrapp">
+        <div class="w1190 clearfix mb40 oh" style="position:relative;">
+            <div class="on-title">公告列表</div>
+            <div class="on-menuL">
+                <ul>
+                                 <li id=55 name="notice">
+                                 <div>云台系统升级期间，暂停服务</div>
+                                 <div class="on-c999">2018-01-26</div>
+                                 <em></em>
+                                 </li>
+                           
+                                 <li id=54 name="notice">
+                                 <div>采购订单相关接口更新公告</div>
+                                 <div class="on-c999">2017-12-12</div>
+                                 <em></em>
+                                 </li>
+                           
+                                 <li id=53 name="notice">
+                                 <div>商品相关接口双11期间关闭通知</div>
+                                 <div class="on-c999">2017-11-01</div>
+                                 <em></em>
+                                 </li>
+                           
+                                 <li id=52 name="notice">
+                                 <div>商品相关API接口升级关闭公告</div>
+                                 <div class="on-c999">2017-10-09</div>
+                                 <em></em>
+                                 </li>
+                           
+                                 <li style="border-bottom:1px solid #e2e3e4;" id=51 name="notice">
+                                 <div>苏宁C店订单状态变更通知推送消息下线通知</div>
+                                 <div class="on-c999">2017-09-29</div>
+                                 <em></em>
+                                 </li>
+                           
+                     <div class="on-pageDiv">
+                                    <span class="on-pageNum">1/10</span>
+                                        <a class="on-pageA" style="cursor: default;"><span class="on-page on-F"></span></a>
+                                        <a href="queryNotice.do-page=2.htm" tppabs="https://open.suning.com/ospos/apipage/queryNotice.do?page=2" class="on-pageA on-N"><span class="on-page on-N"></span></a>
+                    </div>
+                </ul>
+            </div>
+           
+            <div class="on-menuR clearfix">
+                    <div class="p30"  style="display:none;" id="notice55">
+                        <span class="on-title">云台系统升级期间，暂停服务</span>
+                        <span class="on-date r">2018-01-26</span>
+                        <div class="on-hr"></div>
+                           <div>因云台订单系统将在2018/1/27 03:00~03:30进行升级，期间以下功能将暂停服务：</div><div>新增订单接收</div><div>订单发货、确认收货、退货退款等操作与状态更新</div><div>修改运费、订单备注</div><div>特卖打包</div><div>海外购合单、报关信息接收</div><div>商家结算暂停</div><div>suning.custom.agreerejected.modify退货信息处理(同意)</div><div>suning.custom.disagreerejected.modify退货信息处理(不同意)</div><div>suning.custom.disagreerefund.modify退款信息处理(不同意)</div><div>suning.custom.delayrefund.modify退款信息处理(延期)</div><div>suning.custom.agreerefund.modify同意退款</div><div>suning.custom.ordernote.modify订单备注修改</div><div>suning.custom.orderdelivery.modify发货信息修改</div><div>suning.custom.orderdelivery.add订单发货</div><div>suning.custom.orderdelay.modify延迟交易收货时间</div><div>suning.custom.orderselfdist.add订单发货（商家自配送）</div><div>suning.custom.seaorderdelivery.add订单发货（海外购）</div><div>suning.custom.transportfee.modify未付款订单修改运费接口</div><div>suning.selfmarket.orderdeliver.add订单发货</div><div>suning.selfmarket.agreerefund.modify厂送退货审核（同意退款）</div><div>suning.selfmarket.agreerejected.modify厂送退货审核（同意退货）</div><div>suning.selfmarket.disagreerefund.modify厂送退货审核（拒绝退款）</div><div>suning.selfmarket.order.add订单打包</div><div>suning.selfmarket.orderdeliver.modify订单发货单修改</div><div>suning.selfmarket.agreerefund.modify厂送退货审核（同意退款）</div><div>suning.selfmarket.agreerejected.modify厂送退货审核（同意退货）</div><div>suning.selfmarket.disagreerefund.modify厂送退货审核（拒绝退款）</div><div>suning.selfmarket.disagreerejected.modify厂送退货审核（拒绝退货）</div><div><br></div><div>以上请商家知悉并注意，恭祝商祺！</div>
+											
+                    </div>     
+                    <div class="p30"  style="display:none;" id="notice54">
+                        <span class="on-title">采购订单相关接口更新公告</span>
+                        <span class="on-date r">2017-12-12</span>
+                        <div class="on-hr"></div>
+                           <div>2017.12.18号上线更新接口如下：</div><div>suning.selfmarket.purchaseorder.query&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;采购订单查询&nbsp; &nbsp; &nbsp;</div><div>suning.selfmarket.purchaseordersupplier.query&nbsp; &nbsp;根据供应商编码查询采购订单信息</div><div>改动点如下：</div><div><div>入参“订单状态&nbsp; orderStatus”无值时，订单头状态将返回10（待确认，已确认）、60已取消、新增（40部分确认部分收货、41待确认部分收货、42已确认部分收货）状态，</div><div>新增状态需要可解析，不需要可不解析，这样数据更加完整</div></div>
+											
+                    </div>     
+                    <div class="p30"  id="notice53">
+                        <span class="on-title">商品相关接口双11期间关闭通知</span>
+                        <span class="on-date r">2017-11-01</span>
+                        <div class="on-hr"></div>
+                           <span style="font-family: 宋体; font-size: 16px; line-height: 20px; widows: auto;">为保障双11期间苏宁易购网站各项业务稳定进行，计划自11月1日0时起，关闭商品批量发布和API发布商品相关功能，同时保留页面单条发布商品的功能，功能恢复时间在11月13日凌晨，请您提前安排新品发布！</span>
+											
+                    </div>     
+                    <div class="p30"  style="display:none;" id="notice52">
+                        <span class="on-title">商品相关API接口升级关闭公告</span>
+                        <span class="on-date r">2017-10-09</span>
+                        <div class="on-hr"></div>
+                           
+														
+														<p><span style="font-family: &quot;Microsoft YaHei&quot;; widows: 1; font-size: 14px; font-weight: bold;">各位商家，服务商：</span></p><p><span style="font-family: &quot;Microsoft YaHei&quot;; widows: 1; font-size: 14px; font-weight: bold;"><br></span></p><p><span style="font-family: 微软雅黑;"><span style="font-size: 12px; text-indent: 32px;">为进一步提高商品管理体验，商品系统将于10日凌晨进行升级，升级期间（</span><span style="font-size: 12px; text-indent: 32px;">2017</span><span style="font-size: 12px; text-indent: 32px;">年</span><span style="font-size: 12px; text-indent: 32px;">10</span><span style="font-size: 12px; text-indent: 32px;">月</span><span style="font-size: 12px; text-indent: 32px;">10</span><span style="font-size: 12px; text-indent: 32px;">日凌晨</span><span style="font-size: 12px; text-indent: 32px;">00:00-02:00</span><span style="font-size: 12px; text-indent: 32px;">）相关接口将无法使用，所有商品相关API接口将无法使用，</span><span style="font-size: 12px; text-indent: 32px;">升级完成后，功能将正常开启，请提前做好准备工作。</span><span style="font-size: 12px;">给您带来不便，敬请谅解。</span></span></p><p><span style="font-family: 微软雅黑;"><span style="font-size: 12px;"><br></span></span></p><div style="font-family: &quot;Microsoft YaHei&quot;; text-align: right;">开放服务平台&nbsp;</div><div style="font-family: &quot;Microsoft YaHei&quot;; text-align: right;">2017年10月09日</div>
+													
+													
+                    </div>     
+                    <div class="p30"  style="display:none;" id="notice51">
+                        <span class="on-title">苏宁C店订单状态变更通知推送消息下线通知</span>
+                        <span class="on-date r">2017-09-29</span>
+                        <div class="on-hr"></div>
+                           <p>&nbsp;suning_custom_orderstatus_modify&nbsp; &nbsp; 苏宁C店订单状态变更通知</p><p>该推送消息由于内部系统改造，暂时下线，不支持推送服务，系统重构完成后，会发布上线公告。</p><p>
+											</p>
+                    </div>     
+            </div>   
+        </div>
+    </div>  
+
+    <!-- 置顶 -->
+    <div class="os-topTo" style="bottom: 210px;"></div>
+
+<div class="foot">
+    <iframe scrolling="no" frameborder="0" width="100%" height="165" src="../../../sop.suning.com/sel/portal/common/footer.html" tppabs="https://sop.suning.com/sel/portal/common/footer.html"></iframe>
+</div>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/OpenSer.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/open/OpenSer.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/op_widget.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/open/op_widget.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/common.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/custom/common.js?v=v1.0" charset="UTF-8"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+        		$("#53").addClass("on-menuOn");
+        });   
+           
+        $("li[name='notice']").click(function(){
+            //显示DIV层
+            $(".p30").each(function(){
+                if($(this).is(":visible")){
+                    $(this).hide();
+                }
+            });
+            var noitceId = $(this).attr("id");
+            $("#notice" + noitceId).show();
+            //切换焦点
+            $(".on-menuL ul li").each(function(){
+                if($(this).hasClass("on-menuOn")){
+                    $(this).removeClass("on-menuOn");
+                }
+            });
+            $(this).addClass("on-menuOn");
+        });
+    </script>
+    <script src="../../../static.suning.cn/osr/meas/time.js" tppabs="https://static.suning.cn/osr/meas/time.js"></script>
+</body>
+</html>

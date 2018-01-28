@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>开放服务-API接口详情</title>
+	
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="手机, 电脑, 冰箱, 洗衣机, 相机, 数码, 家居用品, 鞋帽, 化妆品, 母婴用品, 图书，食品，保险，旅行，充值，团购，正品行货, 全国联保, 货到付款。"/>
+<meta name="description" content="苏宁易购是领先的综合网上购物商城, 在线特价销售家电、通讯数码、电脑、家居百货、服装服饰、母婴、图书、食品、保险、旅行、充值、团购等数万类商品和服务。正品行货, 全国联保, 本地配送, 货到付款。省钱放心上苏宁电器网上商城, 尽享购物乐趣！"/>
+<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<script src="../../../static.suning.cn/osr/meas/error-1.js" tppabs="http://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
+			<link rel="stylesheet" href="../staticfiles/css/common.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/common.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/OpenSerNew.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/OpenSerNew.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/plugins/syntaxhighlighter/styles/shCore.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/styles/shCore.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/plugins/syntaxhighlighter/styles/shThemeDefault.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/styles/shThemeDefault.css?v=v1.0"></link>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+</head>
+<body>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    if("" != ""){
+			var userName = "";
+			$("#alLoginName").text(userName);
+			$("#alLoginName").attr("title",userName);
+			$("#alLogin").show();
+			$("#withOutLogin").hide();
+	    }else {
+			var userName = getCookie("osposLoginUserIdFlag");
+			if(userName == ""){
+				var logonStatusVal = getCookie("logonStatus");
+				var authIdVal = getCookie("authId");
+				if((logonStatusVal != undefined && logonStatusVal != "") 
+	       		|| (authIdVal != undefined && authIdVal != "")){
+					userName = getCookie("idsLoginUserIdLastTime");
+				}
+			}
+			if(userName != ""){
+				$("#alLoginName").text(userName);
+				$("#alLoginName").attr("title",userName);
+				$("#alLogin").show();
+				$("#withOutLogin").hide();
+			}else {
+				$("#alLogin").hide();
+				$("#withOutLogin").show();
+			} 
+	    }
+    });
+	
+    function getCookie(cookieName){
+		var cookieArr = document.cookie.split(';');
+		for(var i=0; i<cookieArr.length; i++){
+			var cookie = cookieArr[i];
+			while (cookie.charAt(0)==' '){
+				cookie = cookie.substring(1);
+			}
+			cookieEntry = cookie.split('=');
+			if(cookieEntry[0] == cookieName){
+				return decodeURIComponent(cookieEntry[1]);
+			}
+		}
+		return "";
+    }
+	
+	$(function(){
+        $(".os-nav li").each(function(index){
+            $(this).removeClass("os-on");
+            if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toApi")!=-1&&index=="3"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toDevCenter")!=-1&&index=="4"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname=="/"&&index=="0"){
+                $(this).addClass("os-on");
+            }
+        })                
+	})
+</script>
+<div class="os-top bcs-top">
+	<div class="w1190 clearfix">
+		<div class="l os-snLogo"></div>	
+		<ul class="os-nav">
+			<li class="os-on"><a href="../../index-1.htm" tppabs="http://open.suning.com/">首页</a></li>
+			<li><a href="javascript:void(0);">开放版图<i></i></a>
+				<!--[if IE]>
+				<dl style="margin-left: -104px;margin-top: 55px;">
+				<![endif]-->
+				<!--[if !IE]><!-->
+				<dl>
+			    <!--<![endif]-->
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/road/roadIndex.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/road/roadIndex.html'" tppabs="https://road.suning.com/ospos/road/roadIndex.html" target="_blank">一号公路开放</a><i></i></dd>
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/toDevCenter.action  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/toDevCenter.action'" tppabs="https://road.suning.com/ospos/toDevCenter.action">商家后台开放</a><i></i></dd>
+                </dl>
+            </li>
+            <li><a href="toDocCenter-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toDocCenter.do">文档中心</a></li>
+			<li><a href="toApiListMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiListMenu.do">API文档</a></li>
+			<li><a href="../pushapi/toTopicPageList-1.do.htm" tppabs="http://open.suning.com/ospos/pushapi/toTopicPageList.do">消息文档</a></li>
+			<li><a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/toDevCenter.action">控制台</a></li>
+		</ul>
+		
+		<a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/logOut.action" class="os-exit" style="display: none;" id="alLogin">退出</a> 
+		<div class="r search-top">
+			<form method="post" action="http://open.suning.com/ospos/apipage/toSearchPage.do" id="tlSearchForm" style="display:inline;float:right;" autocomplete="off">
+                <input type="text" class="os-input" id="tlSearchIn" name="tlSearchName"/>
+                <span class="os-search" id="tlSearchBtn"></span>
+            </form>                
+                <span class="os-search"></span>
+                <span id="alLoginName" class="lname r"></span>
+                <a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/toLogin.action" class="os-login" style="display: none;" id="withOutLogin">登录</a>
+		</div>
+	</div>
+</div>
+	<div class="on-wrapp">
+		<div class="w1190 clearfix mb40 oh" style="position:relative;">
+			<div class="on-title">
+				<div class="go-title"><a href="toApiListMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiListMenu.do">API</a> &gt; <a href="toApiListMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiListMenu.do">API列表</a> &gt;<span><a href="toApiAccessMenu-1.do-intertypepageid=1&bustypeid=1.htm" tppabs="http://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=1&bustypeId=1">商品API</a></span></div>
+			</div>
+			<div class="on-menuL w238">
+				<a href="toApiListMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiListMenu.do" class="go-backLink"><em></em>返回API列表</a>
+				<div class="su-list">
+					<ul>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.lsyprice-1.modify&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.lsyprice.modify&interTypeId=1*/;" title="suning.custom.lsyprice.modify 零售云商户价格更新接口">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.lsyprice.modify</a>
+											<p>零售云商户价格更新接口</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.getproductcode-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.getproductcode.query&interTypeId=1*/;" title="suning.custom.getproductcode.query 获取苏宁商品编码接口">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.getproductcode.query</a>
+											<p>获取苏宁商品编码接口</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.categoryredict-1.get&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.categoryredict.get&interTypeId=1*/;" title="suning.custom.categoryredict.get 获取类目预测信息">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.categoryredict.get</a>
+											<p>获取类目预测信息</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.culitemcontents-1.modify&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.culitemcontents.modify&interTypeId=1*/;" title="suning.custom.culitemcontents.modify 商品内容维护（文化制品类）新">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.culitemcontents.modify</a>
+											<p>商品内容维护（文化制品类）新</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.lsyprice-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.lsyprice.query&interTypeId=1*/;" title="suning.custom.lsyprice.query 零售云商户价格查询接口">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.lsyprice.query</a>
+											<p>零售云商户价格查询接口</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.storegroup-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.storegroup.query&interTypeId=1*/;" title="suning.custom.storegroup.query 商家门店组信息查询">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.storegroup.query</a>
+											<p>商家门店组信息查询</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.culitemdetail-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.culitemdetail.query&interTypeId=1*/;" title="suning.custom.culitemdetail.query 获取我的商品库详情（文化制品类）新">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.culitemdetail.query</a>
+											<p>获取我的商品库详情（文化制品类）新</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.culitemcontentrevise-1.modify&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.culitemcontentrevise.modify&interTypeId=1*/;" title="suning.custom.culitemcontentrevise.modify 商品内容修改（文化制品类）新 ">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.culitemcontentrevise.modify</a>
+											<p>商品内容修改（文化制品类）新 </p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.product-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.product.query&interTypeId=1*/;" title="suning.custom.product.query 获取苏宁产品信息">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.product.query</a>
+											<p>获取苏宁产品信息</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.culitem-1.add&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.culitem.add&interTypeId=1*/;" title="suning.custom.culitem.add 产品申请（文化制品类）新">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.culitem.add</a>
+											<p>产品申请（文化制品类）新</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.newbrand-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.newbrand.query&interTypeId=1*/;" title="suning.custom.newbrand.query 获取商品品牌信息新接口">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.newbrand.query</a>
+											<p>获取商品品牌信息新接口</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.otoinfo-1.modify&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.otoinfo.modify&interTypeId=1*/;" title="suning.custom.otoinfo.modify C店商家修改商品O2O信息">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.otoinfo.modify</a>
+											<p>C店商家修改商品O2O信息</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.judgeproduct-1.confirm&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.judgeproduct.confirm&interTypeId=1*/;" title="suning.custom.judgeproduct.confirm 判断商品是否存在接口">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.judgeproduct.confirm</a>
+											<p>判断商品是否存在接口</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.category-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.category.query&interTypeId=1*/;" title="suning.custom.category.query 获取商品采购目录信息">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.category.query</a>
+											<p>获取商品采购目录信息</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.book.brand-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.brand.query&interTypeId=1*/;" title="suning.custom.book.brand.query 获取商品品牌信息（文化制品类）">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.book.brand.query</a>
+											<p>获取商品品牌信息（文化制品类）</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.book.salescatalog-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.salescatalog.query&interTypeId=1*/;" title="suning.custom.book.salescatalog.query 获取商品销售目录信息（文化制品类）">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.book.salescatalog.query</a>
+											<p>获取商品销售目录信息（文化制品类）</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.productdetail-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.productdetail.query&interTypeId=1*/;" title="suning.custom.productdetail.query 获取苏宁产品详情信息">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.productdetail.query</a>
+											<p>获取苏宁产品详情信息</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.book.productdetail-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.productdetail.query&interTypeId=1*/;" title="suning.custom.book.productdetail.query 获取苏宁产品详情信息（文化制品类）">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.book.productdetail.query</a>
+											<p>获取苏宁产品详情信息（文化制品类）</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.item-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.item.query&interTypeId=1*/;" title="suning.custom.item.query 获取我的商品库信息">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.item.query</a>
+											<p>获取我的商品库信息</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.book.item-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.item.query&interTypeId=1*/;" title="suning.custom.book.item.query 获取我的商品库信息（文化制品类）">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.book.item.query</a>
+											<p>获取我的商品库信息（文化制品类）</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.itemdetail-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.itemdetail.query&interTypeId=1*/;" title="suning.custom.itemdetail.query 获取我的商品详情信息">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.itemdetail.query</a>
+											<p>获取我的商品详情信息</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.itemparameters-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.itemparameters.query&interTypeId=1*/;" title="suning.custom.itemparameters.query 获取商品参数模板">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.itemparameters.query</a>
+											<p>获取商品参数模板</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.item-1.add&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.item.add&interTypeId=1*/;" title="suning.custom.item.add 产品申请">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.item.add</a>
+											<p>产品申请</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.itemcontents-1.add&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.itemcontents.add&interTypeId=1*/;" class="on-menuOn" title="suning.custom.itemcontents.add 商品内容维护">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.itemcontents.add</a>
+											<p>商品内容维护</p>
+										</div>
+										<div class="su-mask su-mask1"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.itemsale-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.itemsale.query&interTypeId=1*/;" title="suning.custom.itemsale.query 商品销售情况查询">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.itemsale.query</a>
+											<p>商品销售情况查询</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.itemcontents-1.modify&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.itemcontents.modify&interTypeId=1*/;" title="suning.custom.itemcontents.modify 商品内容修改">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.itemcontents.modify</a>
+											<p>商品内容修改</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.shelves-1.add&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.shelves.add&interTypeId=1*/;" title="suning.custom.shelves.add 商品上架">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.shelves.add</a>
+											<p>商品上架</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.shelves-1.move&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.shelves.move&interTypeId=1*/;" title="suning.custom.shelves.move 商品下架">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.shelves.move</a>
+											<p>商品下架</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.childitem-1.add&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.childitem.add&interTypeId=1*/;" title="suning.custom.childitem.add 规格商品新增">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.childitem.add</a>
+											<p>规格商品新增</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.pic-1.delete&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.pic.delete&interTypeId=1*/;" title="suning.custom.pic.delete 图片删除">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.pic.delete</a>
+											<p>图片删除</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.pic-1.add&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.pic.add&interTypeId=1*/;" title="suning.custom.pic.add 图片上传">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.pic.add</a>
+											<p>图片上传</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.book.product-1.get&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.product.get&interTypeId=1*/;" title="suning.custom.book.product.get 苏宁产品信息精确查询（文化制品类）">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.book.product.get</a>
+											<p>苏宁产品信息精确查询（文化制品类）</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.item-1.get&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.item.get&interTypeId=1*/;" title="suning.custom.item.get 我的商品库信息精确查询">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.item.get</a>
+											<p>我的商品库信息精确查询</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.book.item-1.get&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.item.get&interTypeId=1*/;" title="suning.custom.book.item.get 我的商品库信息精确查询（文化制品类）">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.book.item.get</a>
+											<p>我的商品库信息精确查询（文化制品类）</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.book.mainproduct-1.modify&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.mainproduct.modify&interTypeId=1*/;" title="suning.custom.book.mainproduct.modify 商品内容纠错申请（文化制品类）">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.book.mainproduct.modify</a>
+											<p>商品内容纠错申请（文化制品类）</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.book.mainproduct-1.get&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.mainproduct.get&interTypeId=1*/;" title="suning.custom.book.mainproduct.get 商品内容纠错申请结果查询（文化制品类）">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.book.mainproduct.get</a>
+											<p>商品内容纠错申请结果查询（文化制品类）</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.mainproduct-1.modify&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.mainproduct.modify&interTypeId=1*/;" title="suning.custom.mainproduct.modify 商品内容纠错申请">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.mainproduct.modify</a>
+											<p>商品内容纠错申请</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.mainproduct-1.get&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.mainproduct.get&interTypeId=1*/;" title="suning.custom.mainproduct.get 查询商品内容纠错结果">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.mainproduct.get</a>
+											<p>查询商品内容纠错结果</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.product-1.get&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.product.get&interTypeId=1*/;" title="suning.custom.product.get 苏宁产品信息精确查询">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.product.get</a>
+											<p>苏宁产品信息精确查询</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.item-1.delorres&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.item.delorres&interTypeId=1*/;" title="suning.custom.item.delorres 商品删除，恢复与彻底删除">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.item.delorres</a>
+											<p>商品删除，恢复与彻底删除</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.moduletemplet-1.get&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.moduletemplet.get&interTypeId=1*/;" title="suning.custom.moduletemplet.get 获取模块模板">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.moduletemplet.get</a>
+											<p>获取模块模板</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.mobilerecommend-1.add&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.mobilerecommend.add&interTypeId=1*/;" title="suning.custom.mobilerecommend.add 手机详情推荐模块新增">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.mobilerecommend.add</a>
+											<p>手机详情推荐模块新增</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.mobilerecommend-1.modify&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.mobilerecommend.modify&interTypeId=1*/;" title="suning.custom.mobilerecommend.modify 手机详情推荐模块修改">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.mobilerecommend.modify</a>
+											<p>手机详情推荐模块修改</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.mobilerecommend-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.mobilerecommend.query&interTypeId=1*/;" title="suning.custom.mobilerecommend.query 手机详情推荐模块查询">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.mobilerecommend.query</a>
+											<p>手机详情推荐模块查询</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.mobilesequence-1.modify&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.mobilesequence.modify&interTypeId=1*/;" title="suning.custom.mobilesequence.modify 手机详情模块顺序修改">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.mobilesequence.modify</a>
+											<p>手机详情模块顺序修改</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.mobilesequence-1.query&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.mobilesequence.query&interTypeId=1*/;" title="suning.custom.mobilesequence.query 手机详情模块顺序查询">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.mobilesequence.query</a>
+											<p>手机详情模块顺序查询</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.custom.npic-1.add&intertypeid=1.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.npic.add&interTypeId=1*/;" title="suning.custom.npic.add 新版图片上传接口">
+										<div class="su-listDiv">
+											<a href="#">suning.custom.npic.add</a>
+											<p>新版图片上传接口</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+					</ul>
+				</div>
+				<a href="toApiErrorCodeMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiErrorCodeMenu.do"><div class="ap-APIDoc"><em></em>异常码自查工具</div></a>
+			</div>
+			<div class="on-menuR ml240 clearfix"  style="position: relative;">
+			<div class="p30">
+				<span class="on-title su-titPos">suning.custom.itemcontents.add&nbsp;商品内容维护</span>
+				<p class="tnote">
+			对于苏宁已存在的商品，商户可通过此接口进行商品内容维护。<br>  1、通过输入苏宁商品编码、商品介绍、卖点、售后、价格、库存、运费、销售设定等商品信息维护商品内容。若含有子商品，则该主商品下的所有子商品信息必须维护，若提供的子商品中存在商户不操作的商品，可将对应子商品的库存设置为0 <br> 2、系统成功接收商品申请信息后，返回申请编号、接口接收成功系统时间。<br>  3、商品处理结果可通过获取我的商品库信息/我的商品库信息精确查询/获取我的商品详情信息接口进行查询。        
+		</p>
+					<ul class="su-titList pos">
+						<li class="cur"><a href="#local1" id="scroll-it1">公共参数</a></li>
+						<li><a href="#local2" id="scroll-it2">请求参数</a></li>
+						<li><a href="#local3" id="scroll-it3">响应参数</a></li>
+						<li><a href="#local4" id="scroll-it4">请求示例</a></li>
+						<li><a href="#local5" id="scroll-it5">响应示例</a></li>
+						<li><a href="#local6" id="scroll-it6">异常示例</a></li>
+						<li><a href="#local7" id="scroll-it7">业务异常码</a></li>
+						<li><a href="#local8" id="scroll-it8">公共异常码</a></li>
+						<li><a href="#local9" id="scroll-it9">API工具</a></li>
+						<li><a href="#local10" id="scroll-it10">FAQ</a></li>
+					</ul>
+				<div class="pr-title pr-t1" id="local1"><span class="l">公共参数</span><em class="pr-em pr-down pr-up"></em></div>
+                <div class="pr-con1" style="display: none;">
+                    <table class="su-table mb30">
+                    <colgroup>
+                        <col width="20%"></col>
+                        <col width="10%"></col>
+                        <col width="10%"></col>
+                        <col width="10%"></col>
+                        <col></col>
+                    </colgroup>
+                    <tr>
+                        <th style="text-align:left;">名称</th>
+                        <th align="center">类型</th>
+                        <th align="center">是否必须</th>
+                        <th align="center">示例值</th>
+                        <th class="addBR" style="text-align:left;">描述</th>
+                    </tr>
+							<tr class="odds" name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">appMethod</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">suning.custom.category.query</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">API接口名称</td>
+							</tr>
+							<tr name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">appRequestTime</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">2012-04-25 20:23:30</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">时间戳，格式为yyyy-MM-dd HH:mm:ss，例如：2012-04-25 20:23:30。API服务端允许客户端请求时间误差为10分钟。</td>
+							</tr>
+							<tr class="odds" name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">format</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										N
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">XML</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">默认xml,可指定格式为xml,json</td>
+							</tr>
+							<tr name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">appKey</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">b0c332a133c102765f39de**********</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">分配给应用的访问令牌</td>
+							</tr>
+							<tr class="odds" name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">versionNo</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">v1.2</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">API的版本，目前为v1.2版本</td>
+							</tr>
+							<tr name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">signInfo</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">460d7ff15b073e463125b4**********</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">appSecret,appMethod ,appRequestTime, appKey, versionNo, 请求报文base64加密后的数据顺序MD5(32位小写)，其中appSecret为appKey对应的密钥</td>
+							</tr>
+							<tr class="odds" name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">access_token</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										N
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">a1c5c62b08df3a3cbf7efd**********</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">采用OAuth授权方式为必填参数</td>
+							</tr>
+                </table>
+                </div>
+				<div class="pr-title pr-t2" id="local2"><span class="l">请求参数</span><em class="pr-em pr-down pr-up"></em></div>
+                <div class="pr-con2">
+                    <table class="su-table mb30 JS_showHide">
+                        <colgroup>
+                            <col width="30%"></col>
+                            <col width="10%"></col>
+                            <col width="10%"></col>
+                            <col width="10%"></col>
+                            <col width="30%"></col>
+                        </colgroup>
+                        <tr>
+                            <th align="center" style="text-align:left;">名称</th>
+                            <th align="center">类型</th>
+                            <th align="center">是否必须</th>
+                            <th align="center">示例值</th>
+                            <th class="addBR" style="text-align:left;">描述</th>
+                        </tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>sellPoint</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>商品卖点</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商品卖点。最多可填写40个汉字或字符。</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>freightTemplateId</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>2da499d40cda4389817273ab0affdbed</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商品运费模板编码。可由平台业务-销售准备-运费模板批量查询接口获取。需填写对应商家维护的运维模板编码。每个主商品仅填写一个运费模板。</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>introduction</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>5aW95ZWG5ZOB</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家商品介绍，UTF-8格式。将html内容的txt文本文件读取为字节数组,然后base64加密，去除空格回车后作为字段，传输时所涉及的图片不得使用外部url。允许写入CSS（禁止引用外部CSS）不支持JS。</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>afterSaleServiceDec</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>7天内包退换</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商品售后服务内容。最多可填写200个汉字或字符。</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>saleSet</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>Y</td><td class='addBB' style='text-align:left;word-break: break-word;'>0</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家商品销售设定。1：立即；0：设定日期；2：放入仓库。1表示商品申请处理成功后，系统立即进行上架；0表示商品申请处理成功后，在设定的日期，系统自动上架；2表示商品申请处理成功后，商品状态为待售状态。商户可通过平台业务-商品服务-商品上架接口对待售状态的商品进行上架操作。</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>saleDate</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>2013-09-15</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家设定的销售日期。必须为当天之后的日期！仅在销售设定为0时展示。 格式YYYY-MM-DD</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>productCode</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>Y</td><td class='addBB' style='text-align:left;word-break: break-word;'>102652866</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>苏宁商品编码。可由平台业务-商品服务-获取我的商品库信息接口获取，只可填写主商品编码</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>itemCode</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>789123</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>主商品商家商品编码。</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>price</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>5.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>主商品价格。单位：元。精确到小数点后2位。如含有子商品，此字段无需填写。价格范围：0.01-9,999,999,999,999.99</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>invQty</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>10</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>主商品库存。单位：件。如含有子商品，此字段无需填写。库存范围：0-99999(非海外购商户此字段必填)</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>alertQty</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>5</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>主商品库存预警值。如含有子商品，此字段无需填写。范围：0-99999</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>assortCode</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>店铺商品分类ID,可以通过 店铺-店铺分类查询接口查询，必须使用最底层的店铺分类ID</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>sourceCountry</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>CN</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>来源地国家代码。国家代码（可去已有接口国家代码查询接口查询国家代码）</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 0px;'><i class='plus_link'></i>packingList</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' align='center'></td><td class='addBR addBB' style='text-align:left;word-break: break-word;'></td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>packingListName</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>装箱清单名称</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>装箱清单名称</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>packingListQty</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>装箱清单数值</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 0px;'><i class='plus_link'></i>detailModule</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' align='center'></td><td class='addBR addBB' style='text-align:left;word-break: break-word;'></td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>num</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>模块化详情模块顺序</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>moduleId</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>模块化详情-模块ID</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>moduleName</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>售后服务</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>模块化详情模块名称</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>type</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>usr_mod</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>模块类型。cat_mod：表示运营配置； usr_mod：表示自定义</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>content</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>5aW95ZWG5ZOB</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>模块化详情-模块内容。内容需base64加密。</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>cmTitle</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>Y</td><td class='addBB' style='text-align:left;word-break: break-word;'>商品标题</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商品标题</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 0px;'><i class='plus_link'></i>mobile</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' align='center'></td><td class='addBR addBB' style='text-align:left;word-break: break-word;'></td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>summary</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>手机详情-摘要</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='plus_link'></i>list</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' align='center'></td><td class='addBR addBB' style='text-align:left;word-break: break-word;'></td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>pic</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>http://1.jpg</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>手机详情-图片</td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>text</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>手机详情-文字</td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>num</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>手机详情模块顺序</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 0px;'><i class='plus_link'></i>mobileNew</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' align='center'></td><td class='addBR addBB' style='text-align:left;word-break: break-word;'></td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='plus_link'></i>module</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' align='center'></td><td class='addBR addBB' style='text-align:left;word-break: break-word;'></td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>moduleStatus</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>手机新版详情-模块启用标识。0禁用，1启用</td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>couponId</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>优惠券id(通过查询接口可得)</td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>tuijianId</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家推荐id(通过查询接口可得)</td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>moduleName</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>售后服务</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>手机新版详情模块名称</td></tr>
+								<tr deep='2' style='display:none;'><td class='name ddBB addBB' style='padding-left: 40px;'><i class='child_link'></i>imgUrl</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>http://1.jpg</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商品图片模块、自定义模块图片地址</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>supplierImg1Url</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>Y</td><td class='addBB' style='text-align:left;word-break: break-word;'>http://1.jpg...</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家商品图片1</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>supplierImg2Url</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>Y</td><td class='addBB' style='text-align:left;word-break: break-word;'>http://1.jpg...</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家商品图片2</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>supplierImg3Url</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>Y</td><td class='addBB' style='text-align:left;word-break: break-word;'>http://1.jpg...</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家商品图片3</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>supplierImg4Url</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>Y</td><td class='addBB' style='text-align:left;word-break: break-word;'>http://1.jpg...</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家商品图片4</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>supplierImg5Url</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>Y</td><td class='addBB' style='text-align:left;word-break: break-word;'>http://1.jpg...</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家商品图片5</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>supplierImg6Url</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>http://1.jpg...</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家商品图片6</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>supplierImg7Url</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>http://1.jpg...</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家商品图片7</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>supplierImg8Url</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>http://1.jpg...</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家商品图片8</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>supplierImg9Url</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>http://1.jpg...</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家商品图片9</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>supplierImg10Url</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>http://1.jpg...</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>商家商品图片10</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 0px;'><i class='plus_link'></i>childItem</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' align='center'></td><td class='addBR addBB' style='text-align:left;word-break: break-word;'></td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>productCode</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>Y</td><td class='addBB' style='text-align:left;word-break: break-word;'>104007723</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>子商品的苏宁商品编码。可由平台业务-商品服务-获取我的商品库信息接口获取，仅可填写子商品编码。如无子商品，则无需填写此字段。</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>itemCode</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>561</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>子商品的商家商品编码。可由平台业务-商品服务-获取我的商品库信息接口获取，如修改此字段，子商品-苏宁商品编码字段必填。如无子商品，则无需填写此字段。</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>price</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>100.00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>子商品价格。单位：元。精确到小数点后2位。如无子商品，此字段无需填写。价格范围：0.01-9999999999999.99</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>invQty</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>5</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>子商品库存。单位：件。如无子商品，此字段无需填写。库存范围：0-999999</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>alertQty</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>5</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>子商品库存预警值。如无子商品，则无需填写此字段</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>supplierImg1Url</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>Y</td><td class='addBB' style='text-align:left;word-break: break-word;'>http://1.jpg</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>子商品商家商品图片</td></tr>
+								<tr deep='1' style='display:none;'><td class='name ddBB addBB' style='padding-left: 20px;'><i class='child_link'></i>deductiblePriceChild</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>抵扣金额</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>sellChannel</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>01</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>销售渠道(01:线上;10:线下;11:线上线下)</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>priceType</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>01</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>价格类型(01:一口价;02:O2O特权定金)</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>payTemplate</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>分阶段支付模板</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>deductiblePrice</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>抵扣金额</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>extractMode</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>01,10</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>提取方式(01:快递上门;10:电子凭证)</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>effectiveDay</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>99</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>有效期（0-999的整数）</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>bookingShop</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>0</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>预约到店(0:不支持 1:支持)</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>writeoffPayment</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>0</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>核销打款(0:不支持 1:支持)</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>autoRefund</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>0</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>过期自动退款(0:不支持 1:支持)</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>insaleRefund</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>0</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>售中退款(0:不支持 1:支持)</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>writeoffShop</td><td class='addBB' align='center'>String</td><td class='addBB' align='center'>N</td><td class='addBB' style='text-align:left;word-break: break-word;'>1</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>核销门店组</td></tr>
+                    </table>
+                </div>
+				<div class="pr-title pr-t3" id="local3"><span class="l">响应参数</span><em class="pr-em pr-down"></em></div>
+				<div class="pr-con3">
+					<table class="su-table mb30 JS_showHide">
+						<colgroup>
+							<col width="30%"></col>
+							<col width="10%"></col>
+							<col width="10%"></col>
+							<col width="30%"></col>
+						</colgroup>
+						<tr>
+							<th align="center" style="text-align:left;">名称</th>
+							<th align="center">类型</th>
+							<th align="center">示例值</th>
+							<th align="center" class="addBR" style="text-align:left;">描述</th>
+						</tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>applyCode</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>100011258</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>申请编码。applyid</td></tr>
+								<tr deep='0'><td class='name ddBB addBB' style='padding-left: 20px;'>applyTime</td><td class='addBB' align='center'>String</td><td class='addBB' style='text-align:left;word-break: break-word;'>1990-07-16 00:00:00</td><td class='addBR addBB' style='text-align:left;word-break: break-word;'>申请时间</td></tr>
+					</table>
+				</div>
+				<div class="pr-title pr-t4" id="local4"><span class="l">请求示例</span><em class="pr-em pr-down"></em></div>
+				<div class="pr-con4">
+                    <div class="tab">
+                        <div class="tab-handler">
+                            <ul>
+                                <li atr="reqxml">XML示例</li>
+                                <li atr="reqjson">JSON示例</li>
+                            </ul>
+                            <a href="javascript:void(0);" id="interReqSampleXmlDivHref" class="copy" onclick='copyToClipBoardText(this)'>复制全部代码</a>
+                            <input type="hidden" value="
+
+&lt;sn_request&gt;
+  &lt;sn_body&gt;
+    &lt;itemContents&gt;
+      &lt;effectiveDay&gt;99&lt;/effectiveDay&gt;
+      &lt;insaleRefund&gt;0&lt;/insaleRefund&gt;
+      &lt;invQty&gt;10&lt;/invQty&gt;
+      &lt;freightTemplateId&gt;2da499d40cda4389817273ab0affdbed&lt;/freightTemplateId&gt;
+      &lt;afterSaleServiceDec&gt;7&#22825;&#20869;&#21253;&#36864;&#25442;&lt;/afterSaleServiceDec&gt;
+      &lt;assortCode&gt;1&lt;/assortCode&gt;
+      &lt;supplierImg7Url&gt;http://1.jpg...&lt;/supplierImg7Url&gt;
+      &lt;mobileNew&gt;
+        &lt;module&gt;
+          &lt;imgUrl&gt;http://1.jpg&lt;/imgUrl&gt;
+          &lt;moduleName&gt;&#21806;&#21518;&#26381;&#21153;&lt;/moduleName&gt;
+          &lt;moduleStatus&gt;1&lt;/moduleStatus&gt;
+          &lt;tuijianId&gt;1&lt;/tuijianId&gt;
+          &lt;couponId&gt;1&lt;/couponId&gt;
+        &lt;/module&gt;
+      &lt;/mobileNew&gt;
+      &lt;sellPoint&gt;&#21830;&#21697;&#21334;&#28857;&lt;/sellPoint&gt;
+      &lt;sourceCountry&gt;CN&lt;/sourceCountry&gt;
+      &lt;supplierImg5Url&gt;http://1.jpg...&lt;/supplierImg5Url&gt;
+      &lt;supplierImg1Url&gt;http://1.jpg...&lt;/supplierImg1Url&gt;
+      &lt;supplierImg10Url&gt;http://1.jpg...&lt;/supplierImg10Url&gt;
+      &lt;detailModule&gt;
+        &lt;content&gt;5aW95ZWG5ZOB&lt;/content&gt;
+        &lt;num&gt;1&lt;/num&gt;
+        &lt;moduleId&gt;1&lt;/moduleId&gt;
+        &lt;moduleName&gt;&#21806;&#21518;&#26381;&#21153;&lt;/moduleName&gt;
+        &lt;type&gt;usr_mod&lt;/type&gt;
+      &lt;/detailModule&gt;
+      &lt;packingList&gt;
+        &lt;packingListQty&gt;1&lt;/packingListQty&gt;
+        &lt;packingListName&gt;&#35013;&#31665;&#28165;&#21333;&#21517;&#31216;&lt;/packingListName&gt;
+      &lt;/packingList&gt;
+      &lt;saleDate&gt;2013-09-15&lt;/saleDate&gt;
+      &lt;writeoffPayment&gt;0&lt;/writeoffPayment&gt;
+      &lt;supplierImg6Url&gt;http://1.jpg...&lt;/supplierImg6Url&gt;
+      &lt;payTemplate&gt;1&lt;/payTemplate&gt;
+      &lt;itemCode&gt;789123&lt;/itemCode&gt;
+      &lt;autoRefund&gt;0&lt;/autoRefund&gt;
+      &lt;deductiblePrice&gt;1&lt;/deductiblePrice&gt;
+      &lt;supplierImg3Url&gt;http://1.jpg...&lt;/supplierImg3Url&gt;
+      &lt;productCode&gt;102652866&lt;/productCode&gt;
+      &lt;sellChannel&gt;01&lt;/sellChannel&gt;
+      &lt;writeoffShop&gt;1&lt;/writeoffShop&gt;
+      &lt;priceType&gt;01&lt;/priceType&gt;
+      &lt;alertQty&gt;5&lt;/alertQty&gt;
+      &lt;supplierImg2Url&gt;http://1.jpg...&lt;/supplierImg2Url&gt;
+      &lt;childItem&gt;
+        &lt;supplierImg1Url&gt;http://1.jpg&lt;/supplierImg1Url&gt;
+        &lt;price&gt;100.00&lt;/price&gt;
+        &lt;invQty&gt;5&lt;/invQty&gt;
+        &lt;productCode&gt;104007723&lt;/productCode&gt;
+        &lt;deductiblePriceChild&gt;1&lt;/deductiblePriceChild&gt;
+        &lt;alertQty&gt;5&lt;/alertQty&gt;
+        &lt;itemCode&gt;561&lt;/itemCode&gt;
+      &lt;/childItem&gt;
+      &lt;supplierImg8Url&gt;http://1.jpg...&lt;/supplierImg8Url&gt;
+      &lt;extractMode&gt;01,10&lt;/extractMode&gt;
+      &lt;cmTitle&gt;&#21830;&#21697;&#26631;&#39064;&lt;/cmTitle&gt;
+      &lt;price&gt;5.00&lt;/price&gt;
+      &lt;supplierImg4Url&gt;http://1.jpg...&lt;/supplierImg4Url&gt;
+      &lt;bookingShop&gt;0&lt;/bookingShop&gt;
+      &lt;saleSet&gt;0&lt;/saleSet&gt;
+      &lt;supplierImg9Url&gt;http://1.jpg...&lt;/supplierImg9Url&gt;
+      &lt;introduction&gt;5aW95ZWG5ZOB&lt;/introduction&gt;
+      &lt;mobile&gt;
+        &lt;summary&gt;1&lt;/summary&gt;
+        &lt;list&gt;
+          &lt;text&gt;1&lt;/text&gt;
+          &lt;num&gt;1&lt;/num&gt;
+          &lt;pic&gt;http://1.jpg&lt;/pic&gt;
+        &lt;/list&gt;
+      &lt;/mobile&gt;
+    &lt;/itemContents&gt;
+  &lt;/sn_body&gt;
+&lt;/sn_request&gt;
+
+			
+			"/>
+                            <a href="javascript:void(0);" id="interReqSampleJsonDivHref" class="copy" onclick='copyToClipBoardText(this)' style="display:none;">复制全部代码</a>
+                        	<input type="hidden" value='
+
+{
+  "sn_request": {
+    "sn_body": {
+      "itemContents": {
+        "effectiveDay": "99",
+        "insaleRefund": "0",
+        "afterSaleServiceDec": "7天内包退换",
+        "freightTemplateId": "2da499d40cda4389817273ab0affdbed",
+        "invQty": "10",
+        "assortCode": "1",
+        "supplierImg7Url": "http://1.jpg...",
+        "sourceCountry": "CN",
+        "sellPoint": "商品卖点",
+        "mobileNew": {
+          "module": [
+            {
+              "imgUrl": "http://1.jpg",
+              "moduleName": "售后服务",
+              "moduleStatus": "1",
+              "couponId": "1",
+              "tuijianId": "1"
+            }
+          ]
+        },
+        "supplierImg5Url": "http://1.jpg...",
+        "supplierImg1Url": "http://1.jpg...",
+        "supplierImg10Url": "http://1.jpg...",
+        "detailModule": [
+          {
+            "content": "5aW95ZWG5ZOB",
+            "num": "1",
+            "moduleId": "1",
+            "moduleName": "售后服务",
+            "type": "usr_mod"
+          }
+        ],
+        "packingList": [
+          {
+            "packingListQty": "1",
+            "packingListName": "装箱清单名称"
+          }
+        ],
+        "saleDate": "2013-09-15",
+        "writeoffPayment": "0",
+        "supplierImg6Url": "http://1.jpg...",
+        "payTemplate": "1",
+        "itemCode": "789123",
+        "autoRefund": "0",
+        "deductiblePrice": "1",
+        "supplierImg3Url": "http://1.jpg...",
+        "productCode": "102652866",
+        "sellChannel": "01",
+        "writeoffShop": "1",
+        "priceType": "01",
+        "alertQty": "5",
+        "supplierImg2Url": "http://1.jpg...",
+        "childItem": [
+          {
+            "price": "100.00",
+            "supplierImg1Url": "http://1.jpg",
+            "invQty": "5",
+            "productCode": "104007723",
+            "deductiblePriceChild": "1",
+            "alertQty": "5",
+            "itemCode": "561"
+          }
+        ],
+        "supplierImg8Url": "http://1.jpg...",
+        "extractMode": "01,10",
+        "cmTitle": "商品标题",
+        "price": "5.00",
+        "supplierImg4Url": "http://1.jpg...",
+        "bookingShop": "0",
+        "saleSet": "0",
+        "supplierImg9Url": "http://1.jpg...",
+        "introduction": "5aW95ZWG5ZOB",
+        "mobile": {
+          "summary": "1",
+          "list": [
+            {
+              "num": "1",
+              "text": "1",
+              "pic": "http://1.jpg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+			
+			'/>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-panel">
+                                <pre class='brush:xml;toolbar:false;'>
+
+
+&lt;sn_request&gt;
+  &lt;sn_body&gt;
+    &lt;itemContents&gt;
+      &lt;effectiveDay&gt;99&lt;/effectiveDay&gt;
+      &lt;insaleRefund&gt;0&lt;/insaleRefund&gt;
+      &lt;invQty&gt;10&lt;/invQty&gt;
+      &lt;freightTemplateId&gt;2da499d40cda4389817273ab0affdbed&lt;/freightTemplateId&gt;
+      &lt;afterSaleServiceDec&gt;7&#22825;&#20869;&#21253;&#36864;&#25442;&lt;/afterSaleServiceDec&gt;
+      &lt;assortCode&gt;1&lt;/assortCode&gt;
+      &lt;supplierImg7Url&gt;http://1.jpg...&lt;/supplierImg7Url&gt;
+      &lt;mobileNew&gt;
+        &lt;module&gt;
+          &lt;imgUrl&gt;http://1.jpg&lt;/imgUrl&gt;
+          &lt;moduleName&gt;&#21806;&#21518;&#26381;&#21153;&lt;/moduleName&gt;
+          &lt;moduleStatus&gt;1&lt;/moduleStatus&gt;
+          &lt;tuijianId&gt;1&lt;/tuijianId&gt;
+          &lt;couponId&gt;1&lt;/couponId&gt;
+        &lt;/module&gt;
+      &lt;/mobileNew&gt;
+      &lt;sellPoint&gt;&#21830;&#21697;&#21334;&#28857;&lt;/sellPoint&gt;
+      &lt;sourceCountry&gt;CN&lt;/sourceCountry&gt;
+      &lt;supplierImg5Url&gt;http://1.jpg...&lt;/supplierImg5Url&gt;
+      &lt;supplierImg1Url&gt;http://1.jpg...&lt;/supplierImg1Url&gt;
+      &lt;supplierImg10Url&gt;http://1.jpg...&lt;/supplierImg10Url&gt;
+      &lt;detailModule&gt;
+        &lt;content&gt;5aW95ZWG5ZOB&lt;/content&gt;
+        &lt;num&gt;1&lt;/num&gt;
+        &lt;moduleId&gt;1&lt;/moduleId&gt;
+        &lt;moduleName&gt;&#21806;&#21518;&#26381;&#21153;&lt;/moduleName&gt;
+        &lt;type&gt;usr_mod&lt;/type&gt;
+      &lt;/detailModule&gt;
+      &lt;packingList&gt;
+        &lt;packingListQty&gt;1&lt;/packingListQty&gt;
+        &lt;packingListName&gt;&#35013;&#31665;&#28165;&#21333;&#21517;&#31216;&lt;/packingListName&gt;
+      &lt;/packingList&gt;
+      &lt;saleDate&gt;2013-09-15&lt;/saleDate&gt;
+      &lt;writeoffPayment&gt;0&lt;/writeoffPayment&gt;
+      &lt;supplierImg6Url&gt;http://1.jpg...&lt;/supplierImg6Url&gt;
+      &lt;payTemplate&gt;1&lt;/payTemplate&gt;
+      &lt;itemCode&gt;789123&lt;/itemCode&gt;
+      &lt;autoRefund&gt;0&lt;/autoRefund&gt;
+      &lt;deductiblePrice&gt;1&lt;/deductiblePrice&gt;
+      &lt;supplierImg3Url&gt;http://1.jpg...&lt;/supplierImg3Url&gt;
+      &lt;productCode&gt;102652866&lt;/productCode&gt;
+      &lt;sellChannel&gt;01&lt;/sellChannel&gt;
+      &lt;writeoffShop&gt;1&lt;/writeoffShop&gt;
+      &lt;priceType&gt;01&lt;/priceType&gt;
+      &lt;alertQty&gt;5&lt;/alertQty&gt;
+      &lt;supplierImg2Url&gt;http://1.jpg...&lt;/supplierImg2Url&gt;
+      &lt;childItem&gt;
+        &lt;supplierImg1Url&gt;http://1.jpg&lt;/supplierImg1Url&gt;
+        &lt;price&gt;100.00&lt;/price&gt;
+        &lt;invQty&gt;5&lt;/invQty&gt;
+        &lt;productCode&gt;104007723&lt;/productCode&gt;
+        &lt;deductiblePriceChild&gt;1&lt;/deductiblePriceChild&gt;
+        &lt;alertQty&gt;5&lt;/alertQty&gt;
+        &lt;itemCode&gt;561&lt;/itemCode&gt;
+      &lt;/childItem&gt;
+      &lt;supplierImg8Url&gt;http://1.jpg...&lt;/supplierImg8Url&gt;
+      &lt;extractMode&gt;01,10&lt;/extractMode&gt;
+      &lt;cmTitle&gt;&#21830;&#21697;&#26631;&#39064;&lt;/cmTitle&gt;
+      &lt;price&gt;5.00&lt;/price&gt;
+      &lt;supplierImg4Url&gt;http://1.jpg...&lt;/supplierImg4Url&gt;
+      &lt;bookingShop&gt;0&lt;/bookingShop&gt;
+      &lt;saleSet&gt;0&lt;/saleSet&gt;
+      &lt;supplierImg9Url&gt;http://1.jpg...&lt;/supplierImg9Url&gt;
+      &lt;introduction&gt;5aW95ZWG5ZOB&lt;/introduction&gt;
+      &lt;mobile&gt;
+        &lt;summary&gt;1&lt;/summary&gt;
+        &lt;list&gt;
+          &lt;text&gt;1&lt;/text&gt;
+          &lt;num&gt;1&lt;/num&gt;
+          &lt;pic&gt;http://1.jpg&lt;/pic&gt;
+        &lt;/list&gt;
+      &lt;/mobile&gt;
+    &lt;/itemContents&gt;
+  &lt;/sn_body&gt;
+&lt;/sn_request&gt;
+
+			
+			
+								</pre>
+                            </div>
+                            <div class="tab-panel">
+                                <pre class='brush:javascript;toolbar:false;'>
+
+
+{
+  "sn_request": {
+    "sn_body": {
+      "itemContents": {
+        "effectiveDay": "99",
+        "insaleRefund": "0",
+        "afterSaleServiceDec": "7天内包退换",
+        "freightTemplateId": "2da499d40cda4389817273ab0affdbed",
+        "invQty": "10",
+        "assortCode": "1",
+        "supplierImg7Url": "http://1.jpg...",
+        "sourceCountry": "CN",
+        "sellPoint": "商品卖点",
+        "mobileNew": {
+          "module": [
+            {
+              "imgUrl": "http://1.jpg",
+              "moduleName": "售后服务",
+              "moduleStatus": "1",
+              "couponId": "1",
+              "tuijianId": "1"
+            }
+          ]
+        },
+        "supplierImg5Url": "http://1.jpg...",
+        "supplierImg1Url": "http://1.jpg...",
+        "supplierImg10Url": "http://1.jpg...",
+        "detailModule": [
+          {
+            "content": "5aW95ZWG5ZOB",
+            "num": "1",
+            "moduleId": "1",
+            "moduleName": "售后服务",
+            "type": "usr_mod"
+          }
+        ],
+        "packingList": [
+          {
+            "packingListQty": "1",
+            "packingListName": "装箱清单名称"
+          }
+        ],
+        "saleDate": "2013-09-15",
+        "writeoffPayment": "0",
+        "supplierImg6Url": "http://1.jpg...",
+        "payTemplate": "1",
+        "itemCode": "789123",
+        "autoRefund": "0",
+        "deductiblePrice": "1",
+        "supplierImg3Url": "http://1.jpg...",
+        "productCode": "102652866",
+        "sellChannel": "01",
+        "writeoffShop": "1",
+        "priceType": "01",
+        "alertQty": "5",
+        "supplierImg2Url": "http://1.jpg...",
+        "childItem": [
+          {
+            "price": "100.00",
+            "supplierImg1Url": "http://1.jpg",
+            "invQty": "5",
+            "productCode": "104007723",
+            "deductiblePriceChild": "1",
+            "alertQty": "5",
+            "itemCode": "561"
+          }
+        ],
+        "supplierImg8Url": "http://1.jpg...",
+        "extractMode": "01,10",
+        "cmTitle": "商品标题",
+        "price": "5.00",
+        "supplierImg4Url": "http://1.jpg...",
+        "bookingShop": "0",
+        "saleSet": "0",
+        "supplierImg9Url": "http://1.jpg...",
+        "introduction": "5aW95ZWG5ZOB",
+        "mobile": {
+          "summary": "1",
+          "list": [
+            {
+              "num": "1",
+              "text": "1",
+              "pic": "http://1.jpg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+			
+			
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="pr-title pr-t5" id="local5"><span class="l">响应示例</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con5">
+                    <div class="tab">
+                        <div class="tab-handler">
+                            <ul>
+                                <li atr="respxml">XML示例</li>
+                                <li atr="respjson">JSON示例</li>
+                            </ul>
+                            <a href="javascript:void(0);" id="interRespSampleXmlDivHref" class="copy" onclick='copyToClipBoardText(this)'>复制全部代码</a>
+                            <input type="hidden" value="
+
+&lt;sn_responseContent&gt;
+  &lt;sn_body&gt;
+    &lt;itemContents&gt;
+      &lt;applyTime&gt;1990-07-16 00:00:00&lt;/applyTime&gt;
+      &lt;applyCode&gt;100011258&lt;/applyCode&gt;
+    &lt;/itemContents&gt;
+  &lt;/sn_body&gt;
+&lt;/sn_responseContent&gt;
+
+			
+			"/>
+                            <a href="javascript:void(0);" id="interRespSampleJsonDivHref" class="copy" onclick='copyToClipBoardText(this)' style="display:none;">复制全部代码</a>
+                        	<input type="hidden" value='
+
+{
+  "sn_responseContent": {
+    "sn_body": {
+      "itemContents": {
+        "applyTime": "1990-07-16 00:00:00",
+        "applyCode": "100011258"
+      }
+    }
+  }
+}
+			
+			'/>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-panel">
+                              <pre class='brush:xml;toolbar:false;'>
+
+
+&lt;sn_responseContent&gt;
+  &lt;sn_body&gt;
+    &lt;itemContents&gt;
+      &lt;applyTime&gt;1990-07-16 00:00:00&lt;/applyTime&gt;
+      &lt;applyCode&gt;100011258&lt;/applyCode&gt;
+    &lt;/itemContents&gt;
+  &lt;/sn_body&gt;
+&lt;/sn_responseContent&gt;
+
+			
+			
+                                </pre>
+                            </div>
+                            <div class="tab-panel">
+                              <pre class='brush:javascript;toolbar:false;'>
+
+
+{
+  "sn_responseContent": {
+    "sn_body": {
+      "itemContents": {
+        "applyTime": "1990-07-16 00:00:00",
+        "applyCode": "100011258"
+      }
+    }
+  }
+}
+			
+			
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pr-title pr-t6" id="local6"><span class="l">异常示例</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con6">
+                    <div class="tab">
+                        <div class="tab-handler">
+                            <ul>
+                                <li atr="errorxml">XML示例</li>
+                                <li atr="errorjson">JSON示例</li>
+                            </ul>
+                            <a href="javascript:void(0);" id="interErrorSampleXmlDivHref" class="copy" onclick="copyToClipBoardText(this)">复制全部代码</a>
+                            <input type="hidden" value="<sn_responseContent><sn_error><error_code>API异常码</error_code><error_msg>异常码中文描述</error_msg></sn_error></sn_responseContent>"/>
+                            <a href="javascript:void(0);" id="interErrorSampleJsonDivHref" class="copy" onclick="copyToClipBoardText(this)" style="display:none;">复制全部代码</a>
+                       		<input type="hidden" value='{"sn_responseContent": {"sn_error": {"error_code": "API异常码","error_msg": "异常码中文描述"}}}'/>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-panel">
+                              <pre class='brush:xml;toolbar:false;' id="interErrorSampleXmlPre">
+<sn_responseContent>
+  <sn_error>
+  	<error_code>API异常码</error_code>
+  	<error_msg>异常码中文描述</error_msg>
+  </sn_error>
+</sn_responseContent>
+                           	  </pre>
+                            </div>
+                            <div class="tab-panel">
+							    <pre class='brush:javascript;toolbar:false;' id="interErrorSampleJsonPre">
+{
+  "sn_responseContent": {
+    "sn_error": {
+      "error_code": "API异常码",
+      "error_msg": "异常码中文描述"
+    }
+  }
+} 								  
+                           		</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pr-title pr-t7" id="local7"><span class="l">业务异常码</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con3">	
+                	<table class="su-table mb30">
+						<colgroup>
+							<col width="40%"></col>
+							<col width="30%"></col>
+							<col></col>
+						</colgroup>
+						<tr>
+							<th align="center" style="text-align: left;">异常码</th>
+							<th align="center" style="text-align: left;">错误描述</th>
+							<th align="center" style="text-align: left;" class="addBR">解决方案</th>
+						</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.missing-parameter:*</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">参数必填</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请检查此参数的值,*号表示参数字段名</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.enumeration-error:*</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">参数的可选值错误</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请检查此参数的值,*号表示参数字段名</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.format-error:*</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">参数格式错误</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请检查此参数的值,*号表示参数字段名</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">isp.sys.service.unavailable.mcmp</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">服务不可用</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请联系苏宁技术人员</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:100</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">商家撤场</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:101</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">商家处罚</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:102</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">国内 国外操作权限</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:103</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">海外购来源地国家错误</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:104</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">运费模板校验</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:105</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">报文格式 通子码校验</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:106</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">发货清单不能为空；发货清单不能超过20个项目；发货清单名称必填,不能超过60个字符,且不能包含字符、或x；发货清单数目必须为不大于13位的正整数</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:107</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">电脑端详情长度不能超过100000</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:108</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">电脑端详情中包含iframe或frames或frameset或 frame标签</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:109</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">电脑端详情中包含javascript或script或object或 link标签</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:110</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">电脑端详情中包含外部图片</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:111</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">电脑端详情中包含外部链接</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:112</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">卖点长度不能超过60或者160</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:113</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">售后服务长度不能超过254</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:114</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">商品标题长度不能超过60</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:115</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">单一，通码 商家商品编码大于30个字符</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:116</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">子码 商家商品编码超过30个字符</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:117</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">设定销售情况下，销售日期为空；销售日期填写不规范；销售日期格式化时间错误或者时间早于当天</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:118</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">价格校验出错</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:119</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">类目关联销售范围；类目权限校验</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:120</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">品牌权限校验</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:121</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">商品已经存在 未删除；此商家此商品名称已经存在</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:122</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">商品已经存在 商家删除</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:123</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">商品已经存在 违规删除</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:124</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">商品已经存在 类目删除</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:125</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">商品已经存在 品牌删除</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:126</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">此通码商品无子商品；子商品编码不能为空；填写的子商品编码不为此通码商品的</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:127</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">库存为空；库存填写不规范</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:128</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">库存预警值填写不规范</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:129</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机详情校验-摘要大于140</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:130</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机详情校验-num不为数字，或者重复</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:131</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机详情校验-裁剪适配手机地址异常</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:132</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机详情校验-图片总大小超过1536KB</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:133</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机详情校验-文本总长度不超过5000</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:134</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">图片和文字都为空 或者 图片和文字都不为空</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:135</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机图片不为此商家的；手机图片宽度在480-640px之间</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:136</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机详情校验-文本长度不超过500</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:137</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-模块名称不能空</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:138</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-模块启用标识不能为空</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:139</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-模块启用至少3个</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:140</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-模块名称错误</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:141</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-模块名称重复</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:142</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">商品图片模块图片不能超过20个</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:143</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-优惠券id不为此商家的	</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:144</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-本店推荐id不为此商家的</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:145</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-自定义模块图片不能超过2个</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:146</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-模块数量不为7个</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:147</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-商品图片模块图片后缀不能为gif</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:148</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-商品图片模块图片不为此商家的</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:149</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-商品图片模块图片宽度大于750</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:150</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-自定义模块图片后缀不能为gif</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:151</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-自定义模块图片不为此商家的</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:152</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">手机新版详情校验-自定义模块图片宽度大于750</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:153</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">模块化详情校验-num不为数字，或者重复</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:154</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">模块化详情校验-内容base64加密</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:155</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">模块化详情校验-自定义模块个数大于10个</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:156</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">模块化详情校验-自定义 id必为空，名称和内容必填</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:157</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">模块化详情校验-既不是运营模块，也不是自定义模块</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:158</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">模块化详情校验-不允许自定义顺序;运营模板中必填的模块未填写值;所填运营模块id不在模板当中</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:159</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">子码色卡图第一张为空 ；子码色卡图不为此商家的；子码色卡图规格800*800以上校验</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:160</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">含有敏感词</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:161</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">主图中间不能有空跳过的</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:162</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">主图重复</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.additemcontents.invalid-biz:163</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">主图图片不为此商家的；主图规格800*800以上校验</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions"></td>
+								</tr>
+					</table>
+                </div>
+                <div class="pr-title pr-t8" id="local8">
+                	<span class="l">公共异常码</span><em class="pr-em pr-down pr-up"></em>
+                </div>
+                <div class="pr-con8" style="display:none;">
+                	<table class="su-table mb30">
+						<colgroup>
+							<col width="40%"></col>
+							<col width="30%"></col>
+							<col></col>
+						</colgroup>
+						<tr>
+							<th align="center" style="text-align: left;">异常码</th>
+							<th align="center" style="text-align: left;">错误描述</th>
+							<th align="center" style="text-align: left;" class="addBR">解决方案</th>
+						</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.user-permission:inexistence</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问令牌不存在</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">更换访问令牌</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.user-permission:overdue</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问令牌已过期</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请使用刷新令牌刷新</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.api-permission:inexistence</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">Api方法不存在</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请参考帮助中心</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.api-permission:overdue</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">Api方法已过期</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请参考帮助中心</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.api-permission:authority</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">无权操作此api</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">确认是否有访问该方法权限</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.auth.vendor-request:errory</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">无权操作此供应商</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请确认供应商编码是否正确</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.controller.api-request:limit</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">Api请求受控</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">超过请求次数</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.app-time:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">请求参数错误api请求时间误差大</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">参考帮助中心</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.request-params:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">请求报文结构错误</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">参考帮助中心、日期格式等</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.starttime-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">请求开始时间错误</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">参考帮助中心、日期格式等</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.data-get:success</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">业务数据查询成功</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.data-get:fail</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">业务数据查询失败</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查请求条件</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.data-get:no-result</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">业务数据结果为空</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.pageno-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">pageNo格式错误，只允许1到99999之间的整数</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查pageNo输入是否有误</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.pagesize-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">pageSize格式错误，只允许1到50之间的整数(订单相关是1到100)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查pageSize输入是否有误</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.page-param:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">pageNo或者pageSize不在要求范围内，pageNo只允许1到99999之间的整数，pageSize只允许1到50之间的整数(订单相关是1到100)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查pageNo和pageSize输入是否有误</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.miss-time:starttime</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">不存在开始时间(节点)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查输入</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.miss-time:endtime</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">不存在结束时间(节点)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查输入</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.starttime-value:null</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">开始时间为空(值)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查输入</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.endtime-value:null</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">结束时间为空(值)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查输入</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.starttime-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">校验开始时间不合法，格式yyyy-MM-dd HH:mm:ss</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查时间格式</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.endtime-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">校验结束时间不合法，格式yyyy-MM-dd HH:mm:ss</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查时间格式</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.query-time:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">开始时间是否小于结束时间</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查开始和结束时间大小</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.query-time:outofrange</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">时间查询是否超出指定范围</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查时间范围</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.app-sign:null</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">签名信息为空</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查签名信息</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.app-sign:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">签名信息错误</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查签名信息</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.missing-parameter:apiversion</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">API版本号未指定</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查API版本号</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.missing-parameter:appRequestTime</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">请求时间丢失</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查请求时间</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.missing-nestElement:sn_body</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">缺少sn_body节点</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查sn_body是否存在</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.user-permission:inexistence</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">用户key不存在</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查用户key是否存在</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.batch-handler:no-support</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">非查询类API不支持批量操作</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查API类型</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.request-message:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">查询类API输入多个业务节点</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查业务节点</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.header-param:null</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">header参数为空</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请检查header参数</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.controller.api-access:limit</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问限制</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.controller.api-frequency:limit</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问频率限制</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.error.network:failure</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">网络异常</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.error.network-status:?</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">响应失败 ?为状态码</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.oauth-permission:authority</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问令牌过期或未进行授权</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请重新授权或使用刷新令牌刷新新的访问令牌</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.addpackageorderdeliver.not.declaresuccess.order</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">非申报成功订单不能发货</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">商家后台点击申报按钮，或者调用海外购订单申报接口进行申报</td>
+								</tr>
+					</table>
+                </div>
+                <div class="pr-title pr-t9" id="local9"><span class="l">API工具</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con9">
+                    <div class="su-apiDiv">
+                        <a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodTestPage.do?apiCode=suning.custom.itemcontents.add  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ����������ʼ��ַ��Զ�����ӡ������������ʼ��ַ�����������, ���ļ������������ض��С�  \n\n�����ڷ������ϴ���?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodTestPage.do?apiCode=suning.custom.itemcontents.add'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodTestPage.do?apiCode=suning.custom.itemcontents.add" class="su-apiLink mr10" target="_blank">API TOOLS 在线测试工具</a><a href="toApiErrorCodeMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiErrorCodeMenu.do" class="su-other mr10" target="_blank">异常码查询工具</a><a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiAccessSdkSamplePage.do?apiCode=suning.custom.itemcontents.add  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ����������ʼ��ַ��Զ�����ӡ������������ʼ��ַ�����������, ���ļ������������ض��С�  \n\n�����ڷ������ϴ���?'))window.location='http://open.suning.com/ospos/apipage/toApiAccessSdkSamplePage.do?apiCode=suning.custom.itemcontents.add'" tppabs="http://open.suning.com/ospos/apipage/toApiAccessSdkSamplePage.do?apiCode=suning.custom.itemcontents.add" class="su-other mr10" target="_blank">SDK调用示例</a><a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/appSdkDownLoad.action  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ����������ʼ��ַ��Զ�����ӡ������������ʼ��ַ�����������, ���ļ������������ض��С�  \n\n�����ڷ������ϴ���?'))window.location='http://open.suning.com/ospos/apipage/appSdkDownLoad.action'" tppabs="http://open.suning.com/ospos/apipage/appSdkDownLoad.action" class="su-other" target="_blank">SDK下载</a>
+                    </div>
+                </div>
+				<div class="pr-title pr-t10" id="local10"><span class="l">FAQ</span><em class="pr-em pr-down"></em></div>
+				<div class="pr-con10">
+							<p class="pr-p2">Q：如何判断某个商品是否含有子商品？</p>	
+							<p class="pr-p1 mb30">A：若商品有多个尺码、多种颜色，则该商品含有子商品。例如iphone5s，有黑色、白色、金色，iphone5s为主商品，iphone5s(黑色)、iphone5s(白色)、iphone5s(金色)则分别为子商品。</p>
+							<p class="pr-p2">Q：商品内容维护后要多久才会生效？</p>	
+							<p class="pr-p1 mb30">A：立即生效。可通过平台业务-商品API-获取我的商品库信息查询结果。</p>
+							<p class="pr-p2">Q：苏宁商品编码（productCode）、商家商品编码（itemCode）之间的关系和区别</p>	
+							<p class="pr-p1 mb30">A：1）苏宁商品编码（productCode）是商家在进行产品申请时，由苏宁系统生成的，商家商品编码（itemCode）是商户在产品申请、商品内容维护时，手工填写，并可进行修改； 2）苏宁商品编码（productCode）与商家商品编码（itemCode）一一对应，若商家申请的商品，无子商品，则一个商家商品编码（itemCode）对应一个苏宁商品编码（productCode）；若商家申请的商品有子商品，则此商品本身对应一个苏宁主商品编码（productCode），每个子商品的商家商品编码（itemCode）一一对应一个苏宁子商品编码（productCode）。</p>
+							<p class="pr-p2">Q：对于同一个商品，商品内容可以维护几次？</p>	
+							<p class="pr-p1 mb30">A：对于同一个商品，商品内容维护有且只可维护一次。如需修改，可通过平台业务-商品API-商品内容修改接口或商家后台进行修改。</p>
+				</div>
+				</div>
+			</div>
+			<div class="menuLRH"></div>
+		</div>
+	</div>	
+
+	<!-- 置顶 -->
+	<!--<div class="os-topTo" style="bottom: 210px;"></div>-->
+
+<div class="foot">
+    <iframe scrolling="no" frameborder="0" width="100%" height="165" src="../../../sop.suning.com/sel/portal/common/footer-1.html" tppabs="http://sop.suning.com/sel/portal/common/footer.html"></iframe>
+</div>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/OpenSer.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/open/OpenSer.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/openUPdate.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/open/openUPdate.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/common.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/custom/common.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shCore.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shCore.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shAutoloader.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shAutoloader.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shBrushXml.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shBrushXml.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shBrushJScript.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shBrushJScript.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shBrushCss.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shBrushCss.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/table.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/table.js?v=v1.0" charset="UTF-8"></script>
+<script>
+	SyntaxHighlighter.all();
+
+    $(function(){
+        var _wH = $(window).width()/2;
+        var _left = _wH+1190/2+10;
+        $(".su-titList").css("left",_left);
+		$(window).resize(function(){
+			var _wH = $(window).width()/2;
+			var _left = _wH+1190/2+10;
+			$(".su-titList").css("left",_left);
+		});
+		
+    });
+	
+	$(window).scroll(function(){
+		$(".pos li").each(function(index){
+			var wH = $(window).height();
+			var wst =  $(window).scrollTop(); //滚动条距离顶端值
+			var dH = $(document).height();
+			for(j=0; j<index; j++){
+				var localTop =$(".pr-title").eq(j).offset().top;
+				if(dH-localTop>wH){
+					for (i=1; i<10; i++){
+						if($("#local"+i).offset().top<=wst+5){
+							$("#scroll-it"+i).parents("li").addClass("cur").siblings("li").removeClass("cur");  
+						}
+					}
+				}else{
+					return false;
+				}
+			}
+		});
+	});
+	
+	$.each($(".tab-handler li"),function(index,ele){
+		$(this).on("click",function(){
+			var atrVal = $(this).attr("atr");
+			if(atrVal == "reqxml"){
+				$("#interReqSampleXmlDivHref").show();
+				$("#interReqSampleJsonDivHref").hide();
+			}
+			if(atrVal == "reqjson"){
+				$("#interReqSampleJsonDivHref").show();
+				$("#interReqSampleXmlDivHref").hide();
+			}
+			if(atrVal == "respxml"){
+				$("#interRespSampleXmlDivHref").show();
+				$("#interRespSampleJsonDivHref").hide();
+			}
+			if(atrVal == "respjson"){
+				$("#interRespSampleJsonDivHref").show();
+				$("#interRespSampleXmlDivHref").hide();
+			}
+			if(atrVal == "errorxml"){
+				$("#interErrorSampleXmlDivHref").show();
+				$("#interErrorSampleJsonDivHref").hide();
+			}
+			if(atrVal == "errorjson"){
+				$("#interErrorSampleJsonDivHref").show();
+				$("#interErrorSampleXmlDivHref").hide();
+			}
+		});	
+	});	
+	
+</script>
+<script src="../../../static.suning.cn/osr/meas/time-1.js" tppabs="http://static.suning.cn/osr/meas/time.js"></script>
+</body>
+</html>

@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>开放服务-异常码查询</title>
+	
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="手机, 电脑, 冰箱, 洗衣机, 相机, 数码, 家居用品, 鞋帽, 化妆品, 母婴用品, 图书，食品，保险，旅行，充值，团购，正品行货, 全国联保, 货到付款。"/>
+<meta name="description" content="苏宁易购是领先的综合网上购物商城, 在线特价销售家电、通讯数码、电脑、家居百货、服装服饰、母婴、图书、食品、保险、旅行、充值、团购等数万类商品和服务。正品行货, 全国联保, 本地配送, 货到付款。省钱放心上苏宁电器网上商城, 尽享购物乐趣！"/>
+<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<script src="../../../static.suning.cn/osr/meas/error-1.js" tppabs="http://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
+			<link rel="stylesheet" href="../staticfiles/css/common.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/common.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/OpenSerNew.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/OpenSerNew.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+</head>
+<body>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    if("" != ""){
+			var userName = "";
+			$("#alLoginName").text(userName);
+			$("#alLoginName").attr("title",userName);
+			$("#alLogin").show();
+			$("#withOutLogin").hide();
+	    }else {
+			var userName = getCookie("osposLoginUserIdFlag");
+			if(userName == ""){
+				var logonStatusVal = getCookie("logonStatus");
+				var authIdVal = getCookie("authId");
+				if((logonStatusVal != undefined && logonStatusVal != "") 
+	       		|| (authIdVal != undefined && authIdVal != "")){
+					userName = getCookie("idsLoginUserIdLastTime");
+				}
+			}
+			if(userName != ""){
+				$("#alLoginName").text(userName);
+				$("#alLoginName").attr("title",userName);
+				$("#alLogin").show();
+				$("#withOutLogin").hide();
+			}else {
+				$("#alLogin").hide();
+				$("#withOutLogin").show();
+			} 
+	    }
+    });
+	
+    function getCookie(cookieName){
+		var cookieArr = document.cookie.split(';');
+		for(var i=0; i<cookieArr.length; i++){
+			var cookie = cookieArr[i];
+			while (cookie.charAt(0)==' '){
+				cookie = cookie.substring(1);
+			}
+			cookieEntry = cookie.split('=');
+			if(cookieEntry[0] == cookieName){
+				return decodeURIComponent(cookieEntry[1]);
+			}
+		}
+		return "";
+    }
+	
+	$(function(){
+        $(".os-nav li").each(function(index){
+            $(this).removeClass("os-on");
+            if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toApi")!=-1&&index=="3"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toDevCenter")!=-1&&index=="4"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname=="/"&&index=="0"){
+                $(this).addClass("os-on");
+            }
+        })                
+	})
+</script>
+<div class="os-top bcs-top">
+	<div class="w1190 clearfix">
+		<div class="l os-snLogo"></div>	
+		<ul class="os-nav">
+			<li class="os-on"><a href="../../index-1.htm" tppabs="http://open.suning.com/">首页</a></li>
+			<li><a href="javascript:void(0);">开放版图<i></i></a>
+				<!--[if IE]>
+				<dl style="margin-left: -104px;margin-top: 55px;">
+				<![endif]-->
+				<!--[if !IE]><!-->
+				<dl>
+			    <!--<![endif]-->
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/road/roadIndex.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/road/roadIndex.html'" tppabs="https://road.suning.com/ospos/road/roadIndex.html" target="_blank">一号公路开放</a><i></i></dd>
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/toDevCenter.action  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/toDevCenter.action'" tppabs="https://road.suning.com/ospos/toDevCenter.action">商家后台开放</a><i></i></dd>
+                </dl>
+            </li>
+            <li><a href="toDocCenter-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toDocCenter.do">文档中心</a></li>
+			<li><a href="toApiListMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiListMenu.do">API文档</a></li>
+			<li><a href="../pushapi/toTopicPageList-1.do.htm" tppabs="http://open.suning.com/ospos/pushapi/toTopicPageList.do">消息文档</a></li>
+			<li><a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/toDevCenter.action">控制台</a></li>
+		</ul>
+		
+		<a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/logOut.action" class="os-exit" style="display: none;" id="alLogin">退出</a> 
+		<div class="r search-top">
+			<form method="post" action="http://open.suning.com/ospos/apipage/toSearchPage.do" id="tlSearchForm" style="display:inline;float:right;" autocomplete="off">
+                <input type="text" class="os-input" id="tlSearchIn" name="tlSearchName"/>
+                <span class="os-search" id="tlSearchBtn"></span>
+            </form>                
+                <span class="os-search"></span>
+                <span id="alLoginName" class="lname r"></span>
+                <a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/toLogin.action" class="os-login" style="display: none;" id="withOutLogin">登录</a>
+		</div>
+	</div>
+</div>
+	<div class="on-wrapp">
+		<div class="w1190 clearfix">
+			<div class="on-title">异常码自查</div>
+			<div class="wr-wrapp" style="overflow: auto;">
+				<table class="wr-table">
+					<tr>
+						<td><span class="tipRed"></span>业务类型：</td>
+						<td style="position: relative;">
+							<div class="autIdTable">
+				                <ul class="selUl" selval="bizTypeId">
+				                  <li>请选择业务类型</li>
+				                </ul>
+				                <em class="selIcon"></em>
+				                <ul class="selOpt" style="display: none;" vsel="bizTypes">
+				                  <li>请选择业务类型</li>
+				                  		<li sel="">自定义</li>
+				                  		<li sel="1">平台业务</li>
+				                  		<li sel="2">物流业务</li>
+				                  		<li sel="3">网盟业务</li>
+				                  		<li sel="4">自营业务</li>
+				                  		<li sel="5">质检业务</li>
+				                  		<li sel="6">云商城业务</li>
+				                  		<li sel="7">自采业务</li>
+				                  		<li sel="8">其他业务</li>
+				                  		<li sel="10">4PS业务</li>
+				                  		<li sel="11">商家供应商业务</li>
+				                  		<li sel="16">O2O业务</li>
+				                  		<li sel="14">联营</li>
+				                  		<li sel="30">零售云</li>
+				                  		<li sel="12">云信业务</li>
+				                  		<li sel="13">政企业务</li>
+				                  		<li sel="17">广告业务</li>
+				                  		<li sel="21">公共业务</li>
+				                  		<li sel="23">特卖业务</li>
+				                  		<li sel="27">服务市场业务</li>
+				                  		<li sel="28">消息服务</li>
+				                </ul>
+			                </div>
+			             </td>
+			             <td style="width:500px;"></td>
+					</tr>
+					<tr>
+						<td><span class="tipRed"></span>接口类型：</td>
+						<td style="position: relative;">
+							<div class="autIdTable">
+				                <ul class="selUl" selval="accessTypeId">
+				                  <li>请选择接口类型</li>
+				                </ul>
+				                <em class="selIcon"></em>
+				                <ul class="selOpt" style="display: none;" vsel="accessTypes">
+				                  <li>请选择接口类型</li>
+				                </ul>
+			                </div>
+			             </td>
+			             <td style="width:500px;"></td>
+					</tr>
+					<tr>
+						<td><span class="tipRed"></span>接口名称：</td>
+						<td style="position: relative;">
+							<div class="autIdTable autIdTableT" id="apiMethodSel">
+				                <ul class="selUl selUlSSS" selval="apiMethodId">
+				                  <li>请选择接口名称</li>
+				                </ul>
+				                <em class="selIcon"></em>
+				                <ul class="selOpt" style="display: none;" vsel="apiMethods">
+				                  <li>请选择接口名称</li>
+				                </ul>
+			                </div>
+			                <input type="text"  class="te-Text" id="apiMethod" style="display:none;" />
+			                <input type="text" class="te-Text te-TextT" style="display:none;" />
+			             </td>
+			             <td style="width:500px;"></td>
+					</tr>
+					<tr>
+						<td style="vertical-align: top;"><span class="tipRed">*</span>错误信息：</td>
+						<td colspan="2" style="padding-top: 10px;"><textarea class="wr-teArea JClear" rel="请填写异常码" id="errorCodeTextArea">请填写异常码</textarea></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><a href="#" class="wr-search" id="errorCodeSearch">搜索</a></td>
+					</tr>
+				</table>
+				<div id="errorCodeListDiv">
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	<!-- 置顶 -->
+	<div class="os-topTo" style="bottom: 219px;"></div>
+
+<div class="foot">
+    <iframe scrolling="no" frameborder="0" width="100%" height="165" src="../../../sop.suning.com/sel/portal/common/footer-1.html" tppabs="http://sop.suning.com/sel/portal/common/footer.html"></iframe>
+</div>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/OpenSer.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/open/OpenSer.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/common.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/custom/common.js?v=v1.0" charset="UTF-8"></script>
+	
+	<script>
+		//接口类型
+		var apiAccessTypesList = 
+			[
+					{"interTypeId":"1","interTypeName":"商品API",
+					"bustypeId":"1"},
+					{"interTypeId":"2","interTypeName":"价格API",
+					"bustypeId":"1"},
+					{"interTypeId":"3","interTypeName":"库存API",
+					"bustypeId":"1"},
+					{"interTypeId":"4","interTypeName":"销售准备API",
+					"bustypeId":"1"},
+					{"interTypeId":"5","interTypeName":"交易API",
+					"bustypeId":"1"},
+					{"interTypeId":"6","interTypeName":"退货退款API",
+					"bustypeId":"1"},
+					{"interTypeId":"8","interTypeName":"店铺API",
+					"bustypeId":"1"},
+					{"interTypeId":"9","interTypeName":"物流API",
+					"bustypeId":"1"},
+					{"interTypeId":"10","interTypeName":"促销API",
+					"bustypeId":"1"},
+					{"interTypeId":"73","interTypeName":"分销API",
+					"bustypeId":"1"},
+					{"interTypeId":"11","interTypeName":"苏宁开放物流API",
+					"bustypeId":"2"},
+					{"interTypeId":"12","interTypeName":"联盟订单API",
+					"bustypeId":"3"},
+					{"interTypeId":"46","interTypeName":"会员API",
+					"bustypeId":"3"},
+					{"interTypeId":"13","interTypeName":"大聚惠API",
+					"bustypeId":"3"},
+					{"interTypeId":"27","interTypeName":"联盟商品API",
+					"bustypeId":"3"},
+					{"interTypeId":"69","interTypeName":"招商推广活动API",
+					"bustypeId":"3"},
+					{"interTypeId":"81","interTypeName":"获取推广链接API",
+					"bustypeId":"3"},
+					{"interTypeId":"88","interTypeName":"优惠券推广API",
+					"bustypeId":"3"},
+					{"interTypeId":"14","interTypeName":"合同API",
+					"bustypeId":"4"},
+					{"interTypeId":"15","interTypeName":"厂送API",
+					"bustypeId":"4"},
+					{"interTypeId":"30","interTypeName":"品牌串码API",
+					"bustypeId":"4"},
+					{"interTypeId":"39","interTypeName":"报表API",
+					"bustypeId":"4"},
+					{"interTypeId":"40","interTypeName":"采购订单API",
+					"bustypeId":"4"},
+					{"interTypeId":"41","interTypeName":"供应商收发货API",
+					"bustypeId":"4"},
+					{"interTypeId":"42","interTypeName":"供应商财务API",
+					"bustypeId":"4"},
+					{"interTypeId":"43","interTypeName":"主数据API",
+					"bustypeId":"4"},
+					{"interTypeId":"44","interTypeName":"售后服务API",
+					"bustypeId":"4"},
+					{"interTypeId":"70","interTypeName":"自营商品API",
+					"bustypeId":"4"},
+					{"interTypeId":"83","interTypeName":"订单API",
+					"bustypeId":"4"},
+					{"interTypeId":"89","interTypeName":"易道报表API",
+					"bustypeId":"4"},
+					{"interTypeId":"74","interTypeName":"采购计划API",
+					"bustypeId":"4"},
+					{"interTypeId":"82","interTypeName":"收发货API",
+					"bustypeId":"4"},
+					{"interTypeId":"100","interTypeName":"不良品API",
+					"bustypeId":"4"},
+					{"interTypeId":"16","interTypeName":"服务商质检API",
+					"bustypeId":"5"},
+					{"interTypeId":"17","interTypeName":"云商城API",
+					"bustypeId":"6"},
+					{"interTypeId":"20","interTypeName":"供应商结算API",
+					"bustypeId":"7"},
+					{"interTypeId":"23","interTypeName":"退厂API",
+					"bustypeId":"7"},
+					{"interTypeId":"24","interTypeName":"购物广场API",
+					"bustypeId":"8"},
+					{"interTypeId":"28","interTypeName":"4PS接单管理API",
+					"bustypeId":"10"},
+					{"interTypeId":"29","interTypeName":"4PS任务作业API",
+					"bustypeId":"10"},
+					{"interTypeId":"31","interTypeName":"4PS商品查询API",
+					"bustypeId":"10"},
+					{"interTypeId":"32","interTypeName":"4PS商品管理API",
+					"bustypeId":"10"},
+					{"interTypeId":"33","interTypeName":"4PS仓库管理API",
+					"bustypeId":"10"},
+					{"interTypeId":"35","interTypeName":"4PS仓库库存API",
+					"bustypeId":"10"},
+					{"interTypeId":"45","interTypeName":"商家供应商交易API",
+					"bustypeId":"11"},
+					{"interTypeId":"47","interTypeName":"云信API",
+					"bustypeId":"12"},
+					{"interTypeId":"48","interTypeName":"政企商品API",
+					"bustypeId":"13"},
+					{"interTypeId":"49","interTypeName":"政企价格API",
+					"bustypeId":"13"},
+					{"interTypeId":"50","interTypeName":"政企库存API",
+					"bustypeId":"13"},
+					{"interTypeId":"51","interTypeName":"政企订单API",
+					"bustypeId":"13"},
+					{"interTypeId":"52","interTypeName":"政企物流API",
+					"bustypeId":"13"},
+					{"interTypeId":"66","interTypeName":"政企发票API",
+					"bustypeId":"13"},
+					{"interTypeId":"53","interTypeName":"政企其他API",
+					"bustypeId":"13"},
+					{"interTypeId":"56","interTypeName":"仓库API",
+					"bustypeId":"14"},
+					{"interTypeId":"55","interTypeName":"退库API",
+					"bustypeId":"14"},
+					{"interTypeId":"54","interTypeName":"入库API",
+					"bustypeId":"14"},
+					{"interTypeId":"58","interTypeName":"O2O订单API",
+					"bustypeId":"16"},
+					{"interTypeId":"67","interTypeName":"O2O商品API",
+					"bustypeId":"16"},
+					{"interTypeId":"71","interTypeName":"O2O库存API",
+					"bustypeId":"16"},
+					{"interTypeId":"68","interTypeName":"效果报表API",
+					"bustypeId":"17"},
+					{"interTypeId":"65","interTypeName":"工具API",
+					"bustypeId":"21"},
+					{"interTypeId":"75","interTypeName":"特卖商品API",
+					"bustypeId":"23"},
+					{"interTypeId":"76","interTypeName":"特卖交易API",
+					"bustypeId":"23"},
+					{"interTypeId":"77","interTypeName":"特卖库存API",
+					"bustypeId":"23"},
+					{"interTypeId":"87","interTypeName":"字体服务商API",
+					"bustypeId":"27"},
+					{"interTypeId":"93","interTypeName":"订购关系查询API",
+					"bustypeId":"27"},
+					{"interTypeId":"91","interTypeName":"消息服务",
+					"bustypeId":"28"},
+					{"interTypeId":"92","interTypeName":"云号API",
+					"bustypeId":"29"},
+					{"interTypeId":"94","interTypeName":"商品API",
+					"bustypeId":"30"},
+					{"interTypeId":"95","interTypeName":"订单API",
+					"bustypeId":"30"},
+					{"interTypeId":"96","interTypeName":"发货API",
+					"bustypeId":"30"},
+					{"interTypeId":"97","interTypeName":"退货API",
+					"bustypeId":"30"},
+					{"interTypeId":"99","interTypeName":"销售报表API",
+					"bustypeId":"30"},
+			];
+			
+		//api接口方法
+		var apiMethodsList = 
+			[
+					{"interTypeId":"1","interCode":"suning.custom.category.query"},
+					{"interTypeId":"1","interCode":"suning.custom.book.brand.query"},
+					{"interTypeId":"1","interCode":"suning.custom.book.salescatalog.query"},
+					{"interTypeId":"1","interCode":"suning.custom.product.query"},
+					{"interTypeId":"1","interCode":"suning.custom.productdetail.query"},
+					{"interTypeId":"1","interCode":"suning.custom.book.productdetail.query"},
+					{"interTypeId":"1","interCode":"suning.custom.item.query"},
+					{"interTypeId":"1","interCode":"suning.custom.book.item.query"},
+					{"interTypeId":"1","interCode":"suning.custom.itemdetail.query"},
+					{"interTypeId":"1","interCode":"suning.custom.itemparameters.query"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.item.add"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.itemcontents.add"},
+					{"interTypeId":"1","interCode":"suning.custom.itemsale.query"},
+					{"interTypeId":"1","interCode":"suning.custom.itemcontents.modify"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.shelves.add"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.shelves.move"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.childitem.add"},
+					{"interTypeId":"1","interCode":"suning.custom.pic.delete"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.pic.add"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.book.product.get"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.item.get"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.book.item.get"},
+					{"interTypeId":"1","interCode":"suning.custom.book.mainproduct.modify"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.book.mainproduct.get"},
+					{"interTypeId":"1","interCode":"suning.custom.item.delorres"},
+					{"interTypeId":"1","interCode":"suning.custom.mainproduct.modify"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.mainproduct.get"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.product.get"},
+					{"interTypeId":"2","interCode":"suning.custom.price.update"},
+					{"interTypeId":"2","interCode":"http://open.suning.com/ospos/apipage/suning.custom.price.get"},
+					{"interTypeId":"3","interCode":"http://open.suning.com/ospos/apipage/suning.custom.invaddress.add"},
+					{"interTypeId":"3","interCode":"suning.custom.invaddress.modify"},
+					{"interTypeId":"3","interCode":"suning.custom.invaddress.delete"},
+					{"interTypeId":"3","interCode":"http://open.suning.com/ospos/apipage/suning.custom.invaddress.get"},
+					{"interTypeId":"3","interCode":"http://open.suning.com/ospos/apipage/suning.custom.invaddress.set"},
+					{"interTypeId":"3","interCode":"suning.custom.inventory.modify"},
+					{"interTypeId":"3","interCode":"http://open.suning.com/ospos/apipage/suning.custom.parallelinvaddress.add"},
+					{"interTypeId":"3","interCode":"suning.custom.parallelinvaddress.modify"},
+					{"interTypeId":"3","interCode":"http://open.suning.com/ospos/apipage/suning.custom.parallelinvaddress.get"},
+					{"interTypeId":"3","interCode":"http://open.suning.com/ospos/apipage/suning.custom.parallelinventory.get"},
+					{"interTypeId":"3","interCode":"suning.custom.parallelinventory.modify"},
+					{"interTypeId":"3","interCode":"http://open.suning.com/ospos/apipage/suning.custom.parallelinvarea.set"},
+					{"interTypeId":"3","interCode":"http://open.suning.com/ospos/apipage/suning.custom.parallelinvarea.get"},
+					{"interTypeId":"4","interCode":"suning.custom.nation.query"},
+					{"interTypeId":"4","interCode":"suning.custom.city.query"},
+					{"interTypeId":"4","interCode":"http://open.suning.com/ospos/apipage/suning.custom.saleareatemplate.add"},
+					{"interTypeId":"4","interCode":"suning.custom.saleareatemplate.modify"},
+					{"interTypeId":"4","interCode":"suning.custom.saleareatemplate.delete"},
+					{"interTypeId":"4","interCode":"suning.custom.saleareatemplate.query"},
+					{"interTypeId":"4","interCode":"http://open.suning.com/ospos/apipage/suning.custom.saleareatemplate.get"},
+					{"interTypeId":"4","interCode":"http://open.suning.com/ospos/apipage/suning.custom.saleareatemplateitemgroup.add"},
+					{"interTypeId":"4","interCode":"suning.custom.saleareatemplateitemgroup.modify"},
+					{"interTypeId":"4","interCode":"suning.custom.saleareatemplateitemgroup.delete"},
+					{"interTypeId":"4","interCode":"suning.custom.saleareatemplateitemgroup.query"},
+					{"interTypeId":"4","interCode":"http://open.suning.com/ospos/apipage/suning.custom.saleareatemplateitemgroup.get"},
+					{"interTypeId":"4","interCode":"http://open.suning.com/ospos/apipage/suning.custom.freighttemplate.add"},
+					{"interTypeId":"4","interCode":"suning.custom.freighttemplate.modify"},
+					{"interTypeId":"4","interCode":"suning.custom.freighttemplate.delete"},
+					{"interTypeId":"4","interCode":"suning.custom.freighttemplate.query"},
+					{"interTypeId":"4","interCode":"http://open.suning.com/ospos/apipage/suning.custom.freighttemplate.get"},
+					{"interTypeId":"4","interCode":"http://open.suning.com/ospos/apipage/suning.custom.itemsalearea.get"},
+					{"interTypeId":"4","interCode":"http://open.suning.com/ospos/apipage/suning.custom.itemsalearea.add"},
+					{"interTypeId":"5","interCode":"suning.custom.historyorder.query"},
+					{"interTypeId":"5","interCode":"suning.custom.order.query"},
+					{"interTypeId":"5","interCode":"suning.custom.ordercode.query"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.order.get"},
+					{"interTypeId":"5","interCode":"suning.custom.ordernote.modify"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.ordernote.get"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.orderdelivery.add"},
+					{"interTypeId":"5","interCode":"suning.custom.orderdelivery.modify"},
+					{"interTypeId":"5","interCode":"suning.custom.orderdelay.modify"},
+					{"interTypeId":"5","interCode":"suning.custom.ordercountdown.query"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.logisticcompany.get"},
+					{"interTypeId":"5","interCode":"suning.custom.logisticcompany.query"},
+					{"interTypeId":"5","interCode":"suning.custom.ord.query"},
+					{"interTypeId":"5","interCode":"suning.custom.unpaidorder.query"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.orderselfdist.add"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.comphandle.add"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.comphandle.get"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.complaint.get"},
+					{"interTypeId":"5","interCode":"suning.custom.complaint.query"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.seaorderdelivery.add"},
+					{"interTypeId":"6","interCode":"suning.custom.batchrejected.query"},
+					{"interTypeId":"6","interCode":"suning.custom.batchrejectedOrd.query"},
+					{"interTypeId":"6","interCode":"http://open.suning.com/ospos/apipage/suning.custom.singlerejected.get"},
+					{"interTypeId":"6","interCode":"suning.custom.agreerejected.modify"},
+					{"interTypeId":"6","interCode":"suning.custom.disagreerejected.modify"},
+					{"interTypeId":"6","interCode":"suning.custom.disagreerefund.modify"},
+					{"interTypeId":"6","interCode":"suning.custom.delayrefund.modify"},
+					{"interTypeId":"6","interCode":"suning.custom.rejectedord.query"},
+					{"interTypeId":"8","interCode":"http://open.suning.com/ospos/apipage/suning.custom.shopcategory.add"},
+					{"interTypeId":"8","interCode":"suning.custom.shopcategory.query"},
+					{"interTypeId":"8","interCode":"suning.custom.shopcategoryitem.query"},
+					{"interTypeId":"8","interCode":"http://open.suning.com/ospos/apipage/suning.custom.shopcategoryitem.add"},
+					{"interTypeId":"8","interCode":"suning.custom.shopcategory.delete"},
+					{"interTypeId":"8","interCode":"suning.custom.shopcategory.modify"},
+					{"interTypeId":"8","interCode":"suning.custom.shopinfo.modify"},
+					{"interTypeId":"8","interCode":"http://open.suning.com/ospos/apipage/suning.custom.shopinfo.get"},
+					{"interTypeId":"8","interCode":"suning.custom.shopcategoryitem.delete"},
+					{"interTypeId":"9","interCode":"http://open.suning.com/ospos/apipage/suning.custom.logisticsstatus.get"},
+					{"interTypeId":"10","interCode":"suning.custom.pricereduce.query"},
+					{"interTypeId":"10","interCode":"http://open.suning.com/ospos/apipage/suning.custom.pricereducedetail.get"},
+					{"interTypeId":"10","interCode":"http://open.suning.com/ospos/apipage/suning.custom.shopcoupdetail.get"},
+					{"interTypeId":"10","interCode":"suning.custom.shopcoupon.query"},
+					{"interTypeId":"10","interCode":"suning.custom.promotion.query"},
+					{"interTypeId":"10","interCode":"suning.custom.salesmanage.modify"},
+					{"interTypeId":"10","interCode":"suning.custom.xnactivity.query"},
+					{"interTypeId":"10","interCode":"http://open.suning.com/ospos/apipage/suning.custom.xndetail.get"},
+					{"interTypeId":"10","interCode":"http://open.suning.com/ospos/apipage/suning.custom.shopcoupon.add"},
+					{"interTypeId":"10","interCode":"suning.custom.shopcoupon.modify"},
+					{"interTypeId":"11","interCode":"http://open.suning.com/ospos/apipage/suning.logistics.task.get"},
+					{"interTypeId":"11","interCode":"suning.logistics.task.query"},
+					{"interTypeId":"11","interCode":"suning.logistics.outsourcetask.query"},
+					{"interTypeId":"11","interCode":"http://open.suning.com/ospos/apipage/suning.logistics.outsourcetask.get"},
+					{"interTypeId":"11","interCode":"http://open.suning.com/ospos/apipage/suning.custom.logisticsorder.get"},
+					{"interTypeId":"11","interCode":"suning.custom.logisticsorder.query"},
+					{"interTypeId":"11","interCode":"suning.custom.logisticsstatus.query"},
+					{"interTypeId":"11","interCode":"http://open.suning.com/ospos/apipage/suning.logistics.crossbuyprdcustdecl.get"},
+					{"interTypeId":"11","interCode":"http://open.suning.com/ospos/apipage/suning.logistics.crossbuytask.get"},
+					{"interTypeId":"11","interCode":"suning.logistics.crossbuytask.query"},
+					{"interTypeId":"11","interCode":"http://open.suning.com/ospos/apipage/suning.logistics.taskstatusfeedback.add"},
+					{"interTypeId":"11","interCode":"suning.logistics.crossbuyinventory.modify"},
+					{"interTypeId":"11","interCode":"http://open.suning.com/ospos/apipage/suning.logistics.outerorder.add"},
+					{"interTypeId":"11","interCode":"suning.logistics.outerorder.modify"},
+					{"interTypeId":"12","interCode":"http://open.suning.com/ospos/apipage/suning.netalliance.order.get"},
+					{"interTypeId":"12","interCode":"suning.netalliance.order.query"},
+					{"interTypeId":"12","interCode":"http://open.suning.com/ospos/apipage/suning.netalliance.ordersettle.get"},
+					{"interTypeId":"13","interCode":"http://open.suning.com/ospos/apipage/suning.netalliance.juinfomation.get"},
+					{"interTypeId":"13","interCode":"suning.netalliance.juinfomation.query"},
+					{"interTypeId":"14","interCode":"suning.selfmarket.contract.query"},
+					{"interTypeId":"14","interCode":"suning.selfmarket.signcontract.handle"},
+					{"interTypeId":"15","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.orderdeliver.add"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.orderdeliver.modify"},
+					{"interTypeId":"15","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.saleorder.get"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.saleorder.query"},
+					{"interTypeId":"16","interCode":"http://open.suning.com/ospos/apipage/suning.fws.chargeiteminfo.get"},
+					{"interTypeId":"16","interCode":"suning.fws.chargeitemremain.query"},
+					{"interTypeId":"16","interCode":"http://open.suning.com/ospos/apipage/suning.fws.historyorder.get"},
+					{"interTypeId":"16","interCode":"suning.fws.historyorder.query"},
+					{"interTypeId":"16","interCode":"http://open.suning.com/ospos/apipage/suning.fws.report.get"},
+					{"interTypeId":"16","interCode":"http://open.suning.com/ospos/apipage/suning.fws.detectionform.add"},
+					{"interTypeId":"16","interCode":"suning.fws.report.modify"},
+					{"interTypeId":"16","interCode":"suning.fws.detectionform.delete"},
+					{"interTypeId":"17","interCode":"suning.cloud.appcomplete.notice"},
+					{"interTypeId":"18","interCode":"suning.saleorder.query"},
+					{"interTypeId":"18","interCode":"suning.saleorder.dilivery"},
+					{"interTypeId":"23","interCode":"http://open.suning.com/ospos/apipage/suning.badArticleOrder.add"},
+					{"interTypeId":"23","interCode":"http://open.suning.com/ospos/apipage/suning.retuenBadArticleHandleResults.add"},
+					{"interTypeId":"24","interCode":"http://open.suning.com/ospos/apipage/suning.shoppingmallsalesdata.add"},
+					{"interTypeId":"26","interCode":"http://open.suning.com/ospos/apipage/suning.shzbservice.get"},
+					{"interTypeId":"26","interCode":"http://open.suning.com/ospos/apipage/suning.shzbservice.add"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.packageorderdeliver.add"},
+					{"interTypeId":"27","interCode":"http://open.suning.com/ospos/apipage/suning.netalliance.unioninfomation.get"},
+					{"interTypeId":"27","interCode":"suning.netalliance.unioninfomation.query"},
+					{"interTypeId":"28","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.orderdelivery.add"},
+					{"interTypeId":"28","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.orderreturn.add"},
+					{"interTypeId":"28","interCode":"suning.fourps.order.delete"},
+					{"interTypeId":"28","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.orderdetail.get"},
+					{"interTypeId":"28","interCode":"suning.fourps.orderstatus.query"},
+					{"interTypeId":"29","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.logisticsdetail.get"},
+					{"interTypeId":"30","interCode":"suning.selfmarket.saleform.query"},
+					{"interTypeId":"30","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.saleform.get"},
+					{"interTypeId":"30","interCode":"suning.selfmarket.allotform.query"},
+					{"interTypeId":"30","interCode":"suning.selfmarket.stockform.query"},
+					{"interTypeId":"10","interCode":"http://open.suning.com/ospos/apipage/suning.custom.direcoupon.add"},
+					{"interTypeId":"10","interCode":"suning.custom.direcoupon.query"},
+					{"interTypeId":"10","interCode":"http://open.suning.com/ospos/apipage/suning.custom.direcoupondetail.get"},
+					{"interTypeId":"31","interCode":"suning.fourps.iteminfo.query"},
+					{"interTypeId":"31","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.iteminfo.get"},
+					{"interTypeId":"31","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.itemdetail.get"},
+					{"interTypeId":"32","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.item.add"},
+					{"interTypeId":"32","interCode":"suning.fourps.item.modify"},
+					{"interTypeId":"33","interCode":"suning.fourps.storagesub.query"},
+					{"interTypeId":"33","interCode":"suning.fourps.realstorage.query"},
+					{"interTypeId":"33","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.celstoragesub.add"},
+					{"interTypeId":"33","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.celstoragesub.get"},
+					{"interTypeId":"33","interCode":"suning.fourps.celstoragesub.query"},
+					{"interTypeId":"33","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.realcelstorage.get"},
+					{"interTypeId":"33","interCode":"suning.fourps.refundworkinfo.delete"},
+					{"interTypeId":"33","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.storagesub.add"},
+					{"interTypeId":"33","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.storagesub.get"},
+					{"interTypeId":"35","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.inventoryquantity.get"},
+					{"interTypeId":"35","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.inventorydetail.get"},
+					{"interTypeId":"10","interCode":"http://open.suning.com/ospos/apipage/suning.custom.ordercoupon.add"},
+					{"interTypeId":"10","interCode":"suning.custom.ordercoupon.modify"},
+					{"interTypeId":"10","interCode":"suning.custom.ordercoupon.query"},
+					{"interTypeId":"10","interCode":"http://open.suning.com/ospos/apipage/suning.custom.ordercoupondetail.get"},
+					{"interTypeId":"28","interCode":"suning.fourps.orderdetail.query"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.seaorderdeclare.add"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.bsseaorderdeclare.add"},
+					{"interTypeId":"31","interCode":"suning.fourps.brandmasdata.query"},
+					{"interTypeId":"31","interCode":"suning.fourps.categorymasdata.query"},
+					{"interTypeId":"6","interCode":"http://open.suning.com/ospos/apipage/suning.custom.verifycode.get"},
+					{"interTypeId":"6","interCode":"suning.custom.agreerefund.modify"},
+					{"interTypeId":"17","interCode":"http://open.suning.com/ospos/apipage/suning.cloud.orderrel.get"},
+					{"interTypeId":"45","interCode":"suning.supply.ordercode.query"},
+					{"interTypeId":"45","interCode":"http://open.suning.com/ospos/apipage/suning.supply.order.get"},
+					{"interTypeId":"45","interCode":"suning.supply.orderbytime.query"},
+					{"interTypeId":"45","interCode":"http://open.suning.com/ospos/apipage/suning.supply.seaorderjoin.add"},
+					{"interTypeId":"45","interCode":"http://open.suning.com/ospos/apipage/suning.supply.seaorderdeclare.add"},
+					{"interTypeId":"45","interCode":"http://open.suning.com/ospos/apipage/suning.supply.orderdelivery.add"},
+					{"interTypeId":"45","interCode":"suning.supply.reorderbytime.query"},
+					{"interTypeId":"45","interCode":"http://open.suning.com/ospos/apipage/suning.supply.reorderdetail.get"},
+					{"interTypeId":"5","interCode":"suning.custom.hisorderevaluate.query"},
+					{"interTypeId":"5","interCode":"suning.custom.orderevaluate.query"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.orderevaluate.get"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.replycmreview.add"},
+					{"interTypeId":"8","interCode":"http://open.suning.com/ospos/apipage/suning.custom.dsrinfo.get"},
+					{"interTypeId":"32","interCode":"suning.fourps.item.delete"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.moduletemplet.get"},
+					{"interTypeId":"39","interCode":"suning.salesreport.query"},
+					{"interTypeId":"39","interCode":"suning.stockreport.query"},
+					{"interTypeId":"39","interCode":"suning.badstockreport.query"},
+					{"interTypeId":"39","interCode":"suning.samplestockreport.query"},
+					{"interTypeId":"39","interCode":"suning.unsalestockreport.query"},
+					{"interTypeId":"40","interCode":"suning.purchaseorder.query"},
+					{"interTypeId":"40","interCode":"suning.purchaseorder.confirm"},
+					{"interTypeId":"40","interCode":"suning.purchaseorderreport.query"},
+					{"interTypeId":"41","interCode":"suning.delivery.reserve"},
+					{"interTypeId":"41","interCode":"suning.reserve.cancel"},
+					{"interTypeId":"41","interCode":"suning.reserve.query"},
+					{"interTypeId":"41","interCode":"suning.receipt.query"},
+					{"interTypeId":"44","interCode":"http://open.suning.com/ospos/apipage/suning.facservice.add"},
+					{"interTypeId":"43","interCode":"suning.companyinfo.query"},
+					{"interTypeId":"43","interCode":"suning.plantinfo.query"},
+					{"interTypeId":"42","interCode":"suning.statementcode.query"},
+					{"interTypeId":"42","interCode":"http://open.suning.com/ospos/apipage/suning.statementhtml.get"},
+					{"interTypeId":"42","interCode":"http://open.suning.com/ospos/apipage/suning.bindstatement.sign"},
+					{"interTypeId":"42","interCode":"suning.approvalresult.query"},
+					{"interTypeId":"42","interCode":"http://open.suning.com/ospos/apipage/suning.statement.sign"},
+					{"interTypeId":"42","interCode":"suning.invoice.checkresult.query"},
+					{"interTypeId":"42","interCode":"suning.application.privilege.apply"},
+					{"interTypeId":"42","interCode":"suning.application.discount.apply"},
+					{"interTypeId":"42","interCode":"suning.application.balance.apply"},
+					{"interTypeId":"42","interCode":"suning.application.promotion.apply"},
+					{"interTypeId":"42","interCode":"suning.application.protocol.apply"},
+					{"interTypeId":"42","interCode":"suning.application.query"},
+					{"interTypeId":"42","interCode":"suning.statement.query"},
+					{"interTypeId":"42","interCode":"suning.statement.confirm"},
+					{"interTypeId":"44","interCode":"http://open.suning.com/ospos/apipage/suning.asmp.dispatchorder.add"},
+					{"interTypeId":"44","interCode":"http://open.suning.com/ospos/apipage/suning.asmp.sninstallorder.add"},
+					{"interTypeId":"44","interCode":"http://open.suning.com/ospos/apipage/suning.asmp.statement.get"},
+					{"interTypeId":"3","interCode":"suning.custom.invaddress.query"},
+					{"interTypeId":"3","interCode":"suning.custom.parallelinvaddress.query"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.rejected.query"},
+					{"interTypeId":"15","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.rejected.get"},
+					{"interTypeId":"46","interCode":"http://open.suning.com/ospos/apipage/suning.netalliance.account.bind"},
+					{"interTypeId":"46","interCode":"suning.netalliance.extlevel.modify"},
+					{"interTypeId":"46","interCode":"http://open.suning.com/ospos/apipage/suning.netalliance.snmemberlevel.get"},
+					{"interTypeId":"47","interCode":"suning.cloudinfo.subaccount.query"},
+					{"interTypeId":"47","interCode":"suning.cloudinfo.custinstatus.query"},
+					{"interTypeId":"47","interCode":"http://open.suning.com/ospos/apipage/suning.cloudinfo.custopinion.get"},
+					{"interTypeId":"47","interCode":"suning.cloudinfo.chatuser.query"},
+					{"interTypeId":"47","interCode":"suning.cloudinfo.chatcontent.query"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.mobilerecommend.add"},
+					{"interTypeId":"1","interCode":"suning.custom.mobilerecommend.modify"},
+					{"interTypeId":"1","interCode":"suning.custom.mobilerecommend.query"},
+					{"interTypeId":"1","interCode":"suning.custom.mobilesequence.modify"},
+					{"interTypeId":"1","interCode":"suning.custom.mobilesequence.query"},
+					{"interTypeId":"48","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.category.get"},
+					{"interTypeId":"48","interCode":"suning.govbus.prodpool.query"},
+					{"interTypeId":"48","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.proddetail.get"},
+					{"interTypeId":"48","interCode":"suning.govbus.prodimage.query"},
+					{"interTypeId":"48","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.batchprodsalestatus.get"},
+					{"interTypeId":"48","interCode":"suning.govbus.prodreview.query"},
+					{"interTypeId":"49","interCode":"suning.govbus.price.query"},
+					{"interTypeId":"50","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.inventory.get"},
+					{"interTypeId":"50","interCode":"suning.govbus.mprodstock.query"},
+					{"interTypeId":"51","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.order.add"},
+					{"interTypeId":"51","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.confirmorder.add"},
+					{"interTypeId":"51","interCode":"suning.govbus.rejectorder.delete"},
+					{"interTypeId":"51","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.applyrejected.add"},
+					{"interTypeId":"51","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.orderdetail.get"},
+					{"interTypeId":"51","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.orderstatus.get"},
+					{"interTypeId":"51","interCode":"suning.govbus.orderaccount.query"},
+					{"interTypeId":"52","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.orderlogist.get"},
+					{"interTypeId":"52","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.shiptime.get"},
+					{"interTypeId":"52","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.shipcarriage.get"},
+					{"interTypeId":"53","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.fulladdress.get"},
+					{"interTypeId":"53","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.predepositbalance.get"},
+					{"interTypeId":"53","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.message.get"},
+					{"interTypeId":"53","interCode":"suning.govbus.message.delete"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.npic.add"},
+					{"interTypeId":"52","interCode":"suning.govbus.facproduct.confirm"},
+					{"interTypeId":"10","interCode":"http://open.suning.com/ospos/apipage/suning.custom.priceexclusive.add"},
+					{"interTypeId":"10","interCode":"suning.custom.priceexclusive.modify"},
+					{"interTypeId":"10","interCode":"http://open.suning.com/ospos/apipage/suning.custom.priceexclusive.get"},
+					{"interTypeId":"10","interCode":"suning.custom.priceexclusive.query"},
+					{"interTypeId":"48","interCode":"suning.govbus.combinationprod.query"},
+					{"interTypeId":"54","interCode":"http://open.suning.com/ospos/apipage/suning.swl.productstorage.add"},
+					{"interTypeId":"54","interCode":"suning.swl.productstorage.modify"},
+					{"interTypeId":"54","interCode":"http://open.suning.com/ospos/apipage/suning.swl.productstorage.get"},
+					{"interTypeId":"54","interCode":"suning.swl.productstorage.query"},
+					{"interTypeId":"54","interCode":"http://open.suning.com/ospos/apipage/suning.swl.productrealstorage.get"},
+					{"interTypeId":"55","interCode":"http://open.suning.com/ospos/apipage/suning.swl.productbackstorage.add"},
+					{"interTypeId":"55","interCode":"suning.swl.refundappoint.modify"},
+					{"interTypeId":"55","interCode":"http://open.suning.com/ospos/apipage/suning.swl.refundappointorder.get"},
+					{"interTypeId":"55","interCode":"suning.swl.refundappointorder.query"},
+					{"interTypeId":"55","interCode":"http://open.suning.com/ospos/apipage/suning.swl.refundworkinfo.get"},
+					{"interTypeId":"54","interCode":"http://open.suning.com/ospos/apipage/suning.swl.refundworkinfo.get"},
+					{"interTypeId":"56","interCode":"suning.swl.warehouseinfo.query"},
+					{"interTypeId":"56","interCode":"http://open.suning.com/ospos/apipage/suning.swl.warehouseinfo.get"},
+					{"interTypeId":"56","interCode":"suning.swl.waresale.query"},
+					{"interTypeId":"56","interCode":"http://open.suning.com/ospos/apipage/suning.swl.waresale.get"},
+					{"interTypeId":"56","interCode":"http://open.suning.com/ospos/apipage/suning.swl.inventory.get"},
+					{"interTypeId":"5","interCode":"suning.custom.transportfee.modify"},
+					{"interTypeId":"58","interCode":"http://open.suning.com/ospos/apipage/suning.oto.order.get"},
+					{"interTypeId":"58","interCode":"suning.oto.orderids.query"},
+					{"interTypeId":"58","interCode":"suning.oto.orderinfo.query"},
+					{"interTypeId":"45","interCode":"http://open.suning.com/ospos/apipage/suning.supply.ordercode.add"},
+					{"interTypeId":"65","interCode":"http://open.suning.com/ospos/apipage/suning.common.systime.get"},
+					{"interTypeId":"67","interCode":"suning.oto.supplyapplying.query"},
+					{"interTypeId":"67","interCode":"http://open.suning.com/ospos/apipage/suning.oto.supplyapplying.add"},
+					{"interTypeId":"67","interCode":"suning.oto.salesstatus.query"},
+					{"interTypeId":"67","interCode":"suning.oto.salesstatus.modify"},
+					{"interTypeId":"67","interCode":"http://open.suning.com/ospos/apipage/suning.oto.publishcm.add"},
+					{"interTypeId":"67","interCode":"suning.oto.price.modify"},
+					{"interTypeId":"67","interCode":"suning.oto.price.query"},
+					{"interTypeId":"67","interCode":"suning.oto.storeinfo.query"},
+					{"interTypeId":"67","interCode":"http://open.suning.com/ospos/apipage/suning.oto.item.add"},
+					{"interTypeId":"67","interCode":"suning.oto.exactsupplyapplying.query"},
+					{"interTypeId":"67","interCode":"suning.oto.canshelves.query"},
+					{"interTypeId":"67","interCode":"http://open.suning.com/ospos/apipage/suning.oto.addchild.add"},
+					{"interTypeId":"66","interCode":"suning.govbus.invoice.confirm"},
+					{"interTypeId":"69","interCode":"suning.netalliance.merchantactivity.query"},
+					{"interTypeId":"69","interCode":"suning.netalliance.merchantcommodity.query"},
+					{"interTypeId":"9","interCode":"suning.waybilltrace.modify"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.factorygoodsinv.modify"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.factorygoodsinv.query"},
+					{"interTypeId":"61","interCode":"suning.selfmarket.promocoop.confirm"},
+					{"interTypeId":"70","interCode":"suning.selfmarket.item.query"},
+					{"interTypeId":"70","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.apply.add"},
+					{"interTypeId":"70","interCode":"suning.selfmarket.publish.modify"},
+					{"interTypeId":"70","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.childitem.add"},
+					{"interTypeId":"70","interCode":"suning.selfmarket.itemdetail.query"},
+					{"interTypeId":"70","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.mainproduct.get"},
+					{"interTypeId":"70","interCode":"suning.selfmarket.mainproduct.modify"},
+					{"interTypeId":"70","interCode":"suning.selfmarket.productdetail.query"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.merorderdirect.add"},
+					{"interTypeId":"1","interCode":"suning.custom.newbrand.query"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.receiveinfo.modify"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.ordercode.query"},
+					{"interTypeId":"15","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.order.get"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.disagreerejected.modify"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.agreerefund.modify"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.agreerejected.modify"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.disagreerefund.modify"},
+					{"interTypeId":"71","interCode":"suning.oto.factoryinventory.query"},
+					{"interTypeId":"71","interCode":"suning.oto.factoryinventory.modify"},
+					{"interTypeId":"71","interCode":"suning.oto.warehousepool.query"},
+					{"interTypeId":"71","interCode":"suning.oto.warepoolcityaging.query"},
+					{"interTypeId":"71","interCode":"suning.oto.warepooldistrictaging.query"},
+					{"interTypeId":"28","interCode":"suning.fourps.expressorder.query"},
+					{"interTypeId":"28","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.expressorder.add"},
+					{"interTypeId":"44","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.facservice.get"},
+					{"interTypeId":"72","interCode":"http://open.suning.com/ospos/apipage/suning.pptv.pushrefund.add"},
+					{"interTypeId":"72","interCode":"http://open.suning.com/ospos/apipage/suning.pptv.pushorder.add"},
+					{"interTypeId":"44","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.snservice.get"},
+					{"interTypeId":"44","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.snservice.add"},
+					{"interTypeId":"28","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.result.add"},
+					{"interTypeId":"73","interCode":"http://open.suning.com/ospos/apipage/suning.custom.inventory.get"},
+					{"interTypeId":"73","interCode":"suning.custom.syncinventory.modify"},
+					{"interTypeId":"73","interCode":"suning.custom.batchorder.query"},
+					{"interTypeId":"73","interCode":"suning.custom.orderid.query"},
+					{"interTypeId":"73","interCode":"http://open.suning.com/ospos/apipage/suning.custom.oneorder.get"},
+					{"interTypeId":"73","interCode":"suning.custom.sendgoods.modify"},
+					{"interTypeId":"73","interCode":"suning.custom.returngoods.query"},
+					{"interTypeId":"33","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.inventoryquantity.get"},
+					{"interTypeId":"33","interCode":"http://open.suning.com/ospos/apipage/suning.fourps.inventorydetail.get"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.ord.query"},
+					{"interTypeId":"15","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.order.add"},
+					{"interTypeId":"73","interCode":"http://open.suning.com/ospos/apipage/suning.custom.singleinventory.get"},
+					{"interTypeId":"48","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.prodextend.get"},
+					{"interTypeId":"53","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.paymentway.get"},
+					{"interTypeId":"48","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.judgefacproduct.get"},
+					{"interTypeId":"75","interCode":"http://open.suning.com/ospos/apipage/suning.saleoff.addchild.add"},
+					{"interTypeId":"75","interCode":"suning.saleoff.cmmdtyinfo.modify"},
+					{"interTypeId":"75","interCode":"http://open.suning.com/ospos/apipage/suning.saleoff.item.add"},
+					{"interTypeId":"75","interCode":"suning.saleoff.itemcontents.query"},
+					{"interTypeId":"75","interCode":"http://open.suning.com/ospos/apipage/suning.saleoff.mainproduct.get"},
+					{"interTypeId":"75","interCode":"suning.saleoff.mainproduct.modify"},
+					{"interTypeId":"75","interCode":"suning.saleoff.mylibary.query"},
+					{"interTypeId":"75","interCode":"suning.saleoff.mylibarybatch.query"},
+					{"interTypeId":"75","interCode":"http://open.suning.com/ospos/apipage/suning.saleoff.publishcm.add"},
+					{"interTypeId":"15","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.leaguerstatus.add"},
+					{"interTypeId":"75","interCode":"suning.custom.category.query"},
+					{"interTypeId":"75","interCode":"suning.custom.newbrand.query"},
+					{"interTypeId":"75","interCode":"suning.custom.product.query"},
+					{"interTypeId":"75","interCode":"suning.custom.productdetail.query"},
+					{"interTypeId":"75","interCode":"suning.custom.itemparameters.query"},
+					{"interTypeId":"75","interCode":"http://open.suning.com/ospos/apipage/suning.custom.pic.add"},
+					{"interTypeId":"75","interCode":"suning.custom.pic.delete"},
+					{"interTypeId":"75","interCode":"http://open.suning.com/ospos/apipage/suning.custom.moduletemplet.get"},
+					{"interTypeId":"76","interCode":"suning.selfmarket.ord.query"},
+					{"interTypeId":"76","interCode":"suning.selfmarket.ordercode.query"},
+					{"interTypeId":"76","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.order.get"},
+					{"interTypeId":"76","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.order.add"},
+					{"interTypeId":"76","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.orderdeliver.add"},
+					{"interTypeId":"76","interCode":"suning.selfmarket.rejected.query"},
+					{"interTypeId":"76","interCode":"suning.selfmarket.agreerejected.modify"},
+					{"interTypeId":"77","interCode":"suning.oto.warehousepool.query"},
+					{"interTypeId":"77","interCode":"suning.oto.factoryinventory.modify"},
+					{"interTypeId":"77","interCode":"suning.oto.factoryinventory.query"},
+					{"interTypeId":"3","interCode":"http://open.suning.com/ospos/apipage/suning.custom.inventory.get"},
+					{"interTypeId":"51","interCode":"suning.govbus.ordernumber.query"},
+					{"interTypeId":"51","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.ordernumber.get"},
+					{"interTypeId":"74","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.fivedaysproduce.add"},
+					{"interTypeId":"74","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.inventory.add"},
+					{"interTypeId":"74","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.monthproduce.add"},
+					{"interTypeId":"74","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.ordersplit.add"},
+					{"interTypeId":"74","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.orderdeparture.add"},
+					{"interTypeId":"74","interCode":"suning.selfmarket.purchaseplan.query"},
+					{"interTypeId":"74","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.purchaseplanconfirm.add"},
+					{"interTypeId":"82","interCode":"suning.selfmarket.receipt.query"},
+					{"interTypeId":"82","interCode":"suning.selfmarket.reserve.query"},
+					{"interTypeId":"83","interCode":"suning.selfmarket.purchaseorder.query"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.electronicinvoice.get"},
+					{"interTypeId":"5","interCode":"http://open.suning.com/ospos/apipage/suning.custom.electronicinvoice.add"},
+					{"interTypeId":"67","interCode":"suning.custom.category.query"},
+					{"interTypeId":"67","interCode":"suning.custom.newbrand.query"},
+					{"interTypeId":"67","interCode":"suning.custom.itemparameters.query"},
+					{"interTypeId":"67","interCode":"suning.custom.itemcontents.modify"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.culitem.add"},
+					{"interTypeId":"1","interCode":"suning.custom.culitemcontentrevise.modify"},
+					{"interTypeId":"1","interCode":"suning.custom.culitemcontents.modify"},
+					{"interTypeId":"1","interCode":"suning.custom.judgeproduct.confirm"},
+					{"interTypeId":"1","interCode":"suning.custom.culitemdetail.query"},
+					{"interTypeId":"81","interCode":"suning.netalliance.homepagepositionurl.query"},
+					{"interTypeId":"81","interCode":"suning.netalliance.storepromotionurl.query"},
+					{"interTypeId":"52","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.orderlogistnew.get"},
+					{"interTypeId":"44","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.snservicebatch.add"},
+					{"interTypeId":"11","interCode":"http://open.suning.com/ospos/apipage/suning.logistics.sforderresender.add"},
+					{"interTypeId":"11","interCode":"http://open.suning.com/ospos/apipage/suning.logistics.receiveexpection.add"},
+					{"interTypeId":"84","interCode":"http://open.suning.com/ospos/apipage/suning.spmarket.shelf.add"},
+					{"interTypeId":"84","interCode":"http://open.suning.com/ospos/apipage/suning.spmarket.layoutbase.add"},
+					{"interTypeId":"84","interCode":"http://open.suning.com/ospos/apipage/suning.spmarket.layout.add"},
+					{"interTypeId":"84","interCode":"http://open.suning.com/ospos/apipage/suning.spmarket.confirm.add"},
+					{"interTypeId":"85","interCode":"suning.cmall.pointsbalance.query"},
+					{"interTypeId":"15","interCode":"http://open.suning.com/ospos/apipage/suning.saleoff.electronicsheet.add"},
+					{"interTypeId":"51","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.returnpartorder.add"},
+					{"interTypeId":"48","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.getproductcluster.get"},
+					{"interTypeId":"81","interCode":"suning.netalliance.custompromotionurl.query"},
+					{"interTypeId":"87","interCode":"suning.fontorder.serviceinformation.query"},
+					{"interTypeId":"87","interCode":"suning.fontorder.shippiingnotice.confirm"},
+					{"interTypeId":"85","interCode":"suning.cmall.cancelsubtract.modify"},
+					{"interTypeId":"85","interCode":"suning.cmall.confirmsubtract.modify"},
+					{"interTypeId":"85","interCode":"http://open.suning.com/ospos/apipage/suning.cmall.pointgive.add"},
+					{"interTypeId":"85","interCode":"http://open.suning.com/ospos/apipage/suning.cmall.pointsoccupy.add"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.saleorderpromotioninfo.query"},
+					{"interTypeId":"76","interCode":"http://open.suning.com/ospos/apipage/suning.saleoff.electronicsheet.add"},
+					{"interTypeId":"88","interCode":"suning.netalliance.couponproduct.query"},
+					{"interTypeId":"89","interCode":"suning.selfmarket.sale.query"},
+					{"interTypeId":"89","interCode":"suning.selfmarket.reject.query"},
+					{"interTypeId":"89","interCode":"suning.selfmarket.proto.query"},
+					{"interTypeId":"89","interCode":"suning.selfmarket.stock.query"},
+					{"interTypeId":"89","interCode":"suning.selfmarket.unsale.query"},
+					{"interTypeId":"40","interCode":"suning.selfmarket.purchaseorderreport.query"},
+					{"interTypeId":"1","interCode":"suning.custom.getproductcode.query"},
+					{"interTypeId":"82","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.deliveryreserve.add"},
+					{"interTypeId":"40","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.purchaseorder.add"},
+					{"interTypeId":"82","interCode":"suning.selfmarket.reserve.delete"},
+					{"interTypeId":"91","interCode":"suning.message.user.permit"},
+					{"interTypeId":"91","interCode":"suning.message.user.cancel"},
+					{"interTypeId":"74","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.reviewestatus.add"},
+					{"interTypeId":"15","interCode":"suning.selfmarket.refundlog.query"},
+					{"interTypeId":"66","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.eleinvoice.get"},
+					{"interTypeId":"68","interCode":"suning.advertise.baojieapi.query"},
+					{"interTypeId":"67","interCode":"suning.custom.itemdetail.query"},
+					{"interTypeId":"51","interCode":"http://open.suning.com/ospos/apipage/suning.govbus.mixpayorder.add"},
+					{"interTypeId":"48","interCode":"suning.govbus.productmapping.query"},
+					{"interTypeId":"93","interCode":"suning.fontorder.isvorder.query"},
+					{"interTypeId":"82","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.orderpackage.add"},
+					{"interTypeId":"43","interCode":"suning.selfmarket.plant.query"},
+					{"interTypeId":"82","interCode":"suning.selfmarket.purchaseordersupplier.query"},
+					{"interTypeId":"82","interCode":"suning.selfmarket.receiptsupplier.query"},
+					{"interTypeId":"3","interCode":"http://open.suning.com/ospos/apipage/suning.custom.code.get"},
+					{"interTypeId":"53","interCode":"suning.govbus.pricemessage.query"},
+					{"interTypeId":"1","interCode":"http://open.suning.com/ospos/apipage/suning.custom.categoryredict.get"},
+					{"interTypeId":"94","interCode":"suning.custom.getproductcode.query"},
+					{"interTypeId":"94","interCode":"suning.custom.item.query"},
+					{"interTypeId":"94","interCode":"suning.custom.itemdetail.query"},
+					{"interTypeId":"94","interCode":"suning.custom.itemsale.query"},
+					{"interTypeId":"94","interCode":"suning.custom.itemcontents.modify"},
+					{"interTypeId":"94","interCode":"http://open.suning.com/ospos/apipage/suning.custom.item.get"},
+					{"interTypeId":"94","interCode":"suning.custom.item.delorres"},
+					{"interTypeId":"94","interCode":"http://open.suning.com/ospos/apipage/suning.custom.shelves.add"},
+					{"interTypeId":"94","interCode":"http://open.suning.com/ospos/apipage/suning.custom.shelves.move"},
+					{"interTypeId":"95","interCode":"suning.custom.order.query"},
+					{"interTypeId":"95","interCode":"suning.custom.historyorder.query"},
+					{"interTypeId":"95","interCode":"http://open.suning.com/ospos/apipage/suning.custom.order.get"},
+					{"interTypeId":"95","interCode":"suning.custom.unpaidorder.query"},
+					{"interTypeId":"96","interCode":"http://open.suning.com/ospos/apipage/suning.custom.orderdelivery.add"},
+					{"interTypeId":"96","interCode":"http://open.suning.com/ospos/apipage/suning.custom.orderselfdist.add"},
+					{"interTypeId":"97","interCode":"suning.custom.batchrejected.query"},
+					{"interTypeId":"97","interCode":"http://open.suning.com/ospos/apipage/suning.custom.singlerejected.get"},
+					{"interTypeId":"97","interCode":"suning.custom.agreerejected.modify"},
+					{"interTypeId":"97","interCode":"suning.custom.disagreerejected.modify"},
+					{"interTypeId":"97","interCode":"suning.custom.disagreerefund.modify"},
+					{"interTypeId":"97","interCode":"suning.custom.delayrefund.modify"},
+					{"interTypeId":"97","interCode":"suning.custom.agreerefund.modify"},
+					{"interTypeId":"76","interCode":"http://open.suning.com/ospos/apipage/suning.selfmarket.rejected.get"},
+					{"interTypeId":"76","interCode":"suning.selfmarket.disagreerejected.modify"},
+					{"interTypeId":"76","interCode":"suning.selfmarket.refundlog.query"},
+					{"interTypeId":"76","interCode":"suning.selfmarket.disagreerefund.modify"},
+					{"interTypeId":"76","interCode":"suning.selfmarket.agreerefund.modify"},
+					{"interTypeId":"72","interCode":"suning.custom.updatevideomes.modify"},
+					{"interTypeId":"51","interCode":"suning.govbus.unpaidorder.cancel"},
+					{"interTypeId":"53","interCode":"suning.govbus.onlinepay.create"},
+					{"interTypeId":"1","interCode":"suning.custom.lsyprice.modify"},
+					{"interTypeId":"1","interCode":"suning.custom.lsyprice.query"},
+					{"interTypeId":"94","interCode":"suning.custom.lsyprice.modify"},
+					{"interTypeId":"94","interCode":"suning.custom.lsyprice.query"},
+					{"interTypeId":"1","interCode":"suning.custom.storegroup.query"},
+					{"interTypeId":"1","interCode":"suning.custom.otoinfo.modify"},
+					{"interTypeId":"75","interCode":"suning.custom.getproductcode.query"},
+			];
+	
+		$(document).ready(function(){
+			//选择业务类型后带出对应的接口类型
+			$("ul[vsel='bizTypes'] li").on('click',function(e){
+				e = e || event;
+				e.preventDefault();
+				$(this).parent().hide();
+				var atUlObj = $("ul[selval='bizTypeId']");
+				atUlObj.empty();
+				var atUlLiObj = $("<li></li>");
+				atUlLiObj.attr("sel",$(this).attr("sel"));
+				atUlLiObj.text($(this).text()); 
+				atUlObj.append(atUlLiObj);
+				var liSelId = $(this).attr("sel");
+				var aatlUlObj = $("ul[vsel='accessTypes']");
+				aatlUlObj.empty();
+				if (!liSelId) {
+				    aatlUlObj.append($("<li>自定义</li>"));
+				} else {
+				    aatlUlObj.append($("<li>请选择接口类型</li>"));
+				}								
+				$.each(apiAccessTypesList,function(index,aatl){
+					if(liSelId == aatl.bustypeId){
+						var aatlLi = $("<li></li>");
+						aatlLi.attr("sel",aatl.interTypeId);
+						aatlLi.text(aatl.interTypeName);
+						aatlUlObj.append(aatlLi);
+					}
+				});
+			});
+			//选择接口类型带出对应的方法
+			$('body').on('click',"ul[vsel='accessTypes'] li",function(e){
+				e = e || event;
+				e.preventDefault();
+				$(this).parent().hide();
+				var atUlObj = $("ul[selval='accessTypeId']");
+				atUlObj.empty();
+				var atUlLiObj = $("<li></li>");
+				atUlLiObj.attr("sel",$(this).attr("sel"));
+				atUlLiObj.text($(this).text()); 
+				atUlObj.append(atUlLiObj);
+				//带出方法下拉框
+				var actypeId = $(this).attr("sel");				
+				if (!actypeId) {
+				    $("#apiMethod").show();
+					$("#apiMethodSel").hide();
+				} else {
+				    $("#apiMethodSel").show();
+				    $("#apiMethod").hide();
+					var amlObj = $("ul[vsel='apiMethods']");
+					amlObj.empty();
+					amlObj.append($("<li>请选择接口名称</li>"));
+					$.each(apiMethodsList,function(index,aml){
+						if(actypeId == aml.interTypeId){
+							var amlLi = $("<li></li>");
+							amlLi.attr("sel",aml.interCode);
+							amlLi.text(aml.interCode);
+							amlObj.append(amlLi);
+						}
+					});
+				}
+				
+			});
+			//选择对应的接口方法
+			$('body').on('click',"ul[vsel='apiMethods'] li",function(e){
+				e = e || event;
+				e.preventDefault();
+				$(this).parent().hide();
+				var atUlObj = $("ul[selval='apiMethodId']");
+				atUlObj.empty();
+				var atUlLiObj = $("<li></li>");
+				atUlLiObj.attr("sel",$(this).attr("sel"));
+				atUlLiObj.text($(this).text()); 
+				atUlObj.append(atUlLiObj);
+			});
+			
+			//异常码搜索
+			$("#errorCodeSearch").on('click',function(e){
+				e = e || event;
+				e.preventDefault();
+				//获取业务类型
+				var bizTypeId = $("ul[selval='bizTypeId']").find("li").eq(0).attr("sel");				
+				//获取接口类型
+				var accessTypeId = $("ul[selval='accessTypeId']").find("li").eq(0).attr("sel");
+				//获取接口方法
+				var apiMethodCode;
+				if (!bizTypeId &&!accessTypeId) {
+				    apiMethodCode = $("#apiMethod").val();
+				} else {
+				    apiMethodCode = $("ul[selval='apiMethodId']").find("li").eq(0).attr("sel");
+				}				
+				bizTypeId = (bizTypeId == null || bizTypeId == undefined) ? '' : bizTypeId;
+				accessTypeId = (accessTypeId == null || accessTypeId == undefined) ? '' : accessTypeId;
+				apiMethodCode = (apiMethodCode == null || apiMethodCode == undefined) ? '' : apiMethodCode;
+				//获取异常码
+				var errorCode = $("#errorCodeTextArea").val();
+				var params = {"errorCode":errorCode,"bustypeId":bizTypeId,"interTypeId":accessTypeId,
+					"interCode":apiMethodCode}
+				comm.ajaxPostCall("queryApiMethodErrorCodesInfo-1.do"/*tpa=http://open.suning.com/ospos/apipage/queryApiMethodErrorCodesInfo.do*/,params,function(data){
+					data = $.parseJSON(data);
+					var errorList = data.errorCodes;
+					var errorCodeListDiv = $("#errorCodeListDiv");
+					errorCodeListDiv.empty();
+					if(errorList.length == 0){
+						errorCodeListDiv.append($("<ul class='wr-ul'></ul>")
+							.append($("<li><hr class='wr-hr'/></li>"))
+							.append($("<li>查询不到此异常码对应的错误信息</li>")));
+					}
+					else{
+						$.each(errorList,function(index,el){
+							var erCodeUl = $("<ul class='wr-ul'></ul>");
+							errorCodeListDiv.append(erCodeUl);
+							erCodeUl.append($("<li><hr class='wr-hr'/></li>"));
+							if(el.interCode == null){
+								erCodeUl.append($("<li><a href='" + data.sysErrorCodesUrl + "' target='_blank'>点击查看所有系统级请求参数报错码示例</a></li>"));
+							}
+							else{
+								erCodeUl.append($("<li>查看API文档信息： <a href='toApiMethodDetailMenu.do-interCode=- + el-1.intercode + -.htm'/*tpa=http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=" + el.interCode + "*/ target='_blank'>" + el.interCode + "</a></li>"));
+							}
+							erCodeUl.append($("<li>错误描述：" + el.errorDesc + "</li>"))
+								.append($("<li>解决方案：" + el.errorSolutions + "</li>"));
+						});
+					}
+				});
+			});
+		});
+	</script>
+	<script src="../../../static.suning.cn/osr/meas/time-1.js" tppabs="http://static.suning.cn/osr/meas/time.js"></script>
+</body>
+</html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="手机, 电脑, 冰箱, 洗衣机, 相机, 数码, 家居用品, 鞋帽, 化妆品, 母婴用品, 图书，食品，保险，旅行，充值，团购，正品行货, 全国联保, 货到付款。"/>
+<meta name="description" content="苏宁易购是领先的综合网上购物商城, 在线特价销售家电、通讯数码、电脑、家居百货、服装服饰、母婴、图书、食品、保险、旅行、充值、团购等数万类商品和服务。正品行货, 全国联保, 本地配送, 货到付款。省钱放心上苏宁电器网上商城, 尽享购物乐趣！"/>
+<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<script src="../../../static.suning.cn/osr/meas/error.js" tppabs="https://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
+        <title>开放服务-文档中心</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="手机, 电脑, 冰箱, 洗衣机, 相机, 数码, 家居用品, 鞋帽, 化妆品, 母婴用品, 图书，食品，保险，旅行，充值，团购，正品行货, 全国联保, 货到付款。"/>
+<meta name="description" content="苏宁易购是领先的综合网上购物商城, 在线特价销售家电、通讯数码、电脑、家居百货、服装服饰、母婴、图书、食品、保险、旅行、充值、团购等数万类商品和服务。正品行货, 全国联保, 本地配送, 货到付款。省钱放心上苏宁电器网上商城, 尽享购物乐趣！"/>
+<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<script src="../../../static.suning.cn/osr/meas/error.js" tppabs="https://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
+			<link rel="stylesheet" href="../staticfiles/css/common.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/common.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/appcommon.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/appcommon.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/backstage.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/backstage.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/OpenSerNew.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/OpenSerNew.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+	<style>
+		.on-menuL .child-menu .parent-li a.parenta {
+		    display: inline-block;
+		}
+	</style>
+</head>
+<body>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    if("" != ""){
+			var userName = "";
+			$("#alLoginName").text(userName);
+			$("#alLoginName").attr("title",userName);
+			$("#alLogin").show();
+			$("#withOutLogin").hide();
+	    }else {
+			var userName = getCookie("osposLoginUserIdFlag");
+			if(userName == ""){
+				var logonStatusVal = getCookie("logonStatus");
+				var authIdVal = getCookie("authId");
+				if((logonStatusVal != undefined && logonStatusVal != "") 
+	       		|| (authIdVal != undefined && authIdVal != "")){
+					userName = getCookie("idsLoginUserIdLastTime");
+				}
+			}
+			if(userName != ""){
+				$("#alLoginName").text(userName);
+				$("#alLoginName").attr("title",userName);
+				$("#alLogin").show();
+				$("#withOutLogin").hide();
+			}else {
+				$("#alLogin").hide();
+				$("#withOutLogin").show();
+			} 
+	    }
+    });
+	
+    function getCookie(cookieName){
+		var cookieArr = document.cookie.split(';');
+		for(var i=0; i<cookieArr.length; i++){
+			var cookie = cookieArr[i];
+			while (cookie.charAt(0)==' '){
+				cookie = cookie.substring(1);
+			}
+			cookieEntry = cookie.split('=');
+			if(cookieEntry[0] == cookieName){
+				return decodeURIComponent(cookieEntry[1]);
+			}
+		}
+		return "";
+    }
+	
+	$(function(){
+        $(".os-nav li").each(function(index){
+            $(this).removeClass("os-on");
+            if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toApi")!=-1&&index=="3"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toDevCenter")!=-1&&index=="4"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname=="/"&&index=="0"){
+                $(this).addClass("os-on");
+            }
+        })                
+	})
+</script>
+<div class="os-top bcs-top">
+	<div class="w1190 clearfix">
+		<div class="l os-snLogo"></div>	
+		<ul class="os-nav">
+			<li class="os-on"><a href="../../index.htm" tppabs="https://open.suning.com/">首页</a></li>
+			<li><a href="javascript:void(0);">开放版图<i></i></a>
+				<!--[if IE]>
+				<dl style="margin-left: -104px;margin-top: 55px;">
+				<![endif]-->
+				<!--[if !IE]><!-->
+				<dl>
+			    <!--<![endif]-->
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/road/roadIndex.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/road/roadIndex.html'" tppabs="https://road.suning.com/ospos/road/roadIndex.html" target="_blank">一号公路开放</a><i></i></dd>
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/toDevCenter.action  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/toDevCenter.action'" tppabs="https://road.suning.com/ospos/toDevCenter.action">商家后台开放</a><i></i></dd>
+                </dl>
+            </li>
+            <li><a href="toDocCenter.do.htm" tppabs="https://open.suning.com/ospos/apipage/toDocCenter.do">文档中心</a></li>
+			<li><a href="toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do">API文档</a></li>
+			<li><a href="../pushapi/toTopicPageList.do.htm" tppabs="https://open.suning.com/ospos/pushapi/toTopicPageList.do">消息文档</a></li>
+			<li><a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/toDevCenter.action">控制台</a></li>
+		</ul>
+		
+		<a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/logOut.action" class="os-exit" style="display: none;" id="alLogin">退出</a> 
+		<div class="r search-top">
+			<form method="post" action="https://open.suning.com/ospos/apipage/toSearchPage.do" id="tlSearchForm" style="display:inline;float:right;" autocomplete="off">
+                <input type="text" class="os-input" id="tlSearchIn" name="tlSearchName"/>
+                <span class="os-search" id="tlSearchBtn"></span>
+            </form>                
+                <span class="os-search"></span>
+                <span id="alLoginName" class="lname r"></span>
+                <a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/toLogin.action" class="os-login" style="display: none;" id="withOutLogin">登录</a>
+		</div>
+	</div>
+</div>
+    <div class="on-wrapp">
+        <div class="w1190 clearfix mb40 oh" style="position:relative;">
+            <div class="on-title">文档中心</div>
+            <div class="on-menuL w238">
+                <div class="child-menu">
+											<dl>
+													<dt class="parent-li">
+														<i class="se-menuIcon se-icon2 se-icon1"></i>
+														<a class="parenta">平台介绍</a>
+													</dt>
+													<dd class="child-parent" style="display: none;">                               
+													<ul>
+																	<li id=6 name="queryDocC">
+																		<a>平台简介</a>
+																	</li>
+																	<li id=8 name="queryDocC">
+																		<a>盈利模式</a>
+																	</li>
+																	<li id=7 name="queryDocC">
+																		<a>开放业务</a>
+																	</li>
+																	<li id=54 name="queryDocC">
+																		<a>一号公路入驻流程</a>
+																	</li>
+													</ul>
+												</dd>
+											</dl>
+											<dl>
+													<dt class="parent-li">
+														<i class="se-menuIcon se-icon2 se-icon1"></i>
+														<a class="parenta">应用接入</a>
+													</dt>
+													<dd class="child-parent" style="display: none;">                               
+													<ul>
+																	<li id=9 name="queryDocC">
+																		<a>接入指南</a>
+																	</li>
+													</ul>
+												</dd>
+											</dl>
+											<dl>
+													<dt class="parent-li">
+														<i class="se-menuIcon se-icon2"></i>
+													 <a class="parenta">开发文档</a>
+													</dt>
+													<dd class="child-parent">                               
+													<ul>
+																	<li id=10 name="queryDocC">
+																		<a>API变更记录</a>
+																	</li>
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>开发基础</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=18 name="queryDocC"><a>应用创建</a></li>
+																			<li id=19 name="queryDocC"><a>IP白名单设置</a></li>
+																			<li id=20 name="queryDocC"><a>权限体系说明</a></li>
+																		</ul>
+																	</dd> 
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>开发核心技术</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=21 name="queryDocC"><a>运行环境介绍</a></li>
+																			<li id=22 name="queryDocC"><a>用户授权介绍</a></li>
+																			<li id=23 name="queryDocC"><a>API调用方法详解</a></li>
+																			<li id=24 name="queryDocC"><a>SDK下载介绍</a></li>
+																			<li id=25 name="queryDocC"><a>API调用实例</a></li>
+																			<li id=41 name="queryDocC"><a>接口调用频率说明</a></li>
+																			<li id=53 name="queryDocC"><a>API签名算法</a></li>
+																			<li id=52 name="queryDocC"><a>消息推送指南</a></li>
+																			<li id=56 name="queryDocC"><a>消息推送使用说明</a></li>
+																		</ul>
+																	</dd> 
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>开发帮助文档</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=26 name="queryDocC"><a>应用标签介绍</a></li>
+																			<li id=27 name="queryDocC"><a>测试工具介绍</a></li>
+																		</ul>
+																	</dd> 
+													</ul>
+												</dd>
+											</dl>
+											<dl>
+													<dt class="parent-li">
+														<i class="se-menuIcon se-icon2 se-icon1"></i>
+														<a class="parenta">API调用场景</a>
+													</dt>
+													<dd class="child-parent" style="display: none;">                               
+													<ul>
+																	<li id=47 name="queryDocC">
+																		<a>销售准备</a>
+																	</li>
+																	<li id=48 name="queryDocC">
+																		<a>商品新增</a>
+																	</li>
+																	<li id=44 name="queryDocC">
+																		<a>商品信息修改</a>
+																	</li>
+																	<li id=45 name="queryDocC">
+																		<a>库存同步</a>
+																	</li>
+																	<li id=46 name="queryDocC">
+																		<a>订单同步</a>
+																	</li>
+																	<li id=49 name="queryDocC">
+																		<a>物流发货</a>
+																	</li>
+																	<li id=50 name="queryDocC">
+																		<a>退货退款</a>
+																	</li>
+																	<li id=51 name="queryDocC">
+																		<a>4PS业务场景</a>
+																	</li>
+													</ul>
+												</dd>
+											</dl>
+											<dl>
+													<dt class="parent-li">
+														<i class="se-menuIcon se-icon2 se-icon1"></i>
+														<a class="parenta">规则中心</a>
+													</dt>
+													<dd class="child-parent" style="display: none;">                               
+													<ul>
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>服务市场规则</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=28 name="queryDocC"><a>概述</a></li>
+																			<li id=29 name="queryDocC"><a>服务市场准入规则</a></li>
+																			<li id=30 name="queryDocC"><a>服务市场违规及处罚</a></li>
+																			<li id=31 name="queryDocC"><a>服务商及服务退市</a></li>
+																			<li id=32 name="queryDocC"><a>附则：规则解读</a></li>
+																		</ul>
+																	</dd> 
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>平台协议</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=33 name="queryDocC"><a>合作伙伴开发协议</a></li>
+																			<li id=34 name="queryDocC"><a>技术服务协议</a></li>
+																			<li id=35 name="queryDocC"><a>运营服务商服务协议</a></li>
+																			<li id=36 name="queryDocC"><a>oauth2.0授权说明</a></li>
+																		</ul>
+																	</dd> 
+													</ul>
+												</dd>
+											</dl>
+											<dl style="border-bottom: 1px solid #e2e3e4;">
+													<dt class="parent-li">
+													<i class="se-menuIcon se-icon2 se-icon1""></i>
+													<a class="parenta">常见问题</a>
+												</dt> 
+												<dd class="child-parent" style="display: none;">                               
+													<ul>
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>技术问题</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=37 name="queryDocC"><a>技术规范</a></li>
+																			<li id=38 name="queryDocC"><a>API问题</a></li>
+																		</ul>
+																	</dd> 
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>名词解释</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=39 name="queryDocC"><a>苏宁基础概念</a></li>
+																			<li id=40 name="queryDocC"><a>技术名词</a></li>
+																		</ul>
+																	</dd> 
+													</ul>
+												</dd> 
+											</dl>
+
+                    <a href="toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do"><div class="se-APIDoc"><em></em>API说明文档</div></a>
+                  </div>
+            </div>
+            <div class="on-menuR ml240 clearfix">
+                <div class="p30">
+                <div class="on-posfix">
+                    <span class="on-title clearfix"><p class="l">消息推送指南</p>
+                        <div class="on-posHover">
+                            <em></em>
+                            <ul class="on-posList pos">
+                                <li><a href="#daohang174">一、SDK下载</a></li>
+                                <li><a href="#daohang177">二、JAVA版SDK推送使用示例</a></li>
+                                <li><a href="#daohang179">三、JAVA版SDK推送测试类</a></li>
+                                <li><a href="#daohang186">四、NET版SDK推送使用示例</a></li>
+                                <li><a href="#daohang180">五、现有业务消息主题</a></li>
+                                <li><a href="#daohang181">六、消息推送地址</a></li>
+                            </ul>
+                        </div>
+                    </span>
+                    <span class="on-date r" style="margin-top:-16px;">更新时间: 2017-05-05 </span>
+                    <div class="on-hr"></div>
+                </div>
+                            <div class="pr-title pr-t1" id="daohang174" style="margin-top: 55px;"><span class="l">一、SDK下载</span>
+                                <em class="pr-em pr-down"></em>
+                            </div>
+                            <div class="pr-con1">
+                                <p class="pr-p1 mb30"><font face="Microsoft YaHei"><a href="toDocContent-1.do-menuid=24.htm" tppabs="http://open.suning.com/ospos/apipage/toDocContent.do?menuId=24" data-ke-src="toDocContent-1.do-menuid=24.htm" tppabs="http://open.suning.com/ospos/apipage/toDocContent.do?menuId=24" target="_blank"><span style="color:#337FE5;">SDK下载</span></a>（可下载对应语言的SDK），目前消息推送功能暂时只有JAVA版和.NET版SDK支持。</font></p>
+                            </div>
+                            <div class="pr-title pr-t2" id="daohang177" style="margin-top: 55px;"><span class="l">二、JAVA版SDK推送使用示例</span>
+                                <em class="pr-em pr-down"></em>
+                            </div>
+                            <div class="pr-con2">
+                                <p class="pr-p1 mb30"><p class="MsoNormal"><br></p><p class="MsoNormal"><span style="font-family: 'Microsoft YaHei';"><strong>1</strong></span><strong><span style="font-family:Microsoft YaHei;">、在项目中新建</span></strong><span style="font-family: 'Microsoft YaHei';"><strong>lib</strong></span><strong><span style="font-family:Microsoft YaHei;">文件夹，放置消息推送</span></strong><span style="font-family: 'Microsoft YaHei';"><strong>SDK</strong></span></p><p class="MsoNormal"><span><br></span></p><p><img src="../../../image.suning.cn/uimg/API/KFFW/145887360281934998.png" tppabs="http://image.suning.cn/uimg/API/KFFW/145887360281934998.png"></p><p><br></p><p><br></p><p></p><p class="MsoNormal"><span style="font-family: 'Microsoft YaHei';"><strong>2</strong></span><span style="font-family:Microsoft YaHei;"><strong>、添加maven依赖​</strong></span></p><p class="MsoNormal"><span style="font-family:Microsoft YaHei;"><strong><br></strong></span></p><div style="mso-element:para-border-div;border:solid #CCCCCC 1.0pt;mso-border-alt:
+solid #CCCCCC .75pt;padding:5.0pt 8.0pt 5.0pt 8.0pt;background:#F8F8F8">
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&lt;dependency&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;groupId&gt;org.slf4j&lt;/groupId&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;version&gt;1.7.5&lt;/version&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&lt;/dependency&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&lt;dependency&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;groupId&gt;com.suning.api.sdk&lt;/groupId&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;artifactId&gt;api-push-sdk&lt;/artifactId&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;version&gt;suning-sdk-java-beta-20150428085739&lt;/version&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;scope&gt;system&lt;/scope&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;systemPath&gt;${project.basedir}/lib/suning-sdk-java-beta-20150428085739.jar&lt;/systemPath&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&lt;/dependency&gt;<o:p></o:p></span></p>
+
+</div><p><br></p><p><span style="color: rgb(255, 0, 0);">sdk版本可替换为最新的</span></p><p><span style="color: rgb(255, 0, 0);"><br></span></p><p><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:
+11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-latin;
+mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:
+minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;
+mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">3</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-font-family:
+Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;
+mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">、可选择性添加日志组件，如</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
+ZH-CN;mso-bidi-language:AR-SA">logback</span><span style="font-size:10.5pt;
+mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;
+mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">、</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:宋体;mso-fareast-theme-font:
+minor-fareast;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
+ZH-CN;mso-bidi-language:AR-SA">log4j</span><span style="font-size:10.5pt;
+mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;
+mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">，版本不限制</span></p><div style="mso-element:para-border-div;border:solid #CCCCCC 1.0pt;mso-border-alt:
+solid #CCCCCC .75pt;padding:5.0pt 8.0pt 5.0pt 8.0pt;background:#F8F8F8">
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&lt;dependency&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;artifactId&gt;logback-core&lt;/artifactId&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;version&gt;1.0.0&lt;/version&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&lt;/dependency&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&lt;dependency&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;artifactId&gt;logback-classic&lt;/artifactId&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;version&gt;1.0.0&lt;/version&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&lt;/dependency&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&lt;dependency&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;artifactId&gt;logback-access&lt;/artifactId&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;version&gt;1.0.0&lt;/version&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;exclusions&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&lt;exclusion&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;artifactId&gt;logback-core&lt;/artifactId&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/exclusion&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/exclusions&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&lt;/dependency&gt;<o:p></o:p></span></p>
+
+</div><p><span style="font-size:10.5pt;
+mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;
+mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA"><br></span></p><p><span style="font-size:10.5pt;
+mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;
+mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">添加日志组件后，如连接成功则显示如下信息：</span></p><p><br></p><p><span style="font-family: 宋体; font-size: 14px; color: rgb(255, 0, 0);">2016-05-05 19:03:58.828 [nioEventLoopGroup-2-1] DEBUG c.s.a.p.MessagePushClient$</span></p><p><span style="font-family: 宋体; font-size: 14px; color: rgb(255, 0, 0);">MessageHandler [358]-client [id: 0x8666612d, /10.24.64.192:12843 =&gt; mcpre.api.cn</span></p><p></p><p><span style="font-family: 宋体; font-size: 14px; color: rgb(255, 0, 0);">suning.com/10.27.199.73:80] &nbsp;received pong</span></p><p><span style="font-family: 宋体; font-size: 14px;"><br></span></p></p>
+                            </div>
+                            <div class="pr-title pr-t3" id="daohang179" style="margin-top: 55px;"><span class="l">三、JAVA版SDK推送测试类</span>
+                                <em class="pr-em pr-down"></em>
+                            </div>
+                            <div class="pr-con3">
+                                <p class="pr-p1 mb30"><p><br></p><p><br></p><div style="mso-element:para-border-div;border:solid #CCCCCC 1.0pt;mso-border-alt:
+solid #CCCCCC .75pt;padding:5.0pt 8.0pt 5.0pt 8.0pt;background:#F8F8F8">
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">package com.suning.api;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;</span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">import com.suning.api.message.Message;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">import com.suning.api.push.MessageListener;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">import com.suning.api.push.MessagePushClient;<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;</span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">public class MessagePushClientTest {<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;</span></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 20.25pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">public static void main(String[] args) {<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 20.25pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp; &nbsp; &nbsp; &nbsp; //</span><span style="font-size: 10pt; font-family: 宋体;">推送<span lang="EN-US">API</span>连接地址<span lang="EN-US"><o:p></o:p></span></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String uri = "ws://mcsit.api.cnsuning.com/websocket";<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 40pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp; &nbsp; &nbsp;//</span><span style="font-size: 10pt; font-family: 宋体;">苏宁分配的<span lang="EN-US">appKey(</span>注意环境不同<span lang="EN-US">appKey</span>不同<span lang="EN-US">)<o:p></o:p></span></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String appKey =
+"71d65ce5c8b838187201e10a6dece77d";<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 40pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp; &nbsp; &nbsp;//</span><span style="font-size: 10pt; font-family: 宋体;">苏宁分配的<span lang="EN-US">appKey</span>对应的<span lang="EN-US">appSecret<o:p></o:p></span></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String appSecret =
+"5030dd190ab950bb2f12ef05ab103c38";<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //</span><span style="font-size: 10pt; font-family: 宋体;">组名，同组内只有一个连接收到消息，尽量不要使用default，组名通常需有标志意义。</span></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 40pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp; &nbsp; &nbsp;String groupName="default";<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MessagePushClient client =
+new MessagePushClient(uri, appKey, appSecret, groupName);<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+client.setMessageListener(new MessageListener() {<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;</span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @Override<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public void
+onMessage(Message message) {<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="text-indent: 80pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//</span><span style="font-size: 10pt; font-family: 宋体;">主题名<span lang="EN-US">(</span>当监听多个主题时，注意根据主题判断进行业务逻辑处理<span lang="EN-US">)<o:p></o:p></span></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+System.err.println("topic:" + message.getTopic());<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //</span><span style="font-size: 10pt; font-family: 宋体;">消息内容<span lang="EN-US"><o:p></o:p></span></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+System.err.println("message:" + message.getMsg());<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;</span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; client.connect();<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (Exception e) {<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.printStackTrace();<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">&nbsp;&nbsp;&nbsp; }<o:p></o:p></span></p>
+
+<p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;">}</span></p><p class="MsoNormal" align="left" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; border: none; padding: 0cm;"><span lang="EN-US" style="font-size: 10pt; font-family: 宋体;"><o:p></o:p></span></p>
+
+</div><p></p><p class="MsoNormal"><br></p><p></p></p>
+                            </div>
+                            <div class="pr-title pr-t4" id="daohang186" style="margin-top: 55px;"><span class="l">四、NET版SDK推送使用示例</span>
+                                <em class="pr-em pr-down"></em>
+                            </div>
+                            <div class="pr-con4">
+                                <p class="pr-p1 mb30"><p>1.下载.NET版SDK。</p><p>2.引入api-sdk.dll。</p><p>3.示例代码如下：</p><p><br></p><img src="../../../image.suning.cn/uimg/API/KFFW/146397206748197881.png" tppabs="http://image.suning.cn/uimg/API/KFFW/146397206748197881.png"></p>
+                            </div>
+                            <div class="pr-title pr-t5" id="daohang180" style="margin-top: 55px;"><span class="l">五、现有业务消息主题</span>
+                                <em class="pr-em pr-down"></em>
+                            </div>
+                            <div class="pr-con5">
+                                <p class="pr-p1 mb30"><p><span style="font-family:Microsoft YaHei;">1、suning_isv_ord &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-family:Microsoft YaHei;"> 订购关系创建消息</span></p><p><br><br><table class="MsoNormalTable ke-zeroborder" border="0" cellspacing="0" cellpadding="0" width="576" style="width:432.1pt;"><tbody><tr><td width="79" style="border:solid windowtext 1.0pt;background:#A6A6A6;"><p class="MsoNormal" align="left"><b><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">参数名<span></span></span></b></p></td><td width="119" style="border:solid windowtext 1.0pt;background:#A6A6A6;"><p class="MsoNormal" align="left"><b><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">英文名<span></span></span></b></p></td><td width="67" style="border:solid windowtext 1.0pt;background:#A6A6A6;"><p class="MsoNormal" align="left"><b><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">是否必需<span></span></span></b></p></td><td width="56" style="border:solid windowtext 1.0pt;background:#A6A6A6;"><p class="MsoNormal" align="left"><b><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">类型<span></span></span></b></p></td><td width="63" style="border:solid windowtext 1.0pt;background:#A6A6A6;"><p class="MsoNormal" align="center" style="text-align:center;"><b><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">出现次数<span></span></span></b></p></td><td width="193" style="border:solid windowtext 1.0pt;background:#A6A6A6;"><p class="MsoNormal" align="left"><b><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">描述<span></span></span></b></p></td></tr><tr><td width="79" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">流水号<span></span></span></p></td><td width="119" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">StreamingNo</span></p></td><td width="67" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">varchar</span></p></td><td width="63" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">用于调用／提供双方比较接口调用情况。<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">备注：流水号传给<span>ISV</span>，用于<span>ISV</span>应用准备反馈时回传。<span></span></span></p></td></tr><tr><td width="79" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">服务实例<span>ID</span></span></p></td><td width="119" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">productInstanceId</span></p></td><td width="67" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">bigint</span></p></td><td width="63" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">一次购买服务生成的实例<span>ID</span>，该服务的续费、升级、退订共用这个实例<span>ID</span>。<span></span></span></p></td></tr><tr><td width="79" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">订单号<span></span></span></p></td><td width="119" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">orderId</span></p></td><td width="67" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">varchar</span></p></td><td width="63" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">发起服务购买、续费、升级、退订均生成新的订单号<span></span></span></p></td></tr><tr><td width="79" rowspan="4" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">订单类型<span></span></span></p></td><td width="119" rowspan="4" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">orderType</span></p></td><td width="67" rowspan="4" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="4" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">int</span></p></td><td width="63" rowspan="4" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1.</span><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">购买<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">2.</span><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">续费<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">3.</span><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">升级<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">4.</span><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">退订<span></span></span></p></td></tr><tr><td width="79" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">帐号类型<span></span></span></p></td><td width="119" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">accountType</span></p></td><td width="67" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">int</span></p></td><td width="63" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1.</span><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">主帐号<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">2.</span><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">子帐号<span></span></span></p></td></tr><tr><td width="79" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">会员<span>ID</span></span></p></td><td width="119" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">mainMemberId</span></p></td><td width="67" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">varchar</span></p></td><td width="63" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">沙箱环境：登录沙箱做调测的用户编码<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">生产环境：购买软件的用户编码<span></span></span></p></td></tr><tr><td width="79" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">ISVID</span></p></td><td width="119" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">isvId</span></p></td><td width="67" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">varchar</span></p></td><td width="63" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">沙箱环境：‘<span>Suning-mp-6119691283</span>’，苏宁为给当前用户预置的<span>ISV</span>编码。<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">生产环境：销售软件的服务商编码<span></span></span></p></td></tr><tr><td width="79" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">应用<span>ID</span></span></p></td><td width="119" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">appId</span></p></td><td width="67" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">bigint</span></p></td><td width="63" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">沙箱环境：用户对应的沙箱应用编码<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">生产环境：销售软件的服务商的应用编码<span></span></span></p></td></tr><tr><td width="79" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">服务<span>ID</span></span></p></td><td width="119" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">productId</span></p></td><td width="67" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">bigint</span></p></td><td width="63" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">‘沙箱环境：‘<span>Suning-mp-6119691283-1</span>’，为当前用户预置的服务编码。<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">生产环境：销售软件的服务商的服务编码<span></span></span></p></td></tr><tr><td width="79" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">版本<span>ID</span></span></p></td><td width="119" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">versionId</span></p></td><td width="67" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">bigint</span></p></td><td width="63" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">沙箱环境：沙箱生成的版本编码。<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">生产环境：云商城生成的版本编码。<span></span></span></p></td></tr><tr><td width="79" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">订单生成时间<span></span></span></p></td><td width="119" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">orderCreateTime</span></p></td><td width="67" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">datetime</span></p></td><td width="63" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">沙箱环境：用户在沙箱购买<span>/</span>续费<span>/</span>升级<span>/</span>退订后的订单生成时间。<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">生产环境：用户在云商城购买<span>/</span>续费<span>/</span>升级<span>/</span>退订后的订单生成时间。<span></span></span></p></td></tr><tr><td width="79" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">产品<span>CODE</span></span></p></td><td width="119" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">productCode</span></p></td><td width="67" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">varchar</span></p></td><td width="63" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">沙箱环境：用户在沙箱页面填写的服务编码。<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">生产环境：用户在服务发布页面手工填写的服务编码。<span></span></span></p></td></tr><tr><td width="79" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">版本<span>CODE</span></span></p></td><td width="119" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">versionCode</span></p></td><td width="67" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">varchar</span></p></td><td width="63" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">沙箱环境：用户在沙箱页面填写的版本编码。<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">生产环境：用户在服务发布页面手工填写的版本编码。<span></span></span></p></td></tr><tr><td width="79" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">购买周期<span></span></span></p></td><td width="119" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">purchasePeriod</span></p></td><td width="67" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">int</span></p></td><td width="63" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">沙箱环境：用户在沙箱选择的服务类型的周期<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">&nbsp;</span><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">生产环境：用户在云商城购买的服务的周期<span></span></span></p></td></tr><tr><td width="79" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">订购周期单位<span></span></span></p></td><td width="119" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">purchaseUnit</span></p></td><td width="67" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">varchar</span></p></td><td width="63" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">沙箱环境：用户在沙箱购买的服务的周期单位，<span>1.</span>天、<span>2.</span>月、<span>3.</span>季度、<span>4.</span>年。<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">生产环境：用户在云商城购买的服务的周期单位，<span>1.</span>天、<span>2.</span>月、<span>3.</span>季度、<span>4.</span>年。<span></span></span></p></td></tr><tr><td width="79" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">订购量<span></span></span></p></td><td width="119" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">authzNum</span></p></td><td width="67" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">Y</span></p></td><td width="56" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">int</span></p></td><td width="63" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="center" style="text-align:center;"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">1</span></p></td><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">沙箱环境：用户在沙箱选择服务类型为<span>1</span>个月<span>+10</span>用户时，该字段为<span>10</span>，选择其他<span>2</span>个服务类型时该字段为<span>0</span>。<span></span></span></p></td></tr><tr><td width="193" valign="bottom" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;">生产环境：用户在云商城发布组合型服务时填写的用户上限。<span></span></span></p></td></tr></tbody></table>​<br>​​<br></p><p><span style="font-family:Microsoft YaHei;">2、</span><span style="font-family:Microsoft YaHei;">suning_isv_subacc_auth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+子账号授权通知消息</span></p><p><table class="MsoNormalTable ke-zeroborder" border="0" cellspacing="0" cellpadding="0" width="565" style="width:424pt;"><tbody><tr><td width="96" style="border:solid windowtext 1.0pt;background:#A6A6A6;"><p class="MsoNormal" align="center" style="text-align:center;"><b><span style="font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">参数名</span><span></span></span></b></p></td><td width="129" style="border:solid windowtext 1.0pt;background:#A6A6A6;"><p class="MsoNormal" align="center" style="text-align:center;"><b><span style="font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">英文名</span><span></span></span></b></p></td><td width="77" style="border:solid windowtext 1.0pt;background:#A6A6A6;"><p class="MsoNormal" align="center" style="text-align:center;"><b><span style="font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">是否必需</span><span></span></span></b></p></td><td width="65" style="border:solid windowtext 1.0pt;background:#A6A6A6;"><p class="MsoNormal" align="center" style="text-align:center;"><b><span style="font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">类型</span><span></span></span></b></p></td><td width="77" style="border:solid windowtext 1.0pt;background:#A6A6A6;"><p class="MsoNormal" align="center" style="text-align:center;"><b><span style="font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">出现次数</span><span></span></span></b></p></td><td width="121" style="border:solid windowtext 1.0pt;background:#A6A6A6;"><p class="MsoNormal" align="center" style="text-align:center;"><b><span style="font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">描述</span><span></span></span></b></p></td></tr><tr><td width="96" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">服务实例</span><span style="font-family: 'Microsoft YaHei';">ID</span></span></p></td><td width="129" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">productInstanceId</span></p></td><td width="77" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">Y</span></p></td><td width="65" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">bigint</span></p></td><td width="77" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">1</span></p></td><td width="121" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">唯一标识用户购买的服务</span><span></span></span></p></td></tr><tr><td width="96" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">账号类型</span><span></span></span></p></td><td width="129" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">memberType</span></p></td><td width="77" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">Y</span></p></td><td width="65" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">int</span></p></td><td width="77" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">1</span></p></td><td width="121" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">1.</span><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">主账号</span><span></span></span></p></td></tr><tr><td width="121" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">2.</span><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">子账号</span><span></span></span></p></td></tr><tr><td width="96" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">会员</span><span style="font-family: 'Microsoft YaHei';">ID-</span><span style="font-family:Microsoft YaHei;">主账号</span><span></span></span></p></td><td width="129" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">mainMemberId</span></p></td><td width="77" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">Y</span></p></td><td width="65" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">varchar</span></p></td><td width="77" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">1</span></p></td><td width="121" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">主账号编码</span><span></span></span></p></td></tr><tr><td width="96" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">会员</span><span style="font-family: 'Microsoft YaHei';">ID-</span><span style="font-family:Microsoft YaHei;">子账号</span><span></span></span></p></td><td width="129" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">subMemberId</span></p></td><td width="77" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">Y</span></p></td><td width="65" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">varchar</span></p></td><td width="77" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">N</span></p></td><td width="121" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">子账号编码</span><span></span></span></p></td></tr><tr><td width="96" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">服务</span><span style="font-family: 'Microsoft YaHei';">ID</span></span></p></td><td width="129" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">productId</span></p></td><td width="77" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">Y</span></p></td><td width="65" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">bigint</span></p></td><td width="77" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">1</span></p></td><td width="121" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">授权的服务编码</span><span></span></span></p></td></tr><tr><td width="96" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">工号</span><span></span></span></p></td><td width="129" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">subMemberworkNo</span></p></td><td width="77" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">Y</span></p></td><td width="65" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">varchar</span></p></td><td width="77" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">N</span></p></td><td width="121" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">工号，针对子账号。</span><span></span></span></p></td></tr><tr><td width="121" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">子帐号登录会员中心按‘工号</span><span style="font-family: 'Microsoft YaHei';">_</span><span style="font-family:Microsoft YaHei;">团队名’规则校验。团队名是主帐号在创建子帐号时指定，登录名用工号和团队名组合在一起，一是直接从登录名区分子帐号属于那个团队，二是避免不同人创建的子帐号只有工号的可能重复。</span><span></span></span></p></td></tr><tr><td width="96" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">操作类型</span><span></span></span></p></td><td width="129" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">operationType</span></p></td><td width="77" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">Y</span></p></td><td width="65" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">int</span></p></td><td width="77" rowspan="2" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">1</span></p></td><td width="121" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">1.</span><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">启用</span><span></span></span></p></td></tr><tr><td width="121" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">2.</span><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">删除</span><span></span></span></p></td></tr><tr><td width="96" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">应用</span><span style="font-family: 'Microsoft YaHei';">ID</span></span></p></td><td width="129" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">appId</span></p></td><td width="77" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">Y</span></p></td><td width="65" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">bigint</span></p></td><td width="77" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size: 9pt; font-family: 'Microsoft YaHei';">1</span></p></td><td width="121" style="border:solid windowtext 1.0pt;"><p class="MsoNormal" align="left"><span style="font-size:9pt;font-family:微软雅黑, sans-serif;"><span style="font-family:Microsoft YaHei;">应用编码</span><span></span></span></p></td></tr></tbody></table><span style="font-family:Microsoft YaHei;">​</span><br></p></p>
+                            </div>
+                            <div class="pr-title pr-t6" id="daohang181" style="margin-top: 55px;"><span class="l">六、消息推送地址</span>
+                                <em class="pr-em pr-down"></em>
+                            </div>
+                            <div class="pr-con6">
+                                <p class="pr-p1 mb30"><p class="MsoNormal"><span style="font-family:Microsoft YaHei;"><strong>测试环境</strong></span><span style="font-family: 'Microsoft YaHei';"><strong>(PRE):&nbsp; </strong>ws://mcpre.api.cnsuning.com/websocket</span></p><p class="MsoNormal"><span style="font-family:Microsoft YaHei;"><strong>生产环境</strong></span><span style="font-family: 'Microsoft YaHei';"><strong>(PROD): </strong>ws://mc.api.suning.com/websocket</span></p></p>
+                            </div>
+                </div>
+            </div>
+            <div class="menuLRH"></div>
+        </div>
+    </div>  
+
+    <!-- 置顶 -->
+    <div class="os-topTo" style="bottom: 210px;"></div>
+
+        <form id="queryContent" name="queryContent" method="get" action="toDocContent.do-menuId=.htm" tppabs="https://open.suning.com/ospos/apipage/toDocContent.do?menuId=">
+            <input type="hidden" name="menuId" id="queryMenuId" value=""/>
+        </form>
+<div class="foot">
+    <iframe scrolling="no" frameborder="0" width="100%" height="165" src="../../../sop.suning.com/sel/portal/common/footer.html" tppabs="https://sop.suning.com/sel/portal/common/footer.html"></iframe>
+</div>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/OpenSer.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/open/OpenSer.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/common.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/custom/common.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/json2.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/custom/json2.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript"> 
+   $(document).ready(function(){ 
+                $("#52").addClass("on-menuOn");
+            });
+            
+             $("li[name='queryDocC']").click(function(){
+            var menuId=$(this).attr("id");
+            $("#queryMenuId").val(menuId);
+            $("#queryContent").submit();
+        });  
+</script>
+<script src="../../../static.suning.cn/osr/meas/time.js" tppabs="https://static.suning.cn/osr/meas/time.js"></script>
+</body>
+</html>

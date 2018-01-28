@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>开放服务-API接口详情</title>
+	
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="手机, 电脑, 冰箱, 洗衣机, 相机, 数码, 家居用品, 鞋帽, 化妆品, 母婴用品, 图书，食品，保险，旅行，充值，团购，正品行货, 全国联保, 货到付款。"/>
+<meta name="description" content="苏宁易购是领先的综合网上购物商城, 在线特价销售家电、通讯数码、电脑、家居百货、服装服饰、母婴、图书、食品、保险、旅行、充值、团购等数万类商品和服务。正品行货, 全国联保, 本地配送, 货到付款。省钱放心上苏宁电器网上商城, 尽享购物乐趣！"/>
+<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<script src="../../../static.suning.cn/osr/meas/error.js" tppabs="https://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
+			<link rel="stylesheet" href="../staticfiles/css/common.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/common.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/OpenSerNew.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/OpenSerNew.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/plugins/syntaxhighlighter/styles/shCore.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/styles/shCore.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/plugins/syntaxhighlighter/styles/shThemeDefault.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/styles/shThemeDefault.css?v=v1.0"></link>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
+</head>
+<body>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    if("" != ""){
+			var userName = "";
+			$("#alLoginName").text(userName);
+			$("#alLoginName").attr("title",userName);
+			$("#alLogin").show();
+			$("#withOutLogin").hide();
+	    }else {
+			var userName = getCookie("osposLoginUserIdFlag");
+			if(userName == ""){
+				var logonStatusVal = getCookie("logonStatus");
+				var authIdVal = getCookie("authId");
+				if((logonStatusVal != undefined && logonStatusVal != "") 
+	       		|| (authIdVal != undefined && authIdVal != "")){
+					userName = getCookie("idsLoginUserIdLastTime");
+				}
+			}
+			if(userName != ""){
+				$("#alLoginName").text(userName);
+				$("#alLoginName").attr("title",userName);
+				$("#alLogin").show();
+				$("#withOutLogin").hide();
+			}else {
+				$("#alLogin").hide();
+				$("#withOutLogin").show();
+			} 
+	    }
+    });
+	
+    function getCookie(cookieName){
+		var cookieArr = document.cookie.split(';');
+		for(var i=0; i<cookieArr.length; i++){
+			var cookie = cookieArr[i];
+			while (cookie.charAt(0)==' '){
+				cookie = cookie.substring(1);
+			}
+			cookieEntry = cookie.split('=');
+			if(cookieEntry[0] == cookieName){
+				return decodeURIComponent(cookieEntry[1]);
+			}
+		}
+		return "";
+    }
+	
+	$(function(){
+        $(".os-nav li").each(function(index){
+            $(this).removeClass("os-on");
+            if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toApi")!=-1&&index=="3"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toDevCenter")!=-1&&index=="4"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname=="/"&&index=="0"){
+                $(this).addClass("os-on");
+            }
+        })                
+	})
+</script>
+<div class="os-top bcs-top">
+	<div class="w1190 clearfix">
+		<div class="l os-snLogo"></div>	
+		<ul class="os-nav">
+			<li class="os-on"><a href="../../index.htm" tppabs="https://open.suning.com/">首页</a></li>
+			<li><a href="javascript:void(0);">开放版图<i></i></a>
+				<!--[if IE]>
+				<dl style="margin-left: -104px;margin-top: 55px;">
+				<![endif]-->
+				<!--[if !IE]><!-->
+				<dl>
+			    <!--<![endif]-->
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/road/roadIndex.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/road/roadIndex.html'" tppabs="https://road.suning.com/ospos/road/roadIndex.html" target="_blank">一号公路开放</a><i></i></dd>
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/toDevCenter.action  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/toDevCenter.action'" tppabs="https://road.suning.com/ospos/toDevCenter.action">商家后台开放</a><i></i></dd>
+                </dl>
+            </li>
+            <li><a href="toDocCenter.do.htm" tppabs="https://open.suning.com/ospos/apipage/toDocCenter.do">文档中心</a></li>
+			<li><a href="toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do">API文档</a></li>
+			<li><a href="../pushapi/toTopicPageList.do.htm" tppabs="https://open.suning.com/ospos/pushapi/toTopicPageList.do">消息文档</a></li>
+			<li><a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/toDevCenter.action">控制台</a></li>
+		</ul>
+		
+		<a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/logOut.action" class="os-exit" style="display: none;" id="alLogin">退出</a> 
+		<div class="r search-top">
+			<form method="post" action="https://open.suning.com/ospos/apipage/toSearchPage.do" id="tlSearchForm" style="display:inline;float:right;" autocomplete="off">
+                <input type="text" class="os-input" id="tlSearchIn" name="tlSearchName"/>
+                <span class="os-search" id="tlSearchBtn"></span>
+            </form>                
+                <span class="os-search"></span>
+                <span id="alLoginName" class="lname r"></span>
+                <a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/toLogin.action" class="os-login" style="display: none;" id="withOutLogin">登录</a>
+		</div>
+	</div>
+</div>
+	<div class="on-wrapp">
+		<div class="w1190 clearfix mb40 oh" style="position:relative;">
+			<div class="on-title">
+				<div class="go-title"><a href="toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do">API</a> &gt; <a href="toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do">API列表</a> &gt;<span><a href="toApiAccessMenu.do-interTypePageId=37&bustypeId=4.htm" tppabs="https://open.suning.com/ospos/apipage/toApiAccessMenu.do?interTypePageId=37&bustypeId=4">供应商财务API</a></span></div>
+			</div>
+			<div class="on-menuL w238">
+				<a href="toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do" class="go-backLink"><em></em>返回API列表</a>
+				<div class="su-list">
+					<ul>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.statementcode.query&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.statementcode.query&interTypeId=42*/;" title="suning.statementcode.query 获取结算清单号">
+										<div class="su-listDiv">
+											<a href="#">suning.statementcode.query</a>
+											<p>获取结算清单号</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.statementhtml.get&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.statementhtml.get&interTypeId=42*/;" title="suning.statementhtml.get 获取结算清单">
+										<div class="su-listDiv">
+											<a href="#">suning.statementhtml.get</a>
+											<p>获取结算清单</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.bindstatement.sign&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.bindstatement.sign&interTypeId=42*/;" title="suning.bindstatement.sign 合并对账单签章">
+										<div class="su-listDiv">
+											<a href="#">suning.bindstatement.sign</a>
+											<p>合并对账单签章</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.approvalresult.query&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.approvalresult.query&interTypeId=42*/;" title="suning.approvalresult.query 获取审批结果">
+										<div class="su-listDiv">
+											<a href="#">suning.approvalresult.query</a>
+											<p>获取审批结果</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.statement.sign&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.statement.sign&interTypeId=42*/;" title="suning.statement.sign 结算清单签章">
+										<div class="su-listDiv">
+											<a href="#">suning.statement.sign</a>
+											<p>结算清单签章</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.invoice.checkresult.query&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.invoice.checkresult.query&interTypeId=42*/;" title="suning.invoice.checkresult.query 发票预校验查询">
+										<div class="su-listDiv">
+											<a href="#">suning.invoice.checkresult.query</a>
+											<p>发票预校验查询</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.application.privilege.apply&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.application.privilege.apply&interTypeId=42*/;" class="on-menuOn" title="suning.application.privilege.apply 优惠单活动函申请">
+										<div class="su-listDiv">
+											<a href="#">suning.application.privilege.apply</a>
+											<p>优惠单活动函申请</p>
+										</div>
+										<div class="su-mask su-mask1"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.application.discount.apply&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.application.discount.apply&interTypeId=42*/;" title="suning.application.discount.apply 商业折让对账单申请">
+										<div class="su-listDiv">
+											<a href="#">suning.application.discount.apply</a>
+											<p>商业折让对账单申请</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.application.balance.apply&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.application.balance.apply&interTypeId=42*/;" title="suning.application.balance.apply 销售补差确认函申请">
+										<div class="su-listDiv">
+											<a href="#">suning.application.balance.apply</a>
+											<p>销售补差确认函申请</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.application.promotion.apply&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.application.promotion.apply&interTypeId=42*/;" title="suning.application.promotion.apply 促销服务协议确认函申请">
+										<div class="su-listDiv">
+											<a href="#">suning.application.promotion.apply</a>
+											<p>促销服务协议确认函申请</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.application.protocol.apply&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.application.protocol.apply&interTypeId=42*/;" title="suning.application.protocol.apply 展示位使用协议申请">
+										<div class="su-listDiv">
+											<a href="#">suning.application.protocol.apply</a>
+											<p>展示位使用协议申请</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.application.query&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.application.query&interTypeId=42*/;" title="suning.application.query 函件查询">
+										<div class="su-listDiv">
+											<a href="#">suning.application.query</a>
+											<p>函件查询</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.statement.query&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.statement.query&interTypeId=42*/;" title="suning.statement.query 获取返利对账单">
+										<div class="su-listDiv">
+											<a href="#">suning.statement.query</a>
+											<p>获取返利对账单</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+									<li onclick="location.href='toApiMethodDetailMenu.do-interCode=suning.statement.confirm&interTypeId=42.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.statement.confirm&interTypeId=42*/;" title="suning.statement.confirm 返利对账单金额确认">
+										<div class="su-listDiv">
+											<a href="#">suning.statement.confirm</a>
+											<p>返利对账单金额确认</p>
+										</div>
+										<div class="su-mask"></div>
+									</li>
+					</ul>
+				</div>
+				<a href="toApiErrorCodeMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiErrorCodeMenu.do"><div class="ap-APIDoc"><em></em>异常码自查工具</div></a>
+			</div>
+			<div class="on-menuR ml240 clearfix"  style="position: relative;">
+			<div class="p30">
+				<span class="on-title su-titPos">suning.application.privilege.apply&nbsp;优惠单活动函申请</span>
+				<p class="tnote">通过此接口可优惠单活动函申请</p>
+					<ul class="su-titList pos">
+						<li class="cur"><a href="#local1" id="scroll-it1">公共参数</a></li>
+						<li><a href="#local2" id="scroll-it2">请求参数</a></li>
+						<li><a href="#local3" id="scroll-it3">响应参数</a></li>
+						<li><a href="#local4" id="scroll-it4">请求示例</a></li>
+						<li><a href="#local5" id="scroll-it5">响应示例</a></li>
+						<li><a href="#local6" id="scroll-it6">异常示例</a></li>
+						<li><a href="#local7" id="scroll-it7">业务异常码</a></li>
+						<li><a href="#local8" id="scroll-it8">公共异常码</a></li>
+						<li><a href="#local9" id="scroll-it9">API工具</a></li>
+						<li><a href="#local10" id="scroll-it10">FAQ</a></li>
+					</ul>
+				<div class="pr-title pr-t1" id="local1"><span class="l">公共参数</span><em class="pr-em pr-down pr-up"></em></div>
+                <div class="pr-con1" style="display: none;">
+                    <table class="su-table mb30">
+                    <colgroup>
+                        <col width="20%"></col>
+                        <col width="10%"></col>
+                        <col width="10%"></col>
+                        <col width="10%"></col>
+                        <col></col>
+                    </colgroup>
+                    <tr>
+                        <th style="text-align:left;">名称</th>
+                        <th align="center">类型</th>
+                        <th align="center">是否必须</th>
+                        <th align="center">示例值</th>
+                        <th class="addBR" style="text-align:left;">描述</th>
+                    </tr>
+							<tr class="odds" name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">appMethod</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">suning.custom.category.query</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">API接口名称</td>
+							</tr>
+							<tr name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">appRequestTime</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">2012-04-25 20:23:30</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">时间戳，格式为yyyy-MM-dd HH:mm:ss，例如：2012-04-25 20:23:30。API服务端允许客户端请求时间误差为10分钟。</td>
+							</tr>
+							<tr class="odds" name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">format</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										N
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">XML</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">默认xml,可指定格式为xml,json</td>
+							</tr>
+							<tr name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">appKey</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">b0c332a133c102765f39de**********</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">分配给应用的访问令牌</td>
+							</tr>
+							<tr class="odds" name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">versionNo</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">v1.2</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">API的版本，目前为v1.2版本</td>
+							</tr>
+							<tr name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">signInfo</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										Y
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">460d7ff15b073e463125b4**********</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">appSecret,appMethod ,appRequestTime, appKey, versionNo, 请求报文base64加密后的数据顺序MD5(32位小写)，其中appSecret为appKey对应的密钥</td>
+							</tr>
+							<tr class="odds" name="fieldTr">
+								<td class="addBB" name="fieldName" style="text-align:left;">access_token</td>
+								<td class="addBB" align="center" name="fieldType">
+										String
+								</td>
+								<td class="addBB" align="center" name="isMust">
+										N
+								</td>
+								<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">a1c5c62b08df3a3cbf7efd**********</td>
+								<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">采用OAuth授权方式为必填参数</td>
+							</tr>
+                </table>
+                </div>
+				<div class="pr-title pr-t2" id="local2"><span class="l">请求参数</span><em class="pr-em pr-down pr-up"></em></div>
+                <div class="pr-con2">
+                    <table class="su-table mb30 JS_showHide">
+                        <colgroup>
+                            <col width="30%"></col>
+                            <col width="10%"></col>
+                            <col width="10%"></col>
+                            <col width="10%"></col>
+                            <col width="30%"></col>
+                        </colgroup>
+                        <tr>
+                            <th align="center" style="text-align:left;">名称</th>
+                            <th align="center">类型</th>
+                            <th align="center">是否必须</th>
+                            <th align="center">示例值</th>
+                            <th class="addBR" style="text-align:left;">描述</th>
+                        </tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">supplierCode</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">10000335</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">供应商编码。供应商编码。</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">supplierBraComp</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													N
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">SEBJ</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">供应商分公司代码。供应商分公司代码。</td>
+										</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">supplierOffice</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													N
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">北京，天津</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">供应商办事处。分公司对应办事处，分公司人员可以同时选择多个办事处</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">snCode</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">5400</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">苏宁公司代码。苏宁公司代码。</td>
+										</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">productBrand</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">000021659</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">品牌代码。品牌代码。支持多个，逗号隔开。</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">expenseBudgetCode</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													N
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;"></td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">费用预算单号。费用预算单号。</td>
+										</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">areaCopCode</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">1001</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">活动区域。活动区域。如果活动区域为全国则为5400，如果活动是分区域的，不允许跨大区操作，只能是苏宁一个大区内的多个分公司。但分公司多个的时候需分公司别发送函件。</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">supplierApplicationCode</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;"></td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">供应商活动通知单号。供应商活动函代码。</td>
+										</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">startDate</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">2014-05-19</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">活动开始时间。活动开始时间。活动期间范围不超过31天。格式：yyyy-MM-dd</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">endDate</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">2014-05-23</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">活动结束时间。活动结束时间。活动期间范围不超过31天。格式：yyyy-MM-dd</td>
+										</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">applyLevel</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">1</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">生效层次。生效层次。</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">actionDescribe</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													N
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;"></td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">活动描述。活动描述。</td>
+										</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">settlementType</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">A</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">结算方式。结算方式。1--贵司开出国税普通销售发票给我司，我司在约定的支付时间前以： 方式支付给贵司，开票内容： ；相应电汇款项我司将在约定的支付日期前予以电汇，相应转款款项贵司可在发票开出后最近一个账期的结算清单的货款中扣除。2--我司出具折让证明，贵司办理“开具红字增值税专用发票通知单”，我司在约定支付时间前开红票给贵司，我司在开给贵司的红票上备注：红字通知单号码。3--我司在约定的支付时间前，在进货发票中以销售折让方式支付给贵司，并在我司开给贵司的增值税发票上备注费用对账单号码。</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">payType</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													N
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">3</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">支付方式。支付方式。适用于结算方式1，3-电汇；5-转款。选择转款时，支付日期不可填写。</td>
+										</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">invoiceContent</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													N
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">2</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">开票内容。开票内容。适用于结算方式1，1-补差；2-折扣；3-促销费；4-销售补差。</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">payDate</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													N
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">2014-05-29</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">支付日期。支付日期。格式：yyyy-MM-dd。1、必须晚于活动开始日期；2、结算方式为1，且以转款方式支付时，支付日期不可填写</td>
+										</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">htmlContent</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">xxx</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">HTML内容。HTML ENCODE:UTF-8</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">signNatureContent</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													N
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">qh2CXxZYkrmjljgfZxFaGFW</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">SIGNATURE 内容。SIGNATURE ENCODE:UTF-8</td>
+										</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">operateAreaCompany</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">1001</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">操作范围公司。苏宁操作活动范围公司代码。</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">operateAreaShoper</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">“所有门店”或者具体门店代码如“7891”</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">操作范围门店。苏宁操作活动范围门店代码。生效层次为门店时，填写门店代码；生效层次为分公司时，填写“所有门店”</td>
+										</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">wareHouse</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">0001</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">库位。库位代码。0001常规机库，0002特价机库，0003包销机库、0007样机库、0008行政用品库。</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">channel</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">10</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">渠道。10 -零售（含线上）；20- 团购</td>
+										</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">itemCode</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">LA52BLKCHN</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">供应商商品编码。供应商商品编码。一个商品编码一个行项目。</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">chargeItem</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">54</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">数量。整数，库位代码为0001、0002、0003时，数量填写999999；库位代码为0007时，数量填写数字。</td>
+										</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">favoureAmount</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													Y
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">500</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">活动金额。活动金额（元/台）。不超过两位小数。</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">comments</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" align="center" name="isMust">
+													N
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">1</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">备注。若填写，不可超过200个字符。</td>
+										</tr>
+                    </table>
+                </div>
+				<div class="pr-title pr-t3" id="local3"><span class="l">响应参数</span><em class="pr-em pr-down"></em></div>
+				<div class="pr-con3">
+					<table class="su-table mb30 JS_showHide">
+						<colgroup>
+							<col width="30%"></col>
+							<col width="10%"></col>
+							<col width="10%"></col>
+							<col width="30%"></col>
+						</colgroup>
+						<tr>
+							<th align="center" style="text-align:left;">名称</th>
+							<th align="center">类型</th>
+							<th align="center">示例值</th>
+							<th align="center" class="addBR" style="text-align:left;">描述</th>
+						</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">applicationCode</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">5400X0021405424424</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">活动函编号。</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">supplierApplicationCode</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">FYBJ14051603</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">供应商活动函编号。</td>
+										</tr>
+										<tr class="odds" name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">resultFlag</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">Y</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">成功标识。成功标识。Y-成功，N-失败</td>
+										</tr>
+										<tr name="fieldTr">
+											<td class="addBB" name="fieldName" style="text-align:left;">errorReason</td>
+											<td class="addBB" align="center" name="fieldType">
+													String
+											</td>
+											<td class="addBB" name="fieldSample" style="text-align:left;word-break: break-word;">信息有误</td>
+											<td class="addBR addBB" name="fieldDesc" style="text-align:left;word-break: break-word;">失败原因</td>
+										</tr>
+					</table>
+				</div>
+				<div class="pr-title pr-t4" id="local4"><span class="l">请求示例</span><em class="pr-em pr-down"></em></div>
+				<div class="pr-con4">
+                    <div class="tab">
+                        <div class="tab-handler">
+                            <ul>
+                                <li atr="reqxml">XML示例</li>
+                                <li atr="reqjson">JSON示例</li>
+                            </ul>
+                            <a href="javascript:void(0);" id="interReqSampleXmlDivHref" class="copy" onclick='copyToClipBoardText(this)'>复制全部代码</a>
+                            <input type="hidden" value="
+&lt;sn_request&gt;
+	&lt;sn_body&gt;
+		&lt;applyPrivilegeApplication&gt;
+			&lt;applyHead&gt;
+				&lt;supplierCode&gt;10000335&lt;/supplierCode&gt;
+				&lt;supplierBraComp&gt;SEBJ&lt;/supplierBraComp&gt;
+				&lt;supplierOffice&gt;&#21271;&#20140;,&#22825;&#27941;&lt;/supplierOffice&gt;
+				&lt;snCode&gt;5400&lt;/snCode&gt;
+				&lt;productBrand&gt;0123,0124,0125&lt;/productBrand&gt;
+				&lt;expenseBudgetCode&gt;123456789&lt;/expenseBudgetCode&gt;
+				&lt;areaCopCode&gt;1001&lt;/areaCopCode&gt;
+				&lt;supplierApplicationCode&gt;HDGZ20140125&lt;/supplierApplicationCode&gt;
+				&lt;startDate&gt;2014-05-19&lt;/startDate&gt;
+				&lt;endDate&gt;2014-05-29&lt;/endDate&gt;
+				&lt;applyLevel&gt;FGS&lt;/applyLevel&gt;
+				&lt;actionDescribe&gt;&#20248;&#24800;&#21333;&#27963;&#21160;&#20989;&#30003;&#35831;&lt;/actionDescribe&gt;
+				&lt;settlementType&gt;2&lt;/settlementType&gt;
+				&lt;payType&gt;3&lt;/payType&gt;
+				&lt;invoiceContent&gt;3&lt;/invoiceContent&gt;
+				&lt;payDate&gt;2014-05-29&lt;/payDate&gt;
+				&lt;htmlContent&gt;XHHGHHKJKKKKLGFHJRTIOOJBK...&lt;/htmlContent&gt;
+				&lt;signNatureContent&gt;XHHGHHKJKKKKLGFHJRTIOOJBK...&lt;/signNatureContent&gt;
+			&lt;/applyHead&gt;
+			&lt;areaDetail&gt;
+				&lt;operateAreaCompany&gt;1001&lt;/operateAreaCompany&gt;
+				&lt;operateAreaShoper&gt;&#25152;&#26377;&#38376;&#24215;&lt;/operateAreaShoper&gt;
+			&lt;/areaDetail&gt;
+			&lt;areaDetail&gt;
+				&lt;operateAreaCompany&gt;1002&lt;/operateAreaCompany&gt;
+				&lt;operateAreaShoper&gt;&#25152;&#26377;&#38376;&#24215;&lt;/operateAreaShoper&gt;
+			&lt;/areaDetail&gt;
+			&lt;areaDetail&gt;
+				&lt;operateAreaCompany&gt;1003&lt;/operateAreaCompany&gt;
+				&lt;operateAreaShoper&gt;&#25152;&#26377;&#38376;&#24215;&lt;/operateAreaShoper&gt;
+			&lt;/areaDetail&gt;
+			&lt;itemDetail&gt;
+				&lt;wareHouse&gt;0001&lt;/wareHouse&gt;
+				&lt;channel&gt;10&lt;/channel&gt;
+				&lt;itemCode&gt;LA52BLKCHN&lt;/itemCode&gt;
+				&lt;chargeItem&gt;999999&lt;/chargeItem&gt;
+				&lt;favoureAmount&gt;500.15&lt;/favoureAmount&gt;
+				&lt;comments&gt;&#19981;&#21442;&#19982;XX&#27963;&#21160;&lt;/comments&gt;
+			&lt;/itemDetail&gt;
+			&lt;itemDetail&gt;
+				&lt;wareHouse&gt;0001&lt;/wareHouse&gt;
+				&lt;channel&gt;10&lt;/channel&gt;
+				&lt;itemCode&gt;LA52BLKCHN&lt;/itemCode&gt;
+				&lt;chargeItem&gt;999999&lt;/chargeItem&gt;
+				&lt;favoureAmount&gt;500.15&lt;/favoureAmount&gt;
+				&lt;comments&gt;&#19981;&#21442;&#19982;XX&#27963;&#21160;&lt;/comments&gt;
+			&lt;/itemDetail&gt;
+			&lt;itemDetail&gt;
+				&lt;wareHouse&gt;0001&lt;/wareHouse&gt;
+				&lt;channel&gt;10&lt;/channel&gt;
+				&lt;itemCode&gt;LA52BLKCHN&lt;/itemCode&gt;
+				&lt;chargeItem&gt;999999&lt;/chargeItem&gt;
+				&lt;favoureAmount&gt;500.15&lt;/favoureAmount&gt;
+				&lt;comments&gt;&#19981;&#21442;&#19982;XX&#27963;&#21160;&lt;/comments&gt;
+			&lt;/itemDetail&gt;
+		&lt;/applyPrivilegeApplication&gt;
+	&lt;/sn_body&gt;
+&lt;/sn_request&gt;
+	
+
+			"/>
+                            <a href="javascript:void(0);" id="interReqSampleJsonDivHref" class="copy" onclick='copyToClipBoardText(this)' style="display:none;">复制全部代码</a>
+                        	<input type="hidden" value='
+{
+  "sn_request": {
+    "sn_body": {
+      "applyPrivilegeApplication": {
+        "applyHead": {
+          "supplierCode": "10000335",
+          "supplierBraComp": "SEBJ",
+          "supplierOffice": "北京,天津",
+          "snCode": "5400",
+          "productBrand": "0123,0124,0125",
+          "expenseBudgetCode": "123456789",
+          "areaCopCode": "1001",
+          "supplierApplicationCode": "HDGZ20140125",
+          "startDate": "2014-05-19",
+          "endDate": "2014-05-29",
+          "applyLevel": "FGS",
+          "actionDescribe": "优惠单活动函申请",
+          "settlementType": "2",
+          "payType": "3",
+          "invoiceContent": "3",
+          "payDate": "2014-05-29",
+          "htmlContent": "XHHGHHKJKKKKLGFHJRTIOOJBK...",
+          "signNatureContent": "XHHGHHKJKKKKLGFHJRTIOOJBK..."
+        },
+        "areaDetail": [
+          {
+            "operateAreaCompany": "1001",
+            "operateAreaShoper": "所有门店"
+          },
+          {
+            "operateAreaCompany": "1002",
+            "operateAreaShoper": "所有门店"
+          },
+          {
+            "operateAreaCompany": "1003",
+            "operateAreaShoper": "所有门店"
+          }
+        ],
+        "itemDetail": [
+          {
+            "wareHouse": "0001",
+            "channel": "10",
+            "itemCode": "LA52BLKCHN",
+            "chargeItem": "999999",
+            "favoureAmount": "500.15",
+            "comments": "不参与XX活动"
+          },
+          {
+            "wareHouse": "0001",
+            "channel": "10",
+            "itemCode": "LA52BLKCHN",
+            "chargeItem": "999999",
+            "favoureAmount": "500.15",
+            "comments": "不参与XX活动"
+          },
+          {
+            "wareHouse": "0001",
+            "channel": "10",
+            "itemCode": "LA52BLKCHN",
+            "chargeItem": "999999",
+            "favoureAmount": "500.15",
+            "comments": "不参与XX活动"
+          }
+        ]
+      }
+    }
+  }
+}
+			'/>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-panel">
+                                <pre class='brush:xml;toolbar:false;'>
+
+&lt;sn_request&gt;
+	&lt;sn_body&gt;
+		&lt;applyPrivilegeApplication&gt;
+			&lt;applyHead&gt;
+				&lt;supplierCode&gt;10000335&lt;/supplierCode&gt;
+				&lt;supplierBraComp&gt;SEBJ&lt;/supplierBraComp&gt;
+				&lt;supplierOffice&gt;&#21271;&#20140;,&#22825;&#27941;&lt;/supplierOffice&gt;
+				&lt;snCode&gt;5400&lt;/snCode&gt;
+				&lt;productBrand&gt;0123,0124,0125&lt;/productBrand&gt;
+				&lt;expenseBudgetCode&gt;123456789&lt;/expenseBudgetCode&gt;
+				&lt;areaCopCode&gt;1001&lt;/areaCopCode&gt;
+				&lt;supplierApplicationCode&gt;HDGZ20140125&lt;/supplierApplicationCode&gt;
+				&lt;startDate&gt;2014-05-19&lt;/startDate&gt;
+				&lt;endDate&gt;2014-05-29&lt;/endDate&gt;
+				&lt;applyLevel&gt;FGS&lt;/applyLevel&gt;
+				&lt;actionDescribe&gt;&#20248;&#24800;&#21333;&#27963;&#21160;&#20989;&#30003;&#35831;&lt;/actionDescribe&gt;
+				&lt;settlementType&gt;2&lt;/settlementType&gt;
+				&lt;payType&gt;3&lt;/payType&gt;
+				&lt;invoiceContent&gt;3&lt;/invoiceContent&gt;
+				&lt;payDate&gt;2014-05-29&lt;/payDate&gt;
+				&lt;htmlContent&gt;XHHGHHKJKKKKLGFHJRTIOOJBK...&lt;/htmlContent&gt;
+				&lt;signNatureContent&gt;XHHGHHKJKKKKLGFHJRTIOOJBK...&lt;/signNatureContent&gt;
+			&lt;/applyHead&gt;
+			&lt;areaDetail&gt;
+				&lt;operateAreaCompany&gt;1001&lt;/operateAreaCompany&gt;
+				&lt;operateAreaShoper&gt;&#25152;&#26377;&#38376;&#24215;&lt;/operateAreaShoper&gt;
+			&lt;/areaDetail&gt;
+			&lt;areaDetail&gt;
+				&lt;operateAreaCompany&gt;1002&lt;/operateAreaCompany&gt;
+				&lt;operateAreaShoper&gt;&#25152;&#26377;&#38376;&#24215;&lt;/operateAreaShoper&gt;
+			&lt;/areaDetail&gt;
+			&lt;areaDetail&gt;
+				&lt;operateAreaCompany&gt;1003&lt;/operateAreaCompany&gt;
+				&lt;operateAreaShoper&gt;&#25152;&#26377;&#38376;&#24215;&lt;/operateAreaShoper&gt;
+			&lt;/areaDetail&gt;
+			&lt;itemDetail&gt;
+				&lt;wareHouse&gt;0001&lt;/wareHouse&gt;
+				&lt;channel&gt;10&lt;/channel&gt;
+				&lt;itemCode&gt;LA52BLKCHN&lt;/itemCode&gt;
+				&lt;chargeItem&gt;999999&lt;/chargeItem&gt;
+				&lt;favoureAmount&gt;500.15&lt;/favoureAmount&gt;
+				&lt;comments&gt;&#19981;&#21442;&#19982;XX&#27963;&#21160;&lt;/comments&gt;
+			&lt;/itemDetail&gt;
+			&lt;itemDetail&gt;
+				&lt;wareHouse&gt;0001&lt;/wareHouse&gt;
+				&lt;channel&gt;10&lt;/channel&gt;
+				&lt;itemCode&gt;LA52BLKCHN&lt;/itemCode&gt;
+				&lt;chargeItem&gt;999999&lt;/chargeItem&gt;
+				&lt;favoureAmount&gt;500.15&lt;/favoureAmount&gt;
+				&lt;comments&gt;&#19981;&#21442;&#19982;XX&#27963;&#21160;&lt;/comments&gt;
+			&lt;/itemDetail&gt;
+			&lt;itemDetail&gt;
+				&lt;wareHouse&gt;0001&lt;/wareHouse&gt;
+				&lt;channel&gt;10&lt;/channel&gt;
+				&lt;itemCode&gt;LA52BLKCHN&lt;/itemCode&gt;
+				&lt;chargeItem&gt;999999&lt;/chargeItem&gt;
+				&lt;favoureAmount&gt;500.15&lt;/favoureAmount&gt;
+				&lt;comments&gt;&#19981;&#21442;&#19982;XX&#27963;&#21160;&lt;/comments&gt;
+			&lt;/itemDetail&gt;
+		&lt;/applyPrivilegeApplication&gt;
+	&lt;/sn_body&gt;
+&lt;/sn_request&gt;
+	
+
+			
+								</pre>
+                            </div>
+                            <div class="tab-panel">
+                                <pre class='brush:javascript;toolbar:false;'>
+
+{
+  "sn_request": {
+    "sn_body": {
+      "applyPrivilegeApplication": {
+        "applyHead": {
+          "supplierCode": "10000335",
+          "supplierBraComp": "SEBJ",
+          "supplierOffice": "北京,天津",
+          "snCode": "5400",
+          "productBrand": "0123,0124,0125",
+          "expenseBudgetCode": "123456789",
+          "areaCopCode": "1001",
+          "supplierApplicationCode": "HDGZ20140125",
+          "startDate": "2014-05-19",
+          "endDate": "2014-05-29",
+          "applyLevel": "FGS",
+          "actionDescribe": "优惠单活动函申请",
+          "settlementType": "2",
+          "payType": "3",
+          "invoiceContent": "3",
+          "payDate": "2014-05-29",
+          "htmlContent": "XHHGHHKJKKKKLGFHJRTIOOJBK...",
+          "signNatureContent": "XHHGHHKJKKKKLGFHJRTIOOJBK..."
+        },
+        "areaDetail": [
+          {
+            "operateAreaCompany": "1001",
+            "operateAreaShoper": "所有门店"
+          },
+          {
+            "operateAreaCompany": "1002",
+            "operateAreaShoper": "所有门店"
+          },
+          {
+            "operateAreaCompany": "1003",
+            "operateAreaShoper": "所有门店"
+          }
+        ],
+        "itemDetail": [
+          {
+            "wareHouse": "0001",
+            "channel": "10",
+            "itemCode": "LA52BLKCHN",
+            "chargeItem": "999999",
+            "favoureAmount": "500.15",
+            "comments": "不参与XX活动"
+          },
+          {
+            "wareHouse": "0001",
+            "channel": "10",
+            "itemCode": "LA52BLKCHN",
+            "chargeItem": "999999",
+            "favoureAmount": "500.15",
+            "comments": "不参与XX活动"
+          },
+          {
+            "wareHouse": "0001",
+            "channel": "10",
+            "itemCode": "LA52BLKCHN",
+            "chargeItem": "999999",
+            "favoureAmount": "500.15",
+            "comments": "不参与XX活动"
+          }
+        ]
+      }
+    }
+  }
+}
+			
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="pr-title pr-t5" id="local5"><span class="l">响应示例</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con5">
+                    <div class="tab">
+                        <div class="tab-handler">
+                            <ul>
+                                <li atr="respxml">XML示例</li>
+                                <li atr="respjson">JSON示例</li>
+                            </ul>
+                            <a href="javascript:void(0);" id="interRespSampleXmlDivHref" class="copy" onclick='copyToClipBoardText(this)'>复制全部代码</a>
+                            <input type="hidden" value="
+&lt;sn_responseContent&gt;
+	&lt;sn_body&gt;
+		&lt;applyPrivilegeApplication&gt;
+			&lt;applicationCode&gt;5400X0021405424424&lt;/applicationCode&gt;
+			&lt;supplierApplicationCode&gt;FYBJ14051603&lt;/supplierApplicationCode&gt;
+			&lt;resultFlag&gt;Y&lt;/resultFlag&gt;
+			&lt;errorReason/&gt;   
+		&lt;/applyPrivilegeApplication&gt;
+	&lt;/sn_body&gt;
+&lt;/sn_responseContent&gt;
+			"/>
+                            <a href="javascript:void(0);" id="interRespSampleJsonDivHref" class="copy" onclick='copyToClipBoardText(this)' style="display:none;">复制全部代码</a>
+                        	<input type="hidden" value='
+{
+  "sn_responseContent": {
+    "sn_body": {
+      "applyPrivilegeApplication": {
+        "applicationCode": "5400X0021405424424",
+        "supplierApplicationCode": "FYBJ14051603",
+        "resultFlag": "Y"
+      }
+    }
+  }
+}
+			'/>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-panel">
+                              <pre class='brush:xml;toolbar:false;'>
+
+&lt;sn_responseContent&gt;
+	&lt;sn_body&gt;
+		&lt;applyPrivilegeApplication&gt;
+			&lt;applicationCode&gt;5400X0021405424424&lt;/applicationCode&gt;
+			&lt;supplierApplicationCode&gt;FYBJ14051603&lt;/supplierApplicationCode&gt;
+			&lt;resultFlag&gt;Y&lt;/resultFlag&gt;
+			&lt;errorReason/&gt;   
+		&lt;/applyPrivilegeApplication&gt;
+	&lt;/sn_body&gt;
+&lt;/sn_responseContent&gt;
+			
+                                </pre>
+                            </div>
+                            <div class="tab-panel">
+                              <pre class='brush:javascript;toolbar:false;'>
+
+{
+  "sn_responseContent": {
+    "sn_body": {
+      "applyPrivilegeApplication": {
+        "applicationCode": "5400X0021405424424",
+        "supplierApplicationCode": "FYBJ14051603",
+        "resultFlag": "Y"
+      }
+    }
+  }
+}
+			
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pr-title pr-t6" id="local6"><span class="l">异常示例</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con6">
+                    <div class="tab">
+                        <div class="tab-handler">
+                            <ul>
+                                <li atr="errorxml">XML示例</li>
+                                <li atr="errorjson">JSON示例</li>
+                            </ul>
+                            <a href="javascript:void(0);" id="interErrorSampleXmlDivHref" class="copy" onclick="copyToClipBoardText(this)">复制全部代码</a>
+                            <input type="hidden" value="<sn_responseContent><sn_error><error_code>API异常码</error_code><error_msg>异常码中文描述</error_msg></sn_error></sn_responseContent>"/>
+                            <a href="javascript:void(0);" id="interErrorSampleJsonDivHref" class="copy" onclick="copyToClipBoardText(this)" style="display:none;">复制全部代码</a>
+                       		<input type="hidden" value='{"sn_responseContent": {"sn_error": {"error_code": "API异常码","error_msg": "异常码中文描述"}}}'/>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-panel">
+                              <pre class='brush:xml;toolbar:false;' id="interErrorSampleXmlPre">
+<sn_responseContent>
+  <sn_error>
+  	<error_code>API异常码</error_code>
+  	<error_msg>异常码中文描述</error_msg>
+  </sn_error>
+</sn_responseContent>
+                           	  </pre>
+                            </div>
+                            <div class="tab-panel">
+							    <pre class='brush:javascript;toolbar:false;' id="interErrorSampleJsonPre">
+{
+  "sn_responseContent": {
+    "sn_error": {
+      "error_code": "API异常码",
+      "error_msg": "异常码中文描述"
+    }
+  }
+} 								  
+                           		</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pr-title pr-t7" id="local7"><span class="l">业务异常码</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con3">	
+                	<table class="su-table mb30">
+						<colgroup>
+							<col width="40%"></col>
+							<col width="30%"></col>
+							<col></col>
+						</colgroup>
+						<tr>
+							<th align="center" style="text-align: left;">异常码</th>
+							<th align="center" style="text-align: left;">错误描述</th>
+							<th align="center" style="text-align: left;" class="addBR">解决方案</th>
+						</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.format-error:*</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">格式错误,*号用请求参数字段名替换</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.missing-parameter: *</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">请求字段为空, *号用请求参数字段名替换</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.invalid-biz:suppliercode</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">供应商编码不存在</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">isp.sys.service.unavailable.scs</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">服务不可用（系统异常）</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请联系苏宁技术人员。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:100</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">供应商编码必须为数字</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:101</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">供应商编码长度不超过8位</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:102</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">供应商分公司代码只能为数字或字母</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:103</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">供应商分公司代码长度不能超过20</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:104</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">供应商办事处长度不能超过60（中文长度*3）</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:105</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">苏宁公司代码是否为数字</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:106</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">苏宁公司代码长度不能超过4位</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:107</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">品牌代码只允许数字和逗号(,)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:108</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">品牌代码长度不能超过150</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:109</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">费用预算单号只能为数字或字母</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:110</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">费用预算单号长度不能超过45</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:111</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">活动区域编码只能为数字</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:112</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">活动区域编码长度不能超过4</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:113</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">供应商活动通知单号只能为数字或字母</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:114</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">供应商活动通知单号长度不能超过40</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:115</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">活动开始时间格式错误yyyy-MM-dd</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:116</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">活动结束时间格式错误yyyy-MM-dd</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:117</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">活动开始时间不能大于结束时间</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:118</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">活动日期区间范围，不能大于31天</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:119</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">生效层次只能为FGS或者MD</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:120</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">活动描述长度不能超过200（中文*3）</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:121</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">结算方式只能为"1"或者"2"或者"3"</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:122</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">支付方式：结算方式不为1时支付方式不可填</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:123</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">支付方式：结算方式为1时支付方式必填</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:124</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">支付方式：支付方式存在时，必须为3或者5</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:125</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">开票内容：结算方式不为1时开票内容不可填</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:126</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">开票内容：结算方式为1时开票内容必填</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:127</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">开票内容：若存在，值必须为"1"或者"2"或者"3"或者"4"</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:128</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">支付日期：结算方式为1，且以转款方式支付("5")时，支付日期不可填写</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:129</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">支付日期：格式必须为yyyy-MM-dd</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:130</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">支付日期：支付日期必须晚于活动结束日期，支付日期与活动结束日期范围区间必须在0-31天内</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:131</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细1：操作范围公司必须为数字</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:132</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细1：操作范围公司长度不能超过4</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:133</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细1：操作范围门店长度不能超过4</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:134</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细1：生效层次为"FGS"时，操作范围门店必须为"所有门店"</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:135</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细2：库位只能为"0001", "0002", "0003", "0007", "0008"其中一种</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:136</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细2：渠道只能为"10"或者"20"</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:137</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细2：供应商商品编码不能包含汉字</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:138</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细2：供应商商品编码长度不能超过50</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:139</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细2：若库位为"0001"或"0002"或"0003"，数量必须为"999999"</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:140</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细2：数量必须为大于0的自然数</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:141</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细2：数量长度不能超过40</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:142</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细2：活动金额只允许带1到2位小数，允许负数</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:143</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细2：活动金额长度不能超过15</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:144</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">明细2：备注长度不能超过200</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:145</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">hessian请求bsm进行商品mapping</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:146</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">供应商商品编码无效(无对应苏宁商品编码)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:147</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">不支持批量操作(applyHead节点不是map)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.selfmarket.addprivilegeapply.invalid-biz:148</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">供应商编码为空</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请输入正确参数。</td>
+								</tr>
+					</table>
+                </div>
+                <div class="pr-title pr-t8" id="local8">
+                	<span class="l">公共异常码</span><em class="pr-em pr-down pr-up"></em>
+                </div>
+                <div class="pr-con8" style="display:none;">
+                	<table class="su-table mb30">
+						<colgroup>
+							<col width="40%"></col>
+							<col width="30%"></col>
+							<col></col>
+						</colgroup>
+						<tr>
+							<th align="center" style="text-align: left;">异常码</th>
+							<th align="center" style="text-align: left;">错误描述</th>
+							<th align="center" style="text-align: left;" class="addBR">解决方案</th>
+						</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.user-permission:inexistence</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问令牌不存在</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">更换访问令牌</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.user-permission:overdue</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问令牌已过期</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请使用刷新令牌刷新</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.api-permission:inexistence</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">Api方法不存在</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请参考帮助中心</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.api-permission:overdue</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">Api方法已过期</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请参考帮助中心</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.api-permission:authority</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">无权操作此api</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">确认是否有访问该方法权限</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.auth.vendor-request:errory</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">无权操作此供应商</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请确认供应商编码是否正确</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.controller.api-request:limit</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">Api请求受控</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">超过请求次数</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.app-time:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">请求参数错误api请求时间误差大</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">参考帮助中心</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.request-params:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">请求报文结构错误</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">参考帮助中心、日期格式等</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.starttime-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">请求开始时间错误</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">参考帮助中心、日期格式等</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.data-get:success</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">业务数据查询成功</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.data-get:fail</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">业务数据查询失败</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查请求条件</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.data-get:no-result</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">业务数据结果为空</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.pageno-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">pageNo格式错误，只允许1到99999之间的整数</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查pageNo输入是否有误</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.pagesize-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">pageSize格式错误，只允许1到50之间的整数(订单相关是1到100)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查pageSize输入是否有误</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.page-param:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">pageNo或者pageSize不在要求范围内，pageNo只允许1到99999之间的整数，pageSize只允许1到50之间的整数(订单相关是1到100)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查pageNo和pageSize输入是否有误</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.miss-time:starttime</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">不存在开始时间(节点)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查输入</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.miss-time:endtime</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">不存在结束时间(节点)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查输入</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.starttime-value:null</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">开始时间为空(值)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查输入</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.endtime-value:null</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">结束时间为空(值)</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查输入</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.starttime-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">校验开始时间不合法，格式yyyy-MM-dd HH:mm:ss</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查时间格式</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.endtime-format:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">校验结束时间不合法，格式yyyy-MM-dd HH:mm:ss</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查时间格式</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.query-time:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">开始时间是否小于结束时间</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查开始和结束时间大小</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.query-time:outofrange</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">时间查询是否超出指定范围</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查时间范围</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.app-sign:null</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">签名信息为空</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查签名信息</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.app-sign:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">签名信息错误</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查签名信息</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.missing-parameter:apiversion</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">API版本号未指定</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查API版本号</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.missing-parameter:appRequestTime</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">请求时间丢失</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查请求时间</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.missing-nestElement:sn_body</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">缺少sn_body节点</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查sn_body是否存在</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.user-permission:inexistence</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">用户key不存在</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查用户key是否存在</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.batch-handler:no-support</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">非查询类API不支持批量操作</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查API类型</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.handler.request-message:error</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">查询类API输入多个业务节点</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">检查业务节点</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.header-param:null</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">header参数为空</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请检查header参数</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.controller.api-access:limit</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问限制</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.controller.api-frequency:limit</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问频率限制</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.error.network:failure</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">网络异常</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.error.network-status:?</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">响应失败 ?为状态码</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">无</td>
+								</tr>
+								<tr name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">sys.check.oauth-permission:authority</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">访问令牌过期或未进行授权</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">请重新授权或使用刷新令牌刷新新的访问令牌</td>
+								</tr>
+								<tr class="odds" name="erFieldTr">
+									<td class="addBB" style="text-align: left;" name="errorCode">biz.custom.addpackageorderdeliver.not.declaresuccess.order</td>
+									<td class="addBB" style="text-align: left;" name="errorDesc">非申报成功订单不能发货</td>
+									<td class="addBB addBR" style="text-align: left;" name="errorSolutions">商家后台点击申报按钮，或者调用海外购订单申报接口进行申报</td>
+								</tr>
+					</table>
+                </div>
+                <div class="pr-title pr-t9" id="local9"><span class="l">API工具</span><em class="pr-em pr-down"></em></div>
+                <div class="pr-con9">
+                    <div class="su-apiDiv">
+                        <a href="toApiMethodTestPage.do-apiCode=suning.application.privilege.apply.htm" tppabs="https://open.suning.com/ospos/apipage/toApiMethodTestPage.do?apiCode=suning.application.privilege.apply" class="su-apiLink mr10" target="_blank">API TOOLS 在线测试工具</a><a href="toApiErrorCodeMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiErrorCodeMenu.do" class="su-other mr10" target="_blank">异常码查询工具</a><a href="toApiAccessSdkSamplePage.do-apiCode=suning.application.privilege.apply.htm" tppabs="https://open.suning.com/ospos/apipage/toApiAccessSdkSamplePage.do?apiCode=suning.application.privilege.apply" class="su-other mr10" target="_blank">SDK调用示例</a><a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252Fapipage%252FappSdkDownLoad.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252Fapipage%252FappSdkDownLoad.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/apipage/appSdkDownLoad.action" class="su-other" target="_blank">SDK下载</a>
+                    </div>
+                </div>
+				<div class="pr-title pr-t10" id="local10"><span class="l">FAQ</span><em class="pr-em pr-down"></em></div>
+				<div class="pr-con10">
+							<p class="pr-p2">Q：优惠单活动函申请接口如何使用？</p>	
+							<p class="pr-p1 mb30">A：通过此接口可优惠单活动函申请</p>
+				</div>
+				</div>
+			</div>
+			<div class="menuLRH"></div>
+		</div>
+	</div>	
+
+	<!-- 置顶 -->
+	<!--<div class="os-topTo" style="bottom: 210px;"></div>-->
+
+<div class="foot">
+    <iframe scrolling="no" frameborder="0" width="100%" height="165" src="../../../sop.suning.com/sel/portal/common/footer.html" tppabs="https://sop.suning.com/sel/portal/common/footer.html"></iframe>
+</div>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/OpenSer.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/open/OpenSer.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/openUPdate.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/open/openUPdate.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/common.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/custom/common.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shCore.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shCore.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shAutoloader.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shAutoloader.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shBrushXml.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shBrushXml.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shBrushJScript.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shBrushJScript.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/plugins/syntaxhighlighter/scripts/shBrushCss.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/plugins/syntaxhighlighter/scripts/shBrushCss.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/table.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/table.js?v=v1.0" charset="UTF-8"></script>
+<script>
+	SyntaxHighlighter.all();
+
+    $(function(){
+        var _wH = $(window).width()/2;
+        var _left = _wH+1190/2+10;
+        $(".su-titList").css("left",_left);
+		$(window).resize(function(){
+			var _wH = $(window).width()/2;
+			var _left = _wH+1190/2+10;
+			$(".su-titList").css("left",_left);
+		});
+		
+    });
+	
+	$(window).scroll(function(){
+		$(".pos li").each(function(index){
+			var wH = $(window).height();
+			var wst =  $(window).scrollTop(); //滚动条距离顶端值
+			var dH = $(document).height();
+			for(j=0; j<index; j++){
+				var localTop =$(".pr-title").eq(j).offset().top;
+				if(dH-localTop>wH){
+					for (i=1; i<10; i++){
+						if($("#local"+i).offset().top<=wst+5){
+							$("#scroll-it"+i).parents("li").addClass("cur").siblings("li").removeClass("cur");  
+						}
+					}
+				}else{
+					return false;
+				}
+			}
+		});
+	});
+	
+	$.each($(".tab-handler li"),function(index,ele){
+		$(this).on("click",function(){
+			var atrVal = $(this).attr("atr");
+			if(atrVal == "reqxml"){
+				$("#interReqSampleXmlDivHref").show();
+				$("#interReqSampleJsonDivHref").hide();
+			}
+			if(atrVal == "reqjson"){
+				$("#interReqSampleJsonDivHref").show();
+				$("#interReqSampleXmlDivHref").hide();
+			}
+			if(atrVal == "respxml"){
+				$("#interRespSampleXmlDivHref").show();
+				$("#interRespSampleJsonDivHref").hide();
+			}
+			if(atrVal == "respjson"){
+				$("#interRespSampleJsonDivHref").show();
+				$("#interRespSampleXmlDivHref").hide();
+			}
+			if(atrVal == "errorxml"){
+				$("#interErrorSampleXmlDivHref").show();
+				$("#interErrorSampleJsonDivHref").hide();
+			}
+			if(atrVal == "errorjson"){
+				$("#interErrorSampleJsonDivHref").show();
+				$("#interErrorSampleXmlDivHref").hide();
+			}
+		});	
+	});	
+	
+</script>
+<script src="../../../static.suning.cn/osr/meas/time.js" tppabs="https://static.suning.cn/osr/meas/time.js"></script>
+</body>
+</html>

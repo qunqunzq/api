@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>å¼€æ”¾æœåŠ¡-å…¬å‘Š</title>
+    
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="æ‰‹æœº, ç”µè„‘, å†°ç®±, æ´—è¡£æœº, ç›¸æœº, æ•°ç , å®¶å±…ç”¨å“, é‹å¸½, åŒ–å¦†å“, æ¯å©´ç”¨å“, å›¾ä¹¦ï¼Œé£Ÿå“ï¼Œä¿é™©ï¼Œæ—…è¡Œï¼Œå……å€¼ï¼Œå›¢è´­ï¼Œæ­£å“è¡Œè´§, å…¨å›½è”ä¿, è´§åˆ°ä»˜æ¬¾ã€‚"/>
+<meta name="description" content="è‹å®æ˜“è´­æ˜¯é¢†å…ˆçš„ç»¼åˆç½‘ä¸Šè´­ç‰©å•†åŸ, åœ¨çº¿ç‰¹ä»·é”€å”®å®¶ç”µã€é€šè®¯æ•°ç ã€ç”µè„‘ã€å®¶å±…ç™¾è´§ã€æœè£…æœé¥°ã€æ¯å©´ã€å›¾ä¹¦ã€é£Ÿå“ã€ä¿é™©ã€æ—…è¡Œã€å……å€¼ã€å›¢è´­ç­‰æ•°ä¸‡ç±»å•†å“å’ŒæœåŠ¡ã€‚æ­£å“è¡Œè´§, å…¨å›½è”ä¿, æœ¬åœ°é…é€, è´§åˆ°ä»˜æ¬¾ã€‚çœé’±æ”¾å¿ƒä¸Šè‹å®ç”µå™¨ç½‘ä¸Šå•†åŸ, å°½äº«è´­ç‰©ä¹è¶£ï¼"/>
+<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<script src="../../../static.suning.cn/osr/meas/error.js" tppabs="https://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
+			<link rel="stylesheet" href="../staticfiles/css/common.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/common.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/OpenSerNew.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/OpenSerNew.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+</head>
+<body>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    if("" != ""){
+			var userName = "";
+			$("#alLoginName").text(userName);
+			$("#alLoginName").attr("title",userName);
+			$("#alLogin").show();
+			$("#withOutLogin").hide();
+	    }else {
+			var userName = getCookie("osposLoginUserIdFlag");
+			if(userName == ""){
+				var logonStatusVal = getCookie("logonStatus");
+				var authIdVal = getCookie("authId");
+				if((logonStatusVal != undefined && logonStatusVal != "") 
+	       		|| (authIdVal != undefined && authIdVal != "")){
+					userName = getCookie("idsLoginUserIdLastTime");
+				}
+			}
+			if(userName != ""){
+				$("#alLoginName").text(userName);
+				$("#alLoginName").attr("title",userName);
+				$("#alLogin").show();
+				$("#withOutLogin").hide();
+			}else {
+				$("#alLogin").hide();
+				$("#withOutLogin").show();
+			} 
+	    }
+    });
+	
+    function getCookie(cookieName){
+		var cookieArr = document.cookie.split(';');
+		for(var i=0; i<cookieArr.length; i++){
+			var cookie = cookieArr[i];
+			while (cookie.charAt(0)==' '){
+				cookie = cookie.substring(1);
+			}
+			cookieEntry = cookie.split('=');
+			if(cookieEntry[0] == cookieName){
+				return decodeURIComponent(cookieEntry[1]);
+			}
+		}
+		return "";
+    }
+	
+	$(function(){
+        $(".os-nav li").each(function(index){
+            $(this).removeClass("os-on");
+            if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toApi")!=-1&&index=="3"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toDevCenter")!=-1&&index=="4"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname=="/"&&index=="0"){
+                $(this).addClass("os-on");
+            }
+        })                
+	})
+</script>
+<div class="os-top bcs-top">
+	<div class="w1190 clearfix">
+		<div class="l os-snLogo"></div>	
+		<ul class="os-nav">
+			<li class="os-on"><a href="../../index.htm" tppabs="https://open.suning.com/">é¦–é¡µ</a></li>
+			<li><a href="javascript:void(0);">å¼€æ”¾ç‰ˆå›¾<i></i></a>
+				<!--[if IE]>
+				<dl style="margin-left: -104px;margin-top: 55px;">
+				<![endif]-->
+				<!--[if !IE]><!-->
+				<dl>
+			    <!--<![endif]-->
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/road/roadIndex.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://road.suning.com/ospos/road/roadIndex.html'" tppabs="https://road.suning.com/ospos/road/roadIndex.html" target="_blank">ä¸€å·å…¬è·¯å¼€æ”¾</a><i></i></dd>
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/toDevCenter.action  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://road.suning.com/ospos/toDevCenter.action'" tppabs="https://road.suning.com/ospos/toDevCenter.action">å•†å®¶åå°å¼€æ”¾</a><i></i></dd>
+                </dl>
+            </li>
+            <li><a href="toDocCenter.do.htm" tppabs="https://open.suning.com/ospos/apipage/toDocCenter.do">æ–‡æ¡£ä¸­å¿ƒ</a></li>
+			<li><a href="toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do">APIæ–‡æ¡£</a></li>
+			<li><a href="../pushapi/toTopicPageList.do.htm" tppabs="https://open.suning.com/ospos/pushapi/toTopicPageList.do">æ¶ˆæ¯æ–‡æ¡£</a></li>
+			<li><a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/toDevCenter.action">æ§åˆ¶å°</a></li>
+		</ul>
+		
+		<a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/logOut.action" class="os-exit" style="display: none;" id="alLogin">é€€å‡º</a> 
+		<div class="r search-top">
+			<form method="post" action="https://open.suning.com/ospos/apipage/toSearchPage.do" id="tlSearchForm" style="display:inline;float:right;" autocomplete="off">
+                <input type="text" class="os-input" id="tlSearchIn" name="tlSearchName"/>
+                <span class="os-search" id="tlSearchBtn"></span>
+            </form>                
+                <span class="os-search"></span>
+                <span id="alLoginName" class="lname r"></span>
+                <a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/toLogin.action" class="os-login" style="display: none;" id="withOutLogin">ç™»å½•</a>
+		</div>
+	</div>
+</div>    <div class="on-wrapp">
+        <div class="w1190 clearfix mb40 oh" style="position:relative;">
+            <div class="on-title">å…¬å‘Šåˆ—è¡¨</div>
+            <div class="on-menuL">
+                <ul>
+                                 <li id=34 name="notice">
+                                 <div>å¼€æ”¾æœåŠ¡å¹³å°20160824æ¥å£å˜æ›´å…¬å‘Š</div>
+                                 <div class="on-c999">2016-08-25</div>
+                                 <em></em>
+                                 </li>
+                           
+                                 <li id=33 name="notice">
+                                 <div>818å¤§ä¿ƒæœŸé—´å…³é—­ç›¸å…³APIæ¥å£å…¬å‘Š</div>
+                                 <div class="on-c999">2016-08-08</div>
+                                 <em></em>
+                                 </li>
+                           
+                                 <li id=32 name="notice">
+                                 <div>å¼€æ”¾æœåŠ¡å¹³å°20160713æ¥å£å˜æ›´å…¬å‘Š</div>
+                                 <div class="on-c999">2016-07-15</div>
+                                 <em></em>
+                                 </li>
+                           
+                                 <li id=30 name="notice">
+                                 <div>618APIæ¥å£æš‚æ—¶å…³é—­å…¬å‘Š</div>
+                                 <div class="on-c999">2016-06-17</div>
+                                 <em></em>
+                                 </li>
+                           
+                                 <li style="border-bottom:1px solid #e2e3e4;" id=26 name="notice">
+                                 <div>518æ—¥æ™šé—´ç³»ç»Ÿå‡çº§å…¬å‘Š</div>
+                                 <div class="on-c999">2016-05-31</div>
+                                 <em></em>
+                                 </li>
+                           
+                     <div class="on-pageDiv">
+                                    <span class="on-pageNum">5/10</span>
+                                        <a href="queryNotice.do-page=4.htm" tppabs="https://open.suning.com/ospos/apipage/queryNotice.do?page=4" class="on-pageA on-P"><span class="on-page on-P"></span></a>
+                                        <a href="javascript:if(confirm('https://open.suning.com/ospos/apipage/queryNotice.do?page=6  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://open.suning.com/ospos/apipage/queryNotice.do?page=6'" tppabs="https://open.suning.com/ospos/apipage/queryNotice.do?page=6" class="on-pageA on-N"><span class="on-page on-N"></span></a>
+                    </div>
+                </ul>
+            </div>
+           
+            <div class="on-menuR clearfix">
+                    <div class="p30"  id="notice34">
+                        <span class="on-title">å¼€æ”¾æœåŠ¡å¹³å°20160824æ¥å£å˜æ›´å…¬å‘Š</span>
+                        <span class="on-date r">2016-08-25</span>
+                        <div class="on-hr"></div>
+                           <div><div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;"><span style="font-weight: bold; font-size: 14px;">å„ä½å•†æˆ·ã€æœåŠ¡å•†ï¼Œ</span></div><div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;"><span style="font-weight: bold; font-size: 14px;">ä½ ä»¬å¥½ï¼š</span></div><div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;">â€‹</div><div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;">å¼€æ”¾æœåŠ¡å¹³å°0824ç‰ˆæœ¬å¯¹æ¥å£åšäº†å¦‚ä¸‹ä¼˜åŒ–ï¼š</div></div><div><br></div><div><span style="font-weight: bold; color: rgb(206, 0, 0);">ä¸€ã€APIæ¥å£æ”¹é€ ï¼š</span></div><div><span style="font-weight: bold; color: rgb(206, 0, 0);"><br></span></div><div>1ã€suning.custom.item.add-äº§å“ç”³è¯·</div><div>è¯·æ±‚å­—æ®µæ–°å¢ï¼šmoduleName-æ¨¡å—åç§°ï¼ŒmoduleStatus-æ¨¡å—å¯ç”¨çŠ¶æ€ï¼ŒcouponId-ä¼˜æƒ åˆ¸idï¼ŒtuijianId-å•†å®¶æ¨èidï¼ŒimgUrl-å›¾ç‰‡URL</div><div><br></div><div>2ã€suning.custom.itemcontents.add-å•†å“å†…å®¹ç»´æŠ¤</div><div>è¯·æ±‚å­—æ®µæ–°å¢ï¼šmoduleName-æ¨¡å—åç§°ï¼ŒmoduleStatus-æ¨¡å—å¯ç”¨çŠ¶æ€ï¼ŒcouponId-ä¼˜æƒ åˆ¸idï¼ŒtuijianId-å•†å®¶æ¨èidï¼ŒimgUrl-å›¾ç‰‡URL</div><div><br></div><div>3ã€suning.custom.itemcontents.modify-å•†å“å†…å®¹ä¿®æ”¹</div><div>è¯·æ±‚å­—æ®µæ–°å¢ï¼šmoduleName-æ¨¡å—åç§°ï¼ŒmoduleStatus-æ¨¡å—å¯ç”¨çŠ¶æ€ï¼ŒcouponId-ä¼˜æƒ åˆ¸idï¼ŒtuijianId-å•†å®¶æ¨èidï¼ŒimgUrl-å›¾ç‰‡URL</div><div><br></div><div>4ã€suning.custom.itemdetail.query-è·å–æˆ‘çš„å•†å“è¯¦æƒ…ä¿¡æ¯</div><div>è¿”å›å­—æ®µæ–°å¢ï¼šmoduleName-æ¨¡å—åç§°ï¼ŒmoduleStatus-æ¨¡å—å¯ç”¨çŠ¶æ€ï¼ŒcouponId-ä¼˜æƒ åˆ¸idï¼ŒtuijianId-å•†å®¶æ¨èidï¼ŒimgUrl-å›¾ç‰‡URL</div><div><br></div><div>5ã€suning.fourps.item.add-å•†å“ç”³è¯·æ¥å£</div><div>è¯·æ±‚å­—æ®µæ–°å¢ï¼šcmTitle-å•†å“æ ‡é¢˜ã€cmArea-äº§åœ°ï¼Œæ ¡éªŒé€»è¾‘åŒé¡µé¢å‘å¸ƒæ–°å•†å“</div><div><br></div><div>6ã€suning.fourps.item.modify-å•†å“ä¿®æ”¹æ¥å£</div><div>è¯·æ±‚å­—æ®µæ–°å¢ï¼šcmTitle-å•†å“æ ‡é¢˜ã€cmArea-äº§åœ°ï¼Œæ ¡éªŒé€»è¾‘åŒé¡µé¢å‘å¸ƒæ–°å•†å“</div><div><br></div><div>7ã€suning.fourps.iteminfo.query-å•†å“ä¿¡æ¯æ‰¹é‡æŸ¥è¯¢æ¥å£</div><div>è¿”å›å­—æ®µæ–°å¢ï¼šsnLogisticsCode-è‹å®ç‰©æµå•†å“ç¼–ç </div><div><br></div><div>8ã€suning.fourps.iteminfo.get-å•†å“ä¿¡æ¯å•ç¬”æŸ¥è¯¢æ¥å£</div><div>è¿”å›å­—æ®µæ–°å¢ï¼šsnLogisticsCode-è‹å®ç‰©æµå•†å“ç¼–ç </div><div><br></div><div>9ã€suning.fourps.itemdetail.get-å•†å“è¯¦æƒ…æŸ¥è¯¢æ¥å£</div><div>è¿”å›å­—æ®µæ–°å¢ï¼šsnLogisticsCode-è‹å®ç‰©æµå•†å“ç¼–ç ã€cmTitle-å•†å“æ ‡é¢˜ã€cmArea-äº§åœ°</div><div><br></div><div><br></div><div><span style="font-weight: bold; color: rgb(206, 0, 0);">äºŒã€APIæ¥å£æ–°å¢ï¼š</span></div><div><br></div><div>å¹³å°-å•†å“API<span class="Apple-tab-span" style="white-space:pre">	</span></div><div>1ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.custom.mobilerecommend.add-æ‰‹æœºè¯¦æƒ…æ¨èæ¨¡å—æ–°å¢</div><div>2ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.custom.mobilerecommend.modify-æ‰‹æœºè¯¦æƒ…æ¨èæ¨¡å—ä¿®æ”¹</div><div>3ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.custom.mobilecoupon.add-æ‰‹æœºè¯¦æƒ…ä¼˜æƒ åˆ¸æ–°å¢</div><div>4ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.custom.mobilecoupon.modify-æ‰‹æœºè¯¦æƒ…ä¼˜æƒ åˆ¸ä¿®æ”¹</div><div>5ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.custom.mobilerecommend.query-æ‰‹æœºè¯¦æƒ…æ¨èæ¨¡å—æŸ¥è¯¢</div><div>6ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.custom.mobilesequence.modify-æ‰‹æœºè¯¦æƒ…æ¨¡å—é¡ºåºä¿®æ”¹</div><div>7ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.custom.mobilesequence.query-æ‰‹æœºè¯¦æƒ…æ¨¡å—é¡ºåºæŸ¥è¯¢</div><div>8ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.custom.mobilecoupon.query-æ‰‹æœºè¯¦æƒ…ä¼˜æƒ åˆ¸æŸ¥è¯¢</div><div><span class="Apple-tab-span" style="white-space:pre">	</span></div><div>æ”¿ä¼å•†å“API<span class="Apple-tab-span" style="white-space:pre">	</span></div><div>9ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.category.get-è·å–å•†å“ç›®å½•æ¥å£</div><div>10ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.prodpool.query-è·å–å•†å“æ± </div><div>11ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.proddetail.get-è·å–å•†å“è¯¦æƒ…æ¥å£</div><div>12ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.prodimage.query-è·å–å•†å“å›¾ç‰‡æ¥å£</div><div>13ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.batchprodsalestatus.get-å•†å“ä¸Šä¸‹æ¶çŠ¶æ€æŸ¥è¯¢æ¥å£</div><div>14ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.prodreview.query-è·å–å•†å“è¯„ä»·æ¥å£</div><div><span class="Apple-tab-span" style="white-space:pre">	</span></div><div>æ”¿ä¼ä»·æ ¼API<span class="Apple-tab-span" style="white-space:pre">	</span></div><div>15ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.price.query-æ‰¹é‡æŸ¥è¯¢å•†å“ä»·æ ¼æ¥å£</div><div><span class="Apple-tab-span" style="white-space:pre">	</span></div><div>æ”¿ä¼åº“å­˜API<span class="Apple-tab-span" style="white-space:pre">	</span></div><div>16ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.inventory.get-å•†å“çš„ç²¾å‡†åº“å­˜æŸ¥è¯¢æ¥å£</div><div>17ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.mprodstock.query-å¤šå•†å“çš„åº“å­˜æ‰¹é‡æŸ¥è¯¢æ¥å£&nbsp;</div><div><span class="Apple-tab-span" style="white-space:pre">	</span></div><div>æ”¿ä¼è®¢å•API<span class="Apple-tab-span" style="white-space:pre">	</span></div><div>18ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.order.add-åˆ›å»ºè®¢å•æ¥å£</div><div>19ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.confirmorder.add-ç¡®è®¤é¢„å åº“å­˜è®¢å•æ¥å£</div><div>20ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.rejectorder.delete-å–æ¶ˆé¢„å åº“å­˜è®¢å•æ¥å£</div><div>21ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.applyrejected.add-é€€è´§æ¥å£ç”³è¯·</div><div>22ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.orderdetail.get-æŸ¥è¯¢å•ä¸ªè®¢å•è¯¦ç»†</div><div>23ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.orderstatus.get-è·å–è®¢å•çŠ¶æ€æ¥å£</div><div>24ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.orderaccount.query-è®¢å•å¯¹è´¦æ¥å£</div><div><span class="Apple-tab-span" style="white-space:pre">	</span></div><div>æ”¿ä¼ç‰©æµAPI<span class="Apple-tab-span" style="white-space:pre">	</span></div><div>25ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.orderlogist.get-è·å–è®¢å•ç‰©æµè¯¦æƒ…</div><div>26ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.shiptime.get-ç‰©æµæ—¶æ•ˆæ¥å£</div><div>27ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.shipcarriage.get-ç‰©æµè¿è´¹æ¥å£&nbsp;</div><div><span class="Apple-tab-span" style="white-space:pre">	</span></div><div>æ”¿ä¼å…¶ä»–API<span class="Apple-tab-span" style="white-space:pre">	</span></div><div>28ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.fulladdress.get-å…¨é‡åœ°å€æ¥å£</div><div>29ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.predepositbalance.get-æŸ¥è¯¢é¢„å­˜æ¬¾é‡‘é¢æ¥å£&nbsp;</div><div>30ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.message.get-æŸ¥è¯¢æ¶ˆæ¯</div><div>31ã€<span class="Apple-tab-span" style="white-space:pre">	</span>suning.govbus.message.delete-åˆ é™¤æ¶ˆæ¯æ¥å£</div><div><p style="margin-bottom: 0px; font-family: &quot;Microsoft YaHei&quot;; line-height: 18px; text-align: right;">å¼€æ”¾æœåŠ¡å¹³å°</p><p style="margin-bottom: 0px; font-family: &quot;Microsoft YaHei&quot;; line-height: 18px; text-align: right;">2016å¹´8æœˆ24æ—¥</p></div>
+											
+                    </div>     
+                    <div class="p30"  style="display:none;" id="notice33">
+                        <span class="on-title">818å¤§ä¿ƒæœŸé—´å…³é—­ç›¸å…³APIæ¥å£å…¬å‘Š</span>
+                        <span class="on-date r">2016-08-08</span>
+                        <div class="on-hr"></div>
+                           
+														
+														<p>å„ä½å•†æˆ·ã€æœåŠ¡å•†ï¼Œ</p><p>ä½ ä»¬å¥½</p><p><br></p><p>818ä¸ºæˆ‘å¸å¤§ä¿ƒæœŸé—´ï¼Œä¸ºä¿éšœç³»ç»Ÿç¨³å®šï¼Œåœ¨ä¿ƒé”€æœŸé—´å°†å…³é—­ç›¸å…³æ¥å£ï¼Œå…·ä½“å†…å®¹å¦‚ä¸‹è¡¨ï¼š<br></p><p>
+ </p><p></p><p></p><p></p><span style="color: rgb(0, 0, 0); font-size: 13.3333px; line-height: 19.0476px;">è¯·å„ä½æœåŠ¡å•†ã€å•†æˆ·æ‚‰çŸ¥ï¼Œå¹¶åšå¥½åº”å¯¹æªæ–½ï¼Œè°¢è°¢ï¼</span><p></p><p style="font-size: 13.3333px; color: rgb(0, 0, 0); line-height: 19.0476px;"></p><p style="font-size: 13.3333px; color: rgb(0, 0, 0); line-height: 19.0476px;"></p><p></p><br style="color: rgb(0, 0, 0); font-size: 13.3333px; line-height: 19.0476px;"><p></p><p style="font-size: 13.3333px; color: rgb(0, 0, 0); line-height: 19.0476px;"></p><p style="font-size: 13.3333px; color: rgb(0, 0, 0); line-height: 19.0476px;"></p><p></p><span style="color: rgb(0, 0, 0); font-size: 13.3333px; line-height: 19.0476px;">å¼€æ”¾æœåŠ¡å¹³å°</span><p></p><p style="font-size: 13.3333px; color: rgb(0, 0, 0); line-height: 19.0476px;"></p><p style="font-size: 13.3333px; color: rgb(0, 0, 0); line-height: 19.0476px;"></p><p></p><span style="color: rgb(0, 0, 0); font-size: 13.3333px; line-height: 19.0476px;">2016å¹´8æœˆ8æ—¥</span><p></p><p></p><br><p></p><table border="0" cellpadding="0" cellspacing="0" width="936" style="width: 703pt;"><colgroup><col width="66" style="mso-width-source:userset;mso-width-alt:2112;width:50pt">
+ <col width="450" style="mso-width-source:userset;mso-width-alt:14400;width:338pt">
+ <col width="167" style="mso-width-source:userset;mso-width-alt:5344;width:125pt">
+ <col width="253" style="mso-width-source:userset;mso-width-alt:8096;width:190pt">
+ </colgroup><tbody><tr height="16" style="height:12.0pt">
+  <td height="16" class="xl66" width="66" style="height:12.0pt;width:50pt">æ¨¡å—</td>
+  <td class="xl66" width="450" style="border-left:none;width:338pt">æœåŠ¡åç§°</td>
+  <td class="xl66" width="167" style="border-left:none;width:125pt">æ–¹æ¡ˆ</td>
+  <td class="xl66" width="253" style="border-left:none;width:190pt">æ—¶é—´</td>
+ </tr>
+ <tr height="16" style="height:12.0pt">
+  <td rowspan="3" height="64" class="xl68" style="border-bottom-width: 0.5pt; border-bottom-color: black; height: 48pt;">å•†å“</td>
+  <td class="xl67" width="450" style="border-left-style: none; width: 338pt;">suning.custom.price.updateä»·æ ¼æ›´æ–°æ¥å£</td>
+  <td rowspan="8" class="xl67" width="167" style="width: 125pt;">å…³é—­æ¥å£</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="16" style="height:12.0pt">
+  <td height="16" class="xl67" width="450" style="height: 12pt; border-left-style: none; width: 338pt;">suning.custom.inventory.modifyåº“å­˜æ›´æ–°æ¥å£</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="32" style="height:24.0pt">
+  <td height="32" class="xl67" width="450" style="height: 24pt; border-left-style: none; width: 338pt;">suning.custom.parallelinventory.modifyï¼ˆå¹³è¡Œä»“æ¨¡å¼ï¼‰ä¿®æ”¹å•ä¸ªä»“åº“å•ä¸ªå•†å“åº“å­˜</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="16" style="height:12.0pt">
+  <td rowspan="5" height="112" class="xl68" style="border-bottom-width: 0.5pt; border-bottom-color: black; height: 84pt;">é”€å”®å‡†å¤‡</td>
+  <td class="xl67" width="450" style="border-left-style: none; width: 338pt;">suning.custom.saleareatemplate.modifyé”€å”®èŒƒå›´æ¨¡æ¿ä¿®æ”¹</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="16" style="height:12.0pt">
+  <td height="16" class="xl67" width="450" style="height: 12pt; border-left-style: none; width: 338pt;">suning.custom.saleareatemplate.deleteé”€å”®èŒƒå›´æ¨¡æ¿åˆ é™¤</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="32" style="height:24.0pt">
+  <td height="32" class="xl67" width="450" style="height: 24pt; border-left-style: none; width: 338pt;">suning.custom.saleareatemplateitemgroup.deleteé”€å”®èŒƒå›´æ¨¡æ¿å…³è”å•†å“ç»„åˆ é™¤</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="32" style="height:24.0pt">
+  <td height="32" class="xl67" width="450" style="height: 24pt; border-left-style: none; width: 338pt;">suning.custom.saleareatemplateitemgroup.modifyé”€å”®èŒƒå›´æ¨¡æ¿å…³è”å•†å“ç»„ä¿®æ”¹</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="16" style="height:12.0pt">
+  <td height="16" class="xl67" width="450" style="height: 12pt; border-left-style: none; width: 338pt;">suning.custom.itemsalearea.addå•å“é”€å”®èŒƒå›´ç»´æŠ¤</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="16" style="height:12.0pt">
+  <td rowspan="7" height="112" class="xl68" style="border-bottom-width: 0.5pt; border-bottom-color: black; height: 84pt;">è¥é”€</td>
+  <td class="xl67" width="450" style="border-left-style: none; width: 338pt;">suning.custom.xnactivity.addXå…ƒNä»¶æ´»åŠ¨æ–°å¢</td>
+  <td class="xl65" style="border-left-style: none;">å…³é—­æ¥å£</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="16" style="height:12.0pt">
+  <td height="16" class="xl67" width="450" style="height: 12pt; border-left-style: none; width: 338pt;">suning.custom.xnactivity.modifyXå…ƒNä»¶æ´»åŠ¨ä¿®æ”¹</td>
+  <td class="xl65" style="border-left-style: none;">å…³é—­æ¥å£</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="16" style="height:12.0pt">
+  <td height="16" class="xl67" width="450" style="height: 12pt; border-left-style: none; width: 338pt;">suning.custom.shopcoupon.addåº—é“ºä¼˜æƒ åˆ¸æ´»åŠ¨æ–°å¢</td>
+  <td class="xl65" style="border-left-style: none;">å…³é—­æ¥å£</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="16" style="height:12.0pt">
+  <td height="16" class="xl67" width="450" style="height: 12pt; border-left-style: none; width: 338pt;">suning.custom.shopcoupon.modifyåº—é“ºä¼˜æƒ åˆ¸æ´»åŠ¨ä¿®æ”¹</td>
+  <td class="xl65" style="border-left-style: none;">å…³é—­æ¥å£</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="16" style="height:12.0pt">
+  <td height="16" class="xl67" width="450" style="height: 12pt; border-left-style: none; width: 338pt;">suning.custom.direcoupon.addå®šå‘å‘åˆ¸æ´»åŠ¨åˆ›å»º</td>
+  <td class="xl65" style="border-left-style: none;">å…³é—­æ¥å£</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="16" style="height:12.0pt">
+  <td height="16" class="xl67" width="450" style="height: 12pt; border-left-style: none; width: 338pt;">suning.custom.ordercoupon.addè®¢å•ä¼˜æƒ æ´»åŠ¨åˆ›å»º</td>
+  <td class="xl65" style="border-left-style: none;">å…³é—­æ¥å£</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr>
+ <tr height="16" style="height:12.0pt">
+  <td height="16" class="xl67" width="450" style="height: 12pt; border-left-style: none; width: 338pt;">suning.custom.ordercoupon.modifyè®¢å•ä¼˜æƒ æ´»åŠ¨ä¿®æ”¹</td>
+  <td class="xl65" style="border-left-style: none;">å…³é—­æ¥å£</td>
+  <td class="xl63" width="253" style="border-left-style: none; width: 190pt;">8æœˆ17æ—¥23ç‚¹-8æœˆ18æ—¥å‡Œæ™¨2ç‚¹æœŸé—´</td>
+ </tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody><tbody><tr height="16" style="height:12.0pt"></tr></tbody></table>
+													
+													
+                    </div>     
+                    <div class="p30"  style="display:none;" id="notice32">
+                        <span class="on-title">å¼€æ”¾æœåŠ¡å¹³å°20160713æ¥å£å˜æ›´å…¬å‘Š</span>
+                        <span class="on-date r">2016-07-15</span>
+                        <div class="on-hr"></div>
+                           <div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;"><span style="font-weight: bold;">å„ä½å•†æˆ·ã€æœåŠ¡å•†ï¼Œ</span></div><div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;"><span style="font-weight: bold;">ä½ ä»¬å¥½ï¼š</span></div><div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;">â€‹</div><div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;">å¼€æ”¾æœåŠ¡å¹³å°0713ç‰ˆæœ¬å¯¹æ¥å£åšäº†å¦‚ä¸‹ä¼˜åŒ–ï¼š</div><div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;">&nbsp;</div><div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;"><span style="font-weight: bold; color: rgb(206, 0, 0);">æ–°å¢æ¥å£ï¼š</span></div><div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;">1ã€<a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.selfmarket.rejected.query  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.selfmarket.rejected.query'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.selfmarket.rejected.query" target="_blank" style="color: rgb(0, 0, 0);">suning.selfmarket.rejected.query</a>-æ‰¹é‡è·å–é€€è´§ä¿¡æ¯</div><div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;">2ã€<a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.selfmarket.rejected.get  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.selfmarket.rejected.get'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.selfmarket.rejected.get" target="_blank" style="color: rgb(0, 0, 0);">suning.selfmarket.rejected.get</a>-å•ç¬”è·å–é€€è´§ä¿¡æ¯</div><div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;"><br></div><div style="font-family: &quot;Microsoft YaHei&quot;; line-height: 18px;"><p style="margin-bottom: 0px; text-align: right;">å¼€æ”¾æœåŠ¡å¹³å°</p><p style="margin-bottom: 0px; text-align: right;">2016å¹´7æœˆ13æ—¥</p></div>
+											
+                    </div>     
+                    <div class="p30"  style="display:none;" id="notice30">
+                        <span class="on-title">618APIæ¥å£æš‚æ—¶å…³é—­å…¬å‘Š</span>
+                        <span class="on-date r">2016-06-17</span>
+                        <div class="on-hr"></div>
+                           <p>å„ä½å•†æˆ·ï¼ŒæœåŠ¡å•†</p><p><br></p><p>å¤§å®¶å¥½ï¼Œ</p><p><br></p><p>ä¸ºäº†é…åˆ618å¤§ä¿ƒï¼Œéƒ¨åˆ†APIæ¥å£å°†æš‚æ—¶åœç”¨ï¼Œåœç”¨æ—¶é—´ä»17æ—¥23ç‚¹å¼€å§‹ï¼ŒåŒæ—¶æŒ‰ç…§å®é™…æƒ…å†µåœ¨18æ—¥é‡æ–°å¼€å¯ã€‚</p><p><br></p><p>æ¶‰åŠæ¥å£å¦‚ä¸‹ï¼š</p><p></p><ul class="go-ulList" style="font-family:'Microsoft YaHei';font-size:12px;background-color:#FFFFFF;"><li><a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.inventory.get  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.inventory.get'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.inventory.get" data-ke-src="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.inventory.get  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.inventory.get'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.inventory.get" class="l go-liList" target="_blank"><span class="cirIcon" style="vertical-align:middle;background:url(http://open.suning.com/ospos/staticfiles/css/images/OpenSer.png) 0px -154px no-repeat;"></span>suning.custom.inventory.get</a>åº“å­˜æŸ¥è¯¢(å•ä¸ª)</li><li><a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.inventory.modify  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.inventory.modify'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.inventory.modify" data-ke-src="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.inventory.modify  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.inventory.modify'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.inventory.modify" class="l go-liList" target="_blank"><span class="cirIcon" style="vertical-align:middle;background:url(http://open.suning.com/ospos/staticfiles/css/images/OpenSer.png) 0px -154px no-repeat;"></span>suning.custom.inventory.modify</a>åº“å­˜ä¿®æ”¹(å•ä¸ª)</li></ul><ul class="go-ulList" style="font-family:'Microsoft YaHei';font-size:12px;background-color:#FFFFFF;"><li><a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.parallelinventory.get  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.parallelinventory.get'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.parallelinventory.get" data-ke-src="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.parallelinventory.get  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.parallelinventory.get'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.parallelinventory.get" class="l go-liList" target="_blank"><span class="cirIcon" style="vertical-align:middle;background:url(http://open.suning.com/ospos/staticfiles/css/images/OpenSer.png) 0px -154px no-repeat;"></span>suning.custom.parallelinventory.get</a>ï¼ˆå¹³è¡Œä»“æ¨¡å¼ï¼‰æŸ¥è¯¢å•ä¸ªä»“åº“å•ä¸ªå•†å“åº“å­˜</li><li><a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.parallelinventory.modify  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.parallelinventory.modify'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.parallelinventory.modify" data-ke-src="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.parallelinventory.modify  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.parallelinventory.modify'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.parallelinventory.modify" class="l go-liList" target="_blank"><span class="cirIcon" style="vertical-align:middle;background:url(http://open.suning.com/ospos/staticfiles/css/images/OpenSer.png) 0px -154px no-repeat;"></span>suning.custom.parallelinventory.modify</a>ï¼ˆå¹³è¡Œä»“æ¨¡å¼ï¼‰ä¿®æ”¹å•ä¸ªä»“åº“å•ä¸ªå•†å“åº“å­˜</li><li>â€‹<a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.price.update  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.price.update'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.price.update" data-ke-src="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.price.update  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.price.update'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.price.update" class="l go-liList" target="_blank">suning.custom.price.update</a><span style="font-family:'Microsoft YaHei';font-size:12px;line-height:30px;">ä»·æ ¼æ›´æ–°(å•ä¸ª)</span></li><li><a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.price.get  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.price.get'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.price.get" data-ke-src="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.price.get  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.price.get'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.price.get" class="l go-liList" target="_blank">suning.custom.price.get</a><span style="font-family:'Microsoft YaHei';font-size:12px;line-height:30px;">ä»·æ ¼æŸ¥è¯¢(å•ä¸ª)</span></li><li><a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.itemcontents.modify  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.itemcontents.modify'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.itemcontents.modify" data-ke-src="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.itemcontents.modify  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.itemcontents.modify'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.itemcontents.modify" class="l go-liList" target="_blank">suning.custom.itemcontents.modify</a><span style="font-family:'Microsoft YaHei';font-size:12px;line-height:30px;">å•†å“å†…å®¹ä¿®æ”¹</span></li><li><a href="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.itemcontents.modify  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.itemcontents.modify'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.itemcontents.modify" data-ke-src="javascript:if(confirm('http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.itemcontents.modify  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.itemcontents.modify'" tppabs="http://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=suning.custom.book.itemcontents.modify" class="l go-liList" target="_blank">suning.custom.book.itemcontents.modify</a><span style="font-family:'Microsoft YaHei';font-size:12px;line-height:30px;">å•†å“å†…å®¹ä¿®æ”¹ï¼ˆæ–‡åŒ–åˆ¶å“ç±»ï¼‰</span>â€‹<br></li></ul><p></p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p><p><br></p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; å¼€æ”¾æœåŠ¡å¹³å°</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2016å¹´6æœˆ17æ—¥</p>
+                    </div>     
+                    <div class="p30"  style="display:none;" id="notice26">
+                        <span class="on-title">518æ—¥æ™šé—´ç³»ç»Ÿå‡çº§å…¬å‘Š</span>
+                        <span class="on-date r">2016-05-31</span>
+                        <div class="on-hr"></div>
+                           <p style="font-family: 'Microsoft YaHei'; background-color: #ffffff;"><strong>å„ä½å•†æˆ·ã€æœåŠ¡å•†ï¼Œ</strong></p>
+<p style="font-family: 'Microsoft YaHei'; background-color: #ffffff;"><strong>ä½ ä»¬å¥½ï¼š</strong></p>
+<p style="font-family: 'Microsoft YaHei'; background-color: #ffffff;"><span style="font-size: small;"><strong>&nbsp;</strong></span></p>
+<p style="font-family: 'Microsoft YaHei'; background-color: #ffffff;"><strong>ç”±äºå•†å“ã€é”€å”®å‡†å¤‡ç­‰å¤šä¸ªåå°ç³»ç»Ÿå‡çº§ï¼Œå•†å“ç”³è¯·ï¼ˆæ–‡åŒ–åŠéæ–‡åŒ–ï¼‰æ¥å£ã€å•†å“ä¿®æ”¹<strong>ï¼ˆæ–‡åŒ–åŠéæ–‡åŒ–ï¼‰æ¥å£ã€é”€å”®å‡†å¤‡æ¨¡å—æ‰€æœ‰æ¥å£</strong>â€‹ï¼Œå‡æš‚åœä½¿ç”¨ã€‚æš‚åœä½¿ç”¨æ—¶é—´ä»5æœˆ18æ—¥20ç‚¹è‡³5æœˆ19æ—¥6ç‚¹ã€‚</strong></p>
+<p style="font-family: 'Microsoft YaHei'; background-color: #ffffff;"><strong>&nbsp;</strong></p>
+<p style="font-family: 'Microsoft YaHei'; background-color: #ffffff;"><strong>æœŸé—´å¸¦æ¥ä¸ä¾¿ï¼Œæ•¬è¯·è°…è§£ï¼Œè°¢è°¢ï¼</strong></p>
+<p style="font-family: 'Microsoft YaHei'; background-color: #ffffff;"><strong>&nbsp;</strong></p>
+<div style="font-family: 'Microsoft YaHei'; text-align: right; background-color: #ffffff;">å¼€æ”¾æœåŠ¡å¹³å°</div>
+<div style="font-family: 'Microsoft YaHei'; text-align: right; background-color: #ffffff;">&nbsp;</div>
+<div style="font-family: 'Microsoft YaHei'; text-align: right; background-color: #ffffff;">2016å¹´5æœˆ18æ—¥</div>
+<div style="font-family: 'Microsoft YaHei'; text-align: right; background-color: #ffffff;">&nbsp;</div>
+<p style="font-family: 'Microsoft YaHei'; background-color: #ffffff;">â€‹</p>
+                    </div>     
+            </div>   
+        </div>
+    </div>  
+
+    <!-- ç½®é¡¶ -->
+    <div class="os-topTo" style="bottom: 210px;"></div>
+
+<div class="foot">
+    <iframe scrolling="no" frameborder="0" width="100%" height="165" src="../../../sop.suning.com/sel/portal/common/footer.html" tppabs="https://sop.suning.com/sel/portal/common/footer.html"></iframe>
+</div>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/OpenSer.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/open/OpenSer.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/op_widget.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/open/op_widget.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/common.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/custom/common.js?v=v1.0" charset="UTF-8"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+        		$("#34").addClass("on-menuOn");
+        });   
+           
+        $("li[name='notice']").click(function(){
+            //æ˜¾ç¤ºDIVå±‚
+            $(".p30").each(function(){
+                if($(this).is(":visible")){
+                    $(this).hide();
+                }
+            });
+            var noitceId = $(this).attr("id");
+            $("#notice" + noitceId).show();
+            //åˆ‡æ¢ç„¦ç‚¹
+            $(".on-menuL ul li").each(function(){
+                if($(this).hasClass("on-menuOn")){
+                    $(this).removeClass("on-menuOn");
+                }
+            });
+            $(this).addClass("on-menuOn");
+        });
+    </script>
+    <script src="../../../static.suning.cn/osr/meas/time.js" tppabs="https://static.suning.cn/osr/meas/time.js"></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="手机, 电脑, 冰箱, 洗衣机, 相机, 数码, 家居用品, 鞋帽, 化妆品, 母婴用品, 图书，食品，保险，旅行，充值，团购，正品行货, 全国联保, 货到付款。"/>
+<meta name="description" content="苏宁易购是领先的综合网上购物商城, 在线特价销售家电、通讯数码、电脑、家居百货、服装服饰、母婴、图书、食品、保险、旅行、充值、团购等数万类商品和服务。正品行货, 全国联保, 本地配送, 货到付款。省钱放心上苏宁电器网上商城, 尽享购物乐趣！"/>
+<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<script src="../../../static.suning.cn/osr/meas/error-1.js" tppabs="http://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
+        <title>开放服务-文档中心</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="keywords" content="手机, 电脑, 冰箱, 洗衣机, 相机, 数码, 家居用品, 鞋帽, 化妆品, 母婴用品, 图书，食品，保险，旅行，充值，团购，正品行货, 全国联保, 货到付款。"/>
+<meta name="description" content="苏宁易购是领先的综合网上购物商城, 在线特价销售家电、通讯数码、电脑、家居百货、服装服饰、母婴、图书、食品、保险、旅行、充值、团购等数万类商品和服务。正品行货, 全国联保, 本地配送, 货到付款。省钱放心上苏宁电器网上商城, 尽享购物乐趣！"/>
+<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<script src="../../../static.suning.cn/osr/meas/error-1.js" tppabs="http://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
+			<link rel="stylesheet" href="../staticfiles/css/common.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/common.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/appcommon.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/appcommon.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/backstage.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/backstage.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/OpenSerNew.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/OpenSerNew.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1-1.0.css" tppabs="http://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+	<style>
+		.on-menuL .child-menu .parent-li a.parenta {
+		    display: inline-block;
+		}
+	</style>
+</head>
+<body>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    if("" != ""){
+			var userName = "";
+			$("#alLoginName").text(userName);
+			$("#alLoginName").attr("title",userName);
+			$("#alLogin").show();
+			$("#withOutLogin").hide();
+	    }else {
+			var userName = getCookie("osposLoginUserIdFlag");
+			if(userName == ""){
+				var logonStatusVal = getCookie("logonStatus");
+				var authIdVal = getCookie("authId");
+				if((logonStatusVal != undefined && logonStatusVal != "") 
+	       		|| (authIdVal != undefined && authIdVal != "")){
+					userName = getCookie("idsLoginUserIdLastTime");
+				}
+			}
+			if(userName != ""){
+				$("#alLoginName").text(userName);
+				$("#alLoginName").attr("title",userName);
+				$("#alLogin").show();
+				$("#withOutLogin").hide();
+			}else {
+				$("#alLogin").hide();
+				$("#withOutLogin").show();
+			} 
+	    }
+    });
+	
+    function getCookie(cookieName){
+		var cookieArr = document.cookie.split(';');
+		for(var i=0; i<cookieArr.length; i++){
+			var cookie = cookieArr[i];
+			while (cookie.charAt(0)==' '){
+				cookie = cookie.substring(1);
+			}
+			cookieEntry = cookie.split('=');
+			if(cookieEntry[0] == cookieName){
+				return decodeURIComponent(cookieEntry[1]);
+			}
+		}
+		return "";
+    }
+	
+	$(function(){
+        $(".os-nav li").each(function(index){
+            $(this).removeClass("os-on");
+            if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toApi")!=-1&&index=="3"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname.indexOf("toDevCenter")!=-1&&index=="4"){
+                $(this).addClass("os-on");
+            }else if(window.location.pathname=="/"&&index=="0"){
+                $(this).addClass("os-on");
+            }
+        })                
+	})
+</script>
+<div class="os-top bcs-top">
+	<div class="w1190 clearfix">
+		<div class="l os-snLogo"></div>	
+		<ul class="os-nav">
+			<li class="os-on"><a href="../../index-1.htm" tppabs="http://open.suning.com/">首页</a></li>
+			<li><a href="javascript:void(0);">开放版图<i></i></a>
+				<!--[if IE]>
+				<dl style="margin-left: -104px;margin-top: 55px;">
+				<![endif]-->
+				<!--[if !IE]><!-->
+				<dl>
+			    <!--<![endif]-->
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/road/roadIndex.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/road/roadIndex.html'" tppabs="https://road.suning.com/ospos/road/roadIndex.html" target="_blank">一号公路开放</a><i></i></dd>
+                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/toDevCenter.action  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/toDevCenter.action'" tppabs="https://road.suning.com/ospos/toDevCenter.action">商家后台开放</a><i></i></dd>
+                </dl>
+            </li>
+            <li><a href="toDocCenter-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toDocCenter.do">文档中心</a></li>
+			<li><a href="toApiListMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiListMenu.do">API文档</a></li>
+			<li><a href="../pushapi/toTopicPageList-1.do.htm" tppabs="http://open.suning.com/ospos/pushapi/toTopicPageList.do">消息文档</a></li>
+			<li><a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/toDevCenter.action">控制台</a></li>
+		</ul>
+		
+		<a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/logOut.action" class="os-exit" style="display: none;" id="alLogin">退出</a> 
+		<div class="r search-top">
+			<form method="post" action="http://open.suning.com/ospos/apipage/toSearchPage.do" id="tlSearchForm" style="display:inline;float:right;" autocomplete="off">
+                <input type="text" class="os-input" id="tlSearchIn" name="tlSearchName"/>
+                <span class="os-search" id="tlSearchBtn"></span>
+            </form>                
+                <span class="os-search"></span>
+                <span id="alLoginName" class="lname r"></span>
+                <a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/toLogin.action" class="os-login" style="display: none;" id="withOutLogin">登录</a>
+		</div>
+	</div>
+</div>
+    <div class="on-wrapp">
+        <div class="w1190 clearfix mb40 oh" style="position:relative;">
+            <div class="on-title">文档中心</div>
+            <div class="on-menuL w238">
+                <div class="child-menu">
+											<dl>
+													<dt class="parent-li">
+														<i class="se-menuIcon se-icon2 se-icon1"></i>
+														<a class="parenta">平台介绍</a>
+													</dt>
+													<dd class="child-parent" style="display: none;">                               
+													<ul>
+																	<li id=6 name="queryDocC">
+																		<a>平台简介</a>
+																	</li>
+																	<li id=8 name="queryDocC">
+																		<a>盈利模式</a>
+																	</li>
+																	<li id=7 name="queryDocC">
+																		<a>开放业务</a>
+																	</li>
+																	<li id=54 name="queryDocC">
+																		<a>一号公路入驻流程</a>
+																	</li>
+													</ul>
+												</dd>
+											</dl>
+											<dl>
+													<dt class="parent-li">
+														<i class="se-menuIcon se-icon2 se-icon1"></i>
+														<a class="parenta">应用接入</a>
+													</dt>
+													<dd class="child-parent" style="display: none;">                               
+													<ul>
+																	<li id=9 name="queryDocC">
+																		<a>接入指南</a>
+																	</li>
+													</ul>
+												</dd>
+											</dl>
+											<dl>
+													<dt class="parent-li">
+														<i class="se-menuIcon se-icon2 se-icon1"></i>
+														<a class="parenta">开发文档</a>
+													</dt>
+													<dd class="child-parent" style="display: none;">                               
+													<ul>
+																	<li id=10 name="queryDocC">
+																		<a>API变更记录</a>
+																	</li>
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>开发基础</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=18 name="queryDocC"><a>应用创建</a></li>
+																			<li id=19 name="queryDocC"><a>IP白名单设置</a></li>
+																			<li id=20 name="queryDocC"><a>权限体系说明</a></li>
+																		</ul>
+																	</dd> 
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>开发核心技术</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=21 name="queryDocC"><a>运行环境介绍</a></li>
+																			<li id=22 name="queryDocC"><a>用户授权介绍</a></li>
+																			<li id=23 name="queryDocC"><a>API调用方法详解</a></li>
+																			<li id=24 name="queryDocC"><a>SDK下载介绍</a></li>
+																			<li id=25 name="queryDocC"><a>API调用实例</a></li>
+																			<li id=41 name="queryDocC"><a>接口调用频率说明</a></li>
+																			<li id=53 name="queryDocC"><a>API签名算法</a></li>
+																			<li id=52 name="queryDocC"><a>消息推送指南</a></li>
+																			<li id=56 name="queryDocC"><a>消息推送使用说明</a></li>
+																		</ul>
+																	</dd> 
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>开发帮助文档</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=26 name="queryDocC"><a>应用标签介绍</a></li>
+																			<li id=27 name="queryDocC"><a>测试工具介绍</a></li>
+																		</ul>
+																	</dd> 
+													</ul>
+												</dd>
+											</dl>
+											<dl>
+													<dt class="parent-li">
+														<i class="se-menuIcon se-icon2 se-icon1"></i>
+														<a class="parenta">API调用场景</a>
+													</dt>
+													<dd class="child-parent" style="display: none;">                               
+													<ul>
+																	<li id=47 name="queryDocC">
+																		<a>销售准备</a>
+																	</li>
+																	<li id=48 name="queryDocC">
+																		<a>商品新增</a>
+																	</li>
+																	<li id=44 name="queryDocC">
+																		<a>商品信息修改</a>
+																	</li>
+																	<li id=45 name="queryDocC">
+																		<a>库存同步</a>
+																	</li>
+																	<li id=46 name="queryDocC">
+																		<a>订单同步</a>
+																	</li>
+																	<li id=49 name="queryDocC">
+																		<a>物流发货</a>
+																	</li>
+																	<li id=50 name="queryDocC">
+																		<a>退货退款</a>
+																	</li>
+																	<li id=51 name="queryDocC">
+																		<a>4PS业务场景</a>
+																	</li>
+													</ul>
+												</dd>
+											</dl>
+											<dl>
+													<dt class="parent-li">
+														<i class="se-menuIcon se-icon2 se-icon1"></i>
+														<a class="parenta">规则中心</a>
+													</dt>
+													<dd class="child-parent" style="display: none;">                               
+													<ul>
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>服务市场规则</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=28 name="queryDocC"><a>概述</a></li>
+																			<li id=29 name="queryDocC"><a>服务市场准入规则</a></li>
+																			<li id=30 name="queryDocC"><a>服务市场违规及处罚</a></li>
+																			<li id=31 name="queryDocC"><a>服务商及服务退市</a></li>
+																			<li id=32 name="queryDocC"><a>附则：规则解读</a></li>
+																		</ul>
+																	</dd> 
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>平台协议</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=33 name="queryDocC"><a>合作伙伴开发协议</a></li>
+																			<li id=34 name="queryDocC"><a>技术服务协议</a></li>
+																			<li id=35 name="queryDocC"><a>运营服务商服务协议</a></li>
+																			<li id=36 name="queryDocC"><a>oauth2.0授权说明</a></li>
+																		</ul>
+																	</dd> 
+													</ul>
+												</dd>
+											</dl>
+											<dl style="border-bottom: 1px solid #e2e3e4;">
+													<dt class="parent-li">
+													<i class="se-menuIcon se-icon2"></i>
+													<a class="parenta">常见问题</a>
+												</dt> 
+												<dd class="child-parent">                               
+													<ul>
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>技术问题</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=37 name="queryDocC"><a>技术规范</a></li>
+																			<li id=38 name="queryDocC"><a>API问题</a></li>
+																		</ul>
+																	</dd> 
+																	<li class="child-li">
+																		<dt>
+																			<i class="se-menuIcon se-icon2"></i>
+																			<a>名词解释</a>
+																		</dt>  
+																	</li> 
+																	<dd class="child-child">
+																		<ul>    
+																			<li id=39 name="queryDocC"><a>苏宁基础概念</a></li>
+																			<li id=40 name="queryDocC"><a>技术名词</a></li>
+																		</ul>
+																	</dd> 
+													</ul>
+												</dd> 
+											</dl>
+
+                    <a href="toApiListMenu-1.do.htm" tppabs="http://open.suning.com/ospos/apipage/toApiListMenu.do"><div class="se-APIDoc"><em></em>API说明文档</div></a>
+                  </div>
+            </div>
+            <div class="on-menuR ml240 clearfix">
+            </div>
+            <div class="menuLRH"></div>
+        </div>
+    </div>  
+
+    <!-- 置顶 -->
+    <div class="os-topTo" style="bottom: 210px;"></div>
+
+        <form id="queryContent" name="queryContent" method="get" action="toDocContent-1.do-menuid=.htm" tppabs="http://open.suning.com/ospos/apipage/toDocContent.do?menuId=">
+            <input type="hidden" name="menuId" id="queryMenuId" value=""/>
+        </form>
+<div class="foot">
+    <iframe scrolling="no" frameborder="0" width="100%" height="165" src="../../../sop.suning.com/sel/portal/common/footer-1.html" tppabs="http://sop.suning.com/sel/portal/common/footer.html"></iframe>
+</div>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/OpenSer.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/open/OpenSer.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/common.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/custom/common.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/json2.js-v=v1-1.0" tppabs="http://open.suning.com/ospos/staticfiles/js/custom/json2.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript"> 
+   $(document).ready(function(){ 
+                $("#17").addClass("on-menuOn");
+            });
+            
+             $("li[name='queryDocC']").click(function(){
+            var menuId=$(this).attr("id");
+            $("#queryMenuId").val(menuId);
+            $("#queryContent").submit();
+        });  
+</script>
+<script src="../../../static.suning.cn/osr/meas/time-1.js" tppabs="http://static.suning.cn/osr/meas/time.js"></script>
+</body>
+</html>
