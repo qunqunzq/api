@@ -1,0 +1,71 @@
+/**
+ * 招商首页改版
+ * User: 14080987
+ * Date: 12017-6-19
+ */
+@charset "utf-8";
+
+
+/* banner 滚动图 */
+.focusImages{ position: relative; z-index: 1; width: 100%; height:380px; overflow: hidden;}
+.focusImages li{ position: absolute; width: 100%; z-index: 1; left: 0; top: 0; overflow: hidden; text-align:center;}
+.focusImages img{ position: absolute; left: 50%; top: 0; width: auto !important;}
+
+.focusNumBox{ position: absolute; z-index: 2; left:50%; bottom:22px;}
+.focusNumBox a{display:inline-block; width:50px; height:2px; background: #666; margin: 0 5px;}
+.focusNumBox a.hideNumTxt{ text-indent: -99em;}
+.focusNumBox a i{display:inline-block; height:2px;}
+.focusNumBox a.focusSel i{ background: #fff; color: #000; animation:mymove 4s linear;}
+.focusPreArr{display:none; position:absolute; width:21px; height:65px; top:50%; left: 20px; background:url("images/focus/focus-prev.png")/*tpa=http://sop.suning.com/front/css/images/focus/focus-prev.png*/ no-repeat center; z-index:5;}
+.focusNextArr{display:none; position:absolute; width:21px; height:65px; top:50%; right: 20px; background:url("images/focus/focus-next.png")/*tpa=http://sop.suning.com/front/css/images/focus/focus-next.png*/ no-repeat center; z-index:5;}
+
+.focusBox:hover .focusPreArr, .focusBox:hover .focusNextArr{display:inline-block;}
+
+
+
+
+@keyframes mymove {
+	0% {width:0;}
+	100% {width:100%;}
+}
+
+/* 信息公告 */
+.index-notice-box{min-height:250px; background:#fff;}
+.index-notice{width:1190px; padding:40px 0; margin:auto;}
+.index-notice > li{float:left; width:396px; min-height:170px; border-right:1px solid #eee; text-align:center;}
+.index-notice > li.index-notice-last{width:352px; padding-left:44px; border:none; text-align:left;}
+.index-notice h1{font:normal 20px/40px 'MicroSoft YaHei'; color:#333;}
+.index-notice p{margin:5px 0 25px; font:16px/24px 'MicroSoft YaHei'; color:#999;}
+a.index-notice-btn{display:inline-block; width:160px; height:46px; background:#f70; border-radius:2px; text-align:center; font-size:16px; line-height:46px; color:#fff; }
+a.index-notice-btn:hover{background:#f80; text-decoration:none;}
+.index-list li{height:26px; padding-left:12px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ no-repeat -397px 11px; font:14px/26px 'MicroSoft YaHei'; color:#666; }
+.index-list li a{display:inline-block; max-width:250px; height:24px; color:#666;  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.index-list li a:hover{color:#f70;}
+.index-list li em{display:inline-block; width:30px; height:14px; margin-left:5px; border:1px solid #f55; border-radius:2px; font-size:12px; line-height:14px; color:#ff5555; text-align:center; vertical-align:8px;}
+
+/* 首页连版广告 */
+.index-floor-new h2{font:30px/118px 'MicroSoft YaHei'; color:#333; text-align:center;}
+.index-new-list li{float:left; position:relative; width:227px; height:auto; padding:30px; margin-right:14px; background:#fff; text-align:center; overflow:hidden;}
+.index-new-list li:last-of-type{margin-right:0;}
+.index-new-list li:hover{box-shadow:0 0 20px #dbdbdb;}
+.index-new-list li > div{position:absolute; width:100px; height:100px; margin-left:-50px; border-radius:50%; z-index:1; top:30px; left:50%;}
+.index-new-list li:hover > div{width:400px; height:400px; margin:0; animation: alls 1500ms linear;border-radius:0; left:0; top:0; color:#fff;}
+.index-new-list li:hover h1, .index-new-list li:hover p, .index-new-list li:hover a{animation: words 10ms linear; animation-delay:10ms; animation-fill-mode:forwards}
+.index-new-list li:hover p{opacity:0.8;}
+.index-new-list h1{position:relative; padding:10px 0; font:normal 18px/24px 'MicroSoft YaHei'; color:#333; z-index:2;}
+.index-new-list p{position:relative; font:normal 14px/24px 'MicroSoft YaHei'; color:#666; z-index:2;}
+.index-new-list a{position:relative; display:block; padding:10px 0; font:14px/24px 'MicroSoft YaHei'; color:#3399ee; z-index:2;}
+.index-new-list a:hover{color:#f70;}
+.index-new-list i{position:relative; display:inline-block; width:100px; height:100px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ no-repeat 0 -15px; z-index:2;}
+.index-new-list i.indes-new-ad{background-position:0 -116px;}
+.index-new-list i.indes-new-money{background-position:0 -217px;}
+.index-new-list i.indes-new-data{background-position:0 -318px;}
+
+@keyframes alls {
+	0% {width:100px; height:100px; margin-left:-50px; border-radius:50%; top:30px; left:50%;}
+	100% {width:400px; height:400px; border-radius:50%; left:0; top:0; transform: scale(10); }
+}
+
+@keyframes words{
+	100% {color:#fff;}
+}

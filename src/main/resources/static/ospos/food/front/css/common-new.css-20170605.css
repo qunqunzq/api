@@ -1,0 +1,91 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 'MicroSoft YaHei',arial,tahoma,\5b8b\4f53;color:#333;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+em,i{font-style:normal;}
+fieldset,img{border:0;}
+img{vertical-align:top;}
+ul,ol{list-style:none;}
+a{color:#2272CB;text-decoration:none;outline:none;}
+a:hover{color:#F70;text-decoration:underline;}
+.clear{clear:both;display:block;height:0;overflow:hidden;font-size:0;}
+button,input,select,textarea{font-size:100%;outline:none}
+table{border-collapse:collapse;border-spacing:0;}
+.hide{display:none;}
+.l{float:left;}
+.r{float:right;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{zoom:1;}
+.mt10{margin-top:10px!important;}
+.mr10{margin-right:10px!important;}
+.mb10{margin-bottom:10px!important;}
+.ml10{margin-left:10px!important;}
+.w1190{width:1190px;margin:0 auto;}
+/*body{background:#f5f5f5;}*/
+
+/*头部*/
+.g-header {width:100%; min-width:1190px;background:#f5f5f5;}
+.g-header .topArea {width:1190px;height:30px;line-height:30px;margin:0 auto;}
+.g-header .topArea .back-index{display:inline-block; margin-right:18px; color:#666;}
+.g-header .topArea .back-index i{display:inline-block; width:12px; height:12px; margin-right:5px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/; vertical-align:-1px;}
+.g-header .topArea > span{display:inline-block; margin-right:18px; color:#666;}
+.g-header .topArea .head-login{display:inline-block; color:#f70; margin-right:18px;}
+.g-header .topArea .head-register{display:inline-block; color:#666; margin-right:18px;}
+.g-header .topArea .grey{color:#666;}
+.g-header .topArea .name{padding-right:15px;color:#666;}
+/* 页头商户图标 */
+.g-header .topArea .shang-icon{display:inline-block; width:14px; height:18px; margin-left:5px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ -230px 0; vertical-align:-4px;}
+/* 页头供应商图标 */
+.g-header .topArea .gong-icon{display:inline-block; width:14px; height:18px; margin-left:5px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ -245px 0; vertical-align:-4px;}
+/* 页头站内信图标 */
+.mail-icon{display:inline-block; width:19px; height:18px; margin-right:3px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ -260px 0; vertical-align:-2px;}
+
+.g-header .topArea .headerMenu{float:right;}
+.topArea .headerMenu > li{float:left; position:relative; padding:0 10px; border:1px solid #f5f5f5; border-width:0 1px; line-height:30px;}
+.topArea .headerMenu a{color:#666;}
+.topArea .headerMenu a:hover{color:#f70;}
+.topArea .headerMenu .head-map{width:98px; height:30px; padding:0;}
+.topArea .headerMenu .head-map-hand{padding:0 10px; cursor:pointer;}
+.topArea .headerMenu .head-phone-code{height:30px; padding:0;}
+.topArea .headerMenu .head-map-icon{display:inline-block; width:12px; height:12px; margin-right:5px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ -15px 0; vertical-align:-2px;}
+.topArea .headerMenu .head-down{display:inline-block; width:10px; height:5px; margin-left:3px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ -45px 0; vertical-align:1px;}
+.topArea .headerMenu .head-phone{display:inline-block; width:10px; height:14px; margin-right:5px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ -30px 0; vertical-align:-2px;}
+.topArea .headerMenu li.on{background:#fff; border:1px solid #e6e6e6; border-width:0 1px;}
+
+.topArea .headerMenu li.on .head-map-hand{position:relative; border-bottom:1px solid #fff; z-index:100;}
+.head-map-con{display:none; position:absolute; width:740px; height:148px; margin-top:-1px; padding:25px 0; background:#fff; border:1px solid #e6e6e6; z-index:99; right:-1px;}
+.head-map-con ul{float:left; height:148px; padding:0 30px; border-right:1px solid #eee;}
+.head-map-con ul:last-of-type{border-right:0;}
+.head-map-con ul li{width:66px; font:12px/24px 'MicroSoft YaHei'; color:#666;}
+.head-map-con ul li:first-of-type{padding-bottom:10px; font:bold 15px/20px "MicroSoft YaHei"; color:#333;}
+
+.head-phone-con{display:none; position:absolute; margin-top:-1px; padding:10px; border:1px solid #e6e6e6; background:#fff; z-index:99; right:-1px;}
+
+
+/* 页面底部 */
+.i-footer{position:relative; width:100%; min-width:1190px; height:200px; margin-top:100px; background:#222; font:12px/26px 'MicroSoft YaHei'; text-align:center; color:#999;}
+.i-footer a{padding:0 5px; color:#999;}
+.i-footer a:hover, .i-footer a.blue:hover, .i-footer a.orange{color:#f70;}
+.i-footer a.blue{color:#39e;}
+.footer-lion{position:absolute; width:100px; height:57px; margin-left:-50px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ no-repeat -110px -15px; top:-52px; left:50%;}
+.pt10{padding-top:10px;}
+.mt30{margin-top:30px;}
+.pt30{padding-top:30px;}
+
+.i-footer dt, .i-footer dd{text-align:left; color:#666;}
+.i-footer .foot-s a{padding:0; text-align:left;}
+
+
+/*导航*/
+.g-top{width:100%; min-width:1190px;background:#FFF;}
+.topBG{width:1190px;height:90px;margin:0 auto;overflow:hidden;}
+.topBG .logo{float:left;margin-top:33px;}
+.topBG .nav{float:right;position:relative;}
+.topBG .nav .nav-slide{position:absolute;top:0;left:0;width:100px;height:77px;background:#FAFAFA;border-top:3px solid #F70;z-index:1;}
+.topBG .nav ul{float:left;position:relative;z-index:2;}
+.topBG .nav li{float:left;height:80px;}
+.topBG .nav li a{display:block;padding:0 30px;font:18px/76px 'Microsoft YaHei';color:#222;}
+.topBG .nav li a:hover{color:#F70;text-decoration:none;}
+.topBG .nav li.on a{color:#F70;}
+
+
