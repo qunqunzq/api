@@ -63,12 +63,12 @@ table{border-collapse:collapse;border-spacing:0;}
 
 
 /* 页面底部 */
-.i-footer{position:relative; width:100%; min-width:1190px; height:200px; margin-top:100px; background:#222; font:12px/26px 'MicroSoft YaHei'; text-align:center; color:#999;}
+.i-footer{position:relative; width:100%; min-width:1190px; height:100px; margin-top:100px; background: #758a94; font:12px/26px 'MicroSoft YaHei'; text-align:center; color: #f9fdfe;}
 .i-footer a{padding:0 5px; color:#999;}
 .i-footer a:hover, .i-footer a.blue:hover, .i-footer a.orange{color:#f70;}
 .i-footer a.blue{color:#39e;}
 .footer-lion{position:absolute; width:100px; height:57px; margin-left:-50px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ no-repeat -110px -15px; top:-52px; left:50%;}
-.pt10{padding-top:10px;}
+.pt10{padding-top:20px;}
 .mt30{margin-top:30px;}
 .pt30{padding-top:30px;}
 
