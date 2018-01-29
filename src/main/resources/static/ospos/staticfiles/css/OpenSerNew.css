@@ -25,7 +25,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 
 /*首页*/
 .os-top{ position: relative; min-width:1300px;height: 66px;background: #1976e6; z-index: 5}
-.os-snLogo{width: 323px; height: 25px; margin-top:20px;background: url("../images/weLogo.png")/*tpa=https://open.suning.com/ospos/staticfiles/images/snLogo.png*/ no-repeat;margin-right: 40px;}
+.os-snLogo{width: 323px; height: 64px; margin-top:20px;background: url("../images/hisense1.png") no-repeat;margin-right: 40px;margin-left:60px}
 .os-nav >li{float: left; font-size: 16px; height: 66px;line-height: 66px; padding:0 16px; text-align: center;transition:all .3s;}
 .os-nav >li:hover{background: #156fdc;transition:all .5s;}
 .os-nav >li dl a:hover{ color: #ff9c00;}
