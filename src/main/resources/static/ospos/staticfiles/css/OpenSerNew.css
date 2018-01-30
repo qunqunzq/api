@@ -24,10 +24,10 @@ a:hover{color:#ff7700;text-decoration:none;}
 
 
 /*首页*/
-.os-top{ position: relative; min-width:1300px;height: 66px;background: #1976e6; z-index: 5}
+.os-top{ position: relative; min-width:1300px;height: 66px;background: #01b5b7; z-index: 5}
 .os-snLogo{width: 323px; height: 64px; margin-top:20px;background: url("../images/hisense1.png") no-repeat;margin-right: 40px;margin-left:60px}
 .os-nav >li{float: left; font-size: 16px; height: 66px;line-height: 66px; padding:0 16px; text-align: center;transition:all .3s;}
-.os-nav >li:hover{background: #156fdc;transition:all .5s;}
+.os-nav >li:hover{background: #009da0;transition:all .5s;}
 .os-nav >li dl a:hover{ color: #ff9c00;}
 .os-nav >li a{display: inline-block; padding:0; height: 46px;color: #fff;}
 .os-nav >li a i{ display: inline-block; width: 9px; height: 5px; margin-left: 10px; background: url("images/arrow.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/arrow.png*/ no-repeat -28px 0; vertical-align: 3px;}
@@ -44,7 +44,8 @@ a:hover{color:#ff7700;text-decoration:none;}
 .os-search{display: inline-block;width: 16px;height: 16px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ no-repeat;margin-right: 27px;  margin-top: -17px;vertical-align: middle;background-position: 0 0;margin-left: -30px;cursor: pointer;}
 .os-search:hover{background-position: -19px 0;}
 .os-input{width: 0px;height: 32px;line-height: 32px;border: none;background: #1666c7;border-radius: 5px;color: #fff;font-family: 'Microsoft YaHei';vertical-align: bottom;margin-top: 18px;}
-.os-on{background: #156fdc;}
+.os-on{background: #009da0;}
+.os-inLogo{ margin-right:50px;}
 
 .ds-carousel .ds-switchable-content .os-link{display: inline-block;position: absolute;left: 50%;top: 253px;width: 206px;height: 56px;line-height:56px;border-radius: 30px;border:2px solid #fff;z-index: 100;font-size: 24px;color: #fff;text-align: center;transition:all .3s;margin-left: -595px;}
 .ds-carousel .ds-switchable-content .os-link em{display: inline-block;width: 28px;height: 28px;background: url("images/OpenSer-pic.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer-pic.png*/ no-repeat;background-position: 0px -900px; vertical-align: middle;margin-left: 15px;margin-top: -5px;}
@@ -217,7 +218,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 /*公告*/
 .on-wrapp{background: #f5f6f7;min-width: 1300px;overflow: hidden;}
 .on-title{padding: 30px 0 20px 0;font-size: 20px;color: #333;}
-.on-menuL{width: 278px;border: 1px solid #e2e3e4;border-top:1px solid #1976e6;float: left;font-size: 14px;background: #f7f8f9;margin-bottom: -99999px;padding-bottom: 99999px;}
+.on-menuL{width: 278px;border: 1px solid #e2e3e4;border-top:1px solid #01b5b7;float: left;font-size: 14px;background: #f7f8f9;margin-bottom: -99999px;padding-bottom: 99999px;}
 .on-menuR{background: #fff;margin-left: 280px;margin-bottom: -99999px;padding-bottom: 99999px;}
 .on-menuL,.on-menuR{min-height: 580px;height: auto !important;height: 580px;}
 .on-menuL ul >li{padding: 12px 15px;border-top: 1px solid #e2e3e4;position: relative;cursor: pointer;color: #333;}
@@ -225,9 +226,9 @@ a:hover{color:#ff7700;text-decoration:none;}
 .on-menuL ul >li:hover .on-c999{color: #999;}
 .on-menuL ul >li:hover a{color: #ff7700;} 
 .on-menuL .on-c999{color: #999;}
-.on-menuL .on-menuOn{background: #1976e6;color: #fff;}
+.on-menuL .on-menuOn{background: #01b5b7;color: #fff;}
 .on-menuL .on-menuOn a{color: #fff !important;}
-.on-menuL ul .on-menuOn:hover{background: #1976e6;}
+.on-menuL ul .on-menuOn:hover{background: #009da0;}
 .on-menuL ul .on-menuOn:hover div{color: #fff;}
 .on-menuL .on-menuOn .on-c999{color: #fff;}
 .on-menuL .on-cfff{color: #fff;}
@@ -291,9 +292,9 @@ a:hover{color:#ff7700;text-decoration:none;}
 .se-APIDoc:hover{border:1px solid #1976e6;}
 .se-APIDoc em{display: inline-block;width: 25px;height: 28px;background: url("images/leftbg.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/leftbg.png*/ -47px 0px no-repeat;vertical-align: middle;margin-right: 15px;}
 
-.on-menuR .pr-title{height: 40px;line-height: 40px;background: #f7f8f9;font-weight:bold;font-size: 16px;border-left:3px solid #1976e6;padding-left: 15px;margin-bottom: 20px;cursor: pointer;}
+.on-menuR .pr-title{height: 40px;line-height: 40px;background: #f7f8f9;font-weight:bold;font-size: 16px;border-left:3px solid #01b5b7;padding-left: 15px;margin-bottom: 20px;cursor: pointer;}
 .on-menuR .pr-title:hover{background:#eaf4fc;}
-.on-menuR .pr-title em{display: inline-block;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ no-repeat;float: right;margin: 17px 15px 0 0 ;cursor: pointer;}
+.on-menuR .pr-title em{display: inline-block;background: url("images/OpenSer.png")  no-repeat;float: right;margin: 17px 15px 0 0 ;cursor: pointer;}
 .on-menuR .pr-title .pr-down{width: 10px;height: 6px; background-position: 0 -144px ;}
 .on-menuR .pr-title .pr-up{width: 6px;height: 10px; background-position: -13px -144px;margin: 15px 15px 0 0;}
 .on-menuR .pr-p1{color: #666;line-height: 25px;}
@@ -315,7 +316,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .ap-APIDoc{width: 206px;height: 48px;line-height:48px;border:1px solid #e2e3e4;text-align: center;background: #fff;margin: 15px 0 15px 13px;font-size: 14px;font-weight: bold;color: #666;cursor: pointer;}
 .ap-APIDoc:hover{border:1px solid #1976e6;}
 .ap-APIDoc em{display: inline-block;width: 25px;height: 28px;background: url("images/leftbg.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/leftbg.png*/ -75px 0px no-repeat;vertical-align: middle;margin-right: 15px;}
-.ap-conT{color: #2272c8;font-size: 14px;font-weight: bold;}
+.ap-conT{color: #01b5b7;font-size: 14px;font-weight: bold;}
 .cirIcon{display: inline-block;width: 5px;height: 5px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ 0 -154px no-repeat;vertical-align: middle;margin-right: 10px;}
 .ap-dash{border:none;border-top: 1px dashed #e2e3e4;margin:20px 0;}
 
@@ -342,7 +343,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .on-title .go-title a{color: #666;}
 .on-title .go-title a:hover{color: #ff7700;}
 .on-title .go-title span{font-size: 14px;font-weight: bold;color: #333;}
-.on-menuL .go-backLink{padding: 12px 15px;display: inline-block;width: 206px;color: #2272c8;border-bottom: 1px solid #e2e3e4;}
+.on-menuL .go-backLink{padding: 12px 15px;display: inline-block;width: 206px;color: #01b5b7;border-bottom: 1px solid #e2e3e4;}
 .on-menuL .go-backLink:hover{color: #ff7700;}
 .on-menuL .go-backLink em{display: inline-block;width: 18px;height: 16px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ -110px -27px no-repeat;vertical-align: middle;margin-right: 5px;margin-top: -2px;}
 .on-menuL .go-list ul li{border-bottom: 1px solid #e2e3e4;border-top: none;}

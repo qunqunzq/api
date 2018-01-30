@@ -15,71 +15,8 @@
 <script type="text/javascript" src="ospos/staticfiles/js/jquery.min.js"   charset="UTF-8"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-	    if("" != ""){
-			var userName = "";
-			$("#alLoginName").text(userName);
-			$("#alLoginName").attr("title",userName);
-			$("#alLogin").show();
-			$("#withOutLogin").hide();
-	    }else {
-			var userName = getCookie("osposLoginUserIdFlag");
-			if(userName == ""){
-				var logonStatusVal = getCookie("logonStatus");
-				var authIdVal = getCookie("authId");
-				if((logonStatusVal != undefined && logonStatusVal != "") 
-	       		|| (authIdVal != undefined && authIdVal != "")){
-					userName = getCookie("idsLoginUserIdLastTime");
-				}
-			}
-			if(userName != ""){
-				$("#alLoginName").text(userName);
-				$("#alLoginName").attr("title",userName);
-				$("#alLogin").show();
-				$("#withOutLogin").hide();
-			}else {
-				$("#alLogin").hide();
-				$("#withOutLogin").show();
-			} 
-	    }
-	    
-	   /* var _top = document.body.scrollTop || document.documentElement.scrollTop;
-        if(_top>0){
-            $("#scrollHead").addClass("rolling")
-        }else{
-            $("#scrollHead").removeClass("rolling")
-        }*/
         $("#scrollHead").addClass("rolling")
     });
-	
-    function getCookie(cookieName){
-		var cookieArr = document.cookie.split(';');
-		for(var i=0; i<cookieArr.length; i++){
-			var cookie = cookieArr[i];
-			while (cookie.charAt(0)==' '){
-				cookie = cookie.substring(1);
-			}
-			cookieEntry = cookie.split('=');
-			if(cookieEntry[0] == cookieName){
-				return decodeURIComponent(cookieEntry[1]);
-			}
-		}
-		return "";
-    }
-	
-	$(function(){
-        $(".os-nav li").each(function(index){
-            $(this).removeClass("os-on");
-            if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
-                $(this).addClass("os-on");
-            }else if(window.location.pathname.indexOf("toApi")!=-1&&index=="3"){
-                $(this).addClass("os-on");
-            }else if(window.location.pathname.indexOf("toDevCenter")!=-1&&index=="4"){
-                $(this).addClass("os-on");
-            }else if(window.location.pathname=="/"&&index=="0"){
-                $(this).addClass("os-on");
-            }
-        })                
-	})
 </script>
 <div id="scrollHead" class="os-top">
 	<div class="clearfix">
@@ -87,15 +24,7 @@
 			<img src="ospos/staticfiles/images/hisense1.png" height="64px" width="210px"/>
 		</div>
 		<ul class="os-nav">
-			<li class="os-on"><a href="index.htm" >首页</a></li>
-			<!--<li><a href="javascript:void(0);">开放版图<i></i></a>
-            	<dl>
-                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/road/roadIndex.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/road/roadIndex.html'" tppabs="https://road.suning.com/ospos/road/roadIndex.html" target="_blank">一号公路开放</a><i></i></dd>
-                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/toDevCenter.action  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://road.suning.com/ospos/toDevCenter.action'" tppabs="https://road.suning.com/ospos/toDevCenter.action">商家后台开放</a><i></i></dd>
-                </dl>
-            </li>-->
-           <!-- <li><a href="ospos/apipage/toDocCenter.do.htm" tppabs="">文档中心</a></li>-->
-          <!--  <li><a href="ospos/apipage/toDocCenter.do.htm" >文档中心</a></li>-->
+			<li><a href="index.htm" >首页</a></li>
 			<li><a href="ospos/apipage/toApiListMenu.do.htm" >API文档</a></li>
 			<li><a href="ospos/pushapi/toTopicPageList.do.htm" >消息文档</a></li>
 		</ul>
@@ -105,155 +34,24 @@
 	    <div class="ds-switchable-content">
 	        <p style="display: block; padding-top:215px;background-color:#ADADAD; height:1200px; background:url(ospos/staticfiles/images/hisenseHome.jpg) no-repeat center 0 #02000b;">
 	            <a>
-	                <img src="ospos/staticfiles/images/01.png" tppabs="https://open.suning.com/ospos/staticfiles/images/01.png" width="357">
-	                <a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttp%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos'" tppabs="http://open.suning.com/ospos/toDevCenter.action" class="os-link">查看更多<em></em></a>
+	                <img src="ospos/staticfiles/images/011.png"   width="357">
+	                <a href="ospos/apipage/toApiListMenu.do.htm"   class="os-link">查看更多<em></em></a>
 	                <span class="lo-panner lo-icon1"></span>
 	                <span class="lo-panner lo-icon2"></span>
 	                <span class="lo-panner lo-icon3"></span>
 	            </a>
 	        </p>
-	       <!-- <p style=" background:url(http://image.suning.cn/uimg/API/KFFW/147689047689648139.jpg) no-repeat center 0 #050810;">
-	        	<a href="javascript:if(confirm('http://road.suning.com/ospos/road/roadIndex.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://road.suning.com/ospos/road/roadIndex.html'" tppabs="http://road.suning.com/ospos/road/roadIndex.html" target="_blank">
-                    <img class="pic2" src="ospos/staticfiles/images/02.png" tppabs="https://open.suning.com/ospos/staticfiles/images/02.png" width="578" height="126">
-	        	</a>
-	        </p>-->
-	    </div>
-	    <!--<ul class="ds-switchable-nav">
-	        <li class="ds-active"></li>
-                            <li></li>
-	    </ul>-->
-	</div>
-	<!--公告-->
-	<!--<div class="os-newsTip clearfix">
-		<div class="w1190">
-			<ul class="os-newUl">
-				<li><em class="os-newI"></em></li>
-				&lt;!&ndash;<li><em class="os-listI"></em><a href="ospos/apipage/queryNotice.do-noticeId=55.htm" tppabs="https://open.suning.com/ospos/apipage/queryNotice.do?noticeId=55">云台系统升级期间，暂停服务</a><em class="os-newH"></em></li>
-				<li><em class="os-listI"></em><a href="ospos/apipage/queryNotice.do-noticeId=54.htm" tppabs="https://open.suning.com/ospos/apipage/queryNotice.do?noticeId=54">采购订单相关接口更新公告</a><em class="os-newH"></em></li>
-				<li><em class="os-listI"></em><a href="ospos/apipage/queryNotice.do-noticeId=53.htm" tppabs="https://open.suning.com/ospos/apipage/queryNotice.do?noticeId=53">商品相关接口双11期间关闭通知</a><em class="os-newH"></em></li>
-			&ndash;&gt;</ul>
-		&lt;!&ndash;	<a href="ospos/apipage/queryNotice.do.htm" tppabs="https://open.suning.com/ospos/apipage/queryNotice.do" class="r os-moreLink">查看更多 &gt;</a>&ndash;&gt;
-		</div>
-	</div>-->
-	<!--<div class="os-wrapp clearfix">
-		<div class="w1190">
-			<ul>
-				<li>
-					<a href="ospos/apipage/toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do">
-						<div class="os-move">
-							<em class="os-listP os-listP1"><img src="ospos/uimg/144527301503807843.png"  ></em>
-							<em class="os-listP os-listP11"><img src="ospos/uimg/144527301503807842.png" ></em>
-							<p class="os-listT">电商业务</p>
-							<p class="os-listC">商家自主经营管理商品</p>
-						</div>
-						<a href="ospos/apipage/toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do" class="os-detail">了解详情</a>
-					</a>
-				</li>
-				<li>
-					<a href="ospos/apipage/toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do">
-						<div class="os-move">
-							<em class="os-listP os-listP1"><img src="../image.suning.cn/uimg/API/KFFW/144527306053595552.png" tppabs="http://image.suning.cn/uimg/API/KFFW/144527306053595552.png"></em>
-							<em class="os-listP os-listP11"><img src="../image.suning.cn/uimg/API/KFFW/144527306712475777.png" tppabs="http://image.suning.cn/uimg/API/KFFW/144527306712475777.png"></em>
-							<p class="os-listT">物流管理</p>
-							<p class="os-listC">开放大物流体系</p>
-						</div>
-						<a href="ospos/apipage/toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do" class="os-detail">了解详情</a>
-					</a>
-				</li>
-				<li>
-					<a href="ospos/apipage/toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do">
-						<div class="os-move">
-							<em class="os-listP os-listP1"><img src="../image.suning.cn/uimg/API/KFFW/144527311260063842.png" tppabs="http://image.suning.cn/uimg/API/KFFW/144527311260063842.png"></em>
-							<em class="os-listP os-listP11"><img src="../image.suning.cn/uimg/API/KFFW/144527311899528452.png" tppabs="http://image.suning.cn/uimg/API/KFFW/144527311899528452.png"></em>
-							<p class="os-listT">网盟业务</p>
-							<p class="os-listC">开放网盟业务资源</p>
-						</div>
-						<a href="ospos/apipage/toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do" class="os-detail">了解详情</a>
-					</a>
-				</li>
-				<li>
-					<a href="ospos/apipage/toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do">
-						<div class="os-move">
-							<em class="os-listP os-listP1"><img src="../image.suning.cn/uimg/API/KFFW/144527314196857247.png" tppabs="http://image.suning.cn/uimg/API/KFFW/144527314196857247.png"></em>
-							<em class="os-listP os-listP11"><img src="../image.suning.cn/uimg/API/KFFW/144527314814931037.png" tppabs="http://image.suning.cn/uimg/API/KFFW/144527314814931037.png"></em>
-							<p class="os-listT">自营业务</p>
-							<p class="os-listC">开放苏宁自营业务资源</p>
-						</div>
-						<a href="ospos/apipage/toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do" class="os-detail">了解详情</a>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>-->
-	<!--<div class="os-contact" style="*margin-top:30px;">
-		<div class="w1190 clearfix">
-			<em class="os-titleT"></em>
-			<span class="os-title">相关业务</span>
-			<ul>
-				<li style="margin-right:62px;">
-					<a target="_blank" href="javascript:if(confirm('http://fuwu.suning.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://fuwu.suning.com/'" tppabs="http://fuwu.suning.com/" class="l os-pic">
-						<em class="os-pic1"><img src="../image.suning.cn/uimg/API/KFFW/144527323095258432.png" tppabs="http://image.suning.cn/uimg/API/KFFW/144527323095258432.png"></em>
-						<em class="os-pic11"><img src="../image.suning.cn/uimg/API/KFFW/144527321097483365.png" tppabs="http://image.suning.cn/uimg/API/KFFW/144527321097483365.png"></em>
-					</a>
-					<span class="os-font">
-						<a target="_blank" href="javascript:if(confirm('http://fuwu.suning.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://fuwu.suning.com/'" tppabs="http://fuwu.suning.com/">苏宁服务市场</a>
-						<p>苏宁服务市场，卖家电商应用和电商 IT 服务交易市场。</p>
-					</span>
-				</li>
-				<li style="margin-right:62px;">
-					<a target="_blank" href="javascript:if(confirm('http://isv.suningcloud.com/mpisv-web/index  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://isv.suningcloud.com/mpisv-web/index'" tppabs="http://isv.suningcloud.com/mpisv-web/index" class="l os-pic">
-						<em class="os-pic1"><img src="../image.suning.cn/uimg/API/KFFW/144527331453628643.png" tppabs="http://image.suning.cn/uimg/API/KFFW/144527331453628643.png"></em>
-						<em class="os-pic11"><img src="../image.suning.cn/uimg/API/KFFW/144527331965515425.png" tppabs="http://image.suning.cn/uimg/API/KFFW/144527331965515425.png"></em>
-					</a>
-					<span class="os-font">
-						<a target="_blank" href="javascript:if(confirm('http://isv.suningcloud.com/mpisv-web/index  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://isv.suningcloud.com/mpisv-web/index'" tppabs="http://isv.suningcloud.com/mpisv-web/index">苏宁云 服务商</a>
-						<p>苏宁服务商门户，服务商商机和信息资讯门户。</p>
-					</span>
-				</li>
-				<li>
-					<a target="_blank" href="javascript:if(confirm('http://www.suningcloud.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.suningcloud.com/'" tppabs="http://www.suningcloud.com/" class="l os-pic">
-						<em class="os-pic1"><img src="../image.suning.cn/uimg/API/KFFW/144527334684815172.png" tppabs="http://image.suning.cn/uimg/API/KFFW/144527334684815172.png"></em>
-						<em class="os-pic11"><img src="../image.suning.cn/uimg/API/KFFW/144527335151571637.png" tppabs="http://image.suning.cn/uimg/API/KFFW/144527335151571637.png"></em>
-					</a>
-					<span class="os-font">
-						<a target="_blank" href="javascript:if(confirm('http://www.suningcloud.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.suningcloud.com/'" tppabs="http://www.suningcloud.com/">苏宁云</a>
-						<p>苏宁云，给卖家、ISV提供的电商应用托管云平台，保证业务平稳，实现资源弹性使用。</p>
-					</span>
-				</li>
-			</ul>
-		</div>
-	</div>-->
 
-	<!-- 置顶 -->
-<!--	<div class="os-topTo"></div>
-<form id="queryNotice" name="queryNotice" method="post" action="ospos/apipage/queryNotice.do-noticeId=.htm" tppabs="https://open.suning.com/ospos/apipage/queryNotice.do?noticeId=">
-	<input type="hidden" name="noticeId" id="noticeId" value=""/>
-</form>-->
+	    </div>
+
+	</div>
+
 <div class="foot">
     <iframe scrolling="no" frameborder="0" width="100%" height="100" src="ospos/food/sel/portal/common/footer.html"  ></iframe>
-</div>			<script type="text/javascript" src="ospos/staticfiles/js/jquery.min.js"   charset="UTF-8"></script>
+</div>
+		<script type="text/javascript" src="ospos/staticfiles/js/jquery.min.js"   charset="UTF-8"></script>
 			<script type="text/javascript" src="ospos/staticfiles/js/open/OpenSer.js"  charset="UTF-8"></script>
 			<script type="text/javascript" src="ospos/staticfiles/js/open/op_widget.js"   charset="UTF-8"></script>
 			<script type="text/javascript" src="ospos/staticfiles/js/open/openUPdate.js" charset="UTF-8"></script>
-
-<script type="text/javascript">
-
-    $(".SN_Widget").opWidget();
-
-   /* $(document).scroll(function(){
-      /!*  var _top = document.body.scrollTop || document.documentElement.scrollTop;
-        if(_top>0){*!/
-
-       /!* }else{
-            $("#scrollHead").removeClass("rolling")
-        }*!/
-    });*/
-	
-	function queryNotice(noticeId){
-	   $("#noticeId").val(noticeId);
-	   $("#queryNotice").submit();
-	}
-
-</script>
 </body>
 </html>

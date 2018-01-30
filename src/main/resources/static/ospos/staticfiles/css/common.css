@@ -6,7 +6,7 @@ em,i{font-style:normal;}
 fieldset,img{border:0;}
 img{vertical-align:top;}
 ul,ol{list-style:none;}
-a{color:#2272c8;text-decoration:none;outline:none;}
+a{color: #009da0;text-decoration:none;outline:none;}
 a:hover{color:#FF7700;text-decoration:underline;}
 .clear{clear:both;display:block;height:0;overflow:hidden;font-size:0;}
 button,input,select,textarea{font-size:100%;outline:none}
@@ -45,7 +45,7 @@ table{border-collapse:collapse;border-spacing:0;}
 
 /*juyunfang==============2014-09-23==============*/
 /*sBtn*/
-.sBtn,.sBtn span{display:inline-block;background:url("images/allBtn.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/allBtn.png*/ no-repeat;}
+.sBtn,.sBtn span{display:inline-block;background:url("images/allBtn.png")  no-repeat;}
 .sBtn{padding-left:15px;}
 .sBtn:hover{text-decoration:none;}
 .sBtn span{padding-right:15px;text-align:center;font-weight:700;cursor:pointer; vertical-align:top;}
@@ -204,7 +204,7 @@ table{border-collapse:collapse;border-spacing:0;}
 
 /*================================ 提示信息 ===============================*/
 /*tipIcon.png聚合图*/
-.notice i ,.message b ,.confirm-tips .tips i{background:url("images/tipIcon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ no-repeat 0 -999em;}
+.notice i ,.message b ,.confirm-tips .tips i{background:url("images/tipIcon.png")  no-repeat 0 -999em;}
 .notice{display:inline-block; padding:5px 10px; line-height:18px; border:1px solid #ffcc66; background-color:#FFFFF0; color:#333;}
 .notice-multi{padding:6px 10px;}
 .notice i{float:left; margin:1px 5px 0 0; width:16px; height:16px; background-position:-180px -140px;}
@@ -214,7 +214,7 @@ table{border-collapse:collapse;border-spacing:0;}
 /* .history-contract .notice-multi{display:block;margin-bottom:10px;} */
 
 /*bg_notice_arrow.png聚合图*/
-.notice-arrow ,.notice-arrow b{background:url("images/bg_notice_arrow.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bg_notice_arrow.png*/ no-repeat right -999em;}
+
 
 .notice-arrow{position:absolute;display:inline-block; padding:6px 10px; background-position:100% 0; line-height:18px;}
 .notice-arrow p{line-height:18px;}
@@ -236,7 +236,7 @@ table{border-collapse:collapse;border-spacing:0;}
 .alert-failed{background-color:#DD0000;}
 
 /*========================== 报错 ========================*/
-.page-error{width:420px; margin:0 auto; padding:75px 0 50px 285px;background:url("images/bg_page_error.jpg")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bg_page_error.jpg*/ no-repeat 0 115px;}
+
 .page-error h2{margin-bottom:6px;font-size:24px;font-weight:normal;font-family:'Microsoft YaHei';color:#666;}
 .page-error p{margin-bottom:23px;line-height:20px;color:#666;}
 .page-error .tips{margin:75px 0 0 -80px;line-height:20px;color:#666;}
@@ -266,7 +266,7 @@ table{border-collapse:collapse;border-spacing:0;}
 .confirm-tips .btn-wrap{text-align:center;}
 .confirm-tips .error i{background-position:-120px -70px;}
 .confirm-tips .btn-wrap .sBtn ,.confirm-tips .btn .sBtn{margin:0 5px;}
-.confirm-tips .tips-sorry i{margin-top:20px;width:100px; height:60px; background:url("images/bg_tips_sorry.jpg")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bg_tips_sorry.jpg*/ no-repeat 0 0;}
+
 .confirm-tips .tips-sorry h2{margin-bottom:10px;}
 
 /* 输入框 */
@@ -290,7 +290,7 @@ table{border-collapse:collapse;border-spacing:0;}
 
 /* 报错位 */
 .sTip{height:16px;overflow:hidden; line-height:16px;color:#666;}
-.sTip em{float:left;width:16px;height:16px;margin-right:3px;background:url("images/tipIcon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ no-repeat;overflow:hidden;}
+.sTip em{float:left;width:16px;height:16px;margin-right:3px;background:url("images/tipIcon.png")  no-repeat;overflow:hidden;}
 .sTip span{float:left;line-height:16px;color:#666;}
 .sTip-false{color:#f00;}
 .sTip-false em{background-position:-180px -70px;}
@@ -341,20 +341,20 @@ table{border-collapse:collapse;border-spacing:0;}
 .head-scroll{ box-shadow:0 2px 10px rgba(125, 125, 125, 0.8); z-index: 999;}
 /*交易中心提示样式块  by  蒯灵敏 2014/09/09*/
 .point{width: 100%; min-width: 1190px; height: 40px; border-bottom: 1px solid #DDD; background: #fff; line-height: 40px; *line-height: 41px !important; }
-.point .point-context .point-img{ display: block; width: 16px; height: 15px; margin: 13px 10px 0px 15px; background: url("../images/index.png")/*tpa=https://open.suning.com/ospos/staticfiles/images/index.png*/ 0px -117px;}
+
 .point .point-context .point-notice{color: #FF7700;}
 .point .point-context .point-info{color: #666;}
 .point .point-context li{float: left;}
 
 /*交易中心搜索样式块  by  蒯灵敏 2014/09/04*/
 .head-find{width: 100%; height: 70px; background: #2882D7;}
-.head-find .head-logo{display:block; float: left; width: 345px; height: 32px; margin: 20px 0px 0px 20px; background: url("../images/index.png")/*tpa=https://open.suning.com/ospos/staticfiles/images/index.png*/ 0px 0px repeat-x;}
-.head-find .find{float:right;background:url("../images/index.png")/*tpa=https://open.suning.com/ospos/staticfiles/images/index.png*/ 0px -35px; width: 240px; height: 30px; margin: 20px 50px 0px 0px;}
+
+
 .head-find .find .find-input{float: left; width:200px; height: 30px; margin-left: 10px; border: 0px;  overflow: auto;
     background: transparent; line-height: 30px; color: #B7B7B7; resize: none; }
-.head-find .find .find-logo{ float: right; width: 16px; height: 16px; margin: 6px 10px 0px 0px; background: url("../images/index.png")/*tpa=https://open.suning.com/ospos/staticfiles/images/index.png*/ 0px -68px; font-size: 12px; cursor: pointer;}
 
-/*交易中心导航栏样式块  by  蒯灵敏 2014/09/05*/
+
+/*交易中心导航栏样式块  by   */
 .nav{width: auto; height: 40px; }
 .nav .nav-ul{float: left;}
 .nav .nav-ul li{float: left; padding: 0px 20px 0px 20px; height: 40px;line-height: 40px; *line-height: 41px !important; font-size: 14px; font-weight: bold;}
@@ -427,7 +427,7 @@ table{border-collapse:collapse;border-spacing:0;}
 .select .select-ico em{display:block; width: 7px; height: 4px; margin:10px 0px 0px 5px; background: url("../images/index.png")/*tpa=https://open.suning.com/ospos/staticfiles/images/index.png*/ -166px -85px; }
 .addmodel .model-li{ width: 100%; margin-top: 10px; border-bottom: 1px solid  #D6D6D6;}
 .addmodel .model-li .add-img{float:left; width: 60px; height: 60px;}
-.addmodel .model-li .add-one{background: url("../images/index.png")/*tpa=https://open.suning.com/ospos/staticfiles/images/index.png*/ -225px -100px;}
+.addmodel .model-li .add-one{background: url("../images/index.png")  -225px -100px;}
 .addmodel .model-li .add-two{background: url("../images/index.png")/*tpa=https://open.suning.com/ospos/staticfiles/images/index.png*/ -287px -100px;}
 .addmodel .model-li .add-three{background: url("../images/index.png")/*tpa=https://open.suning.com/ospos/staticfiles/images/index.png*/ -349px -100px;}
 .addmodel .model-li .add-four{background: url("../images/index.png")/*tpa=https://open.suning.com/ospos/staticfiles/images/index.png*/ -411px -100px;}
@@ -438,7 +438,7 @@ table{border-collapse:collapse;border-spacing:0;}
 .addmodel .add-button{float:left; margin-top: 7px;cursor: pointer;}
 .addmodel .s-add-button{float:left; margin-top: 7px;cursor: pointer;}
 
-/*交易中心底部样式块  by  蒯灵敏 2014/09/09*/
+/*交易中心底部样式块 */
 .foot{ width:100%; min-width: 1190px; border-top: 1px solid #E6E6E6; overflow: hidden;}
 
 /* 导航 -- 面包屑 */
