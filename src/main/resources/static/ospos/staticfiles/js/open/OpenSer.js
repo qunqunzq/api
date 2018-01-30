@@ -226,12 +226,78 @@ $(".pr-title.pr-t9").toggle(function(){
 	$(this).find("em").removeClass("pr-up");
 });
 $(".pr-title.pr-t10").toggle(function(){
-	$(".pr-con10").slideUp();
-	$(this).find("em").addClass("pr-up");
+    $(".pr-con10").slideUp();
+    $(this).find("em").addClass("pr-up");
 },function(){
-	$(".pr-con10").slideDown();
-	$(this).find("em").removeClass("pr-up");
+    $(".pr-con10").slideDown();
+    $(this).find("em").removeClass("pr-up");
 });
+$(".pr-title.pr-t11").toggle(function(){
+    $(".pr-con11").slideUp();
+    $(this).find("em").addClass("pr-up");
+},function(){
+    $(".pr-con11").slideDown();
+    $(this).find("em").removeClass("pr-up");
+});
+$(".pr-title.pr-t12").toggle(function(){
+    $(".pr-con12").slideUp();
+    $(this).find("em").addClass("pr-up");
+},function(){
+    $(".pr-con12").slideDown();
+    $(this).find("em").removeClass("pr-up");
+});
+$(".pr-title.pr-t13").toggle(function(){
+    $(".pr-con13").slideUp();
+    $(this).find("em").addClass("pr-up");
+},function(){
+    $(".pr-con13").slideDown();
+    $(this).find("em").removeClass("pr-up");
+});
+$(".pr-title.pr-t14").toggle(function(){
+    $(".pr-con14").slideUp();
+    $(this).find("em").addClass("pr-up");
+},function(){
+    $(".pr-con14").slideDown();
+    $(this).find("em").removeClass("pr-up");
+});
+$(".pr-title.pr-t15").toggle(function(){
+    $(".pr-con15").slideUp();
+    $(this).find("em").addClass("pr-up");
+},function(){
+    $(".pr-con15").slideDown();
+    $(this).find("em").removeClass("pr-up");
+});
+$(".pr-title.pr-t16").toggle(function(){
+    $(".pr-con16").slideUp();
+    $(this).find("em").addClass("pr-up");
+},function(){
+    $(".pr-con16").slideDown();
+    $(this).find("em").removeClass("pr-up");
+});
+$(".pr-title.pr-t17").toggle(function(){
+    $(".pr-con17").slideUp();
+    $(this).find("em").addClass("pr-up");
+},function(){
+    $(".pr-con17").slideDown();
+    $(this).find("em").removeClass("pr-up");
+});
+$(".pr-title.pr-t18").toggle(function(){
+    $(".pr-con18").slideUp();
+    $(this).find("em").addClass("pr-up");
+},function(){
+    $(".pr-con18").slideDown();
+    $(this).find("em").removeClass("pr-up");
+});
+$(".pr-title.pr-t19").toggle(function(){
+    $(".pr-con12").slideUp();
+    $(this).find("em").addClass("pr-up");
+},function(){
+    $(".pr-con19").slideDown();
+    $(this).find("em").removeClass("pr-up");
+});
+
+
+
 
 
 //导航定位
