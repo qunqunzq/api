@@ -293,7 +293,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .se-APIDoc em{display: inline-block;width: 25px;height: 28px;background: url("images/leftbg.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/leftbg.png*/ -47px 0px no-repeat;vertical-align: middle;margin-right: 15px;}
 
 .on-menuR .pr-title{height: 40px;line-height: 40px;background: #f7f8f9;font-weight:bold;font-size: 16px;border-left:3px solid #01b5b7;padding-left: 15px;margin-bottom: 20px;cursor: pointer;}
-.on-menuR .pr-title:hover{background:#eaf4fc;}
+.on-menuR .pr-title:hover{background: #effdff;}
 .on-menuR .pr-title em{display: inline-block;background: url("images/OpenSer.png")  no-repeat;float: right;margin: 17px 15px 0 0 ;cursor: pointer;}
 .on-menuR .pr-title .pr-down{width: 10px;height: 6px; background-position: 0 -144px ;}
 .on-menuR .pr-title .pr-up{width: 6px;height: 10px; background-position: -13px -144px;margin: 15px 15px 0 0;}
@@ -353,13 +353,13 @@ a:hover{color:#ff7700;text-decoration:none;}
 .on-menuR .pr-con1 .go-pic{height: 270px;border: 1px solid #f7f8f9;margin: 20px 0 40px 0;padding: 48px 0 0 32px;}
 .go-ulList li{height: 30px;line-height: 30px;}
 .go-ulList li:hover{background: #f7f8f9;}
-.go-liList{display: inline-block;width: 500px;color: #2272c8;}
+.go-liList{display: inline-block;width: 500px;color: #009da0;}
 
 /*suning.custom*/
 .on-menuL .su-list ul li{border-bottom: 1px solid #e2e3e4;border-top: none;text-align: right;position: relative;padding: 8px 15px;}
 .on-menuL .su-list .on-menuOn .su-listDiv a,.on-menuL .su-list .on-menuOn .su-listDiv p{color: #fff;}
 .su-listDiv{position: relative;text-align: right;overflow: hidden;height: 42px;}
-.on-menuL .su-list .su-listDiv a{position: absolute;top: 0;right: 0;color: #2272c8;}
+.on-menuL .su-list .su-listDiv a{position: absolute;top: 0;right: 0;color: #009da0;}
 .on-menuL .su-list .su-listDiv p{position: absolute;overflow: hidden;white-space: normal;top: 20px;right: 0;color: #333;}
 .su-mask{position: absolute;width: 230px;height: 100%;z-index: 10;top: 0;left: 0;background: url("images/mask.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/mask.png*/;}
 .su-mask1{position: absolute;width: 230px;height: 100%;z-index: 10;top: 0;left: 0;background: url("images/mask1.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/mask1.png*/;}
@@ -370,7 +370,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .su-titList .su-firA{padding-left: 0;border-left: none;}
 .su-table,.su-taQue{width: 100%;text-align: left;}
 .su-table tr th,.su-table tr td{padding-left: 10px;height: 33px;line-height: 33px;border-top: 1px solid #e2e3e4;border-left: 1px solid #e2e3e4;color: #666;}
-.su-table tr th{background: #e7f2ff;color: #333;}
+.su-table tr th{background: #01b5b7;color: #333;}
 .su-taQue tr td{padding-left: 10px;height: 33px;line-height: 33px;border-top: 1px solid #e2e3e4;border-left: 1px solid #e2e3e4;color: #333;}
 .addBR{border-right: 1px solid #e2e3e4;}
 .addBB{border-bottom: 1px solid #e2e3e4;}
