@@ -12,7 +12,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .mt40{margin-top: 40px !important;}
 .mb30{margin-bottom: 30px !important;}
 .mb40{margin-bottom: 40px !important;}
-.mr10{margin-right: 10px !important;}
+.mr10{margin-right: 80px !important;}
 .mr40{margin-right: 40px !important;}
 .ml15{margin-left: 15px !important;}
 .ml240{margin-left: 240px !important;}
@@ -403,7 +403,7 @@ td.odds{background-color: #f9f9f9;}
 .te-leftTab tr td .te-submit:hover{color: #fff;background: #fdaf34;}
 .te-rightDiv{margin: 20px 25px;}
 .te-rightDiv span{color: #666;}
-.te-rightDiv a{color: #2272c8;}.te-rightDiv a:hover{color: #ff7700;}
+.te-rightDiv a{color: #01b5b7;}  .te-rightDiv a:hover{color: #ff7700;}
 .te-rightDiv .te-inDiv{width: 95.5%;height: 138px;border: 1px solid #ddd;margin:10px 0 20px 0;padding: 10px;font-family: 'Microsoft YaHei';color: rgb(51, 51, 51);font-size: 12px;}
 
 
