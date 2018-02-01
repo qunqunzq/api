@@ -4,117 +4,47 @@
 	<title>å¼€æ”¾æœåŠ¡-æ¨é€APIæ¸…å•</title>
 	
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="keywords" content="æ‰‹æœº, ç”µè„‘, å†°ç®±, æ´—è¡£æœº, ç›¸æœº, æ•°ç , å®¶å±…ç”¨å“, é‹å¸½, åŒ–å¦†å“, æ¯å©´ç”¨å“, å›¾ä¹¦ï¼Œé£Ÿå“ï¼Œä¿é™©ï¼Œæ—…è¡Œï¼Œå……å€¼ï¼Œå›¢è´­ï¼Œæ­£å“è¡Œè´§, å…¨å›½è”ä¿, è´§åˆ°ä»˜æ¬¾ã€‚"/>
-<meta name="description" content="è‹å®æ˜“è´­æ˜¯é¢†å…ˆçš„ç»¼åˆç½‘ä¸Šè´­ç‰©å•†åŸ, åœ¨çº¿ç‰¹ä»·é”€å”®å®¶ç”µã€é€šè®¯æ•°ç ã€ç”µè„‘ã€å®¶å±…ç™¾è´§ã€æœè£…æœé¥°ã€æ¯å©´ã€å›¾ä¹¦ã€é£Ÿå“ã€ä¿é™©ã€æ—…è¡Œã€å……å€¼ã€å›¢è´­ç­‰æ•°ä¸‡ç±»å•†å“å’ŒæœåŠ¡ã€‚æ­£å“è¡Œè´§, å…¨å›½è”ä¿, æœ¬åœ°é…é€, è´§åˆ°ä»˜æ¬¾ã€‚çœé’±æ”¾å¿ƒä¸Šè‹å®ç”µå™¨ç½‘ä¸Šå•†åŸ, å°½äº«è´­ç‰©ä¹è¶£ï¼"/>
-<link rel="icon" href="//www.suning.com/favicon.ico?v=v1.0" type="image/x-icon"/>
+<meta name="keywords" content="api"/>
+<meta name="description" content="api"/>
+	<link rel="shortcut icon" href="../../favicon.ico">
 <script src="../../../static.suning.cn/osr/meas/error.js" tppabs="https://static.suning.cn/osr/meas/error.js" charset="UTF-8"></script>
-			<link rel="stylesheet" href="../staticfiles/css/common.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/common.css?v=v1.0"></link>
-			<link rel="stylesheet" href="../staticfiles/css/OpenSerNew.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/OpenSerNew.css?v=v1.0"></link>
-			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css-v=v1.0.css" tppabs="https://open.suning.com/ospos/staticfiles/css/openUpdate.css?v=v1.0"></link>
+			<link rel="stylesheet" href="../staticfiles/css/common.css"  ></link>
+			<link rel="stylesheet" href="../staticfiles/css/OpenSerNew.css"  ></link>
+			<link rel="stylesheet" href="../staticfiles/css/openUpdate.css" ></link>
 </head>
 <body>
-			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
+<script type="text/javascript" src="../staticfiles/js/jquery.min.js"   charset="UTF-8"></script>
 <script type="text/javascript">
-	$(document).ready(function(){
-	    if("" != ""){
-			var userName = "";
-			$("#alLoginName").text(userName);
-			$("#alLoginName").attr("title",userName);
-			$("#alLogin").show();
-			$("#withOutLogin").hide();
-	    }else {
-			var userName = getCookie("osposLoginUserIdFlag");
-			if(userName == ""){
-				var logonStatusVal = getCookie("logonStatus");
-				var authIdVal = getCookie("authId");
-				if((logonStatusVal != undefined && logonStatusVal != "") 
-	       		|| (authIdVal != undefined && authIdVal != "")){
-					userName = getCookie("idsLoginUserIdLastTime");
-				}
-			}
-			if(userName != ""){
-				$("#alLoginName").text(userName);
-				$("#alLoginName").attr("title",userName);
-				$("#alLogin").show();
-				$("#withOutLogin").hide();
-			}else {
-				$("#alLogin").hide();
-				$("#withOutLogin").show();
-			} 
-	    }
-    });
-	
-    function getCookie(cookieName){
-		var cookieArr = document.cookie.split(';');
-		for(var i=0; i<cookieArr.length; i++){
-			var cookie = cookieArr[i];
-			while (cookie.charAt(0)==' '){
-				cookie = cookie.substring(1);
-			}
-			cookieEntry = cookie.split('=');
-			if(cookieEntry[0] == cookieName){
-				return decodeURIComponent(cookieEntry[1]);
-			}
-		}
-		return "";
-    }
-	
-	$(function(){
+    $(function(){
         $(".os-nav li").each(function(index){
             $(this).removeClass("os-on");
-            if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
+            if(window.location.pathname.indexOf("toApi")!=-1&&index=="1"){
                 $(this).addClass("os-on");
-            }else if(window.location.pathname.indexOf("toApi")!=-1&&index=="3"){
-                $(this).addClass("os-on");
-            }else if(window.location.pathname.indexOf("toDevCenter")!=-1&&index=="4"){
-                $(this).addClass("os-on");
-            }else if(window.location.pathname=="/"&&index=="0"){
+            }else if(window.location.pathname.indexOf("toTopic")!=-1&&index=="2"){
                 $(this).addClass("os-on");
             }
-        })                
-	})
+        })
+    })
 </script>
 <div class="os-top bcs-top">
 	<div class="w1190 clearfix">
-		<div class="l os-snLogo"></div>	
+		<div class="l os-inLogo">
+			<img src="../staticfiles/images/hisense1.png" height="64px" width="210px"/>
+		</div>
 		<ul class="os-nav">
 			<li class="os-on"><a href="../../index.htm" tppabs="https://open.suning.com/">é¦–é¡µ</a></li>
-			<li><a href="javascript:void(0);">å¼€æ”¾ç‰ˆå›¾<i></i></a>
-				<!--[if IE]>
-				<dl style="margin-left: -104px;margin-top: 55px;">
-				<![endif]-->
-				<!--[if !IE]><!-->
-				<dl>
-			    <!--<![endif]-->
-                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/road/roadIndex.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://road.suning.com/ospos/road/roadIndex.html'" tppabs="https://road.suning.com/ospos/road/roadIndex.html" target="_blank">ä¸€å·å…¬è·¯å¼€æ”¾</a><i></i></dd>
-                    <dd><a href="javascript:if(confirm('https://road.suning.com/ospos/toDevCenter.action  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://road.suning.com/ospos/toDevCenter.action'" tppabs="https://road.suning.com/ospos/toDevCenter.action">å•†å®¶åå°å¼€æ”¾</a><i></i></dd>
-                </dl>
-            </li>
-            <li><a href="../apipage/toDocCenter.do.htm" tppabs="https://open.suning.com/ospos/apipage/toDocCenter.do">æ–‡æ¡£ä¸­å¿ƒ</a></li>
 			<li><a href="../apipage/toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do">APIæ–‡æ¡£</a></li>
 			<li><a href="toTopicPageList.do.htm" tppabs="https://open.suning.com/ospos/pushapi/toTopicPageList.do">æ¶ˆæ¯æ–‡æ¡£</a></li>
-			<li><a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoDevCenter.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/toDevCenter.action">æ§åˆ¶å°</a></li>
 		</ul>
-		
-		<a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FlogOut.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/logOut.action" class="os-exit" style="display: none;" id="alLogin">é€€å‡º</a> 
-		<div class="r search-top">
-			<form method="post" action="https://open.suning.com/ospos/apipage/toSearchPage.do" id="tlSearchForm" style="display:inline;float:right;" autocomplete="off">
-                <input type="text" class="os-input" id="tlSearchIn" name="tlSearchName"/>
-                <span class="os-search" id="tlSearchBtn"></span>
-            </form>                
-                <span class="os-search"></span>
-                <span id="alLoginName" class="lname r"></span>
-                <a href="javascript:if(confirm('https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mpassport.suning.com/ids/login?service=https%3A%2F%2Fopen.suning.com%2Fospos%2Fauth%3FtargetUrl%3Dhttps%253A%252F%252Fopen.suning.com%252Fospos%252FtoLogin.action&loginTheme=ospos'" tppabs="https://open.suning.com/ospos/toLogin.action" class="os-login" style="display: none;" id="withOutLogin">ç™»å½•</a>
-		</div>
 	</div>
 </div>	<div class="on-wrapp">
 		<div class="w1190 clearfix mb40 oh" style="position:relative;">
 			<div class="on-title">
 				<div class="go-title">
-					<a href="../apipage/toDocCenter.do.htm" tppabs="https://open.suning.com/ospos/apipage/toDocCenter.do">æ–‡æ¡£ä¸­å¿ƒ</a> &gt; 
-					<a href="toTopicPageList.do.htm" tppabs="https://open.suning.com/ospos/pushapi/toTopicPageList.do">ä¸»é¢˜ç±»ç›®</a> &gt;
+					<a href="#" >æ–‡æ¡£ä¸­å¿ƒ</a> &gt;
+					<a href="toTopicPageList.do.htm">ä¸»é¢˜ç±»ç›®</a> &gt;
 					<span>
-						äº‘å•†åŸ
+						æ¶ˆæ¯æ–‡æ¡£
 					</span>
 				</div>
 			</div>
@@ -189,11 +119,11 @@
 	<div class="os-topTo" style="bottom: 210px;"></div>
 
 <div class="foot">
-    <iframe scrolling="no" frameborder="0" width="100%" height="165" src="../../../sop.suning.com/sel/portal/common/footer.html" tppabs="https://sop.suning.com/sel/portal/common/footer.html"></iframe>
+	<iframe scrolling="no" frameborder="0" width="100%" height="100" src="../../ospos/food/sel/portal/common/footer.html"  ></iframe>
 </div>
-			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/jquery-1.7.2.min.js?v=v1.0" charset="UTF-8"></script>
-			<script type="text/javascript" src="../staticfiles/js/open/OpenSer.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/open/OpenSer.js?v=v1.0" charset="UTF-8"></script>
-			<script type="text/javascript" src="../staticfiles/js/custom/common.js-v=v1.0" tppabs="https://open.suning.com/ospos/staticfiles/js/custom/common.js?v=v1.0" charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/jquery-1.7.2.min.js"   charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/open/OpenSer.js"   charset="UTF-8"></script>
+			<script type="text/javascript" src="../staticfiles/js/custom/common.js"   charset="UTF-8"></script>
 	<script>
 		//ç‚¹å‡»ä¸»é¢˜ç±»ç›®æ˜¾ç¤ºå¯¹åº”çš„ä¸»é¢˜åˆ—è¡¨
 		function toTopicList(topicCgryId){
@@ -207,6 +137,5 @@
 			comm.initFormForSubmit("https://open.suning.com/ospos/pushapi/toTopicDetailPage.do","post",params);
 		}
 	</script>
-	<script src="../../../static.suning.cn/osr/meas/time.js" tppabs="https://static.suning.cn/osr/meas/time.js"></script>
 </body>
 </html>

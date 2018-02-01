@@ -15,14 +15,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">		
 </head>
 <body>
-<script type="text/javascript" src="../staticfiles/js/jquery.min.js"   charset="UTF-8"/>
+<script type="text/javascript" src="../staticfiles/js/jquery.min.js"   charset="UTF-8"></script>
 <script type="text/javascript">
 	$(function(){
         $(".os-nav li").each(function(index){
             $(this).removeClass("os-on");
             if(window.location.pathname.indexOf("toApi")!=-1&&index=="1"){
                 $(this).addClass("os-on");
-            }else if(window.location.pathname.indexOf("toTopic")!=-1&&index=="2"){
+            }else if(window.location.pathname.indexOf("toDoc")!=-1&&index=="2"){
                 $(this).addClass("os-on");
             }
         })
@@ -35,8 +35,8 @@
 		</div>
 		<ul class="os-nav">
 			<li class="os-on"><a href="../../index.htm"  >首页</a></li>
-			<li><a href="toApiListMenu.do.htm" tppabs="https://open.suning.com/ospos/apipage/toApiListMenu.do">API文档</a></li>
-			<li><a href="../pushapi/toTopicPageList.do.htm" tppabs="https://open.suning.com/ospos/pushapi/toTopicPageList.do">消息文档</a></li>
+			<li><a href="toApiListMenu.do.htm">API文档</a></li>
+			<li><a href="toDocContent-1.do-menuid=6.htm"  >API帮助</a></li>
 		</ul>
 	</div>
 </div>

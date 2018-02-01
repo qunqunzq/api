@@ -309,7 +309,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .on-menuR .on-posfix{position: absolute;width: 890px;background: #fff;top: 100px;}
 .on-posfix .on-posList{position: absolute;background: #f7f8f9;padding: 15px;border:1px solid #e2e3e4;width: 240px;top: 37px; display: none;}
 .on-posfix .on-posList li{height: 26px;line-height: 26px;}
-.on-posfix .on-posList li a{font-size: 12px;font-weight: bold;color: #2272c8;}
+.on-posfix .on-posList li a{font-size: 12px;font-weight: bold;color: #01b5b7;}
 .on-posfix .on-posList li a:hover{color: #ff7700;}
 
 /*API*/
