@@ -27,18 +27,18 @@ table{border-collapse:collapse;border-spacing:0;}
 .g-header {width:100%; min-width:1190px;background:#f5f5f5;}
 .g-header .topArea {width:1190px;height:30px;line-height:30px;margin:0 auto;}
 .g-header .topArea .back-index{display:inline-block; margin-right:18px; color:#666;}
-.g-header .topArea .back-index i{display:inline-block; width:12px; height:12px; margin-right:5px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/; vertical-align:-1px;}
+.g-header .topArea .back-index i{display:inline-block; width:12px; height:12px; margin-right:5px; background:url("images/new-icon.png") ; vertical-align:-1px;}
 .g-header .topArea > span{display:inline-block; margin-right:18px; color:#666;}
 .g-header .topArea .head-login{display:inline-block; color:#f70; margin-right:18px;}
 .g-header .topArea .head-register{display:inline-block; color:#666; margin-right:18px;}
 .g-header .topArea .grey{color:#666;}
 .g-header .topArea .name{padding-right:15px;color:#666;}
 /* 页头商户图标 */
-.g-header .topArea .shang-icon{display:inline-block; width:14px; height:18px; margin-left:5px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ -230px 0; vertical-align:-4px;}
+.g-header .topArea .shang-icon{display:inline-block; width:14px; height:18px; margin-left:5px; background:url("images/new-icon.png")  -230px 0; vertical-align:-4px;}
 /* 页头供应商图标 */
-.g-header .topArea .gong-icon{display:inline-block; width:14px; height:18px; margin-left:5px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ -245px 0; vertical-align:-4px;}
+.g-header .topArea .gong-icon{display:inline-block; width:14px; height:18px; margin-left:5px; background:url("images/new-icon.png")  -245px 0; vertical-align:-4px;}
 /* 页头站内信图标 */
-.mail-icon{display:inline-block; width:19px; height:18px; margin-right:3px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ -260px 0; vertical-align:-2px;}
+.mail-icon{display:inline-block; width:19px; height:18px; margin-right:3px; background:url("images/new-icon.png")  -260px 0; vertical-align:-2px;}
 
 .g-header .topArea .headerMenu{float:right;}
 .topArea .headerMenu > li{float:left; position:relative; padding:0 10px; border:1px solid #f5f5f5; border-width:0 1px; line-height:30px;}
@@ -47,9 +47,9 @@ table{border-collapse:collapse;border-spacing:0;}
 .topArea .headerMenu .head-map{width:98px; height:30px; padding:0;}
 .topArea .headerMenu .head-map-hand{padding:0 10px; cursor:pointer;}
 .topArea .headerMenu .head-phone-code{height:30px; padding:0;}
-.topArea .headerMenu .head-map-icon{display:inline-block; width:12px; height:12px; margin-right:5px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ -15px 0; vertical-align:-2px;}
-.topArea .headerMenu .head-down{display:inline-block; width:10px; height:5px; margin-left:3px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ -45px 0; vertical-align:1px;}
-.topArea .headerMenu .head-phone{display:inline-block; width:10px; height:14px; margin-right:5px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ -30px 0; vertical-align:-2px;}
+.topArea .headerMenu .head-map-icon{display:inline-block; width:12px; height:12px; margin-right:5px; background:url("images/new-icon.png")  -15px 0; vertical-align:-2px;}
+.topArea .headerMenu .head-down{display:inline-block; width:10px; height:5px; margin-left:3px; background:url("images/new-icon.png")  -45px 0; vertical-align:1px;}
+.topArea .headerMenu .head-phone{display:inline-block; width:10px; height:14px; margin-right:5px; background:url("images/new-icon.png")  -30px 0; vertical-align:-2px;}
 .topArea .headerMenu li.on{background:#fff; border:1px solid #e6e6e6; border-width:0 1px;}
 
 .topArea .headerMenu li.on .head-map-hand{position:relative; border-bottom:1px solid #fff; z-index:100;}
@@ -67,7 +67,7 @@ table{border-collapse:collapse;border-spacing:0;}
 .i-footer a{padding:0 5px; color:#999;}
 .i-footer a:hover, .i-footer a.blue:hover, .i-footer a.orange{color:#f70;}
 .i-footer a.blue{color:#39e;}
-.footer-lion{position:absolute; width:100px; height:57px; margin-left:-50px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ no-repeat -110px -15px; top:-52px; left:50%;}
+.footer-lion{position:absolute; width:100px; height:57px; margin-left:-50px; background:url("images/new-icon.png")  no-repeat -110px -15px; top:-52px; left:50%;}
 .pt10{padding-top:20px;}
 .mt30{margin-top:30px;}
 .pt30{padding-top:30px;}

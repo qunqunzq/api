@@ -30,36 +30,36 @@ a:hover{color:#ff7700;text-decoration:none;}
 .os-nav >li:hover{background: #009da0;transition:all .5s;}
 .os-nav >li dl a:hover{ color: #ff9c00;}
 .os-nav >li a{display: inline-block; padding:0; height: 46px;color: #fff;}
-.os-nav >li a i{ display: inline-block; width: 9px; height: 5px; margin-left: 10px; background: url("images/arrow.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/arrow.png*/ no-repeat -28px 0; vertical-align: 3px;}
+.os-nav >li a i{ display: inline-block; width: 9px; height: 5px; margin-left: 10px; background: url("images/arrow.png")  no-repeat -28px 0; vertical-align: 3px;}
 .os-nav >li:hover a i{ background-position: right 0;}
 .os-nav >li:hover dl{ display: block;}
 .os-nav >li dl{ display: none; position: absolute; padding: 15px 18px 5px; background-color: #156fdc; }
 .os-nav >li dl dd{ line-height: 46px; color: #fff; font-size: 14px;}
-.os-nav >li dl dd i{ display: inline-block; width: 5px; height: 9px; margin-left: 40px; background: url("images/arrow.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/arrow.png*/ no-repeat 0 0; vertical-align: -1px;}
+.os-nav >li dl dd i{ display: inline-block; width: 5px; height: 9px; margin-left: 40px; background: url("images/arrow.png")  no-repeat 0 0; vertical-align: -1px;}
 .os-nav >li dl dd:hover a{color:#ff9c00;}
-.os-nav >li dl dd:hover i{background:url("images/arrowhover.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/arrowhover.png*/ no-repeat 0 0;}
+.os-nav >li dl dd:hover i{background:url("images/arrowhover.png")  no-repeat 0 0;}
 .os-login{width:66px;height:28px;line-height:28px;border: 2px solid #fff;margin-top: 17px;font-size: 14px;color: #f4f7fd;display: inline-block;border-radius: 5px;text-align: center;transition: all 0.3s;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;-o-transition: all 0.3s;}
 .os-login:hover{background: #fff;color: #1976e6;transition: all 0.3s;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;-o-transition: all 0.3s;}
 .os-loginHover{background: #fff;color: #1976e6;transition: all 0.3s;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;-o-transition: all 0.3s;}
-.os-search{display: inline-block;width: 16px;height: 16px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ no-repeat;margin-right: 27px;  margin-top: -17px;vertical-align: middle;background-position: 0 0;margin-left: -30px;cursor: pointer;}
+.os-search{display: inline-block;width: 16px;height: 16px;background: url("images/OpenSer.png")  no-repeat;margin-right: 27px;  margin-top: -17px;vertical-align: middle;background-position: 0 0;margin-left: -30px;cursor: pointer;}
 .os-search:hover{background-position: -19px 0;}
 .os-input{width: 0px;height: 32px;line-height: 32px;border: none;background: #1666c7;border-radius: 5px;color: #fff;font-family: 'Microsoft YaHei';vertical-align: bottom;margin-top: 18px;}
 .os-on{background: #009da0;}
 .os-inLogo{ margin-right:50px;}
 
 .ds-carousel .ds-switchable-content .os-link{display: inline-block;position: absolute;left: 50%;top: 253px;width: 206px;height: 56px;line-height:56px;border-radius: 30px;border:2px solid #fff;z-index: 100;font-size: 24px;color: #fff;text-align: center;transition:all .3s;margin-left: -595px;}
-.ds-carousel .ds-switchable-content .os-link em{display: inline-block;width: 28px;height: 28px;background: url("images/OpenSer-pic.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer-pic.png*/ no-repeat;background-position: 0px -900px; vertical-align: middle;margin-left: 15px;margin-top: -5px;}
+.ds-carousel .ds-switchable-content .os-link em{display: inline-block;width: 28px;height: 28px;background: url("images/OpenSer-pic.png")  no-repeat;background-position: 0px -900px; vertical-align: middle;margin-left: 15px;margin-top: -5px;}
 .ds-carousel .ds-switchable-content .os-link:hover{background: #fff;color: #1976e6;transition:all .3s;}
 .ds-carousel .ds-switchable-content .os-link:hover em{background-position: 0px -928px;}
 
 .os-newsTip{min-width:1300px;height: 49px;border-bottom:1px solid #eee;}
 .os-newUl >li{float: left;height: 50px;line-height: 50px;margin-right: 38px;}
-.os-newUl .os-listI{display: inline-block;width: 2px;height: 2px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ -187px 0 no-repeat;vertical-align: middle;margin-right: 5px;}
+.os-newUl .os-listI{display: inline-block;width: 2px;height: 2px;background: url("images/OpenSer.png")  -187px 0 no-repeat;vertical-align: middle;margin-right: 5px;}
 .os-newUl >li a{color: #666;}
 .os-newUl >li a:hover{color: #ff7700;}
-.os-newsTip .os-newI{display: inline-block;width: 70px;height: 25px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ 0px -20px no-repeat;margin-top: 12px;}
+.os-newsTip .os-newI{display: inline-block;width: 70px;height: 25px;background: url("images/OpenSer.png")  0px -20px no-repeat;margin-top: 12px;}
 .os-newsTip .os-newI > a{color: #666;}
-.os-newsTip .os-newH{display: inline-block;width: 17px;height: 9px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ -64px 0px no-repeat;  margin: -12px 5px 0 5px;  vertical-align: middle;}
+.os-newsTip .os-newH{display: inline-block;width: 17px;height: 9px;background: url("images/OpenSer.png")  -64px 0px no-repeat;  margin: -12px 5px 0 5px;  vertical-align: middle;}
 .os-moreLink{color: #1976e6;  line-height: 50px;}
 
 .os-wrapp ul >li{float: left;width: 250px;height: 332px;margin: 40px 22px 40px 22px;border: 1px solid #fff;}
@@ -85,7 +85,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .os-wrapp .os-listC{text-align: center;font-size: 14px;color: #999;margin-top: 7px;}
 
 .os-contact{height: 320px;background:#f5f6f7;min-width:1300px;}
-.os-contact .os-titleT{display: inline-block;width: 5px;height: 20px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ -88px 0 no-repeat;  vertical-align: middle;margin-top: -7px;margin-right: 10px;}
+.os-contact .os-titleT{display: inline-block;width: 5px;height: 20px;background: url("images/OpenSer.png") -88px 0 no-repeat;  vertical-align: middle;margin-top: -7px;margin-right: 10px;}
 .os-contact .os-title{display: inline-block;font-size: 22px;color: #333;margin: 40px 0;}
 .os-contact ul >li{float: left;width: 355px;}
 .os-contact .os-pic{width: 120px;height: 120px;line-height:120px;border: 1px solid #e0e0e0;margin-right: 20px;text-align: center;position: relative;}
@@ -104,10 +104,10 @@ a:hover{color:#ff7700;text-decoration:none;}
 .os-contact .os-font a:hover{color: #ff7700;}
 .os-contact .os-font p{font-size: 14px;color: #999;margin-top: 10px;}
 
-.os-topTo{width: 44px;height: 44px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ no-repeat;position: fixed;z-index: 110;bottom: 300px;left: 50%;margin-left: 605px;display: none;cursor: pointer;background-position:  0px -50px;transition:all .3s;}
+.os-topTo{width: 44px;height: 44px;background: url("images/OpenSer.png")  no-repeat;position: fixed;z-index: 110;bottom: 300px;left: 50%;margin-left: 605px;display: none;cursor: pointer;background-position:  0px -50px;transition:all .3s;}
 .os-topTo:hover{background-position:  0px -94px; transition:all .3s;}
 
-.lo-panner{display: inline-block;background: url("images/panner-icon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/panner-icon.png*/ no-repeat;position: absolute;z-index: 10;}
+.lo-panner{display: inline-block;background: url("images/panner-icon.png")  no-repeat;position: absolute;z-index: 10;}
 .lo-panner.lo-icon1{width: 240px;height: 140px;background-position: 0px -127px;left: 66%;top: 200px;opacity: 0;animation: iconF 1s infinite;}
 .lo-panner.lo-icon2{width: 89px;height: 153px;background-position: -240px -129px;left: 66%;top: 200px;opacity: 0;animation: iconS 1s infinite;}
 .lo-panner.lo-icon3{width: 131px;height: 114px;background-position: -335px -123px;left: 66%;top: 200px;opacity: 0;animation: iconT 1s infinite;}
@@ -135,8 +135,8 @@ a:hover{color:#ff7700;text-decoration:none;}
 	75%{top: 126px;}
 	100%{top: 127px;}
 }
-.banC{display: inline-block;width: 14px;height: 14px;border-radius: 14px;background: url("images/banC.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/banC.png*/ no-repeat;position:absolute;animation: banC 3s infinite;}
-.banCC{display: inline-block;width: 8px;height: 8px;border-radius: 8px;background: url("images/banCC.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/banCC.png*/ no-repeat;position:absolute;}
+.banC{display: inline-block;width: 14px;height: 14px;border-radius: 14px;background: url("images/banC.png")  no-repeat;position:absolute;animation: banC 3s infinite;}
+.banCC{display: inline-block;width: 8px;height: 8px;border-radius: 8px;background: url("images/banCC.png")  no-repeat;position:absolute;}
 .banCP1{top: 244px;left: 50%;margin-left: 85px;}
 .banCCP1{top: 247px;left: 50%;margin-left: 88px;}
 .banCP2{top: 159px;left: 50%;margin-left: 152px;}
@@ -172,7 +172,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .ds-carousel .ds-switchable-nav {width: 200px; position: absolute; bottom: 20px;left: 50%;}
 .ds-carousel .ds-switchable-nav li {float: left;background-color: #136ddb;width: 12px;height: 12px;margin: 0 5px;border-radius: 12px;cursor: pointer;}
 .ds-carousel .ds-switchable-nav li.ds-active {background-color: #fff;}
-.ds-carousel .ds-prev, .ds-carousel .ds-next {position: absolute;width: 40px;height: 80px;background: url("images/dsPic02.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/dsPic02.png*/; top: 150px; left: 50%;cursor: pointer;line-height: 80px;color: #fff;text-align: center;font-size: 40px;text-decoration: none;font-family: simsun;}
+.ds-carousel .ds-prev, .ds-carousel .ds-next {position: absolute;width: 40px;height: 80px;background: url("images/dsPic02.png"); top: 150px; left: 50%;cursor: pointer;line-height: 80px;color: #fff;text-align: center;font-size: 40px;text-decoration: none;font-family: simsun;}
 .ds-carousel .ds-prev {margin-left: -520px;}
 .ds-carousel .ds-next {margin-left: 480px;}
 .ds-carousel .ds-disable {color: #666;}
@@ -186,31 +186,31 @@ a:hover{color:#ff7700;text-decoration:none;}
 .lo-title{font-size: 22px;margin: 40px 0;color: #333;}
 .lo-main .lo-int{position: relative;}
 .lo-main .lo-text{width: 398px; height:48px;line-height:48px;border: 1px solid #ddd;  padding-left: 45px;  padding-right: 15px;font-family: 'Microsoft YaHei';font-size: 16px;color: #bbb;}
-.lo-main .lo-name{display: inline-block;width: 18px;height: 18px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ -109px 0px no-repeat;position: absolute;top: 15px;left: 15px;}
-.lo-main .lo-passW{display: inline-block;width: 18px;height: 20px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ -132px 0px no-repeat;position: absolute;top: 24px;left: 15px;}
+.lo-main .lo-name{display: inline-block;width: 18px;height: 18px;background: url("images/OpenSer.png") -109px 0px no-repeat;position: absolute;top: 15px;left: 15px;}
+.lo-main .lo-passW{display: inline-block;width: 18px;height: 20px;background: url("images/OpenSer.png") -132px 0px no-repeat;position: absolute;top: 24px;left: 15px;}
 .lo-loginBtn{display: inline-block;width: 460px;height: 50px;line-height:50px;background: #ff9c00;color: #fff;font-size: 22px;text-align: center;margin-top: 30px;transition:all .3s;}
 .lo-loginBtn:hover{background: #fdaf34;color: #fff;transition:all .3s;}
 .lo-lostPass,.lo-reg{margin-top: 20px;}
 .lo-lostPass a,.lo-reg a{font-size: 14px; color: #666;}
-.lo-lostPass em{display: inline-block;width: 14px;height: 14px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ -154px 0 no-repeat;  vertical-align: middle;margin-left: 5px;}
-.lo-reg em{display: inline-block;width: 10px;height: 10px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ -173px 0 no-repeat;  vertical-align: middle;margin-right: 5px;}
+.lo-lostPass em{display: inline-block;width: 14px;height: 14px;background: url("images/OpenSer.png") -154px 0 no-repeat;  vertical-align: middle;margin-left: 5px;}
+.lo-reg em{display: inline-block;width: 10px;height: 10px;background: url("images/OpenSer.png") -173px 0 no-repeat;  vertical-align: middle;margin-right: 5px;}
 .lo-intF{width: 398px; height:48px;line-height:48px;margin-bottom: 10px;background: #fff0f0;border: 1px solid #ff5555; padding-left: 45px;  padding-right: 15px;font-family: 'Microsoft YaHei';position: relative;}
 .lo-intF span{color: #333;font-size: 12px;}
-.lo-intF em{display: inline-block;width: 16px;height: 16px;background: url("images/tipIcon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ -180px -70px no-repeat;position: absolute;top: 16px;left: 15px;}
+.lo-intF em{display: inline-block;width: 16px;height: 16px;background: url("images/tipIcon.png") -180px -70px no-repeat;position: absolute;top: 16px;left: 15px;}
 .lo-intF span a{color: #0066cc;}
 .lo-intF span a:hover{color: #ff9c00;}
 .lo-intW{width: 398px; height:48px;line-height:48px;margin-bottom: 10px;background: #fffff0;border: 1px solid #ffcc66; padding-left: 45px;  padding-right: 15px;font-family: 'Microsoft YaHei';position: relative;}
 .lo-intW span{color: #333;font-size: 12px;}
-.lo-intW em{display: inline-block;width: 16px;height: 16px;background: url("images/tipIcon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ -180px -140px no-repeat;position: absolute;top: 16px;left: 15px;}
+.lo-intW em{display: inline-block;width: 16px;height: 16px;background: url("images/tipIcon.png") -180px -140px no-repeat;position: absolute;top: 16px;left: 15px;}
 .lo-intW span a{color: #0066cc;}
 .lo-intW span a:hover{color: #ff9c00;}
 .lo-regDiv ul >li,.lo-findPassW ul >li{float: left; width: 178px;height: 118px;border: 1px solid #eee;background: #fff;cursor: pointer;}
 .lo-regDiv ul >li:hover,.lo-findPassW ul >li:hover{border: 1px solid #1d86f0; }
 .lo-regDiv ul >li:hover a,.lo-findPassW ul >li:hover a{color: #1d86f0;}
 .lo-mainT a{font-size: 16px;color: #333;text-align: center;margin-top: 10px;display: block;}
-.lo-regList1{display: inline-block;width: 57px;height: 40px;background: url("images/OpenSer-pic.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer-pic.png*/ -433px -584px no-repeat;margin-top: 18px;}
-.lo-regList2{display: inline-block;width: 57px;height: 40px;background: url("images/OpenSer-pic.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer-pic.png*/ -499px -583px no-repeat;margin-top: 18px;}
-.lo-regList3{display: inline-block;width: 57px;height: 40px;background: url("images/OpenSer-pic.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer-pic.png*/ -562px -583px no-repeat;margin-top: 18px;}
+.lo-regList1{display: inline-block;width: 57px;height: 40px;background: url("images/OpenSer-pic.png") -433px -584px no-repeat;margin-top: 18px;}
+.lo-regList2{display: inline-block;width: 57px;height: 40px;background: url("images/OpenSer-pic.png") -499px -583px no-repeat;margin-top: 18px;}
+.lo-regList3{display: inline-block;width: 57px;height: 40px;background: url("images/OpenSer-pic.png") -562px -583px no-repeat;margin-top: 18px;}
 .lo-note{text-align: center;color: #999;margin-top: 30px;}
 .lo-mainT .lo-backLogin{display:inline-block;width: 88px;height: 28px;line-height:28px;border: 1px solid #ff9c00;border-radius: 5px;color:#ff9c00;text-align: center;transition:all .3s;float: right;margin-top: 85px;font-size: 14px;}
 .lo-mainT .lo-backLogin:hover{background: #ff9c00;color:#fff;transition:all .3s;}
@@ -232,7 +232,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .on-menuL ul .on-menuOn:hover div{color: #fff;}
 .on-menuL .on-menuOn .on-c999{color: #fff;}
 .on-menuL .on-cfff{color: #fff;}
-.on-menuL li em{display: none;background: url("images/leftbg.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/leftbg.png*/ -0px -36px no-repeat;width: 10px;height: 17px;position: absolute;right: -1px;;top: 25px;}
+.on-menuL li em{display: none;background: url("images/leftbg.png") -0px -36px no-repeat;width: 10px;height: 17px;position: absolute;right: -1px;;top: 25px;}
 .on-menuL li.on-menuOn em{display: block;}
 
 .on-pageDiv{float: right;margin: 15px 15px 0 0;*margin: 30px 15px 0 0;}
@@ -240,7 +240,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .on-pageA{display: inline-block;width: 28px;height: 28px;border:1px solid #e0e1e3;background: #fff;}
 .on-pageA.on-P:hover .on-P{background-position: -24px -56px;cursor: pointer;}
 .on-pageA.on-N:hover .on-N{background-position: -23px -72px;cursor: pointer;}
-.on-page{display: inline-block;width: 9px;height: 16px;background: url("images/leftbg.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/leftbg.png*/ no-repeat;margin-left: 10px;margin-top: 7px;}
+.on-page{display: inline-block;width: 9px;height: 16px;background: url("images/leftbg.png") no-repeat;margin-left: 10px;margin-top: 7px;}
 .on-page.on-F{background-position: 1px -56px;}
 .on-page.on-P{background-position: -12px -56px;cursor: pointer;}
 .on-P:hover{background-position: -24px -56px;cursor: pointer;}
@@ -261,7 +261,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 /*搜索结果*/
 .on-title span{font-size: 14px;font-weight: normal;color: #666;margin-left: 10px;}
 .se-borderT{border-top: none;}
-.on-menuR .se-icon{display: inline-block;width: 5px;height: 5px;background: url("images/leftbg.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/leftbg.png*/ -1px -90px no-repeat;margin: -5px 10px 0 0;vertical-align: middle;}
+.on-menuR .se-icon{display: inline-block;width: 5px;height: 5px;background: url("images/leftbg.png") -1px -90px no-repeat;margin: -5px 10px 0 0;vertical-align: middle;}
 .on-menuR .se-p1{font-weight:bold;font-size: 16px;color:#2272c8; }
 .on-menuR .se-p1:hover{color:#ff7700; }
 .on-menuR .se-p2{margin-left: 20px;margin-top: 5px;line-height: 24px;color: #666;}
@@ -279,7 +279,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .on-menuL .child-menu .child-parent >ul{border-top: 1px solid #e2e3e4;}
 .on-menuL .child-menu .child-parent ul >li a{padding-left: 50px;color: #666;}
 .on-menuL .child-menu .child-parent ul >li{border-top: none;}
-.se-menuIcon{display: inline-block;width: 7px;height: 7px;background: url("images/leftbg.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/leftbg.png*/ no-repeat;vertical-align: middle;margin-top: -3px;margin-right: 10px;}
+.se-menuIcon{display: inline-block;width: 7px;height: 7px;background: url("images/leftbg.png") no-repeat;vertical-align: middle;margin-top: -3px;margin-right: 10px;}
 .se-icon2{background-position: -37px 0px;}
 .se-icon1{background-position: -28px 0px;}
 .on-menuL .child-menu .child-parent .child-li{padding: 0px;}
@@ -290,7 +290,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .on-menuL .child-menu .child-parent ul >li{padding: 12px 0;}
 .se-APIDoc{width: 204px;height: 48px;line-height:48px;border:1px solid #e2e3e4;text-align: center;background: #fff;margin: 15px 0 0 13px;font-size: 14px;font-weight: bold;color: #666;margin-bottom: 20px;cursor: pointer;}
 .se-APIDoc:hover{border:1px solid #1976e6;}
-.se-APIDoc em{display: inline-block;width: 25px;height: 28px;background: url("images/leftbg.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/leftbg.png*/ -47px 0px no-repeat;vertical-align: middle;margin-right: 15px;}
+.se-APIDoc em{display: inline-block;width: 25px;height: 28px;background: url("images/leftbg.png") -47px 0px no-repeat;vertical-align: middle;margin-right: 15px;}
 
 .on-menuR .pr-title{height: 40px;line-height: 40px;background: #f7f8f9;font-weight:bold;font-size: 16px;border-left:3px solid #01b5b7;padding-left: 15px;margin-bottom: 20px;cursor: pointer;}
 .on-menuR .pr-title:hover{background: #effdff;}
@@ -305,7 +305,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .pr-note li:hover a{color:#ff7700;}
 .pr-note li a{display: inline-block;width: 168px;color: #666;height: 46px;line-height: 46px;margin: 0 15px;}
 
-.on-menuR .on-title em{display: inline-block;width: 36px;height: 32px;background:url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ -71px -20px no-repeat;vertical-align: middle;cursor: pointer;  position: absolute;z-index: 10;top: 5px;}
+.on-menuR .on-title em{display: inline-block;width: 36px;height: 32px;background:url("images/OpenSer.png") -71px -20px no-repeat;vertical-align: middle;cursor: pointer;  position: absolute;z-index: 10;top: 5px;}
 .on-menuR .on-posfix{position: absolute;width: 890px;background: #fff;top: 100px;}
 .on-posfix .on-posList{position: absolute;background: #f7f8f9;padding: 15px;border:1px solid #e2e3e4;width: 240px;top: 37px; display: none;}
 .on-posfix .on-posList li{height: 26px;line-height: 26px;}
@@ -315,9 +315,9 @@ a:hover{color:#ff7700;text-decoration:none;}
 /*API*/
 .ap-APIDoc{width: 206px;height: 48px;line-height:48px;border:1px solid #e2e3e4;text-align: center;background: #fff;margin: 15px 0 15px 13px;font-size: 14px;font-weight: bold;color: #666;cursor: pointer;}
 .ap-APIDoc:hover{border:1px solid #1976e6;}
-.ap-APIDoc em{display: inline-block;width: 25px;height: 28px;background: url("images/leftbg.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/leftbg.png*/ -75px 0px no-repeat;vertical-align: middle;margin-right: 15px;}
+.ap-APIDoc em{display: inline-block;width: 25px;height: 28px;background: url("images/leftbg.png") -75px 0px no-repeat;vertical-align: middle;margin-right: 15px;}
 .ap-conT{color: #01b5b7;font-size: 14px;font-weight: bold;}
-.cirIcon{display: inline-block;width: 5px;height: 5px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ 0 -154px no-repeat;vertical-align: middle;margin-right: 10px;}
+.cirIcon{display: inline-block;width: 5px;height: 5px;background: url("images/OpenSer.png") 0 -154px no-repeat;vertical-align: middle;margin-right: 10px;}
 .ap-dash{border:none;border-top: 1px dashed #e2e3e4;margin:20px 0;}
 
 /*文档中心*/
@@ -334,7 +334,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .doc-ulS >li ul li{font-size: 12px;color: #666;font-weight: normal;height: 30px;line-height: 30px;margin-left: 14px;}
 .doc-ulS >li ul li a{color: #666;}
 .doc-ulS >li ul li a:hover{color: #ff7700;}
-.doc-icon{display: inline-block;width: 18px;height: 21px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ 0 -163px no-repeat;vertical-align: middle;margin-right: 10px;}
+.doc-icon{display: inline-block;width: 18px;height: 21px;background: url("images/OpenSer.png") 0 -163px no-repeat;vertical-align: middle;margin-right: 10px;}
 .doc-hotList{display: inline-block;width: 255px;height: 42px;height: 42px;overflow: hidden;font-size: 14px;}
 .on-menuR .pr-title1{height: 40px;line-height: 40px;background: #f7f8f9;font-weight:bold;font-size: 16px;border-left:3px solid #1976e6;padding-left: 15px;margin-bottom: 20px;}
 
@@ -345,7 +345,7 @@ a:hover{color:#ff7700;text-decoration:none;}
 .on-title .go-title span{font-size: 14px;font-weight: bold;color: #333;}
 .on-menuL .go-backLink{padding: 12px 15px;display: inline-block;width: 206px;color: #01b5b7;border-bottom: 1px solid #e2e3e4;}
 .on-menuL .go-backLink:hover{color: #ff7700;}
-.on-menuL .go-backLink em{display: inline-block;width: 18px;height: 16px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ -110px -27px no-repeat;vertical-align: middle;margin-right: 5px;margin-top: -2px;}
+.on-menuL .go-backLink em{display: inline-block;width: 18px;height: 16px;background: url("images/OpenSer.png") -110px -27px no-repeat;vertical-align: middle;margin-right: 5px;margin-top: -2px;}
 .on-menuL .go-list ul li{border-bottom: 1px solid #e2e3e4;border-top: none;}
 .on-menuL .go-list ul li a{color: #333;}
 .on-menuL .go-list .on-menuOn a{color: #fff;}
@@ -355,14 +355,14 @@ a:hover{color:#ff7700;text-decoration:none;}
 .go-ulList li:hover{background: #f7f8f9;}
 .go-liList{display: inline-block;width: 500px;color: #009da0;}
 
-/*suning.custom*/
+
 .on-menuL .su-list ul li{border-bottom: 1px solid #e2e3e4;border-top: none;text-align: right;position: relative;padding: 8px 15px;}
 .on-menuL .su-list .on-menuOn .su-listDiv a,.on-menuL .su-list .on-menuOn .su-listDiv p{color: #fff;}
 .su-listDiv{position: relative;text-align: right;overflow: hidden;height: 42px;}
 .on-menuL .su-list .su-listDiv a{position: absolute;top: 0;right: 0;color: #009da0;}
 .on-menuL .su-list .su-listDiv p{position: absolute;overflow: hidden;white-space: normal;top: 20px;right: 0;color: #333;}
-.su-mask{position: absolute;width: 230px;height: 100%;z-index: 10;top: 0;left: 0;background: url("images/mask.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/mask.png*/;}
-.su-mask1{position: absolute;width: 230px;height: 100%;z-index: 10;top: 0;left: 0;background: url("images/mask1.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/mask1.png*/;}
+.su-mask{position: absolute;width: 230px;height: 100%;z-index: 10;top: 0;left: 0;background: url("images/mask.png");}
+.su-mask1{position: absolute;width: 230px;height: 100%;z-index: 10;top: 0;left: 0;background: url("images/mask1.png");}
 .su-titList{border-top: 1px solid #e2e3e4;border-bottom: 1px solid #e2e3e4;overflow: hidden;margin-top: 10px;position: absolute;top: 90px;}
 .su-titList li{float: left;height: 50px;line-height: 50px;background: #fff;}
 .su-titList li a{border-left: 1px solid #e2e3e4;padding: 0 20.2px;color: #2272c8;font-size: 14px;}
@@ -395,7 +395,7 @@ td.odds{background-color: #f9f9f9;}
 .te-hr{border:none;border-top:1px dashed #e2e3e4;position: absolute;width: 100%;left: 0;}
 /*select*/
 .selUl >li {width: 238px;height: 8px;line-height: 8px;border: 1px solid #ddd;padding: 10px 5px;cursor: pointer;position: relative;color: #999;vertical-align: top;font-size: 12px;}
-.selIcon {display: inline-block;position: absolute;background: url("images/leftbg.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/leftbg.png*/ 0 -16px no-repeat;width: 9px;height: 5px;cursor: pointer;top: 22px;right: 10px;}
+.selIcon {display: inline-block;position: absolute;background: url("images/leftbg.png") 0 -16px no-repeat;width: 9px;height: 5px;cursor: pointer;top: 22px;right: 10px;}
 .selOpt {position: absolute;display: none;background: #fff;z-index: 10;border: 1px solid #ddd;border-top: none;max-height: 225px;overflow-y:auto;overflow-x: hidden;}
 .selOpt >li {width: 238px;height: 8px;line-height: 8px;border-top: none;padding: 10px 5px;cursor: pointer;color: #333;vertical-align: top;font-size: 12px;}
 .selOpt >li:hover {background: #f0f0f0;}

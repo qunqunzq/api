@@ -8,51 +8,51 @@
 .os-nav >li:hover >a{color:#ff9c00;}
 
 .os-nav >li.os-on{background:none;}
-.os-nav >li.lihover{background:url("images/bg_navli_repeat.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bg_navli_repeat.png*/ repeat 0 0;}
+.os-nav >li.lihover{background:url("images/bg_navli_repeat.png") repeat 0 0;}
 .os-nav >li a{display: inline-block; padding:0; height: 46px;color: #fff;}
-.os-nav >li a i{ display: inline-block; width: 9px; height: 5px; margin-left: 10px; background: url("images/arrow.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/arrow.png*/ no-repeat -28px 0; vertical-align: 3px;}
+.os-nav >li a i{ display: inline-block; width: 9px; height: 5px; margin-left: 10px; background: url("images/arrow.png") no-repeat -28px 0; vertical-align: 3px;}
 .os-nav >li:hover a i{ background-position: right 0;}
 .os-nav >li:hover dl{ display: block;}
-.os-nav >li dl{ display: none; width:135px; left:0; position: absolute; padding: 15px 18px 5px; opacity:0.9;background:url("images/bg_dl_repeat.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bg_dl_repeat.png*/ repeat 0 0;}
+.os-nav >li dl{ display: none; width:135px; left:0; position: absolute; padding: 15px 18px 5px; opacity:0.9;background:url("images/bg_dl_repeat.png") repeat 0 0;}
 .os-nav >li dl dd{ line-height: 46px; color: #fff; font-size: 14px;}
 .os-nav >li dl dd a:hover{color:#1d86f0;}
-.os-nav >li dl .dd-hover i{background:url("images/bg_dd_hover.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bg_dd_hover.png*/ no-repeat 0 0;}
-.os-nav >li dl dd i{margin-right:5px; display: inline-block; width: 5px; height: 9px; margin-left: 40px; background: url("images/arrow.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/arrow.png*/ no-repeat 0 0; vertical-align: -1px;}
+.os-nav >li dl .dd-hover i{background:url("images/bg_dd_hover.png") no-repeat 0 0;}
+.os-nav >li dl dd i{margin-right:5px; display: inline-block; width: 5px; height: 9px; margin-left: 40px; background: url("images/arrow.png") no-repeat 0 0; vertical-align: -1px;}
 .os-login ,.os-exit{width:66px;height:28px;line-height:28px;border: 2px solid #fff;margin-top: 18px;font-size: 14px;color: #f4f7fd;display: inline-block;border-radius: 5px;text-align: center;transition: all 0.3s;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;-o-transition: all 0.3s;}
 .os-exit{float:right; margin-left:20px;}
 .os-login:hover{background: #fff;color: #1976e6;transition: all 0.3s;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;-o-transition: all 0.3s;}
 .os-loginHover{background: #fff;color: #1976e6;transition: all 0.3s;-webkit-transition: all 0.3s;-moz-transition: all 0.3s;-o-transition: all 0.3s;}
-.os-search{display: inline-block;width: 16px;height: 16px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ no-repeat;margin-right: 27px;  margin-top: -3px;vertical-align: middle;background-position: 0 0;margin-left: -30px;cursor: pointer;}
+.os-search{display: inline-block;width: 16px;height: 16px;background: url("images/OpenSer.png") no-repeat;margin-right: 27px;  margin-top: -3px;vertical-align: middle;background-position: 0 0;margin-left: -30px;cursor: pointer;}
 .os-search:hover{background-position: -19px 0;}
 .os-input{width: 0px;height: 32px;line-height: 32px;border: none;background:transparent;border-radius: 5px;color: #fff;font-family: 'Microsoft YaHei';vertical-align: bottom;margin-top: 18px;}
-.os-nav >li.os-on{background:url("images/bg_navli_repeat.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bg_navli_repeat.png*/ repeat 0 0;}
+.os-nav >li.os-on{background:url("images/bg_navli_repeat.png") repeat 0 0;}
 .os-nav >li a:hover ,.os-nav >li.lihover a{color:#fff;}
 
 .lname{float:right; margin-top:17px; margin-left:20px; height:32px; line-height:32px; max-width:80px; overflow:hidden; color:#ffffff;}
 
 .ds-carousel .ds-switchable-content .os-link{display: inline-block;position: absolute;left: 50%;top: 355px;width: 206px;height: 56px;line-height:56px;border-radius: 30px;border:2px solid #fff;z-index: 100;font-size: 24px;color: #fff;text-align: center;transition:all .3s;margin-left: -102px;}
-.ds-carousel .ds-switchable-content .os-link em{display: inline-block;width: 28px;height: 28px;background: url("images/OpenSer-pic.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer-pic.png*/ no-repeat;background-position: 0px -900px; vertical-align: middle;margin-left: 15px;margin-top: -5px;}
+.ds-carousel .ds-switchable-content .os-link em{display: inline-block;width: 28px;height: 28px;background: url("images/OpenSer-pic.png") no-repeat;background-position: 0px -900px; vertical-align: middle;margin-left: 15px;margin-top: -5px;}
 .ds-carousel .ds-switchable-content .os-link:hover{background: #fff;color: #1976e6;transition:all .3s;}
 .ds-carousel .ds-switchable-content .os-link:hover em{background-position: 0px -928px;}
 
 .os-newsTip{min-width:1300px;height: 49px;border-bottom:1px solid #eee;}
 .os-newUl >li{float: left;height: 50px;line-height: 50px;margin-right: 38px;}
-.os-newUl .os-listI{display: inline-block;width: 2px;height: 2px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ -187px 0 no-repeat;vertical-align: middle;margin-right: 5px;}
+.os-newUl .os-listI{display: inline-block;width: 2px;height: 2px;background: url("images/OpenSer.png") -187px 0 no-repeat;vertical-align: middle;margin-right: 5px;}
 .os-newUl >li a{color: #666;}
 .os-newUl >li a:hover{color: #ff7700;}
-.os-newsTip .os-newI{display: inline-block;width: 70px;height: 25px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ 0px -20px no-repeat;margin-top: 12px;}
+.os-newsTip .os-newI{display: inline-block;width: 70px;height: 25px;background: url("images/OpenSer.png") 0px -20px no-repeat;margin-top: 12px;}
 .os-newsTip .os-newI > a{color: #666;}
-.os-newsTip .os-newH{display: inline-block;width: 17px;height: 9px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ -64px 0px no-repeat;  margin: -12px 5px 0 5px;  vertical-align: middle;}
+.os-newsTip .os-newH{display: inline-block;width: 17px;height: 9px;background: url("images/OpenSer.png") -64px 0px no-repeat;  margin: -12px 5px 0 5px;  vertical-align: middle;}
 .os-moreLink{color: #1976e6;  line-height: 50px;}
 
 
-.os-topTo{width: 44px;height: 44px;background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ no-repeat;position: fixed;z-index: 110;bottom: 300px;left: 50%;margin-left: 605px;display: none;cursor: pointer;background-position:  0px -50px;transition:all .3s;}
+.os-topTo{width: 44px;height: 44px;background: url("images/OpenSer.png") no-repeat;position: fixed;z-index: 110;bottom: 300px;left: 50%;margin-left: 605px;display: none;cursor: pointer;background-position:  0px -50px;transition:all .3s;}
 .os-topTo:hover{background-position:  0px -94px; transition:all .3s;}
 
 .lo-panner{display: inline-block;position: absolute;z-index: 10;}
-.lo-panner.lo-icon1{width: 190px;height: 169px;background: url("../images/img_lxing.png")/*tpa=https://open.suning.com/ospos/staticfiles/images/img_lxing.png*/ no-repeat center;left: 50%; margin-left:150px; top: 215px;opacity: 0;animation: iconF 1.14s infinite; -webkit-animation-delay:0.3s; animation-delay:0.3s;}
-.lo-panner.lo-icon2{width: 173px;height: 148px;background: url("../images/img_lxing2.png")/*tpa=https://open.suning.com/ospos/staticfiles/images/img_lxing2.png*/ no-repeat;left: 50%; margin-left:-300px; top: 370px;opacity: 1;animation: iconS 1.4s infinite;}
-.lo-panner.lo-icon3{opacity:0; width: 48px;height: 47px;background: url("images/bg_star.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bg_star.png*/ no-repeat;left: 50%; margin-left:160px; top: 200px;opacity: 1;animation: iconSt 1s infinite;}
+.lo-panner.lo-icon1{width: 190px;height: 169px;background: url("../images/img_lxing.png") no-repeat center;left: 50%; margin-left:150px; top: 215px;opacity: 0;animation: iconF 1.14s infinite; -webkit-animation-delay:0.3s; animation-delay:0.3s;}
+.lo-panner.lo-icon2{width: 173px;height: 148px;background: url("../images/img_lxing2.png") no-repeat;left: 50%; margin-left:-300px; top: 370px;opacity: 1;animation: iconS 1.4s infinite;}
+.lo-panner.lo-icon3{opacity:0; width: 48px;height: 47px;background: url("images/bg_star.png") no-repeat;left: 50%; margin-left:160px; top: 200px;opacity: 1;animation: iconSt 1s infinite;}
 
 @keyframes iconF{
 	0%{opacity:0.8;margin-left:150px; top: 215px;}
@@ -103,7 +103,7 @@
 .ds-carousel .ds-switchable-nav {width: 50px; position: absolute; bottom: 20px;left: 50%; margin-left:-25px;}
 .ds-carousel .ds-switchable-nav li {float: left;background-color: #9492b1;width: 12px;height: 12px;margin: 0 5px;border-radius: 12px;cursor: pointer;}
 .ds-carousel .ds-switchable-nav li.ds-active {background-color: #fff;}
-.ds-carousel .ds-prev, .ds-carousel .ds-next {position: absolute;width: 40px;height: 80px;background: url("images/dsPic02.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/dsPic02.png*/; top: 150px; left: 50%;cursor: pointer;line-height: 80px;color: #fff;text-align: center;font-size: 40px;text-decoration: none;font-family: simsun;}
+.ds-carousel .ds-prev, .ds-carousel .ds-next {position: absolute;width: 40px;height: 80px;background: url("images/dsPic02.png"); top: 150px; left: 50%;cursor: pointer;line-height: 80px;color: #fff;text-align: center;font-size: 40px;text-decoration: none;font-family: simsun;}
 .ds-carousel .ds-prev {margin-left: -520px;}
 .ds-carousel .ds-next {margin-left: 480px;}
 .ds-carousel .ds-disable {color: #666;}

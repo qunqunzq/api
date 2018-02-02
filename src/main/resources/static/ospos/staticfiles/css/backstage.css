@@ -3,7 +3,7 @@
 .bs-header .logo{float:left;margin-top:20px;}
 .bs-header .login-info{float:right;padding:24px 0 18px;height:18px;overflow:hidden;}
 .bs-header .login-info .name{float:left;}
-.bs-header .login-info .name em{float:left;margin:2px 5px 0 0;width:12px;height:14px;background:url("images/bs-icon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat 0 0;overflow:hidden;}
+.bs-header .login-info .name em{float:left;margin:2px 5px 0 0;width:12px;height:14px;background:url("images/bs-icon.png") no-repeat 0 0;overflow:hidden;}
 .bs-header .login-info .name span{float:left;color:#FFF;}
 .bs-header .login-info a{float:left;padding-left:20px;color:#FFF;}
 .bs-header .login-info a:hover{text-decoration:underline;}
@@ -26,7 +26,7 @@
 .bs-menu li{position:relative;height:40px;border-bottom:1px solid #0657A7;overflow:hidden;vertical-align:top;}
 .bs-menu li a{display:block;padding-left:20px;width:100px;height:40px;overflow:hidden;}
 .bs-menu li span{font:14px/40px 'Microsoft YaHei';color:#FFF;cursor:pointer;}
-.bs-menu li i{float:left;margin:12px 10px 0 0;width:16px;height:16px;background:url("images/bs-icon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat;overflow:hidden;cursor:pointer;}
+.bs-menu li i{float:left;margin:12px 10px 0 0;width:16px;height:16px;background:url("images/bs-icon.png") no-repeat;overflow:hidden;cursor:pointer;}
 .bs-menu li a:hover{background:#0657A7;text-decoration:none;}
 .bs-menu .on a,
 .bs-menu .on a:hover{background:#0657A7;}
@@ -49,7 +49,7 @@
 .bs-menu li .menu04:hover i{background-position:0 -190px;}
 .bs-menu .on .menu04 i,
 .bs-menu .on .menu04:hover i{background-position:0 -190px;}
-.bs-menu li em{position:absolute;top:15px;left:115px;display:none;width:5px;height:9px;background:url("images/bs-icon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat 0 -206px;overflow:hidden;}
+.bs-menu li em{position:absolute;top:15px;left:115px;display:none;width:5px;height:9px;background:url("images/bs-icon.png") no-repeat 0 -206px;overflow:hidden;}
 .bs-menu .on em{display:block;}
 
 .bs-subMenu dt{padding-left:12px;height:40px;line-height:40px;overflow:hidden;}
@@ -111,8 +111,8 @@
 .bs-pages{padding-top:10px;height:27px;overflow:hidden;}
 .bs-pages .snPages{margin-right:-14px;}
 .bs-notice .notice-details{position:relative;margin-top:10px;padding:30px 40px 30px 475px;height:674px;background:#F7F7F7;border:solid #E2E2E2;border-width:0 1px 1px 0;color:#333;z-index:1;}
-.bs-notice .notice-details .close-btn{position:absolute;top:9px;right:12px;display:block;width:16px;height:15px;background:url("images/bs-icon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat 0 -215px;overflow:hidden;}
-.bs-notice .notice-details .details-bg{position:absolute;right:-1px;bottom:-1px;width:45px;height:23px;background:url("images/bs-bg.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bs-bg.png*/ no-repeat 0 0;overflow:hidden;}
+.bs-notice .notice-details .close-btn{position:absolute;top:9px;right:12px;display:block;width:16px;height:15px;background:url("images/bs-icon.png") no-repeat 0 -215px;overflow:hidden;}
+.bs-notice .notice-details .details-bg{position:absolute;right:-1px;bottom:-1px;width:45px;height:23px;background:url("images/bs-bg.png") no-repeat 0 0;overflow:hidden;}
 .bs-notice .details{height:674px;overflow-x:hidden;overflow-y:auto;}
 .bs-notice .details h4{padding:10px 0;border-bottom:1px solid #E8E8E8;line-height:22px;font-size:14px;font-weight:400;text-align:center;}
 .bs-notice .details-con{padding-top:10px;border-top:1px solid #FFF;}
@@ -142,7 +142,7 @@
 .tip-popBox .pop-box-main{padding:27px 0 46px;}
 .tip-popBox .tip-table{margin:0 auto;}
 .tip-popBox .tip-table td{padding:10px 0;}
-.tip-popBox .tip-table em{margin-right:10px;display:block;width:32px;height:32px;background:url("images/tipIcon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ no-repeat -120px -70px;overflow:hidden;}
+.tip-popBox .tip-table em{margin-right:10px;display:block;width:32px;height:32px;background:url("images/tipIcon.png") no-repeat -120px -70px;overflow:hidden;}
 .tip-popBox .tip-table b{padding-top:6px;font-size:14px;line-height:20px;}
 .email-popBox .pop-box-main{padding:20px 0 38px;}
 .email-popBox .pop-box-main table{table-layout:fixed;}
@@ -162,7 +162,7 @@
 .bs-flow .cou4 span{width:25%}
 .bs-flow .prev{background:#629FDB;}
 .bs-flow .cur{*margin-right:-3px;background:#4D8ECE;}
-.bs-flow em{float:left;position:absolute;top:0;display:block;width:28px;height:40px;background:url("images/bs-bg.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bs-bg.png*/ no-repeat;overflow:hidden;}
+.bs-flow em{float:left;position:absolute;top:0;display:block;width:28px;height:40px;background:url("images/bs-bg.png") no-repeat;overflow:hidden;}
 .bs-flow .flow-icon01{background-position:0 -25px;}
 .bs-flow .flow-icon02{background-position:-28px -25px;}
 .bs-flow .flow-icon03{background-position:-56px -25px;}
@@ -196,11 +196,11 @@
 .bs-form .app-icon .icon-up .sBtn-h30-disable{margin-bottom:12px;}
 .bs-form .app-icon .icon-up .up-tip{line-height:20px;color:#999;}
 .bs-form .bubble{position:relative;float:right;margin-top:4px;width:16px;height:30px;cursor:pointer;}
-.bs-form .bubble-icon{display:block;margin-top:7px;width:25px;height:16px;background:url("images/tipIcon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ no-repeat -155px -280px;overflow:hidden;}
+.bs-form .bubble-icon{display:block;margin-top:7px;width:25px;height:16px;background:url("images/tipIcon.png") no-repeat -155px -280px;overflow:hidden;}
 .bs-form .bubble-box{display:none;position:absolute;left:-20px;bottom:34px;padding:6px 8px 8px 10px;background:#FFFACC;border:1px solid #FFC52A;}
 .bs-form .bubble-box p{line-height:16px;word-break:keep-all;white-space:nowrap;}
 .bs-form .bubble-box .w300{word-break:break-all;white-space:normal;}
-.bs-form .bubble-box i{position:absolute;left:22px;bottom:-7px;display:block;width:11px;height:7px;background:url("images/com-icon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/com-icon.png*/ no-repeat 0 -16px;overflow:hidden;}
+.bs-form .bubble-box i{position:absolute;left:22px;bottom:-7px;display:block;width:11px;height:7px;background:url("images/com-icon.png") no-repeat 0 -16px;overflow:hidden;}
 .bs-form .def-text{color:#999;}
 .bs-form .handle{padding:15px 0 20px;border-bottom:2px solid #E8E8E8;}
 .bs-form .handle1{padding:20px 0 0;}
@@ -217,13 +217,13 @@
 .bs-app .app-main{padding-left:151px;}
 .bs-app .app-menu dt{padding:0 10px 0 15px;height:32px;line-height:32px;overflow:hidden;cursor:pointer;}
 .bs-app .app-menu dt b{float:left;cursor:pointer;}
-.bs-app .app-menu dt em{float:right;margin-top:13px;width:7px;height:4px;background:url("images/bs-icon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat 0 -230px;overflow:hidden;cursor:pointer;}
+.bs-app .app-menu dt em{float:right;margin-top:13px;width:7px;height:4px;background:url("images/bs-icon.png") no-repeat 0 -230px;overflow:hidden;cursor:pointer;}
 .bs-app .app-menu dt .up{background-position:0 -234px;}
 .bs-app .app-menu .app-select{position:relative;}
 .bs-app .app-menu .app-select .select-box{padding:0 9px 0 14px;height:38px;border:1px solid #FFF;line-height:38px;overflow:hidden;cursor:pointer;}
 .bs-app .app-menu .app-select .hover{border-color:#DDD;}
 .bs-app .app-menu .app-select .select-box b{float:left;cursor:pointer;}
-.bs-app .app-menu .app-select .select-box em{float:right;margin-top:17px;width:7px;height:4px;background:url("images/bs-icon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat 0 -230px;overflow:hidden;cursor:pointer;}
+.bs-app .app-menu .app-select .select-box em{float:right;margin-top:17px;width:7px;height:4px;background:url("images/bs-icon.png") no-repeat 0 -230px;overflow:hidden;cursor:pointer;}
 .bs-app .app-menu .app-select .select-list{display:none;position:absolute;top:40px;left:0;width:138px;max-height:260px;_height:expression((document.documentElement.clientHeight||document.body.clientHeight)>260?"260px":"");background:#F6F6F6;border:1px solid #DDD;overflow-x:hidden;overflow-y:auto;}
 .bs-app .app-menu .app-select .select-list a{display:block;padding:0 9px 0 14px;width:115px;height:26px;line-height:26px;font-weight:700;color:#666;word-break:keep-all;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
 .bs-app .app-menu .app-select .select-list a:hover{background:#70ACE5;color:#FFF;text-decoration:none;}
@@ -233,11 +233,11 @@
 .bs-app .app-menu dd .on:hover{background:#70ACE5;color:#FFF;text-decoration:none;}
 .bs-app .app-menu dd li a{padding-left:40px;width:100px;}
 .bs-app .app-menu dd span{display:block;padding-left:15px;height:32px;line-height:32px;overflow:hidden;cursor:pointer;}
-.bs-app .app-menu dd span em{float:left;margin:12px 6px 0 0;width:7px;height:7px;background:url("images/bs-icon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bs-icon.png*/ no-repeat 0 -245px;overflow:hidden;cursor:pointer;}
+.bs-app .app-menu dd span em{float:left;margin:12px 6px 0 0;width:7px;height:7px;background:url("images/bs-icon.png") no-repeat 0 -245px;overflow:hidden;cursor:pointer;}
 .bs-app .app-menu dd span i{float:left;}
 .bs-app .app-menu dd span .up{margin-top:14px;background-position:0 -238px;}
 .bs-app .app-test{padding:45px 0 55px;height:54px;}
-.bs-app .app-test em{float:left;margin:8px 10px 0 0;width:32px;height:32px;background:url("images/tipIcon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ no-repeat -120px 0;overflow:hidden;}
+.bs-app .app-test em{float:left;margin:8px 10px 0 0;width:32px;height:32px;background:url("images/tipIcon.png") no-repeat -120px 0;overflow:hidden;}
 .bs-app .app-test .test-con{float:left;}
 .bs-app .app-test .test-con b{font-size:14px;line-height:24px;}
 .bs-app .app-test .test-con p{height:30px;overflow:hidden;}
@@ -326,12 +326,12 @@
 .bs-serve .serve-release02 .c6{background:#3CC051;border-color:#17A668;}
 .bs-serve .serve-release02 .c7{background:#57B5E3;border-color:#4D8ECE;}
 .bs-serve .serve-release02 a:hover{padding:0;border:3px solid #FC9100;text-decoration:none;}
-.bs-serve .serve-release02 li em{position:absolute;right:0;bottom:0;display:none;width:20px;height:22px;background:url("images/bs-bg.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/bs-bg.png*/ no-repeat -45px 0;overflow:hidden;}
+.bs-serve .serve-release02 li em{position:absolute;right:0;bottom:0;display:none;width:20px;height:22px;background:url("images/bs-bg.png") no-repeat -45px 0;overflow:hidden;}
 .bs-serve .serve-release02 .on em{display:block;}
 .bs-serve .serve-release02 .on a,
 .bs-serve .serve-release02 .on a:hover{padding:0;border:3px solid #FC9100;text-decoration:none;}
 .bs-serve .serve-tip{background:#FDF9EB;border:1px solid #FFE29B;}
-.bs-serve .serve-tip em{float:left;margin-right:-32px;width:32px;height:32px;background:url("images/tipIcon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ no-repeat;overflow:hidden;}
+.bs-serve .serve-tip em{float:left;margin-right:-32px;width:32px;height:32px;background:url("images/tipIcon.png") no-repeat;overflow:hidden;}
 .bs-serve .serve-tip .con{padding-left:42px;}
 .bs-serve .serve-tip .con b{line-height:22px;font-size:14px;}
 .bs-serve .serve-tip .con p{line-height:20px;}
@@ -371,7 +371,7 @@
 .bs-table1 .serve-icon .newTip{position:absolute;left:200px;top:37px;margin-top:0;}
 
 .noResult-table{margin:25px auto;}
-.noResult-table em{display:inline-block;margin-right:10px;width:32px;height:32px;background:url("images/tipIcon.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/tipIcon.png*/ no-repeat -120px -70px;overflow:hidden;}
+.noResult-table em{display:inline-block;margin-right:10px;width:32px;height:32px;background:url("images/tipIcon.png") no-repeat -120px -70px;overflow:hidden;}
 .noResult-table b{line-height:24px;font-size:14px;}
 .noResult-table p{line-height:22px;}
 

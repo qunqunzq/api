@@ -72,7 +72,7 @@ $(function(){
 		
 	});
 
-    $("https://open.suning.com/ospos/staticfiles/js/open/.sidenav .list").hasClass("js-list");
+
 
     $(".JS-sideselect").each(function(){
         $(this).hover(function(){

@@ -911,7 +911,7 @@
 								erCodeUl.append($("<li><a href='" + data.sysErrorCodesUrl + "' target='_blank'>点击查看所有系统级请求参数报错码示例</a></li>"));
 							}
 							else{
-								erCodeUl.append($("<li>查看API文档信息： <a href='toApiMethodDetailMenu.do-interCode=- + el.interCode + -.htm'/*tpa=https://open.suning.com/ospos/apipage/toApiMethodDetailMenu.do?interCode=" + el.interCode + "*/ target='_blank'>" + el.interCode + "</a></li>"));
+								erCodeUl.append($("<li>查看API文档信息： <a href='toApiMethodDetailMenu.do-interCode=- + el.interCode + -.htm'  target='_blank'>" + el.interCode + "</a></li>"));
 							}
 							erCodeUl.append($("<li>错误描述：" + el.errorDesc + "</li>"))
 								.append($("<li>解决方案：" + el.errorSolutions + "</li>"));

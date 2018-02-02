@@ -16,8 +16,8 @@
 .focusNumBox a.hideNumTxt{ text-indent: -99em;}
 .focusNumBox a i{display:inline-block; height:2px;}
 .focusNumBox a.focusSel i{ background: #fff; color: #000; animation:mymove 4s linear;}
-.focusPreArr{display:none; position:absolute; width:21px; height:65px; top:50%; left: 20px; background:url("images/focus/focus-prev.png")/*tpa=http://sop.suning.com/front/css/images/focus/focus-prev.png*/ no-repeat center; z-index:5;}
-.focusNextArr{display:none; position:absolute; width:21px; height:65px; top:50%; right: 20px; background:url("images/focus/focus-next.png")/*tpa=http://sop.suning.com/front/css/images/focus/focus-next.png*/ no-repeat center; z-index:5;}
+.focusPreArr{display:none; position:absolute; width:21px; height:65px; top:50%; left: 20px; background:url("images/focus/focus-prev.png")  no-repeat center; z-index:5;}
+.focusNextArr{display:none; position:absolute; width:21px; height:65px; top:50%; right: 20px; background:url("images/focus/focus-next.png")  no-repeat center; z-index:5;}
 
 .focusBox:hover .focusPreArr, .focusBox:hover .focusNextArr{display:inline-block;}
 
@@ -38,7 +38,7 @@
 .index-notice p{margin:5px 0 25px; font:16px/24px 'MicroSoft YaHei'; color:#999;}
 a.index-notice-btn{display:inline-block; width:160px; height:46px; background:#f70; border-radius:2px; text-align:center; font-size:16px; line-height:46px; color:#fff; }
 a.index-notice-btn:hover{background:#f80; text-decoration:none;}
-.index-list li{height:26px; padding-left:12px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ no-repeat -397px 11px; font:14px/26px 'MicroSoft YaHei'; color:#666; }
+.index-list li{height:26px; padding-left:12px; background:url("images/new-icon.png")  no-repeat -397px 11px; font:14px/26px 'MicroSoft YaHei'; color:#666; }
 .index-list li a{display:inline-block; max-width:250px; height:24px; color:#666;  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .index-list li a:hover{color:#f70;}
 .index-list li em{display:inline-block; width:30px; height:14px; margin-left:5px; border:1px solid #f55; border-radius:2px; font-size:12px; line-height:14px; color:#ff5555; text-align:center; vertical-align:8px;}
@@ -56,7 +56,7 @@ a.index-notice-btn:hover{background:#f80; text-decoration:none;}
 .index-new-list p{position:relative; font:normal 14px/24px 'MicroSoft YaHei'; color:#666; z-index:2;}
 .index-new-list a{position:relative; display:block; padding:10px 0; font:14px/24px 'MicroSoft YaHei'; color:#3399ee; z-index:2;}
 .index-new-list a:hover{color:#f70;}
-.index-new-list i{position:relative; display:inline-block; width:100px; height:100px; background:url("images/new-icon.png")/*tpa=http://sop.suning.com/front/css/images/new-icon.png*/ no-repeat 0 -15px; z-index:2;}
+.index-new-list i{position:relative; display:inline-block; width:100px; height:100px; background:url("images/new-icon.png")  no-repeat 0 -15px; z-index:2;}
 .index-new-list i.indes-new-ad{background-position:0 -116px;}
 .index-new-list i.indes-new-money{background-position:0 -217px;}
 .index-new-list i.indes-new-data{background-position:0 -318px;}

@@ -1,7 +1,7 @@
 .su-titList{overflow:inherit; width:109px; position: fixed;top:50%; margin-top:-200px; border:none; border-left: 2px solid #ebebeb;}
 .su-titList li{float:none; padding:0 14px; height: 40px;line-height: 40px; background:none; }
-.su-titList li.cur a{margin-left:-20px; color: #009da0; background:url("images/icon_circle_cur.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/icon_circle_cur.png*/ no-repeat 0 center;}
-.su-titList li a{display:block; margin-left:-18px; height: 40px; line-height: 40px; padding: 0; border:none; background:url("images/icon_circle.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/icon_circle.png*/ no-repeat 0 center; padding:0 15px; color: #333333;font-size: 12px; text-align: left; }
+.su-titList li.cur a{margin-left:-20px; color: #009da0; background:url("images/icon_circle_cur.png")  no-repeat 0 center;}
+.su-titList li a{display:block; margin-left:-18px; height: 40px; line-height: 40px; padding: 0; border:none; background:url("images/icon_circle.png")  no-repeat 0 center; padding:0 15px; color: #333333;font-size: 12px; text-align: left; }
 .su-titList li a:hover{color: #009da0;}
 .su-titList .su-firA{border-left: none;}
 .tnote{margin-bottom:35px; margin-top:16px; font-size:12px; color: #333333;}
@@ -30,15 +30,15 @@
     position: relative;
     top: 20px;
     left: 40px;
-    background: url("images/OpenSer.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/OpenSer.png*/ no-repeat -12px -67px;
+    background: url("images/OpenSer.png")  no-repeat -12px -67px;
 }
 
 .su-table tr .name{padding-left:30px; }
-.su-table tr.parent .tdmore{background:url("images/icon_more.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/icon_more.png*/ no-repeat 15px center;}
-.su-table tr.parent .tdslidedown{background:url("images/icon_slidedown.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/icon_slidedown.png*/ no-repeat 15px center;}
+.su-table tr.parent .tdmore{background:url("images/icon_more.png")  no-repeat 15px center;}
+.su-table tr.parent .tdslidedown{background:url("images/icon_slidedown.png")  no-repeat 15px center;}
 .su-table tr.child{display:none; padding-left:45px;}
 
-.su-table tr.child td.name{padding-left:40px; background:url("images/icon_child.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/icon_child.png*/ no-repeat 30px center;}
+.su-table tr.child td.name{padding-left:40px; background:url("images/icon_child.png")  no-repeat 30px center;}
 /* 锟斤拷锟斤拷蟹旨锟斤拷锟绞�*/
 .plus_link,.minus_link{ margin-top:2px; cursor:pointer;}
 .plus_link{ background-position:0px -240px;}
@@ -52,7 +52,7 @@
 .headline .on-title{float:left;}
 .headline .btn{float:right; margin-top:30px; padding-right:13px; text-align: right;}
 .headline .btn a{position:relative; margin-left:12px; display:inline-block; width:96px; height: 28px; line-height: 28px; border:1px solid #1976e6; text-align:center; background-color:#ffffff; color:#1976e6; border-radius:3px;}
-.headline .btn a em{display:block; position: absolute; right:-12px; top:-12px; width:23px; height:23px; background: url("images/icon_red.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/icon_red.png*/ no-repeat 0 0; text-align: center; line-height:23px; color:#ffffff;}
+.headline .btn a em{display:block; position: absolute; right:-12px; top:-12px; width:23px; height:23px; background: url("images/icon_red.png")  no-repeat 0 0; text-align: center; line-height:23px; color:#ffffff;}
 
 
 .faqlist{width:880px; overflow: hidden; padding: 0; border-top:1px solid #e2e3e4; margin-top:10px; padding-top:20px;}
@@ -80,7 +80,7 @@
 .sidenav .list li{white-space: nowrap; position: relative; z-index: 1;}
 .sidenav li a:hover ,.on-menuL .sidenav .list >li:hover a{color:#2272c8;}
 
-.sidenav a.sidemore{display:block; width:70px; margin: 20px auto; padding-left:40px;height:30px; line-height: 30px; background: url("images/icon_sidemore.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/icon_sidemore.png*/ no-repeat 0 center; font-size:14px; color:#2272c8;}
+.sidenav a.sidemore{display:block; width:70px; margin: 20px auto; padding-left:40px;height:30px; line-height: 30px; background: url("images/icon_sidemore.png")  no-repeat 0 center; font-size:14px; color:#2272c8;}
 .sidenav p.nomore{margin:20px 0; text-align:center; font-size:14px; color:#666666;}
 
 
@@ -95,15 +95,15 @@
 .search-top .os-search{ position:absolute; margin:0; left:8px; top:25px;}
 .search-top .os-login{float:right;}
 .plus_link {
-    background: url("images/icon_more.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/icon_more.png*/ no-repeat center;
+    background: url("images/icon_more.png")  no-repeat center;
 }
 
 .minus_link {
-    background: url("images/icon_slidedown.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/icon_slidedown.png*/ no-repeat center;
+    background: url("images/icon_slidedown.png")  no-repeat center;
 }
 
 .child_link {
-    background: url("images/icon_child.png")/*tpa=https://open.suning.com/ospos/staticfiles/css/images/icon_child.png*/ no-repeat center;
+    background: url("images/icon_child.png")  no-repeat center;
 }
 
 .plus_link, .minus_link,.child_link {
